@@ -159,7 +159,7 @@ export default function AboutFirm() {
 
         {/* RIGHT — IMAGE */}
         <motion.div
-          className="relative w-full h-420px md:h-[500px] overflow-hidden shadow-xl"
+          className="relative w-full h-[420px] md:h-[500px] overflow-hidden shadow-xl"
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{
             opacity: 1,
