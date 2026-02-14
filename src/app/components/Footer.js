@@ -152,7 +152,7 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
               S Jain Attorneys
             </h3>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-200 text-sm">
               Trusted legal counsel providing corporate, civil, and advisory
               services across India. Ethical, client-first approach with years
               of experience.
@@ -164,7 +164,7 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
               Practice Areas
             </h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
+            <ul className="space-y-2 text-gray-200 text-sm">
               {practiceAreas.slice(0, 6).map((area, i) => (
                 <li key={i}>
                   <Link
@@ -183,7 +183,7 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
               Quick Links
             </h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
+            <ul className="space-y-2 text-gray-200 text-sm">
               {quickLinks.map((link, i) => (
                 <li key={i}>
                   <Link
@@ -205,7 +205,7 @@ export default function Footer() {
             <p className="text-gray-300 text-sm mb-2">
               123 Legal Lane, Mumbai, Maharashtra, India
             </p>
-            <p className="text-gray-300 text-sm mb-2">
+            <p className="text-gray-200 text-sm mb-2">
               Phone: +91 98765 43210
             </p>
             <p className="text-gray-300 text-sm mb-2">
@@ -216,7 +216,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 text-gray-400 text-sm py-4 px-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-700 text-gray-900 text-sm py-4 px-6 flex flex-col md:flex-row justify-between items-center">
           <p>© S Jain Attorneys – All Rights Reserved</p>
           <div className="space-x-4 mt-2 md:mt-0">
             <Link
