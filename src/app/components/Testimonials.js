@@ -261,7 +261,7 @@ export default function Testimonials() {
     // <section className="py-20 px-6 bg-[#111111]">
     <section
   className="
-    bg-[#090909]
+    bg-[#f4efef]
    
     py-16 sm:py-20 md:py-24 lg:py-6
     px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
@@ -271,12 +271,12 @@ export default function Testimonials() {
 
       {/* Section Title */}
       <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#F5F5F5]">
-          Client Testimonials
-        </h2>
+  <h2 className="text-3xl md:text-4xl font-semibold text-[#0b0b0b]">
+    Client Testimonials
+  </h2>
+  <div className="w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4"></div>
+</div>
 
-        <div className="w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4"></div>
-      </div>
 
 
       {/* Testimonials Grid */}

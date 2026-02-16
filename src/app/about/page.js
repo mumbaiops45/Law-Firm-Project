@@ -51,7 +51,8 @@ export default function Page() {
 
       {/* ================= HERO ================= */}
 
-      <section className="relative w-full h-[40vh] flex items-center justify-center">
+      <section className="relative w-full h-[35vh] flex items-center justify-center">
+        
 
         <Image
           src="/laws2.jpg"
@@ -67,7 +68,7 @@ export default function Page() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="relative z-10 text-4xl md:text-5xl font-serif text-[#C9A24D]"
+          className="relative z-10 text-4xl md:text-5xl font-sans text-[#C9A24D]"
         >
           About Us
         </motion.h1>
@@ -90,7 +91,7 @@ export default function Page() {
             viewport={{ once: true }}
           >
 
-            <h2 className="text-3xl font-serif text-[#C9A24D] mb-6">
+            <h2 className="text-3xl font-sans text-[#C9A24D] mb-6">
               S Jain Attorneys
             </h2>
 
@@ -214,7 +215,7 @@ export default function Page() {
               className="h-[3px] bg-[#C9A24D] mb-6"
             />
 
-            <h2 className="text-[#C9A24D] text-4xl font-serif mb-6">
+            <h2 className="text-[#C9A24D] text-4xl font-sans mb-6">
               Our Philosophy
             </h2>
 
@@ -308,7 +309,7 @@ export default function Page() {
             className="text-center mb-16"
           >
 
-            <h2 className="text-5xl font-serif text-[#C9A24D] mb-4">
+            <h2 className="text-5xl font-sans text-[#C9A24D] mb-4">
               Our Strategic Approach
             </h2>
 
@@ -580,7 +581,7 @@ export default function Page() {
 
             <div className="h-[3px] w-20 bg-[#C9A24D] mx-auto mb-6"></div>
 
-            <h2 className="text-5xl font-serif text-[#C9A24D] mb-4">
+            <h2 className="text-5xl font-sans text-[#C9A24D] mb-4">
               Meet Our Team
             </h2>
 

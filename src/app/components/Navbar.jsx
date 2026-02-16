@@ -19,7 +19,7 @@ export default function Navbar() {
     { name: "About Us", href: "/about" },
     // { name: "Practice Areas", href: "/#practice" },
     // { name: "Our Team", href: "/team" },
-//     // { name: "Insights", href: "/#blog" },
+    //     // { name: "Insights", href: "/#blog" },
     { name: "Contact", href: "/contact" },
   ];
   const services = [
@@ -72,11 +72,26 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-9 py-8 flex items-center justify-between">
 
           {/* LOGO */}
-          <div className="text-2xl font-serif font-semibold tracking-wide">
+          {/* <div className="text-2xl font-serif font-semibold tracking-wide">
             <span className="text-white">S Jain</span>
             <span className="text-[#C9A24D] ml-1">Attorneys</span>
-          </div>
+          </div> */}
+          <div className="flex items-center gap-3">
 
+            {/* Logo Image */}
+            <img
+              src="/logo.png"   // place logo inside public folder
+              alt="S Jain Attorneys Logo"
+              className="h-20 w-24 object-contain"
+            />
+
+            {/* Brand Name */}
+            <div className="text-2xl font-serif font-semibold tracking-wide">
+              <span className="text-white">S Jain</span>
+              <span className="text-[#C9A24D] ml-1">Attorneys</span>
+            </div>
+
+          </div>
 
           {/* DESKTOP MENU */}
           <ul className="hidden md:flex items-center space-x-8 text-sm font-normal text-white">
@@ -94,17 +109,17 @@ export default function Navbar() {
 
 
 
-           {/* SERVICES DROPDOWN */}
-             <li
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
+            {/* SERVICES DROPDOWN */}
+            <li
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
 
-            <button className="hover:text-[#C9A24D] transition duration-300 flex items-center gap-1">
-              Services
-              <span className="text-xs">▼</span>
-          </button>
+              <button className="hover:text-[#C9A24D] transition duration-300 flex items-center gap-1">
+                Services
+                <span className="text-xs">▼</span>
+              </button>
 
               {/* Dropdown */}
               <div
@@ -333,7 +348,7 @@ export default function Navbar() {
           </div>
 
         </div>
-        
+
 
       )}
 

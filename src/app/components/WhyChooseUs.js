@@ -140,7 +140,8 @@ export default function WhyChooseUs() {
 
       {/* Section Title */}
       <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#111111]">
+        <h2 className="text-3xl md:text-4xl font-sans font-semibold text-[#111111]">
+
           Why Clients Trust Us
         </h2>
         <div className="w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4"></div>

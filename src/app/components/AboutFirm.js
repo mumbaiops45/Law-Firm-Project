@@ -90,7 +90,7 @@ export default function AboutFirm() {
 
   return (
 
-    <section className="py-20 px-6 bg-[#111111] text-white mt-5">
+    <section className="py-20 px-6 bg-[#111111] text-white ">
 
       {/* <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center "> */}
       <div className="
@@ -110,7 +110,7 @@ export default function AboutFirm() {
         >
 
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#C9A24D]">
+          <h2 className="text-3xl md:text-4xl font-sans font-semibold text-[#C9A24D]">
             About S Jain Attorneys
           </h2>
 

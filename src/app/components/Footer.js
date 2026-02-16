@@ -264,7 +264,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#080808] text-white">
+    <footer className="bg-[#0c0c0c] text-white">
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-4 gap-10">
@@ -349,11 +349,11 @@ export default function Footer() {
 
 
       {/* Bottom Bar */}
-      <div className="border-t border-[#1E3A5F]">
+      <div className="border-t border-[#060606]">
 
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
 
-          <p className="text-gray-200 text-sm">
+          <p className="text-gray-400 text-sm">
             © 2026 S Jain Attorneys. All Rights Reserved.
           </p>
 
@@ -361,14 +361,14 @@ export default function Footer() {
 
             <Link
               href="#"
-              className="text-gray-200 hover:text-[#C9A24D] text-sm transition"
+              className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
             >
               Privacy Policy
             </Link>
 
             <Link
               href="#"
-              className="text-gray-200 hover:text-[#C9A24D] text-sm transition"
+              className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
             >
               Terms of Use
             </Link>

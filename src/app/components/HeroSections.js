@@ -264,16 +264,16 @@ export default function HeroSection() {
 
       {/* Main container */}
       {/* <div className="relative z-20 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full"> */}
-<div className="
+      <div className="
   relative z-20 max-w-7xl mx-auto w-full
-  px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+  px-6 sm:px-8 md:px-12 lg:px-16 xl:px-15
   grid grid-cols-1 md:grid-cols-2 gap-12 items-center
 ">
 
         {/* Left Column */}
         <div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-white leading-tight mb-6">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-semibold text-white leading-tight mb-6">
             Trusted Legal Counsel with Integrity & Experience
           </h1>
 
@@ -282,7 +282,7 @@ export default function HeroSection() {
             Tailored for Individuals & Businesses in India
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             {/* 
             <Link
               href="/contact"
@@ -291,20 +291,18 @@ export default function HeroSection() {
               Schedule a Consultation
             </Link> */}
             <Link
-    href="/contact"
-    className="relative px-8 py-3 font-semibold text-black rounded-md overflow-hidden group transition-all duration-500 transform hover:-translate-y-1 hover:scale-105"
-  >
-    {/* Animated Gradient Background */}
-    <span className="absolute inset-0 bg-gradient-to-r from-[#C9A24D] via-[#E5C06B] to-[#C9A24D] bg-[length:200%_200%] animate-[gradientMove_4s_ease_infinite]"></span>
+              href="/contact"
+              className="relative w-full sm:w-auto text-center px-6 py-3 sm:px-8 font-semibold text-black rounded-md overflow-hidden group transition-all duration-500 transform hover:-translate-y-1 hover:scale-105"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-[#C9A24D] via-[#E5C06B] to-[#C9A24D] bg-[length:200%_200%] animate-[gradientMove_4s_ease_infinite]"></span>
 
-    {/* Glow Effect */}
-    <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-white/20 blur-xl transition duration-500"></span>
+              <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-white/20 blur-xl transition duration-500"></span>
 
-    {/* Text */}
-    <span className="relative z-10 tracking-wide">
-      Schedule a Consultation
-    </span>
-  </Link>
+              <span className="relative z-10 tracking-wide">
+                Schedule a Consultation
+              </span>
+            </Link>
+
 
 
             {/* <Link
@@ -315,9 +313,10 @@ export default function HeroSection() {
             </Link> */}
             <Link
               href="/#practice"
-              className="relative px-8 py-3 font-semibold text-[#C9A24D] rounded-md border border-[#C9A24D] overflow-hidden group transition-all duration-500"
+              className="relative w-full sm:w-auto text-center px-6 py-3 sm:px-8 font-semibold text-[#C9A24D] rounded-md border border-[#C9A24D] overflow-hidden group transition-all duration-500"
             >
               <span className="absolute inset-0 bg-[#C9A24D] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></span>
+
               <span className="relative z-10 group-hover:text-black transition duration-300 tracking-wide">
                 View Practice Areas
               </span>
@@ -328,17 +327,33 @@ export default function HeroSection() {
         </div>
 
         {/* Right Column */}
-        <div className="relative  w-full h-[500px] hidden md:block ">
+        {/* <div className="relative  w-full h-[500px] hidden md:block ">
 
           <Image
             src="/closeupjustice.jpg"
             alt="Legal books and courtroom"
             fill
             sizes="50vw"
-            className="object-cover rounded-lg shadow-xl"
+            className="object-cover bject-center  rounded-lg shadow-xl"
           />
 
-        </div>
+        </div> */}
+<div className="hidden md:flex justify-center">
+
+  <div className="relative w-full max-w-lg aspect-[7/5]">
+
+    <Image
+      src="/closeupjustice.jpg"
+      alt="Legal books and courtroom"
+      fill
+      sizes="(max-width: 768px) 100vw, 50vw"
+      className="object-cover object-center rounded-xl shadow-2xl"
+      priority
+    />
+
+  </div>
+
+</div>
 
       </div>
 

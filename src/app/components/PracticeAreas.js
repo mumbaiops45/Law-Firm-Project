@@ -88,6 +88,8 @@
 //     </section>
 //   );
 // }
+
+
 "use client";
 
 import {
@@ -184,7 +186,7 @@ export default function PracticeAreas() {
         className="text-center mb-16"
       >
 
-        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#111111]">
+        <h2 className="text-3xl md:text-4xl font-sans font-semibold text-[#111111]">
           Our Practice Areas
         </h2>
 
@@ -265,7 +267,7 @@ export default function PracticeAreas() {
             {/* Title */}
             <h3 className="
               text-xl
-              font-serif
+              font-sans
               font-semibold
               text-[#111111]
               mb-3

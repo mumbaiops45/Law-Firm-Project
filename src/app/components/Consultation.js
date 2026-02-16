@@ -456,7 +456,6 @@ export default function Consultation() {
             p-10
             rounded-lg
             border border-[#C9A24D]/20
-            shadow-[0_0_50px_rgba(0,0,0,0.6)]
             hover:shadow-[0_0_60px_rgba(201,162,77,0.15)]
             transition duration-500
           "
