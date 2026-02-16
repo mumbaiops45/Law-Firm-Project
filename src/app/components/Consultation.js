@@ -208,7 +208,8 @@
 
 
 //   return (
-//     <section className="py-20 px-6 bg-[#F5F5F5]">
+//       <section className="py-20 px-6 bg-white">
+
 
 //       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14">
 
@@ -218,7 +219,8 @@
 //           initial="hidden"
 //           whileInView="visible"
 //           viewport={{ once: true }}
-//           className="bg-[#0B1C2D] p-10 rounded-md shadow-md"
+//           className="bg-black p-10 rounded-md shadow-[0_0_40px_rgba(0,0,0,0.6)] border border-[#C9A24D]/20"
+
 //         >
 
 //           <h2 className="text-3xl font-serif font-semibold text-[#C9A24D] mb-8">
@@ -385,12 +387,315 @@
 
 
 
-import React from 'react'
 
-const Consultation = () => {
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+
+export default function Consultation() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    practiceArea: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
+  const practiceAreas = [
+    "Corporate & Commercial Law",
+    "Civil Litigation",
+    "Criminal Defense & Prosecution",
+    "Family & Divorce Law",
+    "Property & Real Estate Law",
+    "Legal Advisory & Compliance",
+    "NRI Legal Services",
+    "Consumer Protection Law",
+  ];
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7 }
+    },
+  };
+
   return (
-    <div>Consultation</div>
-  )
-}
+    <section className="py-24 px-6 bg-white">
 
-export default Consultation
+      {/* <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start"> */}
+        <div className="
+  relative z-20 max-w-7xl mx-auto w-full
+  px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+  grid grid-cols-1 md:grid-cols-2 gap-12 items-center
+">
+
+        {/* LEFT — CONSULTATION FORM */}
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="
+            bg-black
+            p-10
+            rounded-lg
+            border border-[#C9A24D]/20
+            shadow-[0_0_50px_rgba(0,0,0,0.6)]
+            hover:shadow-[0_0_60px_rgba(201,162,77,0.15)]
+            transition duration-500
+          "
+        >
+
+          <h2 className="text-3xl font-serif font-semibold text-[#C9A24D] mb-8">
+            Request a Consultation
+          </h2>
+
+          <form onSubmit={handleSubmit} className="space-y-5">
+
+            {/* Name */}
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="
+                w-full px-4 py-3
+                bg-black
+                border border-gray-800
+                rounded-md
+                text-white
+                placeholder-gray-500
+                focus:outline-none
+                focus:border-[#C9A24D]
+                focus:shadow-[0_0_12px_rgba(201,162,77,0.4)]
+                transition duration-300
+              "
+            />
+
+            {/* Phone */}
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              className="
+                w-full px-4 py-3
+                bg-black
+                border border-gray-800
+                rounded-md
+                text-white
+                placeholder-gray-500
+                focus:outline-none
+                focus:border-[#C9A24D]
+                focus:shadow-[0_0_12px_rgba(201,162,77,0.4)]
+                transition duration-300
+              "
+            />
+
+            {/* Email */}
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="
+                w-full px-4 py-3
+                bg-black
+                border border-gray-800
+                rounded-md
+                text-white
+                placeholder-gray-500
+                focus:outline-none
+                focus:border-[#C9A24D]
+                focus:shadow-[0_0_12px_rgba(201,162,77,0.4)]
+                transition duration-300
+              "
+            />
+
+            {/* Practice Area */}
+            <select
+              name="practiceArea"
+              value={formData.practiceArea}
+              onChange={handleChange}
+              required
+              className="
+                w-full px-4 py-3
+                bg-black
+                border border-gray-800
+                rounded-md
+                text-white
+                focus:outline-none
+                focus:border-[#C9A24D]
+                focus:shadow-[0_0_12px_rgba(201,162,77,0.4)]
+                transition duration-300
+              "
+            >
+              <option value="">Select Practice Area</option>
+
+              {practiceAreas.map((area, index) => (
+                <option key={index} value={area}>
+                  {area}
+                </option>
+              ))}
+
+            </select>
+
+            {/* Message */}
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="
+                w-full px-4 py-3
+                bg-black
+                border border-gray-800
+                rounded-md
+                text-white
+                placeholder-gray-500
+                focus:outline-none
+                focus:border-[#C9A24D]
+                focus:shadow-[0_0_12px_rgba(201,162,77,0.4)]
+                transition duration-300
+              "
+            ></textarea>
+
+
+            {/* BUTTON */}
+            <button
+              type="submit"
+              className="
+                relative
+                w-full
+                py-3
+                rounded-md
+                font-semibold
+                text-black
+                overflow-hidden
+                group
+                transition-all
+                duration-500
+                hover:-translate-y-1
+                hover:scale-[1.02]
+              "
+            >
+
+              {/* Animated Gradient */}
+              <span className="
+                absolute inset-0
+                bg-gradient-to-r
+                from-[#C9A24D]
+                via-[#E5C06B]
+                to-[#C9A24D]
+                bg-[length:200%_200%]
+                animate-[gradientMove_4s_linear_infinite]
+              "></span>
+
+              {/* Glow */}
+              <span className="
+                absolute inset-0
+                opacity-0
+                group-hover:opacity-100
+                bg-white/20
+                blur-xl
+                transition duration-500
+              "></span>
+
+              <span className="relative z-10 tracking-wide">
+                Request Consultation
+              </span>
+
+            </button>
+
+          </form>
+
+        </motion.div>
+
+
+
+        {/* RIGHT — OFFICE DETAILS */}
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+
+          <h2 className="text-3xl font-serif font-semibold text-black mb-6">
+            Office Details
+          </h2>
+
+
+          <div className="space-y-4 text-gray-700 mb-8">
+
+            <p>
+              <span className="font-semibold text-black">Address:</span><br />
+              S Jain Attorneys<br />
+              Mumbai, Maharashtra, India
+            </p>
+
+            <p>
+              <span className="font-semibold text-black">Phone:</span><br />
+              +91 98765 43210
+            </p>
+
+            <p>
+              <span className="font-semibold text-black">Email:</span><br />
+              contact@sjainattorneys.com
+            </p>
+
+          </div>
+
+
+          {/* MAP */}
+          <div className="
+            w-full h-72
+            rounded-lg
+            overflow-hidden
+            border border-[#C9A24D]/30
+            shadow-md
+            hover:shadow-[0_0_25px_rgba(201,162,77,0.3)]
+            transition duration-500
+          ">
+
+            <iframe
+              src="https://maps.google.com/maps?q=Mumbai%20Maharashtra&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+            ></iframe>
+
+          </div>
+
+        </motion.div>
+
+      </div>
+
+    </section>
+  );
+}

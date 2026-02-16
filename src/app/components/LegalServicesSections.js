@@ -188,9 +188,9 @@ export default function LegalServicesSections() {
 
   return (
 
-    <div className="bg-[#111111] py-20 px-6">
+    <div className="bg-[#111111]">
 
-      <div className="max-w-7xl mx-auto space-y-24">
+  <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28 ">
 
 
         {/* ================= Scope of Services ================= */}
@@ -244,7 +244,7 @@ export default function LegalServicesSections() {
 
         <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
 
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white text-center mb-3">
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white text-center mb-3 mt-5">
             Our Approach
           </h2>
 
@@ -297,7 +297,7 @@ export default function LegalServicesSections() {
 
         <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
 
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white text-center mb-3">
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white text-center mb-3 mt-5">
             Who Can Benefit
           </h2>
 

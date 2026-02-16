@@ -232,7 +232,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
-  const images = ["/laws.jpg", "/laws2.jpg", "/laws5.jpg"];
+  const images = ["/laws1.jpg", "/laws2.jpg", "/laws4.jpg"];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -263,7 +263,12 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/60 z-10"></div>
 
       {/* Main container */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+      {/* <div className="relative z-20 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full"> */}
+<div className="
+  relative z-20 max-w-7xl mx-auto w-full
+  px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+  grid grid-cols-1 md:grid-cols-2 gap-12 items-center
+">
 
         {/* Left Column */}
         <div>
@@ -278,20 +283,44 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-
+            {/* 
             <Link
               href="/contact"
               className="px-8 py-3 bg-[#C9A24D] hover:bg-[#A67C2E] text-black font-semibold rounded-md transition"
             >
               Schedule a Consultation
-            </Link>
-
-
+            </Link> */}
             <Link
+    href="/contact"
+    className="relative px-8 py-3 font-semibold text-black rounded-md overflow-hidden group transition-all duration-500 transform hover:-translate-y-1 hover:scale-105"
+  >
+    {/* Animated Gradient Background */}
+    <span className="absolute inset-0 bg-gradient-to-r from-[#C9A24D] via-[#E5C06B] to-[#C9A24D] bg-[length:200%_200%] animate-[gradientMove_4s_ease_infinite]"></span>
+
+    {/* Glow Effect */}
+    <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-white/20 blur-xl transition duration-500"></span>
+
+    {/* Text */}
+    <span className="relative z-10 tracking-wide">
+      Schedule a Consultation
+    </span>
+  </Link>
+
+
+            {/* <Link
               href="/#practice"
               className="px-8 py-3 border border-[#C9A24D] text-[#C9A24D] hover:bg-[#C9A24D] hover:text-black font-semibold rounded-md transition"
             >
               View Practice Areas
+            </Link> */}
+            <Link
+              href="/#practice"
+              className="relative px-8 py-3 font-semibold text-[#C9A24D] rounded-md border border-[#C9A24D] overflow-hidden group transition-all duration-500"
+            >
+              <span className="absolute inset-0 bg-[#C9A24D] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></span>
+              <span className="relative z-10 group-hover:text-black transition duration-300 tracking-wide">
+                View Practice Areas
+              </span>
             </Link>
 
           </div>

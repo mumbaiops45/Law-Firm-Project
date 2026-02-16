@@ -164,7 +164,16 @@ export default function PracticeAreas() {
 
   return (
 
-    <section className="bg-[#F4F4F4] py-20 px-6 mt-9">
+    // <section className="bg-[#F4F4F4] py-20 px-6 mt-9">
+    <section
+  className="
+    bg-[#F4F4F4]
+    mt-9
+    py-16 sm:py-20 md:py-24 lg:py-28
+    px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+  "
+>
+
 
       {/* Section Title */}
       <motion.div

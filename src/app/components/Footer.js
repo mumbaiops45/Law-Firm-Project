@@ -264,7 +264,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0B1C2D] text-white">
+    <footer className="bg-[#080808] text-white">
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-4 gap-10">

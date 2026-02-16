@@ -62,31 +62,32 @@ export default function Index() {
       <section id="hero">
         <HeroSection />
       </section>
+      <section id="about">
+        <AboutFirm />
+      </section>
+      <ServiceOverview />
 
       <section id="practice">
         <PracticeAreas />
       </section>
 
-      <section id="about">
-        <AboutFirm />
-      </section>
+
 
       <section id="team">
         <WhyChooseUs />
       </section>
+      <LegalServicesSections />
 
-      <section id="blog">
-        <Testimonials/>
-      </section>
 
+
+
+      <Testimonials />
+
+      <FAQsSection />
       <section id="contact">
-        <Consultation/>
+        <Consultation />
       </section>
-
-      <ServiceOverview/>
-      <LegalServicesSections/>
-      <FAQsSection/>
-      <Footer/>
+      <Footer />
 
     </main>
   );

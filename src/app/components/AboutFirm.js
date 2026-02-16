@@ -70,7 +70,7 @@
 
 import Image from "next/image";
 import laws2 from "../../../public/laws2.jpg";
-import founder from "../../../public/founder.jpg"
+import founder1 from "../../../public/founder1.jpg"
 import { motion } from "framer-motion";
 
 export default function AboutFirm() {
@@ -90,9 +90,15 @@ export default function AboutFirm() {
 
   return (
 
-    <section className="py-20 px-6 bg-[#111111] text-white">
+    <section className="py-20 px-6 bg-[#111111] text-white mt-5">
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      {/* <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center "> */}
+      <div className="
+  relative z-20 max-w-7xl mx-auto w-full
+  px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+  grid grid-cols-1 md:grid-cols-2 gap-12 items-center
+">
+
 
         {/* LEFT — TEXT */}
         <motion.div
@@ -173,7 +179,7 @@ export default function AboutFirm() {
           }}
         >
           <Image
-            src={founder}
+            src={founder1}
             alt="S Jain Attorneys Founder"
             fill
             priority

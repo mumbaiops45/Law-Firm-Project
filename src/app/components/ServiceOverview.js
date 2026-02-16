@@ -223,7 +223,13 @@ export default function ServiceOverview() {
   return (
     <section className="py-20 px-6 bg-white">
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-10 gap-10 items-start">
+      {/* <div className="max-w-7xl mx-auto grid md:grid-cols-10 gap-10 items-start"> */}
+      <div className="
+  relative z-20 max-w-7xl mx-auto w-full
+  px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+  grid grid-cols-1 md:grid-cols-2 gap-12 items-center
+">
+
 
         {/* ================= Left Content (70%) ================= */}
         <motion.div
@@ -235,7 +241,7 @@ export default function ServiceOverview() {
         >
 
           {/* Section Title */}
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#0B1C2D] mb-6">
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#0B1C2D] text-center mb-12">
             Overview
           </h2>
 

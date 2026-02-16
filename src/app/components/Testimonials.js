@@ -258,7 +258,16 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 px-6 bg-[#111111]">
+    // <section className="py-20 px-6 bg-[#111111]">
+    <section
+  className="
+    bg-[#090909]
+   
+    py-16 sm:py-20 md:py-24 lg:py-6
+    px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+  "
+>
+
 
       {/* Section Title */}
       <div className="text-center mb-14">

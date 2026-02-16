@@ -141,7 +141,15 @@ export default function FAQsSection({ serviceName = "Corporate Law" }) {
 
   return (
 
-    <section className="bg-[#F5F5F5] py-20 px-6">
+    // <section className="bg-[#F5F5F5] py-20 px-6">
+    <section
+  className="
+    bg-[#F5F5F5]
+    py-16 sm:py-20 md:py-24 lg:py-28
+    px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+  "
+>
+
 
       <div className="max-w-4xl mx-auto">
 
