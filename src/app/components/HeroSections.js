@@ -225,7 +225,200 @@
 
 
 
-"use client";
+  // "use client";
+
+  // import { useState, useEffect } from "react";
+  // import Image from "next/image";
+  // import Link from "next/link";
+
+  // export default function HeroSection() {
+  //   const images = ["/laws1.jpg", "/laws2.jpg", "/laws4.jpg"];
+  //   const [current, setCurrent] = useState(0);
+
+  //   useEffect(() => {
+  //     const interval = setInterval(() => {
+  //       setCurrent((prev) => (prev + 1) % images.length);
+  //     }, 5000);
+  //     return () => clearInterval(interval);
+  //   }, []);
+
+  //   return (
+  //     <section className="relative w-full min-h-screen flex items-center overflow-hidden">
+
+  //       {/* Background slideshow */}
+  //       {images.map((img, index) => (
+  //         <Image
+  //           key={index}
+  //           src={img}
+  //           alt="Legal Background"
+  //           fill
+  //           sizes="100vw"
+  //           priority
+  //           className={`object-cover absolute inset-0 transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
+  //             }`}
+  //         />
+  //       ))}
+
+  //       {/* Dark overlay */}
+  //       <div className="absolute inset-0 bg-black/60 z-10"></div>
+
+  //       {/* Main container */}
+  //       {/* <div className="relative z-20 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full"> */}
+  //       <div className="
+  //   relative z-20 max-w-7xl mx-auto w-full
+  //   px-6 sm:px-8 md:px-12 lg:px-16 xl:px-15
+  //   grid grid-cols-1 md:grid-cols-2 gap-12 items-center
+  // ">
+
+  //         {/* Left Column */}
+  //         <div>
+
+  //           {/* <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-semibold text-white leading-tight mb-6">
+  //             Trusted Legal Counsel with Integrity & Experience
+  //           </h1> */}
+  //           <h1 className="
+  //   text-4xl sm:text-5xl md:text-6xl lg:text-[64px]
+  //   font-medium
+  //   leading-[1.1]
+  //   tracking-tight
+  //   text-white
+  //   mb-6
+  // ">
+  //             Trusted Legal Counsel with Integrity & Experience
+  //           </h1>
+
+  //           <p className="text-base md:text-lg
+  // text-gray-300
+  // leading-relaxed
+  // max-w-xl
+  // mb-10
+  // ">
+  //             Corporate, Civil & Advisory Legal Services <br />
+  //             Tailored for Individuals & Businesses in India
+  //           </p>
+
+  //           {/* <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"> */}
+  //           <div className="flex flex-col sm:flex-row gap-5">
+
+  //             {/* 
+  //             <Link
+  //               href="/contact"
+  //               className="px-8 py-3 bg-[#C9A24D] hover:bg-[#A67C2E] text-black font-semibold rounded-md transition"
+  //             >
+  //               Schedule a Consultation
+  //             </Link> */}
+  //             <Link
+  //               href="/contact"
+  //               className="relative w-full sm:w-auto text-center px-6 py-3 sm:px-8 font-semibold text-black rounded-md overflow-hidden group transition-all duration-500 transform hover:-translate-y-1 hover:scale-105"
+  //             >
+  //               <span className="absolute inset-0 bg-gradient-to-r from-[#C9A24D] via-[#E5C06B] to-[#C9A24D] bg-[length:200%_200%] animate-[gradientMove_4s_ease_infinite]"></span>
+
+  //               <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-white/20 blur-xl transition duration-500"></span>
+
+  //               <span className="relative z-10 tracking-wide">
+  //                 Schedule a Consultation
+  //               </span>
+  //             </Link>
+
+
+
+  //             {/* <Link
+  //               href="/#practice"
+  //               className="px-8 py-3 border border-[#C9A24D] text-[#C9A24D] hover:bg-[#C9A24D] hover:text-black font-semibold rounded-md transition"
+  //             >
+  //               View Practice Areas
+  //             </Link> */}
+  //             <Link
+  //               href="/#practice"
+  //               className="relative w-full sm:w-auto text-center px-6 py-3 sm:px-8 font-semibold text-[#C9A24D] rounded-md border border-[#C9A24D] overflow-hidden group transition-all duration-500"
+  //             >
+  //               <span className="absolute inset-0 bg-[#C9A24D] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></span>
+
+  //               <span className="relative z-10 group-hover:text-black transition duration-300 tracking-wide">
+  //                 View Practice Areas
+  //               </span>
+  //             </Link>
+
+  //           </div>
+
+  //         </div>
+
+  //         {/* Right Column */}
+  //         {/* <div className="relative  w-full h-[500px] hidden md:block ">
+
+  //           <Image
+  //             src="/closeupjustice.jpg"
+  //             alt="Legal books and courtroom"
+  //             fill
+  //             sizes="50vw"
+  //             className="object-cover bject-center  rounded-lg shadow-xl"
+  //           />
+
+  //         </div> */}
+  //         {/* <div className="hidden md:flex justify-center"> */}
+  //         <div className="hidden md:flex justify-end">
+
+
+  //           <div className="relative w-full max-w-lg aspect-[7/5]">
+
+  //             <Image
+  //               src="/closeupjustice.jpg"
+  //               alt="Legal books and courtroom"
+  //               fill
+  //               sizes="(max-width: 768px) 100vw, 50vw"
+  //               className="object-cover object-center rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.6)]
+  // "
+  //               priority
+  //             />
+
+  //           </div>
+
+  //         </div>
+
+  //       </div>
+
+  //       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
+
+  //         <button
+  //           onClick={() => {
+  //             const section = document.getElementById("practice");
+  //             if (section) {
+  //               section.scrollIntoView({ behavior: "smooth" });
+  //             }
+  //           }}
+  //           className="flex flex-col items-center cursor-pointer group animate-bounce"
+  //         >
+
+  //           <span className="text-white text-sm tracking-widest mb-2 opacity-80 group-hover:text-[#C9A24D] transition">
+  //             SCROLL
+  //           </span>
+
+  //           <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center group-hover:border-[#C9A24D] transition">
+
+  //             <svg
+  //               xmlns="http://www.w3.org/2000/svg"
+  //               className="w-5 h-5 text-white group-hover:text-[#C9A24D] transition"
+  //               fill="none"
+  //               viewBox="0 0 24 24"
+  //               stroke="currentColor"
+  //               strokeWidth={2}
+  //             >
+  //               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+  //             </svg>
+
+  //           </div>
+
+  //         </button>
+
+  //       </div>
+
+
+  //     </section>
+  //   );
+  // }
+
+
+  "use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -242,6 +435,9 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
 
+  const container =
+    "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
+
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-hidden">
 
@@ -254,129 +450,110 @@ export default function HeroSection() {
           fill
           sizes="100vw"
           priority
-          className={`object-cover absolute inset-0 transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
-            }`}
+          className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
+            index === current ? "opacity-100" : "opacity-0"
+          }`}
         />
       ))}
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
 
-      {/* Main container */}
-      {/* <div className="relative z-20 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full"> */}
-      <div className="
-  relative z-20 max-w-7xl mx-auto w-full
-  px-6 sm:px-8 md:px-12 lg:px-16 xl:px-15
-  grid grid-cols-1 md:grid-cols-2 gap-12 items-center
-">
+      {/* Main Content */}
+      <div className={`relative z-20 w-full ${container}`}>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
-        {/* Left Column */}
-        <div>
+          {/* LEFT CONTENT */}
+          <div className="text-center md:text-left">
 
-          {/* <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-semibold text-white leading-tight mb-6">
-            Trusted Legal Counsel with Integrity & Experience
-          </h1> */}
-          <h1 className="
-  text-4xl sm:text-5xl md:text-6xl lg:text-[64px]
-   font-medium
-  leading-[1.1]
-  tracking-tight
-  text-white
-  mb-6
-">
-            Trusted Legal Counsel with Integrity & Experience
-          </h1>
-
-          <p className="text-base md:text-lg
-text-gray-300
-leading-relaxed
-max-w-xl
-mb-10
-">
-            Corporate, Civil & Advisory Legal Services <br />
-            Tailored for Individuals & Businesses in India
-          </p>
-
-          {/* <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"> */}
-          <div className="flex flex-col sm:flex-row gap-5">
-
-            {/* 
-            <Link
-              href="/contact"
-              className="px-8 py-3 bg-[#C9A24D] hover:bg-[#A67C2E] text-black font-semibold rounded-md transition"
+            <h1
+              className="
+              text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+              font-semibold
+              leading-[1.2]
+              text-white
+              mb-6
+            "
             >
-              Schedule a Consultation
-            </Link> */}
-            <Link
-              href="/contact"
-              className="relative w-full sm:w-auto text-center px-6 py-3 sm:px-8 font-semibold text-black rounded-md overflow-hidden group transition-all duration-500 transform hover:-translate-y-1 hover:scale-105"
+              Trusted Legal Counsel with Integrity & Experience
+            </h1>
+
+            <p
+              className="
+              text-sm sm:text-base md:text-lg
+              text-gray-300
+              leading-relaxed
+              mb-10
+              max-w-xl
+              mx-auto md:mx-0
+            "
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-[#C9A24D] via-[#E5C06B] to-[#C9A24D] bg-[length:200%_200%] animate-[gradientMove_4s_ease_infinite]"></span>
+              Corporate, Civil & Advisory Legal Services <br />
+              Tailored for Individuals & Businesses in India
+            </p>
 
-              <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-white/20 blur-xl transition duration-500"></span>
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
 
-              <span className="relative z-10 tracking-wide">
+              <Link
+                href="/contact"
+                className="
+                w-full sm:w-auto
+                text-center
+                px-6 sm:px-8
+                py-3
+                font-medium
+                text-black
+                rounded-md
+                bg-[#C9A24D]
+                hover:bg-[#B08D3C]
+                transition
+              "
+              >
                 Schedule a Consultation
-              </span>
-            </Link>
+              </Link>
 
-
-
-            {/* <Link
-              href="/#practice"
-              className="px-8 py-3 border border-[#C9A24D] text-[#C9A24D] hover:bg-[#C9A24D] hover:text-black font-semibold rounded-md transition"
-            >
-              View Practice Areas
-            </Link> */}
-            <Link
-              href="/#practice"
-              className="relative w-full sm:w-auto text-center px-6 py-3 sm:px-8 font-semibold text-[#C9A24D] rounded-md border border-[#C9A24D] overflow-hidden group transition-all duration-500"
-            >
-              <span className="absolute inset-0 bg-[#C9A24D] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></span>
-
-              <span className="relative z-10 group-hover:text-black transition duration-300 tracking-wide">
+              <Link
+                href="/#practice"
+                className="
+                w-full sm:w-auto
+                text-center
+                px-6 sm:px-8
+                py-3
+                font-medium
+                text-[#C9A24D]
+                rounded-md
+                border border-[#C9A24D]
+                hover:bg-[#C9A24D]
+                hover:text-black
+                transition
+              "
+              >
                 View Practice Areas
-              </span>
-            </Link>
+              </Link>
+
+            </div>
 
           </div>
 
-        </div>
-
-        {/* Right Column */}
-        {/* <div className="relative  w-full h-[500px] hidden md:block ">
-
-          <Image
-            src="/closeupjustice.jpg"
-            alt="Legal books and courtroom"
-            fill
-            sizes="50vw"
-            className="object-cover bject-center  rounded-lg shadow-xl"
-          />
-
-        </div> */}
-        {/* <div className="hidden md:flex justify-center"> */}
-        <div className="hidden md:flex justify-end">
-
-
-          <div className="relative w-full max-w-lg aspect-[7/5]">
-
-            <Image
-              src="/closeupjustice.jpg"
-              alt="Legal books and courtroom"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-center rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.6)]
-"
-              priority
-            />
-
+          {/* RIGHT IMAGE (Desktop Only) */}
+          <div className="hidden md:flex justify-end">
+            <div className="relative w-full max-w-lg aspect-[7/5]">
+              <Image
+                src="/closeupjustice.jpg"
+                alt="Legal books and courtroom"
+                fill
+                sizes="50vw"
+                className="object-cover object-center rounded-xl shadow-2xl"
+                priority
+              />
+            </div>
           </div>
 
         </div>
-
       </div>
 
+      {/* Scroll Button */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30">
 
         <button
@@ -389,15 +566,14 @@ mb-10
           className="flex flex-col items-center cursor-pointer group animate-bounce"
         >
 
-          <span className="text-white text-sm tracking-widest mb-2 opacity-80 group-hover:text-[#C9A24D] transition">
+          <span className="text-white text-xs tracking-widest mb-2 opacity-80 group-hover:text-[#C9A24D] transition">
             SCROLL
           </span>
 
-          <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center group-hover:border-[#C9A24D] transition">
-
+          <div className="w-9 h-9 border border-white rounded-full flex items-center justify-center group-hover:border-[#C9A24D] transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5 text-white group-hover:text-[#C9A24D] transition"
+              className="w-4 h-4 text-white group-hover:text-[#C9A24D] transition"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -405,13 +581,11 @@ mb-10
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
-
           </div>
 
         </button>
 
       </div>
-
 
     </section>
   );
