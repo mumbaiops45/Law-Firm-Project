@@ -294,26 +294,70 @@ export default function Navbar() {
     `}
         >
 
-          <div className="flex flex-col mt-24 space-y-6 px-8 text-white">
+         <div className="flex flex-col mt-24 space-y-6 px-8 text-white">
 
-            {links.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="text-lg border-b border-gray-700 pb-3 hover:text-[#C9A24D]"
-              >
-                {link.name}
-              </Link>
-            ))}
+  {links.map((link, index) => (
+    <Link
+      key={index}
+      href={link.href}
+      onClick={() => setIsOpen(false)}
+      className="text-lg border-b border-gray-700 pb-3 hover:text-[#C9A24D]"
+    >
+      {link.name}
+    </Link>
+  ))}
 
-            <button
-              className="mt-6 px-6 py-3 bg-[#C9A24D] text-black font-semibold rounded"
-            >
-              Book Consultation
-            </button>
+  {/* ===== SERVICES ACCORDION ===== */}
+  <div className="border-b border-gray-700 pb-3">
 
-          </div>
+    <button
+      onClick={() => setServicesOpen(!servicesOpen)}
+      className="flex items-center justify-between w-full text-lg hover:text-[#C9A24D]"
+    >
+      Services
+      <ChevronDown
+        size={18}
+        className={`transition-transform duration-300 ${
+          servicesOpen ? "rotate-180 text-[#C9A24D]" : ""
+        }`}
+      />
+    </button>
+
+    <div
+      className={`overflow-hidden transition-all duration-300 ${
+        servicesOpen ? "max-h-[1000px] mt-4" : "max-h-0"
+      }`}
+    >
+      <div className="flex flex-col gap-3 pl-4">
+
+        {services.map((service, index) => (
+          <Link
+            key={index}
+            href={service.href}
+            onClick={() => {
+              setIsOpen(false);
+              setServicesOpen(false);
+            }}
+            className="text-sm text-gray-300 hover:text-[#C9A24D]"
+          >
+            {service.name}
+          </Link>
+        ))}
+
+      </div>
+    </div>
+
+  </div>
+
+  {/* CTA BUTTON */}
+  <button
+    className="mt-6 px-6 py-3 bg-[#C9A24D] text-black font-semibold rounded"
+  >
+    Book Consultation
+  </button>
+
+</div>
+
 
         </div>
 
