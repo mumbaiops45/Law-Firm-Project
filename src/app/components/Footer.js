@@ -240,6 +240,149 @@
 // }
 
 
+// "use client";
+
+// import Link from "next/link";
+
+// export default function Footer() {
+
+//   const practiceAreas = [
+//     "Corporate & Commercial Law",
+//     "Civil Litigation",
+//     "Criminal Defense & Prosecution",
+//     "Family & Divorce Law",
+//     "Property & Real Estate Law",
+//     "Legal Advisory & Regulatory Compliance",
+//   ];
+
+//   const quickLinks = [
+//     { name: "Home", href: "/" },
+//     { name: "About Us", href: "/about" },
+//     { name: "Our Team", href: "/team" },
+//     { name: "Insights", href: "/#blog" },
+//     { name: "Contact", href: "/contact" },
+//   ];
+
+//   return (
+//     <footer className="bg-[#0c0c0c] text-white">
+
+//       {/* Main Content */}
+//       <div className="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-4 gap-10">
+
+//         {/* Firm Overview */}
+//         <div>
+//           <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
+//             S Jain Attorneys
+//           </h3>
+
+//           <p className="text-gray-300 text-sm leading-relaxed">
+//             Trusted legal counsel providing corporate, civil, and advisory
+//             services across India. We deliver ethical, strategic, and
+//             result-driven legal solutions tailored to client needs.
+//           </p>
+//         </div>
+
+
+//         {/* Practice Areas */}
+//         <div>
+//           <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
+//             Practice Areas
+//           </h3>
+
+//           <ul className="space-y-2 text-sm">
+//             {practiceAreas.map((area, i) => (
+//               <li key={i}>
+//                 <Link
+//                   href="#"
+//                   className="text-gray-300 hover:text-[#C9A24D] transition duration-300"
+//                 >
+//                   {area}
+//                 </Link>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+
+
+//         {/* Quick Links */}
+//         <div>
+//           <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
+//             Quick Links
+//           </h3>
+
+//           <ul className="space-y-2 text-sm">
+//             {quickLinks.map((link, i) => (
+//               <li key={i}>
+//                 <Link
+//                   href={link.href}
+//                   className="text-gray-300 hover:text-[#C9A24D] transition duration-300"
+//                 >
+//                   {link.name}
+//                 </Link>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+
+
+//         {/* Contact Info */}
+//         <div>
+//           <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
+//             Contact Info
+//           </h3>
+
+//           <p className="text-gray-300 text-sm mb-2">
+//             Mumbai, Maharashtra, India
+//           </p>
+
+//           <p className="text-gray-300 text-sm mb-2">
+//             Phone: +91 98765 43210
+//           </p>
+
+//           <p className="text-gray-300 text-sm mb-2">
+//             Email: contact@sjainattorneys.com
+//           </p>
+
+//         </div>
+
+//       </div>
+
+
+//       {/* Bottom Bar */}
+//       <div className="border-t border-[#060606]">
+
+//         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+
+//           <p className="text-gray-400 text-sm">
+//             © 2026 S Jain Attorneys. All Rights Reserved.
+//           </p>
+
+//           <div className="flex gap-6 mt-3 md:mt-0">
+
+//             <Link
+//               href="#"
+//               className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
+//             >
+//               Privacy Policy
+//             </Link>
+
+//             <Link
+//               href="#"
+//               className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
+//             >
+//               Terms of Use
+//             </Link>
+
+//           </div>
+
+//         </div>
+
+//       </div>
+
+//     </footer>
+//   );
+// }
+
 "use client";
 
 import Link from "next/link";
@@ -263,85 +406,117 @@ export default function Footer() {
     { name: "Contact", href: "/contact" },
   ];
 
+  // SAME GLOBAL CONTAINER
+  const container =
+    "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
+
+  // SAME HEADING STYLE (scaled for footer)
+  const footerHeading =
+    "text-lg font-semibold text-[#C9A24D] mb-5";
+
   return (
     <footer className="bg-[#0c0c0c] text-white">
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-4 gap-10">
+      <div className={`${container} py-16 sm:py-20`}>
 
-        {/* Firm Overview */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
-            S Jain Attorneys
-          </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
-          <p className="text-gray-300 text-sm leading-relaxed">
-            Trusted legal counsel providing corporate, civil, and advisory
-            services across India. We deliver ethical, strategic, and
-            result-driven legal solutions tailored to client needs.
-          </p>
-        </div>
+          {/* Firm Overview */}
+          <div>
 
+            <h3 className={footerHeading}>
+              S Jain Attorneys
+            </h3>
 
-        {/* Practice Areas */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
-            Practice Areas
-          </h3>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Trusted legal counsel providing corporate, civil, and advisory
+              services across India. We deliver ethical, strategic, and
+              result-driven legal solutions tailored to client needs.
+            </p>
 
-          <ul className="space-y-2 text-sm">
-            {practiceAreas.map((area, i) => (
-              <li key={i}>
-                <Link
-                  href="#"
-                  className="text-gray-300 hover:text-[#C9A24D] transition duration-300"
-                >
-                  {area}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+          </div>
 
 
-        {/* Quick Links */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
-            Quick Links
-          </h3>
+          {/* Practice Areas */}
+          <div>
 
-          <ul className="space-y-2 text-sm">
-            {quickLinks.map((link, i) => (
-              <li key={i}>
-                <Link
-                  href={link.href}
-                  className="text-gray-300 hover:text-[#C9A24D] transition duration-300"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+            <h3 className={footerHeading}>
+              Practice Areas
+            </h3>
+
+            <ul className="space-y-3 text-sm">
+
+              {practiceAreas.map((area, i) => (
+                <li key={i}>
+                  <Link
+                    href="#"
+                    className="text-gray-300 hover:text-[#C9A24D] transition duration-300"
+                  >
+                    {area}
+                  </Link>
+                </li>
+              ))}
+
+            </ul>
+
+          </div>
 
 
-        {/* Contact Info */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4 text-[#C9A24D]">
-            Contact Info
-          </h3>
+          {/* Quick Links */}
+          <div>
 
-          <p className="text-gray-300 text-sm mb-2">
-            Mumbai, Maharashtra, India
-          </p>
+            <h3 className={footerHeading}>
+              Quick Links
+            </h3>
 
-          <p className="text-gray-300 text-sm mb-2">
-            Phone: +91 98765 43210
-          </p>
+            <ul className="space-y-3 text-sm">
 
-          <p className="text-gray-300 text-sm mb-2">
-            Email: contact@sjainattorneys.com
-          </p>
+              {quickLinks.map((link, i) => (
+                <li key={i}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-[#C9A24D] transition duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+
+            </ul>
+
+          </div>
+
+
+          {/* Contact Info */}
+          {/* Contact Info */}
+          <div>
+
+            <h3 className={footerHeading}>
+              Contact Info
+            </h3>
+
+            <div className="space-y-3 text-gray-300 text-sm">
+
+              <p>
+                S Jain Attorneys<br />
+                #42, 3rd Floor, Prestige Meridian II<br />
+                MG Road, Bengaluru, Karnataka 560001<br />
+                India
+              </p>
+
+              <p>
+                Phone: +91 98765 43210
+              </p>
+
+              <p>
+                Email: contact@sjainattorneys.com
+              </p>
+
+            </div>
+
+          </div>
+
 
         </div>
 
@@ -349,29 +524,33 @@ export default function Footer() {
 
 
       {/* Bottom Bar */}
-      <div className="border-t border-[#060606]">
+      <div className="border-t border-[#1a1a1a]">
 
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+        <div className={`${container} py-6`}>
 
-          <p className="text-gray-400 text-sm">
-            © 2026 S Jain Attorneys. All Rights Reserved.
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
 
-          <div className="flex gap-6 mt-3 md:mt-0">
+            <p className="text-gray-400 text-sm">
+              © 2026 S Jain Attorneys. All Rights Reserved.
+            </p>
 
-            <Link
-              href="#"
-              className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
-            >
-              Privacy Policy
-            </Link>
+            <div className="flex gap-6">
 
-            <Link
-              href="#"
-              className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
-            >
-              Terms of Use
-            </Link>
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
+              >
+                Privacy Policy
+              </Link>
+
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
+              >
+                Terms of Use
+              </Link>
+
+            </div>
 
           </div>
 

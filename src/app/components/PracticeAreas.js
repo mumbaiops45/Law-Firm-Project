@@ -90,6 +90,233 @@
 // }
 
 
+// "use client";
+
+// import {
+//   FaBuilding,
+//   FaGavel,
+//   FaShieldAlt,
+//   FaUsers,
+//   FaHome,
+//   FaFileContract,
+// } from "react-icons/fa";
+
+// import { motion } from "framer-motion";
+
+// export default function PracticeAreas() {
+
+//   const services = [
+//     {
+//       name: "Corporate & Commercial Law",
+//       description: "Legal solutions for businesses and corporate entities.",
+//       icon: <FaBuilding size={26} />,
+//     },
+//     {
+//       name: "Civil Litigation",
+//       description: "Representation in civil disputes and legal proceedings.",
+//       icon: <FaGavel size={26} />,
+//     },
+//     {
+//       name: "Criminal Defense",
+//       description: "Strong defense and legal protection in criminal cases.",
+//       icon: <FaShieldAlt size={26} />,
+//     },
+//     {
+//       name: "Family & Divorce Law",
+//       description: "Professional handling of family and matrimonial matters.",
+//       icon: <FaUsers size={26} />,
+//     },
+//     {
+//       name: "Property & Real Estate",
+//       description: "Legal assistance in property and real estate matters.",
+//       icon: <FaHome size={26} />,
+//     },
+//     {
+//       name: "Legal Advisory",
+//       description: "Reliable advisory and regulatory legal services.",
+//       icon: <FaFileContract size={26} />,
+//     },
+//   ];
+
+//   /* Container animation */
+//   const container = {
+//     hidden: {},
+//     visible: {
+//       transition: {
+//         staggerChildren: 0.15,
+//       },
+//     },
+//   };
+
+//   /* Card animation */
+//   const card = {
+//     hidden: {
+//       opacity: 0,
+//       y: 40,
+//     },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: {
+//         duration: 0.6,
+//         ease: "easeOut",
+//       },
+//     },
+//   };
+
+//   return (
+
+//     // <section className="bg-[#F4F4F4] py-20 px-6 mt-9">
+//     <section
+//   className="
+//     bg-[#F4F4F4]
+//     mt-9
+//     py-16 sm:py-20 md:py-24 lg:py-28
+//     px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+//   "
+// >
+
+
+//       {/* Section Title */}
+//       <motion.div
+//         initial={{ opacity: 0, y: 20 }}
+//         whileInView={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.6 }}
+//         viewport={{ once: true }}
+//         className="text-center mb-16"
+//       >
+
+//         <h2 className="text-3xl md:text-4xl font-sans font-semibold text-[#111111]">
+//           Our Practice Areas
+//         </h2>
+
+//         {/* Gold divider */}
+//         <div className="w-20 h-[2px] bg-[#C9A24D] mx-auto mt-4"></div>
+
+//       </motion.div>
+
+
+//       {/* Grid */}
+//       <motion.div
+//         variants={container}
+//         initial="hidden"
+//         whileInView="visible"
+//         viewport={{ once: true }}
+//         className="
+//           max-w-6xl
+//           mx-auto
+//           grid
+//           grid-cols-1
+//           sm:grid-cols-2
+//           md:grid-cols-3
+//           gap-8
+//         "
+//       >
+
+//         {services.map((service, index) => (
+
+//           <motion.div
+//             key={index}
+//             variants={card}
+
+//             whileHover={{
+//               y: -10,
+//               scale: 1.03,
+//             }}
+
+//             className="
+//               bg-white
+//               border
+//               border-gray-200
+//               rounded-md
+//               p-10
+//               text-center
+//               hover:border-[#C9A24D]
+//               hover:shadow-lg
+//               transition-all
+//               duration-300
+//               cursor-pointer
+//               group
+//             "
+//           >
+
+//             {/* Icon */}
+//             <div className="flex justify-center mb-6">
+
+//               <div className="
+//                 w-14
+//                 h-14
+//                 flex
+//                 items-center
+//                 justify-center
+//                 border
+//                 border-[#C9A24D]
+//                 rounded-full
+//                 text-[#C9A24D]
+//                 group-hover:bg-[#C9A24D]
+//                 group-hover:text-white
+//                 transition-all
+//                 duration-300
+//               ">
+//                 {service.icon}
+//               </div>
+
+//             </div>
+
+
+//             {/* Title */}
+//             <h3 className="
+//               text-xl
+//               font-sans
+//               font-semibold
+//               text-[#111111]
+//               mb-3
+//               group-hover:text-[#C9A24D]
+//               transition-colors
+//               duration-300
+//             ">
+//               {service.name}
+//             </h3>
+
+
+//             {/* Description */}
+//             <p className="
+//               text-gray-600
+//               text-sm
+//               leading-relaxed
+//               mb-4
+//               max-w-[260px]
+//               mx-auto
+//             ">
+//               {service.description}
+//             </p>
+
+
+//             {/* Learn More */}
+//             <span className="
+//               text-[#C9A24D]
+//               text-sm
+//               font-medium
+//               hover:underline
+//               transition
+//             ">
+//               Learn More →
+//             </span>
+
+//           </motion.div>
+
+//         ))}
+
+//       </motion.div>
+
+//     </section>
+
+//   );
+
+// }
+
+
+
 "use client";
 
 import {
@@ -104,6 +331,8 @@ import {
 import { motion } from "framer-motion";
 
 export default function PracticeAreas() {
+
+  /* ================= SERVICES ================= */
 
   const services = [
     {
@@ -138,7 +367,9 @@ export default function PracticeAreas() {
     },
   ];
 
-  /* Container animation */
+
+  /* ================= ANIMATION ================= */
+
   const container = {
     hidden: {},
     visible: {
@@ -148,7 +379,6 @@ export default function PracticeAreas() {
     },
   };
 
-  /* Card animation */
   const card = {
     hidden: {
       opacity: 0,
@@ -164,153 +394,363 @@ export default function PracticeAreas() {
     },
   };
 
+
+  /* ================= COMPONENT ================= */
+
   return (
 
-    // <section className="bg-[#F4F4F4] py-20 px-6 mt-9">
-    <section
-  className="
-    bg-[#F4F4F4]
-    mt-9
-    py-16 sm:py-20 md:py-24 lg:py-28
-    px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
-  "
->
+    <section className="bg-[#F4F4F4] py-24 px-6">
+
+      {/* CONTAINER */}
+      <div className="max-w-7xl mx-auto">
 
 
-      {/* Section Title */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
+        {/* ================= HEADING ================= */}
 
-        <h2 className="text-3xl md:text-4xl font-sans font-semibold text-[#111111]">
-          Our Practice Areas
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
 
-        {/* Gold divider */}
-        <div className="w-20 h-[2px] bg-[#C9A24D] mx-auto mt-4"></div>
+          <h2 className="
+            text-4xl
+            md:text-5xl
+            font-semibold
+            text-[#111111]
+          ">
+            Our Practice Areas
+          </h2>
 
-      </motion.div>
+          <div className="w-20 h-[3px] bg-[#C9A24D] mx-auto mt-6"></div>
+
+        </motion.div>
 
 
-      {/* Grid */}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="
-          max-w-6xl
-          mx-auto
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          md:grid-cols-3
-          gap-8
-        "
-      >
 
-        {services.map((service, index) => (
+        {/* ================= GRID ================= */}
 
-          <motion.div
-            key={index}
-            variants={card}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            md:grid-cols-3
+            gap-10
+          "
+        >
 
-            whileHover={{
-              y: -10,
-              scale: 1.03,
-            }}
+          {services.map((service, index) => (
 
-            className="
-              bg-white
-              border
-              border-gray-200
-              rounded-md
-              p-10
-              text-center
-              hover:border-[#C9A24D]
-              hover:shadow-lg
-              transition-all
-              duration-300
-              cursor-pointer
-              group
-            "
-          >
+            <motion.div
+              key={index}
+              variants={card}
 
-            {/* Icon */}
-            <div className="flex justify-center mb-6">
+              whileHover={{
+                y: -10,
+                scale: 1.03,
+              }}
 
-              <div className="
-                w-14
-                h-14
-                flex
-                items-center
-                justify-center
-                border
-                border-[#C9A24D]
-                rounded-full
-                text-[#C9A24D]
-                group-hover:bg-[#C9A24D]
-                group-hover:text-white
-                transition-all
-                duration-300
-              ">
-                {service.icon}
+              className="
+                bg-white
+                border border-gray-200
+                rounded-lg
+                p-10
+                text-center
+                hover:border-[#C9A24D]
+                hover:shadow-xl
+                transition-all duration-300
+                cursor-pointer
+                group
+              "
+            >
+
+
+              {/* ICON */}
+
+              <div className="flex justify-center mb-6">
+
+                <div className="
+                  w-14 h-14
+                  flex items-center justify-center
+                  border border-[#C9A24D]
+                  rounded-full
+                  text-[#C9A24D]
+                  group-hover:bg-[#C9A24D]
+                  group-hover:text-white
+                  transition-all duration-300
+                ">
+                  {service.icon}
+                </div>
+
               </div>
 
-            </div>
 
 
-            {/* Title */}
-            <h3 className="
-              text-xl
-              font-sans
-              font-semibold
-              text-[#111111]
-              mb-3
-              group-hover:text-[#C9A24D]
-              transition-colors
-              duration-300
-            ">
-              {service.name}
-            </h3>
+              {/* TITLE */}
+
+              <h3 className="
+                text-xl
+                font-semibold
+                text-[#111111]
+                mb-3
+                group-hover:text-[#C9A24D]
+                transition-colors duration-300
+              ">
+                {service.name}
+              </h3>
 
 
-            {/* Description */}
-            <p className="
-              text-gray-600
-              text-sm
-              leading-relaxed
-              mb-4
-              max-w-[260px]
-              mx-auto
-            ">
-              {service.description}
-            </p>
+
+              {/* DESCRIPTION */}
+
+              <p className="
+                text-gray-600
+                text-base
+                leading-relaxed
+                mb-4
+                max-w-[260px]
+                mx-auto
+              ">
+                {service.description}
+              </p>
 
 
-            {/* Learn More */}
-            <span className="
-              text-[#C9A24D]
-              text-sm
-              font-medium
-              hover:underline
-              transition
-            ">
-              Learn More →
-            </span>
 
-          </motion.div>
+              {/* LINK */}
 
-        ))}
+              <span className="
+                text-[#C9A24D]
+                text-sm
+                font-medium
+                hover:underline
+                transition
+              ">
+                Learn More →
+              </span>
 
-      </motion.div>
+
+            </motion.div>
+
+          ))}
+
+        </motion.div>
+
+
+      </div>
 
     </section>
 
   );
 
 }
+
+
+
+
+
+
+
+// "use client";
+
+// import {
+//   FaBuilding,
+//   FaGavel,
+//   FaShieldAlt,
+//   FaUsers,
+//   FaHome,
+//   FaFileContract,
+// } from "react-icons/fa";
+
+// import { motion } from "framer-motion";
+
+// export default function PracticeAreas() {
+
+//   const services = [
+//     {
+//       name: "Corporate & Commercial Law",
+//       description: "Legal solutions for businesses and corporate entities.",
+//       icon: <FaBuilding size={24} />,
+//     },
+//     {
+//       name: "Civil Litigation",
+//       description: "Representation in civil disputes and legal proceedings.",
+//       icon: <FaGavel size={24} />,
+//     },
+//     {
+//       name: "Criminal Defense",
+//       description: "Strong defense and legal protection in criminal cases.",
+//       icon: <FaShieldAlt size={24} />,
+//     },
+//     {
+//       name: "Family & Divorce Law",
+//       description: "Professional handling of family and matrimonial matters.",
+//       icon: <FaUsers size={24} />,
+//     },
+//     {
+//       name: "Property & Real Estate",
+//       description: "Legal assistance in property and real estate matters.",
+//       icon: <FaHome size={24} />,
+//     },
+//     {
+//       name: "Legal Advisory",
+//       description: "Reliable advisory and regulatory legal services.",
+//       icon: <FaFileContract size={24} />,
+//     },
+//   ];
+
+//   const container = {
+//     hidden: {},
+//     visible: {
+//       transition: {
+//         staggerChildren: 0.15,
+//       },
+//     },
+//   };
+
+//   const card = {
+//     hidden: { opacity: 0, y: 40 },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: { duration: 0.6, ease: "easeOut" },
+//     },
+//   };
+
+//   return (
+
+//     <section className="
+//       bg-[#F4F4F4]
+//       py-16 md:py-20 lg:py-24
+     
+//     ">
+
+//       <div className="
+//         max-w-7xl mx-auto
+//         px-6 sm:px-8 md:px-12 lg:px-16
+//       ">
+
+//         {/* ================= SECTION TITLE ================= */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 20 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6 }}
+//           viewport={{ once: true }}
+//           className="text-center mb-14"
+//         >
+
+//           <div className="w-20 h-[2px] bg-[#C9A24D] mx-auto mb-6"></div>
+
+//           <h2 className="
+//             text-3xl sm:text-4xl lg:text-5xl
+//             font-semibold
+//             text-[#111111]
+//             leading-tight
+//           ">
+//             Our Practice Areas
+//           </h2>
+
+//         </motion.div>
+
+
+//         {/* ================= GRID ================= */}
+//         <motion.div
+//           variants={container}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           className="
+//             grid
+//             grid-cols-1
+//             sm:grid-cols-2
+//             lg:grid-cols-3
+//             gap-8
+//           "
+//         >
+
+//           {services.map((service, index) => (
+
+//             <motion.div
+//               key={index}
+//               variants={card}
+//               whileHover={{ y: -8 }}
+//               className="
+//                 bg-white
+//                 border border-gray-200
+//                 rounded-xl
+//                 p-8
+//                 text-center
+//                 transition-all duration-300
+//                 hover:shadow-xl
+//                 hover:border-[#C9A24D]
+//                 group
+//               "
+//             >
+
+//               {/* Icon */}
+//               <div className="flex justify-center mb-6">
+//                 <div className="
+//                   w-14 h-14
+//                   flex items-center justify-center
+//                   rounded-full
+//                   border border-[#C9A24D]
+//                   text-[#C9A24D]
+//                   transition-all duration-300
+//                   group-hover:bg-[#C9A24D]
+//                   group-hover:text-white
+//                 ">
+//                   {service.icon}
+//                 </div>
+//               </div>
+
+
+//               {/* Title */}
+//               <h3 className="
+//                 text-lg md:text-xl
+//                 font-semibold
+//                 text-[#111111]
+//                 mb-4
+//                 transition-colors duration-300
+//                 group-hover:text-[#C9A24D]
+//               ">
+//                 {service.name}
+//               </h3>
+
+
+//               {/* Description */}
+//               <p className="
+//                 text-gray-600
+//                 text-base
+//                 leading-relaxed
+//                 mb-5
+//               ">
+//                 {service.description}
+//               </p>
+
+
+//               {/* Link */}
+//               <span className="
+//                 text-[#C9A24D]
+//                 text-sm
+//                 font-medium
+//                 tracking-wide
+//               ">
+//                 Learn More →
+//               </span>
+
+//             </motion.div>
+
+//           ))}
+
+//         </motion.div>
+
+//       </div>
+//     </section>
+//   );
+// }

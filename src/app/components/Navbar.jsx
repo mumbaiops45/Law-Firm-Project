@@ -69,7 +69,9 @@ export default function Navbar() {
 
       <nav className="absolute top-0 left-0 w-full z-50 bg-transparent">
 
-        <div className="max-w-7xl mx-auto px-9 py-8 flex items-center justify-between">
+        {/* <div className="max-w-7xl mx-auto px-9 py-8 flex items-center justify-between"> */}
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+
 
           {/* LOGO */}
           {/* <div className="text-2xl font-serif font-semibold tracking-wide">
@@ -82,11 +84,15 @@ export default function Navbar() {
             <img
               src="/logo.png"   // place logo inside public folder
               alt="S Jain Attorneys Logo"
-              className="h-20 w-24 object-contain"
+              // className="h-20 w-24 object-contain"
+              className="h-14 w-auto object-contain"
+
             />
 
             {/* Brand Name */}
-            <div className="text-2xl font-serif font-semibold tracking-wide">
+            {/* <div className="text-2xl font-serif font-semibold tracking-wide"> */}
+            <div className="text-xl md:text-2xl  font-medium tracking-wide">
+
               <span className="text-white">S Jain</span>
               <span className="text-[#C9A24D] ml-1">Attorneys</span>
             </div>
@@ -100,7 +106,9 @@ export default function Navbar() {
               <li key={index}>
                 <Link
                   href={link.href}
-                  className="hover:text-[#C9A24D] transition duration-300"
+                  // className="hover:text-[#C9A24D] transition duration-300"
+                  className="relative hover:text-[#C9A24D] transition duration-300 after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A24D] after:transition-all after:duration-300 hover:after:w-full"
+
                 >
                   {link.name}
                 </Link>
@@ -153,16 +161,29 @@ export default function Navbar() {
             {/* CTA BUTTON */}
             <li>
               <button
+                // className="
+                //   ml-6
+                //   px-6
+                //   py-2
+                //   bg-[#C9A24D]
+                //   hover:bg-[#A8641E]
+                //   text-black
+                //   font-semibold
+                //   transition duration-300
+                // "
                 className="
-                  ml-6
-                  px-6
-                  py-2
-                  bg-[#C9A24D]
-                  hover:bg-[#A8641E]
-                  text-black
-                  font-semibold
-                  transition duration-300
-                "
+  ml-6
+  px-7
+  py-2.5
+  bg-[#C9A24D]
+  hover:bg-[#B88A2E]
+  text-black
+  font-medium
+  tracking-wide
+  transition-all duration-300
+  hover:shadow-lg hover:shadow-[#C9A24D]/40
+"
+
                 style={{ borderRadius: "5px" }}
               >
                 Book Consultation

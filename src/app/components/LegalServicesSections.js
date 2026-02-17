@@ -94,6 +94,263 @@
 // }
 
 
+// "use client";
+
+// import {
+//   FaFileContract,
+//   FaCheckCircle,
+//   FaUsers,
+//   FaBuilding,
+//   FaGlobe,
+//   FaBalanceScale
+// } from "react-icons/fa";
+
+// import { useEffect, useState } from "react";
+
+// export default function LegalServicesSections() {
+
+//   const [visible, setVisible] = useState(false);
+
+//   useEffect(() => {
+//     setVisible(true);
+//   }, []);
+
+//   // ================= Scope of Services =================
+
+//   const scopeServices = [
+//     "Company incorporation & structuring",
+//     "Contracts & agreements",
+//     "Regulatory compliance",
+//     "Legal due diligence",
+//     "Corporate advisory",
+//   ];
+
+
+//   // ================= Our Legal Process =================
+
+//   const processSteps = [
+//     {
+//       title: "Initial Consultation",
+//       icon: <FaUsers size={26} className="text-[#C9A24D]" />,
+//     },
+//     {
+//       title: "Case Assessment",
+//       icon: <FaCheckCircle size={26} className="text-[#C9A24D]" />,
+//     },
+//     {
+//       title: "Legal Strategy",
+//       icon: <FaBalanceScale size={26} className="text-[#C9A24D]" />,
+//     },
+//     {
+//       title: "Execution & Representation",
+//       icon: <FaFileContract size={26} className="text-[#C9A24D]" />,
+//     },
+//     {
+//       title: "Resolution / Closure",
+//       icon: <FaCheckCircle size={26} className="text-[#C9A24D]" />,
+//     },
+//   ];
+
+
+//   // ================= Who Can Benefit =================
+
+//   const beneficiaries = [
+//     {
+//       name: "Individuals",
+//       icon: <FaUsers size={26} className="text-[#C9A24D]" />,
+//     },
+//     {
+//       name: "Business Owners",
+//       icon: <FaBuilding size={26} className="text-[#C9A24D]" />,
+//     },
+//     {
+//       name: "Corporates / Startups",
+//       icon: <FaFileContract size={26} className="text-[#C9A24D]" />,
+//     },
+//     {
+//       name: "NRIs",
+//       icon: <FaGlobe size={26} className="text-[#C9A24D]" />,
+//     },
+//   ];
+
+
+//   // ================= Animation =================
+
+//   const fadeBase =
+//     "transform transition-all duration-700 ease-out";
+
+//   const fadeHidden =
+//     "opacity-0 translate-y-10";
+
+//   const fadeVisible =
+//     "opacity-100 translate-y-0";
+
+
+//   return (
+
+//     <div className="bg-[#111111]">
+
+//       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28 ">
+
+
+//         {/* ================= Scope of Services ================= */}
+
+//         <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
+
+//           <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-3">
+
+//             Scope of Services
+//           </h2>
+
+//           <div className="w-20 h-2px bg-[#C9A24D] mx-auto mb-12"></div>
+
+
+//           {/* 2 Column Checklist Layout */}
+
+//           <div className="grid md:grid-cols-2 gap-5">
+
+//             {scopeServices.map((service, index) => (
+
+//               <div
+//                 key={index}
+//                 className="
+//                   flex items-start gap-3
+//                   bg-white
+//                   border border-gray-200
+//                   rounded-md
+//                   p-5
+//                   shadow-sm
+//                   hover:shadow-md
+//                   transition
+//                 "
+//               >
+
+//                 <FaCheckCircle className="text-[#C9A24D] mt-1" />
+
+//                 <p className="text-gray-800 text-base">
+//                   {service}
+//                 </p>
+
+//               </div>
+
+//             ))}
+
+//           </div>
+
+//         </section>
+
+
+
+//         {/* ================= Our Legal Process ================= */}
+
+//         <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
+
+//           <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-3 mt-5">
+//             Our Approach
+//           </h2>
+
+//           <div className="w-20 h-2px bg-[#C9A24D] mx-auto mb-12"></div>
+
+
+//           {/* Horizontal Process Cards */}
+
+//           <div className="
+//             grid
+//             md:grid-cols-5
+//             gap-6
+//           ">
+
+//             {processSteps.map((step, index) => (
+
+//               <div
+//                 key={index}
+//                 className="
+//                   bg-white
+//                   border border-gray-200
+//                   rounded-md
+//                   p-6
+//                   text-center
+//                   shadow-sm
+//                   hover:shadow-md
+//                   transition
+//                 "
+//               >
+
+//                 <div className="flex justify-center mb-3">
+//                   {step.icon}
+//                 </div>
+
+//                 <h3 className="text-sm md:text-base font-semibold text-gray-800">
+//                   {step.title}
+//                 </h3>
+
+//               </div>
+
+//             ))}
+
+//           </div>
+
+//         </section>
+
+
+
+//         {/* ================= Who Can Benefit ================= */}
+
+//         <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
+
+//           <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-3 mt-5">
+//             Who Can Benefit
+//           </h2>
+
+//           <div className="w-20 h-2px bg-[#C9A24D] mx-auto mb-12"></div>
+
+
+//           {/* Boxed Cards */}
+
+//           <div className="grid md:grid-cols-4 gap-6">
+
+//             {beneficiaries.map((item, index) => (
+
+//               <div
+//                 key={index}
+//                 className="
+//                   bg-white
+//                   border border-gray-200
+//                   rounded-md
+//                   p-7
+//                   text-center
+//                   shadow-sm
+//                   hover:shadow-md
+//                   transition
+//                 "
+//               >
+
+//                 <div className="flex justify-center mb-4">
+//                   {item.icon}
+//                 </div>
+
+//                 <h3 className="text-base font-semibold text-gray-800">
+//                   {item.name}
+//                 </h3>
+
+//               </div>
+
+//             ))}
+
+//           </div>
+
+//         </section>
+
+
+//       </div>
+
+//     </div>
+
+//   );
+
+// }
+
+
 "use client";
 
 import {
@@ -115,7 +372,22 @@ export default function LegalServicesSections() {
     setVisible(true);
   }, []);
 
-  // ================= Scope of Services =================
+  // ================= GLOBAL STYLES (USE EVERYWHERE) =================
+
+  const container =
+    "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28";
+
+  const sectionTitle =
+    "text-3xl sm:text-4xl lg:text-5xl font-semibold text-white text-center leading-tight";
+
+  const underline =
+    "w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4 mb-14";
+
+  const card =
+    "bg-white border border-gray-200 rounded-md p-6 shadow-sm hover:shadow-md transition duration-300";
+
+
+  // ================= DATA =================
 
   const scopeServices = [
     "Company incorporation & structuring",
@@ -125,109 +397,52 @@ export default function LegalServicesSections() {
     "Corporate advisory",
   ];
 
-
-  // ================= Our Legal Process =================
-
   const processSteps = [
-    {
-      title: "Initial Consultation",
-      icon: <FaUsers size={26} className="text-[#C9A24D]" />,
-    },
-    {
-      title: "Case Assessment",
-      icon: <FaCheckCircle size={26} className="text-[#C9A24D]" />,
-    },
-    {
-      title: "Legal Strategy",
-      icon: <FaBalanceScale size={26} className="text-[#C9A24D]" />,
-    },
-    {
-      title: "Execution & Representation",
-      icon: <FaFileContract size={26} className="text-[#C9A24D]" />,
-    },
-    {
-      title: "Resolution / Closure",
-      icon: <FaCheckCircle size={26} className="text-[#C9A24D]" />,
-    },
+    { title: "Initial Consultation", icon: <FaUsers size={26} className="text-[#C9A24D]" /> },
+    { title: "Case Assessment", icon: <FaCheckCircle size={26} className="text-[#C9A24D]" /> },
+    { title: "Legal Strategy", icon: <FaBalanceScale size={26} className="text-[#C9A24D]" /> },
+    { title: "Execution & Representation", icon: <FaFileContract size={26} className="text-[#C9A24D]" /> },
+    { title: "Resolution / Closure", icon: <FaCheckCircle size={26} className="text-[#C9A24D]" /> },
   ];
-
-
-  // ================= Who Can Benefit =================
 
   const beneficiaries = [
-    {
-      name: "Individuals",
-      icon: <FaUsers size={26} className="text-[#C9A24D]" />,
-    },
-    {
-      name: "Business Owners",
-      icon: <FaBuilding size={26} className="text-[#C9A24D]" />,
-    },
-    {
-      name: "Corporates / Startups",
-      icon: <FaFileContract size={26} className="text-[#C9A24D]" />,
-    },
-    {
-      name: "NRIs",
-      icon: <FaGlobe size={26} className="text-[#C9A24D]" />,
-    },
+    { name: "Individuals", icon: <FaUsers size={26} className="text-[#C9A24D]" /> },
+    { name: "Business Owners", icon: <FaBuilding size={26} className="text-[#C9A24D]" /> },
+    { name: "Corporates / Startups", icon: <FaFileContract size={26} className="text-[#C9A24D]" /> },
+    { name: "NRIs", icon: <FaGlobe size={26} className="text-[#C9A24D]" /> },
   ];
 
-
-  // ================= Animation =================
-
-  const fadeBase =
-    "transform transition-all duration-700 ease-out";
-
-  const fadeHidden =
-    "opacity-0 translate-y-10";
-
-  const fadeVisible =
-    "opacity-100 translate-y-0";
+  const fadeBase = "transform transition-all duration-700 ease-out";
+  const fadeHidden = "opacity-0 translate-y-10";
+  const fadeVisible = "opacity-100 translate-y-0";
 
 
   return (
 
     <div className="bg-[#111111]">
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28 ">
+      <div className={container}>
 
 
         {/* ================= Scope of Services ================= */}
 
         <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
 
-          <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-3">
-
+          <h2 className={sectionTitle}>
             Scope of Services
           </h2>
 
-          <div className="w-20 h-2px bg-[#C9A24D] mx-auto mb-12"></div>
+          <div className={underline}></div>
 
-
-          {/* 2 Column Checklist Layout */}
-
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid md:grid-cols-2 gap-6">
 
             {scopeServices.map((service, index) => (
 
-              <div
-                key={index}
-                className="
-                  flex items-start gap-3
-                  bg-white
-                  border border-gray-200
-                  rounded-md
-                  p-5
-                  shadow-sm
-                  hover:shadow-md
-                  transition
-                "
-              >
+              <div key={index} className={`${card} flex items-start gap-3`}>
 
                 <FaCheckCircle className="text-[#C9A24D] mt-1" />
 
-                <p className="text-gray-800 text-base">
+                <p className="text-gray-800 text-base leading-relaxed">
                   {service}
                 </p>
 
@@ -241,46 +456,27 @@ export default function LegalServicesSections() {
 
 
 
-        {/* ================= Our Legal Process ================= */}
+        {/* ================= Our Approach ================= */}
 
         <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
 
-          <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-3 mt-5">
+          <h2 className={`${sectionTitle} mt-20`}>
             Our Approach
           </h2>
 
-          <div className="w-20 h-2px bg-[#C9A24D] mx-auto mb-12"></div>
+          <div className={underline}></div>
 
-
-          {/* Horizontal Process Cards */}
-
-          <div className="
-            grid
-            md:grid-cols-5
-            gap-6
-          ">
+          <div className="grid md:grid-cols-5 gap-6">
 
             {processSteps.map((step, index) => (
 
-              <div
-                key={index}
-                className="
-                  bg-white
-                  border border-gray-200
-                  rounded-md
-                  p-6
-                  text-center
-                  shadow-sm
-                  hover:shadow-md
-                  transition
-                "
-              >
+              <div key={index} className={`${card} text-center`}>
 
-                <div className="flex justify-center mb-3">
+                <div className="flex justify-center mb-4">
                   {step.icon}
                 </div>
 
-                <h3 className="text-sm md:text-base font-semibold text-gray-800">
+                <h3 className="text-base font-semibold text-gray-800">
                   {step.title}
                 </h3>
 
@@ -298,32 +494,17 @@ export default function LegalServicesSections() {
 
         <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
 
-          <h2 className="text-3xl md:text-4xl font-semibold text-white text-center mb-3 mt-5">
+          <h2 className={`${sectionTitle} mt-20`}>
             Who Can Benefit
           </h2>
 
-          <div className="w-20 h-2px bg-[#C9A24D] mx-auto mb-12"></div>
-
-
-          {/* Boxed Cards */}
+          <div className={underline}></div>
 
           <div className="grid md:grid-cols-4 gap-6">
 
             {beneficiaries.map((item, index) => (
 
-              <div
-                key={index}
-                className="
-                  bg-white
-                  border border-gray-200
-                  rounded-md
-                  p-7
-                  text-center
-                  shadow-sm
-                  hover:shadow-md
-                  transition
-                "
-              >
+              <div key={index} className={`${card} text-center`}>
 
                 <div className="flex justify-center mb-4">
                   {item.icon}
@@ -347,5 +528,4 @@ export default function LegalServicesSections() {
     </div>
 
   );
-
 }

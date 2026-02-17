@@ -257,82 +257,86 @@ export default function Testimonials() {
     },
   };
 
+  // ===== GLOBAL SAME STYLES =====
+
+  const container =
+    "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28";
+
+  const sectionTitle =
+    "text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[#111111] text-center";
+
+  const underline =
+    "w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4 mb-14";
+
+
   return (
-    // <section className="py-20 px-6 bg-[#111111]">
-    <section
-  className="
-    bg-[#f4efef]
-   
-    py-16 sm:py-20 md:py-24 lg:py-6
-    px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
-  "
->
+
+    <section className="bg-[#f4efef]">
+
+      <div className={container}>
+
+        {/* Section Title */}
+        <div className="text-center">
+          <h2 className={sectionTitle}>
+            Client Testimonials
+          </h2>
+          <div className={underline}></div>
+        </div>
 
 
-      {/* Section Title */}
-      <div className="text-center mb-14">
-  <h2 className="text-3xl md:text-4xl font-semibold text-[#0b0b0b]">
-    Client Testimonials
-  </h2>
-  <div className="w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4"></div>
-</div>
+        {/* Testimonials Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
 
+          {testimonials.map((t, index) => (
 
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.15 }}
+              whileHover={{ y: -4 }}
+              className="
+                bg-[#1A1A1A]
+                border border-gray-800
+                rounded-md
+                p-6
+                text-center
+                transition-all duration-300
+                hover:border-[#C9A24D]
+                hover:shadow-md
+              "
+            >
 
-      {/* Testimonials Grid */}
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-        {testimonials.map((t, index) => (
-
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.15 }}
-            whileHover={{ y: -4 }}
-            className="
-              bg-[#1A1A1A]
-              border
-              border-gray-800
-              rounded-md
-              p-8
-              text-center
-              transition-all
-              duration-300
-              hover:border-[#C9A24D]
-            "
-          >
-
-            {/* Quote */}
-            <p className="
-              text-gray-300
-              italic
-              leading-relaxed
-              mb-6
-              text-sm
-            ">
-              “{t.quote}”
-            </p>
-
-
-            {/* Client Name */}
-            <h3 className="text-[#C9A24D] font-semibold text-base">
-              {t.client}
-            </h3>
-
-
-            {/* Practice Area */}
-            {t.practice && (
-              <p className="text-gray-500 text-sm mt-1">
-                {t.practice}
+              {/* Quote */}
+              <p className="
+                text-gray-300
+                italic
+                leading-relaxed
+                mb-6
+                text-base
+              ">
+                “{t.quote}”
               </p>
-            )}
 
-          </motion.div>
+              {/* Client Name */}
+              <h3 className="text-[#C9A24D] font-semibold text-base">
+                {t.client}
+              </h3>
 
-        ))}
+              {/* Practice Area */}
+              {t.practice && (
+                <p className="text-gray-500 text-sm mt-1">
+                  {t.practice}
+                </p>
+              )}
+
+            </motion.div>
+
+          ))}
+
+        </div>
 
       </div>
 

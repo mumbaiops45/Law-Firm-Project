@@ -91,6 +91,126 @@
 // }
 
 
+// "use client";
+
+// import {
+//   FaGavel,
+//   FaBalanceScale,
+//   FaUserSecret,
+//   FaBullseye,
+// } from "react-icons/fa";
+// import { motion } from "framer-motion";
+
+// export default function WhyChooseUs() {
+
+//   const trustCards = [
+//     {
+//       title: "Proven Legal Expertise",
+//       description: "Decades of experience across multiple legal domains.",
+//       icon: <FaGavel size={22} />,
+//     },
+//     {
+//       title: "Ethical Practice",
+//       description: "Committed to honesty, integrity, and professional ethics.",
+//       icon: <FaBalanceScale size={22} />,
+//     },
+//     {
+//       title: "Client Confidentiality",
+//       description: "All matters handled with utmost privacy and discretion.",
+//       icon: <FaUserSecret size={22} />,
+//     },
+//     {
+//       title: "Result-Oriented Approach",
+//       description: "Focused on delivering practical and favorable outcomes.",
+//       icon: <FaBullseye size={22} />,
+//     },
+//   ];
+
+//   const cardVariants = {
+//     hidden: { opacity: 0, y: 30 },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: { duration: 0.6, ease: "easeOut" },
+//     },
+//   };
+
+//   return (
+//     <section className="py-20 px-6 bg-white">
+
+//       {/* Section Title */}
+//       <div className="text-center mb-14">
+//         <h2 className="text-3xl md:text-4xl font-sans font-semibold text-[#111111]">
+
+//           Why Clients Trust Us
+//         </h2>
+//         <div className="w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4"></div>
+//       </div>
+
+//       {/* Cards Grid */}
+//       <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+//         {trustCards.map((card, index) => (
+
+//           <motion.div
+//             key={index}
+//             variants={cardVariants}
+//             initial="hidden"
+//             whileInView="visible"
+//             viewport={{ once: true }}
+//             transition={{ delay: index * 0.1 }}
+//             whileHover={{ y: -6 }}
+//             className="
+//               bg-white
+//               border
+//               border-gray-200
+//               rounded-md
+//               p-8
+//               text-center
+//               hover:shadow-md
+//               transition-all
+//               duration-300
+//             "
+//           >
+
+//             {/* Icon */}
+//             <div className="
+//               w-12
+//               h-12
+//               mx-auto
+//               mb-4
+//               flex
+//               items-center
+//               justify-center
+//               rounded-full
+//               border
+//               border-[#C9A24D]
+//               text-[#C9A24D]
+//             ">
+//               {card.icon}
+//             </div>
+
+//             {/* Title */}
+//             <h3 className="text-lg font-semibold text-[#111111] mb-2">
+//               {card.title}
+//             </h3>
+
+//             {/* One-line Description */}
+//             <p className="text-gray-600 text-sm leading-relaxed">
+//               {card.description}
+//             </p>
+
+//           </motion.div>
+
+//         ))}
+
+//       </div>
+
+//     </section>
+//   );
+// }
+
+
 "use client";
 
 import {
@@ -131,78 +251,83 @@ export default function WhyChooseUs() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6 },
     },
   };
 
   return (
-    <section className="py-20 px-6 bg-white">
 
-      {/* Section Title */}
-      <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-sans font-semibold text-[#111111]">
+    <section className="py-16 md:py-20 lg:py-24 bg-[#F4F4F4] ">
 
-          Why Clients Trust Us
-        </h2>
-        <div className="w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4"></div>
-      </div>
+      {/* SAME CONTAINER AS OTHER SECTIONS */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
 
-      {/* Cards Grid */}
-      <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {/* SECTION HEADING */}
+        <div className="text-center mb-14">
 
-        {trustCards.map((card, index) => (
+    <h2 className="
+  text-3xl sm:text-4xl lg:text-5xl
+  font-semibold
+  text-[#111111]
+  leading-tight
+">
+  Why Clients Trust Us
+</h2>
 
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
-            whileHover={{ y: -6 }}
-            className="
-              bg-white
-              border
-              border-gray-200
-              rounded-md
-              p-8
-              text-center
-              hover:shadow-md
-              transition-all
-              duration-300
-            "
-          >
 
-            {/* Icon */}
-            <div className="
-              w-12
-              h-12
-              mx-auto
-              mb-4
-              flex
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-[#C9A24D]
-              text-[#C9A24D]
-            ">
-              {card.icon}
-            </div>
 
-            {/* Title */}
-            <h3 className="text-lg font-semibold text-[#111111] mb-2">
-              {card.title}
-            </h3>
+          <div className="w-20 h-[2px] bg-[#C9A24D] mx-auto mt-5"></div>
 
-            {/* One-line Description */}
-            <p className="text-gray-600 text-sm leading-relaxed">
-              {card.description}
-            </p>
+        </div>
 
-          </motion.div>
+        {/* CARDS */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-        ))}
+          {trustCards.map((card, index) => (
+
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+              className="
+                bg-white
+                border border-gray-200
+                rounded-lg
+                p-8
+                text-center
+                transition-all duration-300
+                hover:shadow-md
+                hover:border-[#C9A24D]
+              "
+            >
+
+              <div className="
+                w-14 h-14
+                mx-auto mb-6
+                flex items-center justify-center
+                rounded-full
+                border border-[#C9A24D]
+                text-[#C9A24D]
+              ">
+                {card.icon}
+              </div>
+
+              <h3 className="text-lg font-semibold text-[#111111] mb-3">
+                {card.title}
+              </h3>
+
+              <p className="text-gray-600 text-base leading-relaxed">
+                {card.description}
+              </p>
+
+            </motion.div>
+
+          ))}
+
+        </div>
 
       </div>
 

@@ -273,16 +273,33 @@ export default function HeroSection() {
         {/* Left Column */}
         <div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-semibold text-white leading-tight mb-6">
+          {/* <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-semibold text-white leading-tight mb-6">
+            Trusted Legal Counsel with Integrity & Experience
+          </h1> */}
+          <h1 className="
+  text-4xl sm:text-5xl md:text-6xl lg:text-[64px]
+   font-medium
+  leading-[1.1]
+  tracking-tight
+  text-white
+  mb-6
+">
             Trusted Legal Counsel with Integrity & Experience
           </h1>
 
-          <p className="text-lg text-gray-300 mb-8 max-w-xl">
+          <p className="text-base md:text-lg
+text-gray-300
+leading-relaxed
+max-w-xl
+mb-10
+">
             Corporate, Civil & Advisory Legal Services <br />
             Tailored for Individuals & Businesses in India
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          {/* <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"> */}
+          <div className="flex flex-col sm:flex-row gap-5">
+
             {/* 
             <Link
               href="/contact"
@@ -338,22 +355,25 @@ export default function HeroSection() {
           />
 
         </div> */}
-<div className="hidden md:flex justify-center">
+        {/* <div className="hidden md:flex justify-center"> */}
+        <div className="hidden md:flex justify-end">
 
-  <div className="relative w-full max-w-lg aspect-[7/5]">
 
-    <Image
-      src="/closeupjustice.jpg"
-      alt="Legal books and courtroom"
-      fill
-      sizes="(max-width: 768px) 100vw, 50vw"
-      className="object-cover object-center rounded-xl shadow-2xl"
-      priority
-    />
+          <div className="relative w-full max-w-lg aspect-[7/5]">
 
-  </div>
+            <Image
+              src="/closeupjustice.jpg"
+              alt="Legal books and courtroom"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-center rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.6)]
+"
+              priority
+            />
 
-</div>
+          </div>
+
+        </div>
 
       </div>
 

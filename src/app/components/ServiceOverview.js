@@ -313,6 +313,173 @@
 // }
 
 
+// "use client";
+
+// import { motion } from "framer-motion";
+
+// export default function ServiceOverview() {
+
+//   const highlights = [
+//     "Experienced legal counsel",
+//     "End-to-end handling",
+//     "Confidential approach",
+//     "India-focused expertise",
+//   ];
+
+//   const fadeInUp = {
+//     hidden: { opacity: 0, y: 30 },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: { duration: 0.7, ease: "easeOut" },
+//     },
+//   };
+
+//   return (
+
+//     <section className="relative py-24 bg-white overflow-hidden">
+
+//       {/* Background Accent */}
+//       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#F9F6EF] to-transparent"></div>
+
+//       <div className="
+//         relative z-10
+//         max-w-7xl mx-auto
+//         px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
+//         grid grid-cols-1 md:grid-cols-2 gap-16 items-center
+//       ">
+
+
+//         {/* ================= LEFT CONTENT ================= */}
+//         <motion.div
+//           variants={fadeInUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//         >
+
+//           {/* Gold Accent */}
+//           <div className="w-16 h-[3px] bg-[#C9A24D] mb-6"></div>
+
+//           {/* Title */}
+//           <h2 className="
+//             text-3xl md:text-4xl lg:text-5xl
+//             font-sans font-semibold
+//             text-[#0B1C2D]
+//             mb-6
+//             leading-tight
+//           ">
+//             Legal Service Overview
+//           </h2>
+
+//           {/* Paragraphs */}
+//           <p className="text-gray-700 text-lg leading-relaxed mb-6">
+//             Our legal services provide structured and reliable guidance to individuals,
+//             businesses, and organizations. We help clients understand their rights,
+//             fulfill legal obligations, and confidently navigate complex legal processes.
+//           </p>
+
+//           <p className="text-gray-700 text-lg leading-relaxed mb-6">
+//             Whether you are a business owner, startup, corporate entity, or individual,
+//             our team supports you at every stage — from preventive advisory and document
+//             drafting to dispute management and legal representation.
+//           </p>
+
+//           <p className="text-gray-700 text-lg leading-relaxed">
+//             With strong expertise in Indian law, we ensure every matter is handled with
+//             precision, confidentiality, and full legal compliance while protecting your
+//             interests at all times.
+//           </p>
+
+//         </motion.div>
+
+
+
+//         {/* ================= RIGHT HIGHLIGHT CARD ================= */}
+//         <motion.div
+//           variants={fadeInUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           whileHover={{ y: -6 }}
+//           className="
+//             relative
+//             bg-[#0B1C2D]
+//             border border-[#C9A24D]
+//             rounded-xl
+//             shadow-2xl
+//             p-10
+//             text-white
+//             transition-all duration-500
+//           "
+//         >
+
+//           {/* Glow Effect */}
+//           <div className="absolute inset-0 rounded-xl bg-[#C9A24D]/10 blur-xl opacity-30"></div>
+
+//           {/* Content */}
+//           <div className="relative z-10">
+
+//             <h3 className="
+//               text-2xl font-semibold
+//               text-[#C9A24D]
+//               mb-8
+//             ">
+//               Key Highlights
+//             </h3>
+
+//             <ul className="space-y-5">
+
+//               {highlights.map((item, index) => (
+
+//                 <li
+//                   key={index}
+//                   className="flex items-center gap-4 group"
+//                 >
+
+//                   <div className="
+//                     w-7 h-7
+//                     flex items-center justify-center
+//                     rounded-full
+//                     bg-[#C9A24D]
+//                     text-black
+//                     font-bold
+//                     text-sm
+//                     group-hover:scale-110
+//                     transition
+//                   ">
+//                     ✓
+//                   </div>
+
+//                   <span className="
+//                     text-gray-200
+//                     text-base
+//                     group-hover:text-white
+//                     transition
+//                   ">
+//                     {item}
+//                   </span>
+
+//                 </li>
+
+//               ))}
+
+//             </ul>
+
+//           </div>
+
+//         </motion.div>
+
+
+//       </div>
+
+//     </section>
+
+//   );
+
+// }
+
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -327,7 +494,7 @@ export default function ServiceOverview() {
   ];
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
@@ -337,144 +504,166 @@ export default function ServiceOverview() {
 
   return (
 
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="
+      relative
+      py-16 md:py-20 lg:py-24
+      bg-gradient-to-b from-white to-[#F9F6EF]
+     
+      overflow-hidden
+    ">
 
-      {/* Background Accent */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#F9F6EF] to-transparent"></div>
+      {/* Decorative blur */}
+      <div className="absolute top-0 right-0 w-72 h-72 bg-[#C9A24D]/10 blur-3xl rounded-full"></div>
 
+
+      {/* STANDARD CONTAINER (USE THIS EVERYWHERE) */}
       <div className="
         relative z-10
         max-w-7xl mx-auto
-        px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20
-        grid grid-cols-1 md:grid-cols-2 gap-16 items-center
+        px-6 sm:px-8 md:px-12 lg:px-16
       ">
 
-
-        {/* ================= LEFT CONTENT ================= */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-
-          {/* Gold Accent */}
-          <div className="w-16 h-[3px] bg-[#C9A24D] mb-6"></div>
-
-          {/* Title */}
-          <h2 className="
-            text-3xl md:text-4xl lg:text-5xl
-            font-sans font-semibold
-            text-[#0B1C2D]
-            mb-6
-            leading-tight
-          ">
-            Legal Service Overview
-          </h2>
-
-          {/* Paragraphs */}
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Our legal services provide structured and reliable guidance to individuals,
-            businesses, and organizations. We help clients understand their rights,
-            fulfill legal obligations, and confidently navigate complex legal processes.
-          </p>
-
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Whether you are a business owner, startup, corporate entity, or individual,
-            our team supports you at every stage — from preventive advisory and document
-            drafting to dispute management and legal representation.
-          </p>
-
-          <p className="text-gray-700 text-lg leading-relaxed">
-            With strong expertise in Indian law, we ensure every matter is handled with
-            precision, confidentiality, and full legal compliance while protecting your
-            interests at all times.
-          </p>
-
-        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
 
 
+          {/* ================= LEFT CONTENT ================= */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
 
-        {/* ================= RIGHT HIGHLIGHT CARD ================= */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          whileHover={{ y: -6 }}
-          className="
-            relative
-            bg-[#0B1C2D]
-            border border-[#C9A24D]
-            rounded-xl
-            shadow-2xl
-            p-10
-            text-white
-            transition-all duration-500
-          "
-        >
+            {/* Accent line */}
+            <div className="w-20 h-[3px] bg-[#C9A24D] mb-6 rounded-full"></div>
 
-          {/* Glow Effect */}
-          <div className="absolute inset-0 rounded-xl bg-[#C9A24D]/10 blur-xl opacity-30"></div>
-
-          {/* Content */}
-          <div className="relative z-10">
-
-            <h3 className="
-              text-2xl font-semibold
-              text-[#C9A24D]
-              mb-8
+            {/* Title */}
+            <h2 className="
+              text-3xl sm:text-4xl lg:text-5xl
+              font-semibold
+              text-[#0B1C2D]
+              leading-tight
+              mb-6
             ">
-              Key Highlights
-            </h3>
+              Legal Service Overview
+            </h2>
 
-            <ul className="space-y-5">
+            {/* Paragraph */}
+            <p className="
+              text-gray-600
+              text-base md:text-lg
+              leading-relaxed
+              mb-5
+            ">
+              Our legal services provide structured and reliable guidance to individuals,
+              businesses, and organizations. We help clients understand their rights,
+              fulfill legal obligations, and confidently navigate complex legal processes.
+            </p>
 
-              {highlights.map((item, index) => (
+            <p className="
+              text-gray-600
+              text-base md:text-lg
+              leading-relaxed
+              mb-5
+            ">
+              Whether you are a business owner, startup, corporate entity, or individual,
+              our team supports you at every stage — from preventive advisory and document
+              drafting to dispute management and legal representation.
+            </p>
 
-                <li
-                  key={index}
-                  className="flex items-center gap-4 group"
-                >
+            <p className="
+              text-gray-600
+              text-base md:text-lg
+              leading-relaxed
+            ">
+              With strong expertise in Indian law, we ensure every matter is handled with
+              precision, confidentiality, and full legal compliance while protecting your
+              interests at all times.
+            </p>
 
-                  <div className="
-                    w-7 h-7
-                    flex items-center justify-center
-                    rounded-full
-                    bg-[#C9A24D]
-                    text-black
-                    font-bold
-                    text-sm
-                    group-hover:scale-110
-                    transition
-                  ">
-                    ✓
-                  </div>
-
-                  <span className="
-                    text-gray-200
-                    text-base
-                    group-hover:text-white
-                    transition
-                  ">
-                    {item}
-                  </span>
-
-                </li>
-
-              ))}
-
-            </ul>
-
-          </div>
-
-        </motion.div>
+          </motion.div>
 
 
+
+          {/* ================= RIGHT CARD ================= */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ y: -8 }}
+            className="
+              relative
+              bg-[#0B1C2D]
+              rounded-2xl
+              border border-[#C9A24D]/40
+              shadow-xl
+              p-8 md:p-10
+              transition-all duration-500
+              group
+            "
+          >
+
+            {/* Glow */}
+            <div className="absolute inset-0 bg-[#C9A24D]/10 blur-2xl opacity-20 rounded-2xl group-hover:opacity-40 transition"></div>
+
+            <div className="relative z-10">
+
+              <h3 className="
+                text-xl md:text-2xl
+                font-semibold
+                text-[#C9A24D]
+                mb-6
+              ">
+                Key Highlights
+              </h3>
+
+              <ul className="space-y-4">
+
+                {highlights.map((item, index) => (
+
+                  <li
+                    key={index}
+                    className="
+                      flex items-center gap-4
+                      text-gray-300
+                      group-hover:text-white
+                      transition
+                    "
+                  >
+
+                    <div className="
+                      w-7 h-7
+                      flex items-center justify-center
+                      rounded-full
+                      bg-[#C9A24D]
+                      text-black
+                      font-bold
+                      text-sm
+                      transition
+                      group-hover:scale-110
+                    ">
+                      ✓
+                    </div>
+
+                    <span className="text-base md:text-lg">
+                      {item}
+                    </span>
+
+                  </li>
+
+                ))}
+
+              </ul>
+
+            </div>
+
+          </motion.div>
+
+
+        </div>
       </div>
 
     </section>
-
   );
-
 }
