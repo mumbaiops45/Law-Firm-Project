@@ -4,6 +4,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ChevronDown } from "lucide-react";
+
 
 export default function Navbar() {
 
@@ -12,6 +14,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showDisclaimer, setShowDisclaimer] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
 
 
   const links = [
@@ -23,27 +27,66 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
   const services = [
-    "Corporate Law",
-    "Civil Litigation",
-    "Criminal Defense",
-    "Family Law",
-    "Property & Real Estate",
-    "Legal Advisory & Compliance",
+    { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
+    { name: "Civil Litigation", href: "/services/civil-litigation" },
+    { name: "Criminal Defense & Prosecution", href: "/services/criminal-defense-prosecution" },
+    { name: "Family & Divorce Law", href: "/services/family-divorce-law" },
+    { name: "Property & Real Estate Law", href: "/services/property-real-estate-law" },
+    { name: "Legal Advisory & Regulatory Compliance", href: "/services/legal-advisory-regulatory-compliance" },
+    { name: "NRI Legal Services", href: "/services/nri-legal-services" },
+    { name: "Cheque Bounce & Negotiable Instruments Cases", href: "/services/cheque-bounce-ni-cases" },
+    { name: "High Court & Supreme Court Practice", href: "/services/highcourt-supremecourt-practice" },
+    { name: "Consumer Protection Law", href: "/services/consumer-protection-law" },
+    { name: "Mediation, Counselling & ADR", href: "/services/mediation-adr" },
+    { name: "International Private Law", href: "/services/international-private-law" },
   ];
+
+  // const services = [
+  //   "Corporate Law",
+  //   "Civil Litigation",
+  //   "Criminal Defense",
+  //   "Family Law",
+  //   "Property & Real Estate",
+  //   "Legal Advisory & Compliance",
+  // ];
 
   useEffect(() => {
 
-    if (pathname === "/") {
+  if (pathname === "/") {
+
+    const alreadyShown = sessionStorage.getItem("disclaimerShown");
+
+    if (!alreadyShown) {
       setShowDisclaimer(true);
       document.body.style.overflow = "hidden";
-    }
-
-    else {
+    } else {
       setShowDisclaimer(false);
       document.body.style.overflow = "auto";
     }
 
-  }, [pathname]);
+  } else {
+    setShowDisclaimer(false);
+    document.body.style.overflow = "auto";
+  }
+
+}, [pathname]);
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+
+  }, []);
+
 
 
   const handleAccept = () => {
@@ -67,10 +110,25 @@ export default function Navbar() {
 
       {/* ================= NAVBAR ================= */}
 
-      <nav className="absolute top-0 left-0 w-full z-50 bg-transparent">
+      {/* <nav className="absolute top-0 left-0 w-full z-50 bg-transparent"> */}
+      <nav
+        className={`
+    fixed top-0 left-0 w-full z-50
+    transition-all duration-300
+   
+    ${isScrolled
+            ? "bg-black backdrop-blur-md shadow-lg py-3"
+            : "bg-transparent py-5"
+          }
+
+  `}
+      >
+
 
         {/* <div className="max-w-7xl mx-auto px-9 py-8 flex items-center justify-between"> */}
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+        {/* <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between"> */}
+        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
+
 
 
           {/* LOGO */}
@@ -126,7 +184,15 @@ export default function Navbar() {
 
               <button className="hover:text-[#C9A24D] transition duration-300 flex items-center gap-1">
                 Services
-                <span className="text-xs">▼</span>
+                {/* <span className="text-xs">▼</span> */}
+                <ChevronDown
+                  size={16}
+                  className={`
+    transition-transform duration-300
+    ${servicesOpen ? "rotate-180 text-[#C9A24D]" : ""}
+  `}
+                />
+
               </button>
 
               {/* Dropdown */}
@@ -140,7 +206,7 @@ export default function Navbar() {
                 `}
               >
 
-                {services.map((service, index) => (
+                {/* {services.map((service, index) => (
                   <Link
                     key={index}
                     href="/#practice"
@@ -153,7 +219,23 @@ export default function Navbar() {
                   >
                     {service}
                   </Link>
+                ))} */}
+                {services.map((service, index) => (
+                  <Link
+                    key={index}
+                    href={service.href}
+                    className="
+      block px-5 py-3 text-sm text-white
+      hover:bg-[#C9A24D] hover:text-black
+      transition duration-300
+      border-b border-gray-800 last:border-none
+    "
+                    onClick={() => setServicesOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
                 ))}
+
 
               </div>
 
