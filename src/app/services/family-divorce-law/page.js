@@ -281,7 +281,7 @@ export default function FamilyDivorceLawPage() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-semibold text-black mb-6"
             >
-              Why Choose Our Family Lawyers
+              Why Choose Us for Family & Divorce Law
             </motion.h3>
 
 

@@ -11,18 +11,35 @@
 // export default nextConfig;
 
 
+/**
+//  *  @type {import('next').NextConfig} */
+// const nextConfig = {
+//   output:"export",
+//   reactCompiler: true,
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: "https",
+//         hostname: "randomuser.me",
+//       },
+//     ],
+//   },
+// };
+
+// export default nextConfig;
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output:"export",
-  reactCompiler: true,
+  // output: "export",
+
+  // Required for Netlify static hosting
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "randomuser.me",
-      },
-    ],
+    unoptimized: true,
   },
+
+  // Prevents refresh 404 error on Netlify
+  trailingSlash: true,
 };
 
 export default nextConfig;

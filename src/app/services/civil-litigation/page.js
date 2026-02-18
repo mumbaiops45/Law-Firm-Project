@@ -118,10 +118,10 @@ export default function CivilLitigation() {
             "
           >
 
-            <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
+            <div className="rounded-xl overflow-hidden shadow-2xl mt-54">
 
               <Image
-                src="/civil-litigation.jpg"
+                src="/CivilLitigation1.jpg"
                 alt="Civil Litigation"
                 width={1400}
                 height={800}
@@ -279,17 +279,28 @@ export default function CivilLitigation() {
 
             {/* IMAGE */}
 
-            <motion.div variants={fadeUp} className="mb-16">
+           <motion.div
+  variants={fadeUp}
+  className="mb-20 flex justify-center"
+>
+  <div className="
+    w-full max-w-5xl
+    rounded-xl
+    overflow-hidden
+    shadow-2xl
+  ">
 
-              <Image
-                src="/corporatelaw.png"
-                alt="Civil Litigation Legal Services"
-                width={1200}
-                height={600}
-                className="w-full rounded-xl shadow-lg"
-              />
+    <Image
+      src="/civilLitigation2.png"
+      alt="Civil Litigation Legal Services"
+      width={1100}
+      height={500}
+      className="w-full h-[500px] object-cover"
+    />
 
-            </motion.div>
+  </div>
+</motion.div>
+
 
 
 

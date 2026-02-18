@@ -861,7 +861,7 @@ export default function Page() {
 
       {/* ================= PHILOSOPHY ================= */}
 
-      <section className="bg-[#f1ebeb] py-24">
+      {/* <section className="bg-[#f1ebeb] py-24">
 
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
@@ -915,7 +915,97 @@ export default function Page() {
 
         </div>
 
-      </section>
+      </section> */}
+{/* ================= PHILOSOPHY ================= */}
+
+<section className="bg-[#fcfcfc] py-24">
+
+  <div className="max-w-7xl mx-auto px-6">
+
+    {/* Heading */}
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+
+      <div className="h-[3px] w-20 bg-[#C9A24D] mx-auto mb-6"></div>
+
+      <h2 className="text-4xl font-semibold text-black mb-4">
+        Our Philosophy
+      </h2>
+
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        We combine legal expertise, strategic thinking, and client-focused service
+        to deliver trusted and effective legal solutions.
+      </p>
+
+    </motion.div>
+
+
+    {/* Cards */}
+    <motion.div
+      variants={stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="grid md:grid-cols-3 gap-8"
+    >
+
+      {/* Card 1 */}
+      <motion.div
+        variants={fadeUp}
+        className="bg-white p-10 shadow-xl border-t-[3px] border-[#C9A24D]"
+      >
+        <h3 className="text-xl font-semibold mb-4">
+          Integrity
+        </h3>
+
+        <p className="text-gray-600">
+          We uphold the highest ethical standards, ensuring honesty,
+          transparency, and trust in every legal matter.
+        </p>
+      </motion.div>
+
+
+      {/* Card 2 */}
+      <motion.div
+        variants={fadeUp}
+        className="bg-white p-10 shadow-xl border-t-[3px] border-[#C9A24D]"
+      >
+        <h3 className="text-xl font-semibold mb-4">
+          Excellence
+        </h3>
+
+        <p className="text-gray-600">
+          Our team delivers precise, strategic, and effective legal
+          representation tailored to client needs.
+        </p>
+      </motion.div>
+
+
+      {/* Card 3 */}
+      <motion.div
+        variants={fadeUp}
+        className="bg-white p-10 shadow-xl border-t-[3px] border-[#C9A24D]"
+      >
+        <h3 className="text-xl font-semibold mb-4">
+          Client Commitment
+        </h3>
+
+        <p className="text-gray-600">
+          Every client receives personalized attention and dedicated
+          legal support from start to resolution.
+        </p>
+      </motion.div>
+
+    </motion.div>
+
+  </div>
+
+</section>
 
 
 

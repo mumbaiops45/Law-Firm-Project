@@ -18,15 +18,23 @@ export default function Navbar() {
 
 
 
+  // const links = [
+  //   { name: "Home", href: "/#hero" },
+  //   { name: "About Us", href: "/about" },
+  //   // { name: "Practice Areas", href: "/#practice" },
+  //   // { name: "Our Team", href: "/team" },
+  //   //     // { name: "Insights", href: "/#blog" },
+  //   { name: "Contact", href: "/contact" },
+  // ];
   const links = [
-    { name: "Home", href: "/#hero" },
-    { name: "About Us", href: "/about" },
-    // { name: "Practice Areas", href: "/#practice" },
-    // { name: "Our Team", href: "/team" },
-    //     // { name: "Insights", href: "/#blog" },
-    { name: "Contact", href: "/contact" },
-  ];
-  const services = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Our Team", href: "/team" },
+  { name: "Insights", href: "/insights" },
+  { name: "Contact Us", href: "/contact" },
+];
+
+  const practiceAreas = [  
     { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
     { name: "Civil Litigation", href: "/services/civil-litigation" },
     { name: "Criminal Defense & Prosecution", href: "/services/criminal-defense" },
@@ -151,113 +159,69 @@ export default function Navbar() {
           </div>
 
           {/* DESKTOP MENU */}
-          <ul className="hidden md:flex items-center space-x-8 text-sm font-normal text-white">
+          {/* DESKTOP MENU */}
+<ul className="hidden md:flex items-center space-x-8 text-sm font-normal text-white">
 
-            {links.map((link, index) => (
-              <li key={index}>
-                <Link
-                  href={link.href}
-                  // className="hover:text-[#C9A24D] transition duration-300"
-                  className="relative hover:text-[#C9A24D] transition duration-300 after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A24D] after:transition-all after:duration-300 hover:after:w-full"
+  {/* Home and About Us */}
+  {links.slice(0, 2).map((link, index) => (
+    <li key={index}>
+      <Link
+        href={link.href}
+        className="relative hover:text-[#C9A24D] transition duration-300 after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A24D] after:transition-all after:duration-300 hover:after:w-full"
+      >
+        {link.name}
+      </Link>
+    </li>
+  ))}
 
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
+  {/* Practice Areas Dropdown */}
+  <li
+    className="relative"
+    onMouseEnter={() => setServicesOpen(true)}
+    onMouseLeave={() => setServicesOpen(false)}
+  >
+    <button className="hover:text-[#C9A24D] transition duration-300 flex items-center gap-1">
+      Practice Areas
+      <ChevronDown
+        size={16}
+        className={`transition-transform duration-300 ${
+          servicesOpen ? "rotate-180 text-[#C9A24D]" : ""
+        }`}
+      />
+    </button>
 
+    <div
+      className={`absolute top-full left-0 mt-3 w-64 bg-black border border-[#C9A24D]/30 shadow-xl rounded-md transition-all duration-300 ${
+        servicesOpen
+          ? "opacity-100 visible translate-y-0"
+          : "opacity-0 invisible -translate-y-2"
+      }`}
+    >
+      {practiceAreas.map((service, index) => (
+        <Link
+          key={index}
+          href={service.href}
+          className="block px-5 py-3 text-sm text-white hover:bg-[#C9A24D] hover:text-black transition duration-300 border-b border-gray-800 last:border-none"
+        >
+          {service.name}
+        </Link>
+      ))}
+    </div>
+  </li>
 
+  {/* Our Team, Insights, Contact Us */}
+  {links.slice(2).map((link, index) => (
+    <li key={index}>
+      <Link
+        href={link.href}
+        className="relative hover:text-[#C9A24D] transition duration-300 after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-[#C9A24D] after:transition-all after:duration-300 hover:after:w-full"
+      >
+        {link.name}
+      </Link>
+    </li>
+  ))}
 
-            {/* SERVICES DROPDOWN */}
-            <li
-              className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
-
-              <button className="hover:text-[#C9A24D] transition duration-300 flex items-center gap-1">
-                Services
-                {/* <span className="text-xs">▼</span> */}
-                <ChevronDown
-                  size={16}
-                  className={`
-    transition-transform duration-300
-    ${servicesOpen ? "rotate-180 text-[#C9A24D]" : ""}
-  `}
-                />
-
-              </button>
-
-              {/* Dropdown */}
-              <div
-                className={`
-                  absolute top-full left-0 mt-3 w-64
-                  bg-black border border-[#C9A24D]/30
-                  shadow-xl rounded-md
-                  transition-all duration-300
-                  ${servicesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}
-                `}
-              >
-
-                {/* {services.map((service, index) => (
-                  <Link
-                    key={index}
-                    href="/#practice"
-                    className="
-                      block px-5 py-3 text-sm text-white
-                      hover:bg-[#C9A24D] hover:text-black
-                      transition duration-300
-                      border-b border-gray-800 last:border-none
-                    "
-                  >
-                    {service}
-                  </Link>
-                ))} */}
-                {services.map((service, index) => (
-                  <Link
-                    key={index}
-                    href={service.href}
-                    className="
-      block px-5 py-3 text-sm text-white
-      hover:bg-[#C9A24D] hover:text-black
-      transition duration-300
-      border-b border-gray-800 last:border-none
-    "
-                    onClick={() => setServicesOpen(false)}
-                  >
-                    {service.name}
-                  </Link>
-                ))}
-
-
-              </div>
-
-            </li>
-            {/* CTA BUTTON */}
-            <li>
-              <Link href="/contact">
-                <button
-                  className="
-      ml-6
-      px-3
-      py-2.5
-      bg-[#C9A24D]
-      hover:bg-[#B88A2E]
-      text-black
-      font-medium
-      tracking-wide
-      transition-all duration-300
-      hover:shadow-lg hover:shadow-[#C9A24D]/40
-    "
-                  style={{ borderRadius: "8px" }}
-                >
-                  Book Consultation
-                </button>
-              </Link>
-
-            </li>
-
-          </ul>
+</ul>
 
           {/* ✅ MOBILE BUTTON */}
           <button
@@ -315,7 +279,7 @@ export default function Navbar() {
               >
                 <div className="flex flex-col gap-3 pl-4">
 
-                  {services.map((service, index) => (
+                  {practiceAreas.map((service, index) => (
                     <Link
                       key={index}
                       href={service.href}

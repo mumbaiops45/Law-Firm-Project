@@ -259,7 +259,7 @@ export default function InternationalPrivateLawPage() {
             <motion.div variants={fadeUp} className="mb-16">
 
               <Image
-                src="/corporatelaw.png"
+                src="/International-Law1.jpg"
                 alt="International Legal Consultation"
                 width={1200}
                 height={600}

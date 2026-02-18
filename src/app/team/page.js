@@ -2,28 +2,28 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
+import Footer from "../components/Footer";
+import Navbar  from "../components/Navbar";
 
 const teamMembers = [
   {
     name: "Rahul Sharma",
     role: "Founder & AV Director",
-    image: "/founder.jpg",
+    image: "/team1.jpg",
     description:
       "Rahul leads strategic audio-visual integrations for corporate and large-scale infrastructure projects across India.",
   },
   {
     name: "Ankit Verma",
     role: "Audio Engineer",
-    image: "/founder.jpg",
+    image: "/team2.jpeg",
     description:
       "Specialist in high-performance sound system architecture, acoustic optimization, and event installations.",
   },
   {
     name: "Priya Nair",
     role: "Visual Systems Specialist",
-    image: "/founder.jpg",
+    image: "/team1.jpg",
     description:
       "Expert in LED walls, projection mapping, control systems, and enterprise-grade visual experiences.",
   },
@@ -82,7 +82,7 @@ export default function TeamPage() {
               >
 
                 {/* Image */}
-                <div className="relative w-full h-64 overflow-hidden">
+                <div className="relative w-full h-96 overflow-hidden ">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -94,15 +94,15 @@ export default function TeamPage() {
                 {/* Content */}
                 <div className="p-6 text-left">
 
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-white text-center">
                     {member.name}
                   </h3>
 
-                  <p className="text-[#C9A24D] text-sm font-medium mt-1">
+                  <p className="text-[#C9A24D] text-sm font-medium mt-1 text-center">
                     {member.role}
                   </p>
 
-                  <p className="text-gray-400 text-sm mt-4 leading-relaxed">
+                  <p className="text-gray-400 text-sm mt-4 leading-relaxed text-center">
                     {member.description}
                   </p>
 

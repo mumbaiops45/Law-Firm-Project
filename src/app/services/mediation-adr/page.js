@@ -257,14 +257,16 @@ export default function MediationADRPage() {
             <motion.div variants={fadeUp} className="mb-16">
 
               <Image
-                src="/corporatelaw.png"
+                src="/mediation1.jpg"
                 alt="ADR Consultation"
-                width={1200}
-                height={600}
-                className="w-full rounded-xl shadow-lg"
+                width={1400}
+                height={400}
+                className="w-full rounded-2xl shadow-lg"
               />
 
             </motion.div>
+
+            
 
 
 
