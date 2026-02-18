@@ -6,10 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-
-export default function CorporateLaw() {
-
-  /* Animation */
+export default function CriminalDefensePage() {
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -42,15 +39,13 @@ export default function CorporateLaw() {
     }
   };
 
-
   return (
     <>
       <Navbar />
 
       <main className="bg-white overflow-hidden">
 
-
-        {/* ================= HERO SECTION ================= */}
+        {/* ================= HERO ================= */}
 
         <section className="relative bg-[#0B0F14] pt-32 pb-40">
 
@@ -61,18 +56,16 @@ export default function CorporateLaw() {
             className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center"
           >
 
-            {/* Breadcrumb */}
-
             <motion.p
               variants={fadeUp}
-              className="text-gray-400 text-sm mb-6 font-normal"
+              className="text-gray-400 text-sm mb-6"
             >
               Home <span className="mx-2">›</span>
-              <span className="text-[#C9A24D]">Corporate Law</span>
+              <span className="text-[#C9A24D]">
+                Criminal Defense & Prosecution
+              </span>
             </motion.p>
 
-
-            {/* Title */}
 
             <motion.h1
               variants={fadeUp}
@@ -84,12 +77,9 @@ export default function CorporateLaw() {
                 tracking-tight
               "
             >
-              Corporate  &
-              Commercial Law
+              Criminal Defense & Prosecution
             </motion.h1>
 
-
-            {/* Subtitle */}
 
             <motion.p
               variants={fadeUp}
@@ -100,16 +90,16 @@ export default function CorporateLaw() {
                 leading-relaxed
               "
             >
-              Strategic legal advisory for corporate structuring,
-              mergers, acquisitions, compliance, and long-term
-              business success.
+              Expert criminal defense and prosecution services ensuring your
+              rights are protected with strategic legal representation and
+              experienced courtroom advocacy.
             </motion.p>
 
           </motion.div>
 
 
 
-          {/* OVERLAP IMAGE */}
+          {/* FLOATING IMAGE */}
 
           <motion.div
             variants={fadeImage}
@@ -131,8 +121,8 @@ export default function CorporateLaw() {
             <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
 
               <Image
-                src="/consultation.png"
-                alt="Corporate Law Consultation"
+                src="/criminal-law.png"
+                alt="Criminal Defense"
                 width={1400}
                 height={800}
                 className="w-full h-[400px] md:h-[500px] object-cover"
@@ -147,13 +137,13 @@ export default function CorporateLaw() {
 
 
 
-        {/* SPACE */}
+        {/* SPACING */}
 
         <div className="h-40 md:h-60"></div>
 
 
 
-        {/* ================= OVERVIEW SECTION ================= */}
+        {/* ================= OVERVIEW ================= */}
 
         <motion.section
           initial="hidden"
@@ -177,12 +167,11 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-12"
             >
-              Our experienced corporate law team provides strategic legal advisory
-              to businesses ranging from startups to multinational corporations.
-              We assist clients in navigating regulatory frameworks, structuring
-              business entities, and executing complex corporate transactions.
-              Our approach focuses on protecting business interests while enabling
-              sustainable growth and operational efficiency.
+              Criminal law involves defending individuals and organizations
+              accused of criminal offenses while ensuring justice and legal
+              rights are protected. Our experienced criminal lawyers provide
+              strong defense strategies and professional prosecution services
+              across a wide range of criminal matters.
             </motion.p>
 
 
@@ -193,7 +182,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-semibold text-black mb-6"
             >
-              Our Corporate Law Services
+              Our Criminal Defense Services
             </motion.h3>
 
 
@@ -201,8 +190,8 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-10"
             >
-              We offer comprehensive legal services tailored to corporate needs,
-              ensuring compliance, efficiency, and long-term business success.
+              We provide comprehensive criminal law services ensuring strong
+              representation and effective legal protection at every stage.
             </motion.p>
 
 
@@ -214,52 +203,60 @@ export default function CorporateLaw() {
 
               <li>
                 <span className="font-semibold text-black">
-                  Entity Formation and Structuring:
+                  Criminal Trial Representation:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We guide clients in selecting and establishing the optimal
-                  business structure, including private limited companies,
-                  LLPs, and partnerships, aligned with their business goals.
+                  Professional courtroom representation for all criminal cases.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Corporate Governance and Compliance:
+                  Bail & Anticipatory Bail:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We help organizations implement governance policies,
-                  maintain statutory compliance, and ensure transparency
-                  across corporate operations.
+                  Assistance in securing bail and protecting client freedom.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Contract Drafting and Negotiation:
+                  White Collar Crime Defense:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  Our team drafts and reviews shareholder agreements,
-                  partnership agreements, and commercial contracts to
-                  safeguard business interests.
+                  Defense in financial fraud, corruption, and economic offences.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Regulatory Compliance and Risk Management:
+                  FIR Quashing:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We provide proactive compliance strategies and legal
-                  risk assessments to protect your organization from
-                  regulatory exposure.
+                  Legal remedies for wrongful FIR and criminal allegations.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Cyber Crime Defense:
+                </span>
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Defense against cyber fraud, online crime, and digital offenses.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Criminal Appeals:
+                </span>
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Filing appeals and revisions for justice and legal protection.
                 </p>
               </li>
 
@@ -273,7 +270,7 @@ export default function CorporateLaw() {
 
               <Image
                 src="/corporatelaw.png"
-                alt="Corporate Legal Advisory"
+                alt="Criminal Legal Services"
                 width={1200}
                 height={600}
                 className="w-full rounded-xl shadow-lg"
@@ -289,7 +286,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-6"
             >
-              Why Choose Us for Corporate Law Advisory
+              Why Choose Us for Criminal Defense
             </motion.h3>
 
 
@@ -297,12 +294,10 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed"
             >
-              Our firm delivers reliable, strategic, and business-focused legal
-              solutions tailored to corporate clients. With deep industry
-              expertise and a client-centric approach, we ensure every legal
-              strategy supports your business growth, compliance, and operational
-              success. We prioritize clarity, efficiency, and long-term value
-              in every engagement.
+              Our criminal defense team provides strategic, confidential,
+              and professional legal services. We focus on protecting client
+              rights, building strong defense strategies, and achieving the
+              best possible legal outcomes.
             </motion.p>
 
           </div>
@@ -311,7 +306,7 @@ export default function CorporateLaw() {
 
 
 
-        {/* ================= CTA SECTION ================= */}
+        {/* ================= CTA ================= */}
 
         <motion.section
           initial={{ opacity: 0 }}
@@ -334,7 +329,6 @@ export default function CorporateLaw() {
           </div>
 
 
-
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -343,40 +337,33 @@ export default function CorporateLaw() {
           >
 
             <p className="text-[#C9A24D] uppercase tracking-widest text-sm mb-4">
-              Get Expert Legal Support
+              Get Expert Criminal Defense
             </p>
 
 
             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-              Let’s Discuss Your Legal Needs
+              Let’s Discuss Your Case
             </h2>
 
 
             <p className="text-gray-300 text-base md:text-lg mb-10">
-              Our experienced corporate legal team is ready to help you navigate
-              complex legal matters, protect your business, and support your
-              long-term growth.
+              Our experienced criminal lawyers are ready to protect your rights
+              and provide strong legal defense.
             </p>
 
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-              <button className="
-                bg-[#C9A24D]
-                text-black
-                px-8 py-4
-                rounded-lg
-                font-semibold
-                hover:scale-105
-                transition
-              ">
-                Book Consultation
-              </button>
-              </Link>
-
-             
-
-            </div>
+            <Link href="/contact">
+            <button className="
+              bg-[#C9A24D]
+              text-black
+              px-8 py-4
+              rounded-lg
+              font-semibold
+              hover:scale-105
+              transition
+            ">
+              Book Consultation
+            </button>
+            </Link>
 
           </motion.div>
 

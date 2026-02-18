@@ -712,10 +712,10 @@
 
 "use client";
 
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 export default function Page() {
 

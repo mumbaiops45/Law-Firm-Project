@@ -7,9 +7,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 
-export default function CorporateLaw() {
-
-  /* Animation */
+export default function CivilLitigation() {
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -49,8 +47,7 @@ export default function CorporateLaw() {
 
       <main className="bg-white overflow-hidden">
 
-
-        {/* ================= HERO SECTION ================= */}
+        {/* ================= HERO ================= */}
 
         <section className="relative bg-[#0B0F14] pt-32 pb-40">
 
@@ -61,18 +58,14 @@ export default function CorporateLaw() {
             className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center"
           >
 
-            {/* Breadcrumb */}
-
             <motion.p
               variants={fadeUp}
               className="text-gray-400 text-sm mb-6 font-normal"
             >
               Home <span className="mx-2">›</span>
-              <span className="text-[#C9A24D]">Corporate Law</span>
+              <span className="text-[#C9A24D]">Civil Litigation</span>
             </motion.p>
 
-
-            {/* Title */}
 
             <motion.h1
               variants={fadeUp}
@@ -84,12 +77,9 @@ export default function CorporateLaw() {
                 tracking-tight
               "
             >
-              Corporate  &
-              Commercial Law
+              Civil Litigation
             </motion.h1>
 
-
-            {/* Subtitle */}
 
             <motion.p
               variants={fadeUp}
@@ -100,16 +90,16 @@ export default function CorporateLaw() {
                 leading-relaxed
               "
             >
-              Strategic legal advisory for corporate structuring,
-              mergers, acquisitions, compliance, and long-term
-              business success.
+              Professional legal representation in civil disputes,
+              protecting your rights and resolving conflicts through
+              strategic litigation and effective legal solutions.
             </motion.p>
 
           </motion.div>
 
 
 
-          {/* OVERLAP IMAGE */}
+          {/* IMAGE */}
 
           <motion.div
             variants={fadeImage}
@@ -131,8 +121,8 @@ export default function CorporateLaw() {
             <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
 
               <Image
-                src="/consultation.png"
-                alt="Corporate Law Consultation"
+                src="/civil-litigation.jpg"
+                alt="Civil Litigation"
                 width={1400}
                 height={800}
                 className="w-full h-[400px] md:h-[500px] object-cover"
@@ -147,13 +137,13 @@ export default function CorporateLaw() {
 
 
 
-        {/* SPACE */}
+        {/* SPACING */}
 
         <div className="h-40 md:h-60"></div>
 
 
 
-        {/* ================= OVERVIEW SECTION ================= */}
+        {/* ================= OVERVIEW ================= */}
 
         <motion.section
           initial="hidden"
@@ -177,12 +167,11 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-12"
             >
-              Our experienced corporate law team provides strategic legal advisory
-              to businesses ranging from startups to multinational corporations.
-              We assist clients in navigating regulatory frameworks, structuring
-              business entities, and executing complex corporate transactions.
-              Our approach focuses on protecting business interests while enabling
-              sustainable growth and operational efficiency.
+              Civil litigation involves resolving disputes between individuals,
+              businesses, or organizations through negotiation, arbitration,
+              mediation, or court proceedings. Our experienced litigation team
+              provides strong legal representation to protect your rights and
+              achieve favorable outcomes.
             </motion.p>
 
 
@@ -193,7 +182,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-semibold text-black mb-6"
             >
-              Our Corporate Law Services
+              Our Civil Litigation Services
             </motion.h3>
 
 
@@ -201,8 +190,9 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-10"
             >
-              We offer comprehensive legal services tailored to corporate needs,
-              ensuring compliance, efficiency, and long-term business success.
+              We provide comprehensive litigation services to individuals and
+              businesses, ensuring effective dispute resolution and strong
+              courtroom representation.
             </motion.p>
 
 
@@ -214,52 +204,72 @@ export default function CorporateLaw() {
 
               <li>
                 <span className="font-semibold text-black">
-                  Entity Formation and Structuring:
+                  Contract Disputes:
                 </span>
 
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We guide clients in selecting and establishing the optimal
-                  business structure, including private limited companies,
-                  LLPs, and partnerships, aligned with their business goals.
+                  Representation in disputes involving breach of contract,
+                  enforcement, and legal remedies.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Corporate Governance and Compliance:
+                  Property Disputes:
                 </span>
 
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We help organizations implement governance policies,
-                  maintain statutory compliance, and ensure transparency
-                  across corporate operations.
+                  Legal assistance in ownership disputes, possession claims,
+                  and real estate conflicts.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Contract Drafting and Negotiation:
+                  Recovery Suits:
                 </span>
 
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  Our team drafts and reviews shareholder agreements,
-                  partnership agreements, and commercial contracts to
-                  safeguard business interests.
+                  Helping clients recover outstanding payments, debts,
+                  and financial claims legally.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Regulatory Compliance and Risk Management:
+                  Injunctions and Legal Notices:
                 </span>
 
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We provide proactive compliance strategies and legal
-                  risk assessments to protect your organization from
-                  regulatory exposure.
+                  Obtaining court injunctions and issuing legal notices to
+                  protect client interests.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Commercial Litigation:
+                </span>
+
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Handling business disputes, partnership conflicts,
+                  and commercial legal matters.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Arbitration and Dispute Resolution:
+                </span>
+
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Alternative dispute resolution methods for faster and
+                  cost-effective settlements.
                 </p>
               </li>
 
@@ -273,7 +283,7 @@ export default function CorporateLaw() {
 
               <Image
                 src="/corporatelaw.png"
-                alt="Corporate Legal Advisory"
+                alt="Civil Litigation Legal Services"
                 width={1200}
                 height={600}
                 className="w-full rounded-xl shadow-lg"
@@ -289,7 +299,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-6"
             >
-              Why Choose Us for Corporate Law Advisory
+              Why Choose Us for Civil Litigation
             </motion.h3>
 
 
@@ -297,12 +307,11 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed"
             >
-              Our firm delivers reliable, strategic, and business-focused legal
-              solutions tailored to corporate clients. With deep industry
-              expertise and a client-centric approach, we ensure every legal
-              strategy supports your business growth, compliance, and operational
-              success. We prioritize clarity, efficiency, and long-term value
-              in every engagement.
+              Our litigation team provides strategic, professional, and
+              result-oriented legal representation. We focus on protecting
+              client interests, minimizing risk, and achieving favorable
+              legal outcomes through expert courtroom advocacy and
+              efficient dispute resolution.
             </motion.p>
 
           </div>
@@ -311,7 +320,7 @@ export default function CorporateLaw() {
 
 
 
-        {/* ================= CTA SECTION ================= */}
+        {/* ================= CTA ================= */}
 
         <motion.section
           initial={{ opacity: 0 }}
@@ -334,7 +343,6 @@ export default function CorporateLaw() {
           </div>
 
 
-
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -353,31 +361,23 @@ export default function CorporateLaw() {
 
 
             <p className="text-gray-300 text-base md:text-lg mb-10">
-              Our experienced corporate legal team is ready to help you navigate
-              complex legal matters, protect your business, and support your
-              long-term growth.
+              Our experienced civil litigation team is ready to help
+              resolve your legal disputes efficiently and professionally.
             </p>
 
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-              <button className="
-                bg-[#C9A24D]
-                text-black
-                px-8 py-4
-                rounded-lg
-                font-semibold
-                hover:scale-105
-                transition
-              ">
-                Book Consultation
-              </button>
-              </Link>
-
-             
-
-            </div>
-
+            <Link href="/contact">
+            <button className="
+              bg-[#C9A24D]
+              text-black
+              px-8 py-4
+              rounded-lg
+              font-semibold
+              hover:scale-105
+              transition
+            ">
+              Book Consultation
+            </button>
+            </Link>
           </motion.div>
 
         </motion.section>

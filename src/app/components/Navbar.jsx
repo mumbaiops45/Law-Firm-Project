@@ -29,7 +29,7 @@ export default function Navbar() {
   const services = [
     { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
     { name: "Civil Litigation", href: "/services/civil-litigation" },
-    { name: "Criminal Defense & Prosecution", href: "/services/criminal-defense-prosecution" },
+    { name: "Criminal Defense & Prosecution", href: "/services/criminal-defense" },
     { name: "Family & Divorce Law", href: "/services/family-divorce-law" },
     { name: "Property & Real Estate Law", href: "/services/property-real-estate-law" },
     { name: "Legal Advisory & Regulatory Compliance", href: "/services/legal-advisory-regulatory-compliance" },
@@ -41,35 +41,28 @@ export default function Navbar() {
     { name: "International Private Law", href: "/services/international-private-law" },
   ];
 
-  // const services = [
-  //   "Corporate Law",
-  //   "Civil Litigation",
-  //   "Criminal Defense",
-  //   "Family Law",
-  //   "Property & Real Estate",
-  //   "Legal Advisory & Compliance",
-  // ];
+
 
   useEffect(() => {
 
-  if (pathname === "/") {
+    if (pathname === "/") {
 
-    const alreadyShown = sessionStorage.getItem("disclaimerShown");
+      const alreadyShown = sessionStorage.getItem("disclaimerShown");
 
-    if (!alreadyShown) {
-      setShowDisclaimer(true);
-      document.body.style.overflow = "hidden";
+      if (!alreadyShown) {
+        setShowDisclaimer(true);
+        document.body.style.overflow = "hidden";
+      } else {
+        setShowDisclaimer(false);
+        document.body.style.overflow = "auto";
+      }
+
     } else {
       setShowDisclaimer(false);
       document.body.style.overflow = "auto";
     }
 
-  } else {
-    setShowDisclaimer(false);
-    document.body.style.overflow = "auto";
-  }
-
-}, [pathname]);
+  }, [pathname]);
 
   useEffect(() => {
 
@@ -140,7 +133,7 @@ export default function Navbar() {
 
             {/* Logo Image */}
             <img
-              src="/logo.png"   // place logo inside public folder
+              src="/logo2.jpg"   // place logo inside public folder
               alt="S Jain Attorneys Logo"
               // className="h-20 w-24 object-contain"
               className="h-14 w-auto object-contain"
@@ -242,34 +235,26 @@ export default function Navbar() {
             </li>
             {/* CTA BUTTON */}
             <li>
-              <button
-                // className="
-                //   ml-6
-                //   px-6
-                //   py-2
-                //   bg-[#C9A24D]
-                //   hover:bg-[#A8641E]
-                //   text-black
-                //   font-semibold
-                //   transition duration-300
-                // "
-                className="
-  ml-6
-  px-7
-  py-2.5
-  bg-[#C9A24D]
-  hover:bg-[#B88A2E]
-  text-black
-  font-medium
-  tracking-wide
-  transition-all duration-300
-  hover:shadow-lg hover:shadow-[#C9A24D]/40
-"
+              <Link href="/contact">
+                <button
+                  className="
+      ml-6
+      px-3
+      py-2.5
+      bg-[#C9A24D]
+      hover:bg-[#B88A2E]
+      text-black
+      font-medium
+      tracking-wide
+      transition-all duration-300
+      hover:shadow-lg hover:shadow-[#C9A24D]/40
+    "
+                  style={{ borderRadius: "8px" }}
+                >
+                  Book Consultation
+                </button>
+              </Link>
 
-                style={{ borderRadius: "5px" }}
-              >
-                Book Consultation
-              </button>
             </li>
 
           </ul>
@@ -294,69 +279,72 @@ export default function Navbar() {
     `}
         >
 
-         <div className="flex flex-col mt-24 space-y-6 px-8 text-white">
+          {/* <div className="flex flex-col mt-24 space-y-6 px-8 text-white"> */}
+          <div className="flex flex-col mt-24 space-y-6 px-8 text-white overflow-y-auto h-[calc(100vh-100px)]">
 
-  {links.map((link, index) => (
-    <Link
-      key={index}
-      href={link.href}
-      onClick={() => setIsOpen(false)}
-      className="text-lg border-b border-gray-700 pb-3 hover:text-[#C9A24D]"
-    >
-      {link.name}
-    </Link>
-  ))}
 
-  {/* ===== SERVICES ACCORDION ===== */}
-  <div className="border-b border-gray-700 pb-3">
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-lg border-b border-gray-700 pb-3 hover:text-[#C9A24D]"
+              >
+                {link.name}
+              </Link>
+            ))}
 
-    <button
-      onClick={() => setServicesOpen(!servicesOpen)}
-      className="flex items-center justify-between w-full text-lg hover:text-[#C9A24D]"
-    >
-      Services
-      <ChevronDown
-        size={18}
-        className={`transition-transform duration-300 ${
-          servicesOpen ? "rotate-180 text-[#C9A24D]" : ""
-        }`}
-      />
-    </button>
+            {/* ===== SERVICES ACCORDION ===== */}
+            <div className="border-b border-gray-700 pb-3">
 
-    <div
-      className={`overflow-hidden transition-all duration-300 ${
-        servicesOpen ? "max-h-[1000px] mt-4" : "max-h-0"
-      }`}
-    >
-      <div className="flex flex-col gap-3 pl-4">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="flex items-center justify-between w-full text-lg hover:text-[#C9A24D]"
+              >
+                Services
+                <ChevronDown
+                  size={18}
+                  className={`transition-transform duration-300 ${servicesOpen ? "rotate-180 text-[#C9A24D]" : ""
+                    }`}
+                />
+              </button>
 
-        {services.map((service, index) => (
-          <Link
-            key={index}
-            href={service.href}
-            onClick={() => {
-              setIsOpen(false);
-              setServicesOpen(false);
-            }}
-            className="text-sm text-gray-300 hover:text-[#C9A24D]"
-          >
-            {service.name}
-          </Link>
-        ))}
+              <div
+                className={`overflow-hidden transition-all duration-300 ${servicesOpen ? "max-h-[1000px] mt-4" : "max-h-0"
+                  }`}
+              >
+                <div className="flex flex-col gap-3 pl-4">
 
-      </div>
-    </div>
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      href={service.href}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setServicesOpen(false);
+                      }}
+                      className="text-sm text-gray-300 hover:text-[#C9A24D]"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
 
-  </div>
+                </div>
+              </div>
 
-  {/* CTA BUTTON */}
-  <button
-    className="mt-6 px-6 py-3 bg-[#C9A24D] text-black font-semibold rounded"
-  >
-    Book Consultation
-  </button>
+            </div>
 
-</div>
+            {/* CTA BUTTON */}
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <button
+                className="mt-6 px-6 py-3 bg-[#C9A24D] text-black font-semibold rounded w-full"
+              >
+                Book Consultation
+              </button>
+            </Link>
+
+
+          </div>
 
 
         </div>

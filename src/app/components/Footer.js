@@ -528,12 +528,12 @@ export default function Footer() {
 
         <div className={`${container} py-6`}>
 
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
 
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-200 text-sm text-center">
               © 2026 S Jain Attorneys. All Rights Reserved.
             </p>
-
+{/* 
             <div className="flex gap-6">
 
               <Link
@@ -550,7 +550,7 @@ export default function Footer() {
                 Terms of Use
               </Link>
 
-            </div>
+            </div> */}
 
           </div>
 

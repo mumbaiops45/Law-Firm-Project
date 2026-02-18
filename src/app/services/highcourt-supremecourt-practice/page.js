@@ -6,10 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-
-export default function CorporateLaw() {
-
-  /* Animation */
+export default function HighCourtSupremeCourtPracticePage() {
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -42,15 +39,13 @@ export default function CorporateLaw() {
     }
   };
 
-
   return (
     <>
       <Navbar />
 
       <main className="bg-white overflow-hidden">
 
-
-        {/* ================= HERO SECTION ================= */}
+        {/* ================= HERO ================= */}
 
         <section className="relative bg-[#0B0F14] pt-32 pb-40">
 
@@ -61,18 +56,16 @@ export default function CorporateLaw() {
             className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center"
           >
 
-            {/* Breadcrumb */}
-
             <motion.p
               variants={fadeUp}
-              className="text-gray-400 text-sm mb-6 font-normal"
+              className="text-gray-400 text-sm mb-6"
             >
               Home <span className="mx-2">›</span>
-              <span className="text-[#C9A24D]">Corporate Law</span>
+              <span className="text-[#C9A24D]">
+                High Court & Supreme Court Practice
+              </span>
             </motion.p>
 
-
-            {/* Title */}
 
             <motion.h1
               variants={fadeUp}
@@ -84,12 +77,9 @@ export default function CorporateLaw() {
                 tracking-tight
               "
             >
-              Corporate  &
-              Commercial Law
+              High Court & Supreme Court Practice
             </motion.h1>
 
-
-            {/* Subtitle */}
 
             <motion.p
               variants={fadeUp}
@@ -100,16 +90,16 @@ export default function CorporateLaw() {
                 leading-relaxed
               "
             >
-              Strategic legal advisory for corporate structuring,
-              mergers, acquisitions, compliance, and long-term
-              business success.
+              Expert legal representation in High Courts and the Supreme Court
+              of India, providing strong advocacy, strategic litigation, and
+              effective legal solutions for complex matters.
             </motion.p>
 
           </motion.div>
 
 
 
-          {/* OVERLAP IMAGE */}
+          {/* FLOATING IMAGE */}
 
           <motion.div
             variants={fadeImage}
@@ -131,8 +121,8 @@ export default function CorporateLaw() {
             <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
 
               <Image
-                src="/consultation.png"
-                alt="Corporate Law Consultation"
+                src="/highcourt-supreme.jpg"
+                alt="High Court Supreme Court Practice"
                 width={1400}
                 height={800}
                 className="w-full h-[400px] md:h-[500px] object-cover"
@@ -147,13 +137,13 @@ export default function CorporateLaw() {
 
 
 
-        {/* SPACE */}
+        {/* SPACING */}
 
         <div className="h-40 md:h-60"></div>
 
 
 
-        {/* ================= OVERVIEW SECTION ================= */}
+        {/* ================= OVERVIEW ================= */}
 
         <motion.section
           initial="hidden"
@@ -177,12 +167,10 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-12"
             >
-              Our experienced corporate law team provides strategic legal advisory
-              to businesses ranging from startups to multinational corporations.
-              We assist clients in navigating regulatory frameworks, structuring
-              business entities, and executing complex corporate transactions.
-              Our approach focuses on protecting business interests while enabling
-              sustainable growth and operational efficiency.
+              We provide professional legal representation in High Courts and
+              the Supreme Court of India. Our experienced advocates handle complex
+              litigation, appeals, writ petitions, and constitutional matters with
+              strategic expertise and strong courtroom advocacy.
             </motion.p>
 
 
@@ -193,7 +181,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-semibold text-black mb-6"
             >
-              Our Corporate Law Services
+              Our Court Practice Services
             </motion.h3>
 
 
@@ -201,8 +189,8 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-10"
             >
-              We offer comprehensive legal services tailored to corporate needs,
-              ensuring compliance, efficiency, and long-term business success.
+              We provide comprehensive legal support and representation at the
+              highest levels of the judicial system.
             </motion.p>
 
 
@@ -214,52 +202,60 @@ export default function CorporateLaw() {
 
               <li>
                 <span className="font-semibold text-black">
-                  Entity Formation and Structuring:
+                  Writ Petitions:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We guide clients in selecting and establishing the optimal
-                  business structure, including private limited companies,
-                  LLPs, and partnerships, aligned with their business goals.
+                  Filing and defending writ petitions for protection of legal and constitutional rights.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Corporate Governance and Compliance:
+                  Civil & Criminal Appeals:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We help organizations implement governance policies,
-                  maintain statutory compliance, and ensure transparency
-                  across corporate operations.
+                  Representation in appeals before High Courts and the Supreme Court.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Contract Drafting and Negotiation:
+                  Special Leave Petitions (SLP):
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  Our team drafts and reviews shareholder agreements,
-                  partnership agreements, and commercial contracts to
-                  safeguard business interests.
+                  Filing and arguing SLPs before the Supreme Court of India.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Regulatory Compliance and Risk Management:
+                  Constitutional Matters:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We provide proactive compliance strategies and legal
-                  risk assessments to protect your organization from
-                  regulatory exposure.
+                  Handling complex constitutional and fundamental rights cases.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Public Interest Litigation (PIL):
+                </span>
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Filing and defending PILs for public and social justice matters.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Legal Opinions & Case Strategy:
+                </span>
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Providing expert legal opinions and strategic litigation advice.
                 </p>
               </li>
 
@@ -273,7 +269,7 @@ export default function CorporateLaw() {
 
               <Image
                 src="/corporatelaw.png"
-                alt="Corporate Legal Advisory"
+                alt="Court Legal Consultation"
                 width={1200}
                 height={600}
                 className="w-full rounded-xl shadow-lg"
@@ -289,7 +285,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-6"
             >
-              Why Choose Us for Corporate Law Advisory
+              Why Choose Us for Court Representation
             </motion.h3>
 
 
@@ -297,12 +293,10 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed"
             >
-              Our firm delivers reliable, strategic, and business-focused legal
-              solutions tailored to corporate clients. With deep industry
-              expertise and a client-centric approach, we ensure every legal
-              strategy supports your business growth, compliance, and operational
-              success. We prioritize clarity, efficiency, and long-term value
-              in every engagement.
+              Our experienced legal team provides professional advocacy and strategic
+              representation in High Courts and the Supreme Court. We focus on achieving
+              favorable outcomes through thorough preparation, strong legal arguments,
+              and dedicated client support.
             </motion.p>
 
           </div>
@@ -311,7 +305,7 @@ export default function CorporateLaw() {
 
 
 
-        {/* ================= CTA SECTION ================= */}
+        {/* ================= CTA ================= */}
 
         <motion.section
           initial={{ opacity: 0 }}
@@ -324,7 +318,7 @@ export default function CorporateLaw() {
 
             <Image
               src="/discussion.png"
-              alt="Consultation"
+              alt="Court Legal Support"
               fill
               className="object-cover"
             />
@@ -332,7 +326,6 @@ export default function CorporateLaw() {
             <div className="absolute inset-0 bg-black/70"></div>
 
           </div>
-
 
 
           <motion.div
@@ -343,45 +336,37 @@ export default function CorporateLaw() {
           >
 
             <p className="text-[#C9A24D] uppercase tracking-widest text-sm mb-4">
-              Get Expert Legal Support
+              Supreme Court & High Court Experts
             </p>
 
 
             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-              Let’s Discuss Your Legal Needs
+              Get Expert Representation in Higher Courts
             </h2>
 
 
             <p className="text-gray-300 text-base md:text-lg mb-10">
-              Our experienced corporate legal team is ready to help you navigate
-              complex legal matters, protect your business, and support your
-              long-term growth.
+              Our experienced advocates are ready to represent you in High Courts
+              and the Supreme Court of India.
             </p>
 
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-              <button className="
-                bg-[#C9A24D]
-                text-black
-                px-8 py-4
-                rounded-lg
-                font-semibold
-                hover:scale-105
-                transition
-              ">
-                Book Consultation
-              </button>
-              </Link>
-
-             
-
-            </div>
+            <Link href="/contact">
+            <button className="
+              bg-[#C9A24D]
+              text-black
+              px-8 py-4
+              rounded-lg
+              font-semibold
+              hover:scale-105
+              transition
+            ">
+              Book Consultation
+            </button>
+            </Link>
 
           </motion.div>
 
         </motion.section>
-
 
 
       </main>

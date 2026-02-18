@@ -6,10 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-
-export default function CorporateLaw() {
-
-  /* Animation */
+export default function NRILegalServicesPage() {
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -42,15 +39,13 @@ export default function CorporateLaw() {
     }
   };
 
-
   return (
     <>
       <Navbar />
 
       <main className="bg-white overflow-hidden">
 
-
-        {/* ================= HERO SECTION ================= */}
+        {/* ================= HERO ================= */}
 
         <section className="relative bg-[#0B0F14] pt-32 pb-40">
 
@@ -61,18 +56,16 @@ export default function CorporateLaw() {
             className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center"
           >
 
-            {/* Breadcrumb */}
-
             <motion.p
               variants={fadeUp}
-              className="text-gray-400 text-sm mb-6 font-normal"
+              className="text-gray-400 text-sm mb-6"
             >
               Home <span className="mx-2">›</span>
-              <span className="text-[#C9A24D]">Corporate Law</span>
+              <span className="text-[#C9A24D]">
+                NRI Legal Services
+              </span>
             </motion.p>
 
-
-            {/* Title */}
 
             <motion.h1
               variants={fadeUp}
@@ -84,12 +77,9 @@ export default function CorporateLaw() {
                 tracking-tight
               "
             >
-              Corporate  &
-              Commercial Law
+              NRI Legal Services
             </motion.h1>
 
-
-            {/* Subtitle */}
 
             <motion.p
               variants={fadeUp}
@@ -100,16 +90,16 @@ export default function CorporateLaw() {
                 leading-relaxed
               "
             >
-              Strategic legal advisory for corporate structuring,
-              mergers, acquisitions, compliance, and long-term
-              business success.
+              Comprehensive legal support for Non-Resident Indians in property,
+              family, corporate, and litigation matters across India — managed
+              efficiently without the need for frequent travel.
             </motion.p>
 
           </motion.div>
 
 
 
-          {/* OVERLAP IMAGE */}
+          {/* FLOATING IMAGE */}
 
           <motion.div
             variants={fadeImage}
@@ -131,8 +121,8 @@ export default function CorporateLaw() {
             <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
 
               <Image
-                src="/consultation.png"
-                alt="Corporate Law Consultation"
+                src="/nri-legal.png"
+                alt="NRI Legal Services"
                 width={1400}
                 height={800}
                 className="w-full h-[400px] md:h-[500px] object-cover"
@@ -147,13 +137,13 @@ export default function CorporateLaw() {
 
 
 
-        {/* SPACE */}
+        {/* SPACING */}
 
         <div className="h-40 md:h-60"></div>
 
 
 
-        {/* ================= OVERVIEW SECTION ================= */}
+        {/* ================= OVERVIEW ================= */}
 
         <motion.section
           initial="hidden"
@@ -177,12 +167,10 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-12"
             >
-              Our experienced corporate law team provides strategic legal advisory
-              to businesses ranging from startups to multinational corporations.
-              We assist clients in navigating regulatory frameworks, structuring
-              business entities, and executing complex corporate transactions.
-              Our approach focuses on protecting business interests while enabling
-              sustainable growth and operational efficiency.
+              Our NRI legal services are designed to provide seamless legal
+              assistance to clients residing abroad. From property management
+              and dispute resolution to family law and corporate matters, we
+              offer reliable representation and end-to-end legal support in India.
             </motion.p>
 
 
@@ -193,7 +181,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-semibold text-black mb-6"
             >
-              Our Corporate Law Services
+              Our NRI Legal Services
             </motion.h3>
 
 
@@ -201,8 +189,8 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-10"
             >
-              We offer comprehensive legal services tailored to corporate needs,
-              ensuring compliance, efficiency, and long-term business success.
+              We provide dedicated legal assistance tailored to the needs of
+              NRIs handling legal matters in India.
             </motion.p>
 
 
@@ -214,52 +202,60 @@ export default function CorporateLaw() {
 
               <li>
                 <span className="font-semibold text-black">
-                  Entity Formation and Structuring:
+                  Property Management & Disputes:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We guide clients in selecting and establishing the optimal
-                  business structure, including private limited companies,
-                  LLPs, and partnerships, aligned with their business goals.
+                  Handling property transactions, documentation, and disputes on behalf of NRIs.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Corporate Governance and Compliance:
+                  Power of Attorney Assistance:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We help organizations implement governance policies,
-                  maintain statutory compliance, and ensure transparency
-                  across corporate operations.
+                  Drafting and managing power of attorney for smooth legal representation.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Contract Drafting and Negotiation:
+                  Family & Matrimonial Matters:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  Our team drafts and reviews shareholder agreements,
-                  partnership agreements, and commercial contracts to
-                  safeguard business interests.
+                  Legal assistance in divorce, custody, and family disputes.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Regulatory Compliance and Risk Management:
+                  Inheritance & Succession:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We provide proactive compliance strategies and legal
-                  risk assessments to protect your organization from
-                  regulatory exposure.
+                  Assistance with wills, succession certificates, and inheritance claims.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Court Representation:
+                </span>
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Representation in Indian courts without requiring frequent travel.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Corporate & Investment Advisory:
+                </span>
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Legal guidance for business investments and compliance in India.
                 </p>
               </li>
 
@@ -273,7 +269,7 @@ export default function CorporateLaw() {
 
               <Image
                 src="/corporatelaw.png"
-                alt="Corporate Legal Advisory"
+                alt="NRI Legal Consultation"
                 width={1200}
                 height={600}
                 className="w-full rounded-xl shadow-lg"
@@ -289,7 +285,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-6"
             >
-              Why Choose Us for Corporate Law Advisory
+              Why Choose Us for NRI Legal Services
             </motion.h3>
 
 
@@ -297,12 +293,10 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed"
             >
-              Our firm delivers reliable, strategic, and business-focused legal
-              solutions tailored to corporate clients. With deep industry
-              expertise and a client-centric approach, we ensure every legal
-              strategy supports your business growth, compliance, and operational
-              success. We prioritize clarity, efficiency, and long-term value
-              in every engagement.
+              We provide transparent communication, efficient case handling,
+              and trusted representation for NRIs across various legal matters.
+              Our goal is to ensure peace of mind while protecting your legal
+              rights and investments in India.
             </motion.p>
 
           </div>
@@ -311,7 +305,7 @@ export default function CorporateLaw() {
 
 
 
-        {/* ================= CTA SECTION ================= */}
+        {/* ================= CTA ================= */}
 
         <motion.section
           initial={{ opacity: 0 }}
@@ -324,7 +318,7 @@ export default function CorporateLaw() {
 
             <Image
               src="/discussion.png"
-              alt="Consultation"
+              alt="NRI Legal Consultation"
               fill
               className="object-cover"
             />
@@ -332,7 +326,6 @@ export default function CorporateLaw() {
             <div className="absolute inset-0 bg-black/70"></div>
 
           </div>
-
 
 
           <motion.div
@@ -343,45 +336,36 @@ export default function CorporateLaw() {
           >
 
             <p className="text-[#C9A24D] uppercase tracking-widest text-sm mb-4">
-              Get Expert Legal Support
+              Dedicated NRI Legal Support
             </p>
 
 
             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-              Let’s Discuss Your Legal Needs
+              Manage Your Legal Matters in India with Confidence
             </h2>
 
 
             <p className="text-gray-300 text-base md:text-lg mb-10">
-              Our experienced corporate legal team is ready to help you navigate
-              complex legal matters, protect your business, and support your
-              long-term growth.
+              Get professional and reliable legal assistance tailored for NRIs.
             </p>
 
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-              <button className="
-                bg-[#C9A24D]
-                text-black
-                px-8 py-4
-                rounded-lg
-                font-semibold
-                hover:scale-105
-                transition
-              ">
-                Book Consultation
-              </button>
-              </Link>
-
-             
-
-            </div>
+             <Link href="/contact">
+            <button className="
+              bg-[#C9A24D]
+              text-black
+              px-8 py-4
+              rounded-lg
+              font-semibold
+              hover:scale-105
+              transition
+            ">
+              Book Consultation
+            </button>
+            </Link>
 
           </motion.div>
 
         </motion.section>
-
 
 
       </main>

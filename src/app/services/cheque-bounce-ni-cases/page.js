@@ -6,10 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-
-export default function CorporateLaw() {
-
-  /* Animation */
+export default function ChequeBounceNICasesPage() {
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -42,15 +39,13 @@ export default function CorporateLaw() {
     }
   };
 
-
   return (
     <>
       <Navbar />
 
       <main className="bg-white overflow-hidden">
 
-
-        {/* ================= HERO SECTION ================= */}
+        {/* ================= HERO ================= */}
 
         <section className="relative bg-[#0B0F14] pt-32 pb-40">
 
@@ -61,18 +56,16 @@ export default function CorporateLaw() {
             className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center"
           >
 
-            {/* Breadcrumb */}
-
             <motion.p
               variants={fadeUp}
-              className="text-gray-400 text-sm mb-6 font-normal"
+              className="text-gray-400 text-sm mb-6"
             >
               Home <span className="mx-2">›</span>
-              <span className="text-[#C9A24D]">Corporate Law</span>
+              <span className="text-[#C9A24D]">
+                Cheque Bounce / NI Act Cases
+              </span>
             </motion.p>
 
-
-            {/* Title */}
 
             <motion.h1
               variants={fadeUp}
@@ -84,12 +77,9 @@ export default function CorporateLaw() {
                 tracking-tight
               "
             >
-              Corporate  &
-              Commercial Law
+              Cheque Bounce / NI Act Cases
             </motion.h1>
 
-
-            {/* Subtitle */}
 
             <motion.p
               variants={fadeUp}
@@ -100,16 +90,16 @@ export default function CorporateLaw() {
                 leading-relaxed
               "
             >
-              Strategic legal advisory for corporate structuring,
-              mergers, acquisitions, compliance, and long-term
-              business success.
+              Professional legal assistance for cheque bounce cases under
+              the Negotiable Instruments Act, ensuring recovery of dues and
+              strong legal representation in court.
             </motion.p>
 
           </motion.div>
 
 
 
-          {/* OVERLAP IMAGE */}
+          {/* FLOATING IMAGE */}
 
           <motion.div
             variants={fadeImage}
@@ -131,8 +121,8 @@ export default function CorporateLaw() {
             <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
 
               <Image
-                src="/consultation.png"
-                alt="Corporate Law Consultation"
+                src="/cheque-bounce.jpg"
+                alt="Cheque Bounce NI Act Cases"
                 width={1400}
                 height={800}
                 className="w-full h-[400px] md:h-[500px] object-cover"
@@ -147,13 +137,13 @@ export default function CorporateLaw() {
 
 
 
-        {/* SPACE */}
+        {/* SPACING */}
 
         <div className="h-40 md:h-60"></div>
 
 
 
-        {/* ================= OVERVIEW SECTION ================= */}
+        {/* ================= OVERVIEW ================= */}
 
         <motion.section
           initial="hidden"
@@ -177,12 +167,11 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-12"
             >
-              Our experienced corporate law team provides strategic legal advisory
-              to businesses ranging from startups to multinational corporations.
-              We assist clients in navigating regulatory frameworks, structuring
-              business entities, and executing complex corporate transactions.
-              Our approach focuses on protecting business interests while enabling
-              sustainable growth and operational efficiency.
+              Cheque bounce cases fall under Section 138 of the Negotiable
+              Instruments Act. These cases involve dishonor of cheques due to
+              insufficient funds or other legal reasons. Our legal team provides
+              expert assistance in filing, defending, and resolving cheque bounce
+              cases efficiently.
             </motion.p>
 
 
@@ -193,7 +182,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-semibold text-black mb-6"
             >
-              Our Corporate Law Services
+              Our Cheque Bounce Legal Services
             </motion.h3>
 
 
@@ -201,8 +190,8 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed mb-10"
             >
-              We offer comprehensive legal services tailored to corporate needs,
-              ensuring compliance, efficiency, and long-term business success.
+              We provide complete legal support for individuals, businesses,
+              and financial institutions in cheque bounce matters.
             </motion.p>
 
 
@@ -214,52 +203,60 @@ export default function CorporateLaw() {
 
               <li>
                 <span className="font-semibold text-black">
-                  Entity Formation and Structuring:
+                  Filing Cheque Bounce Cases:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We guide clients in selecting and establishing the optimal
-                  business structure, including private limited companies,
-                  LLPs, and partnerships, aligned with their business goals.
+                  Legal assistance in filing cases under Section 138 of the NI Act.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Corporate Governance and Compliance:
+                  Legal Notice Drafting:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We help organizations implement governance policies,
-                  maintain statutory compliance, and ensure transparency
-                  across corporate operations.
+                  Drafting and sending statutory legal notices to defaulters.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Contract Drafting and Negotiation:
+                  Court Representation:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  Our team drafts and reviews shareholder agreements,
-                  partnership agreements, and commercial contracts to
-                  safeguard business interests.
+                  Professional representation in court proceedings.
                 </p>
               </li>
 
 
               <li>
                 <span className="font-semibold text-black">
-                  Regulatory Compliance and Risk Management:
+                  Defense Against False Cases:
                 </span>
-
                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-                  We provide proactive compliance strategies and legal
-                  risk assessments to protect your organization from
-                  regulatory exposure.
+                  Legal defense for individuals falsely accused in cheque bounce cases.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Settlement & Recovery Assistance:
+                </span>
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Negotiation and legal assistance for financial recovery.
+                </p>
+              </li>
+
+
+              <li>
+                <span className="font-semibold text-black">
+                  Business & Corporate Cheque Cases:
+                </span>
+                <p className="mt-2 text-base md:text-lg leading-relaxed">
+                  Handling cheque dishonor cases for companies and business transactions.
                 </p>
               </li>
 
@@ -273,7 +270,7 @@ export default function CorporateLaw() {
 
               <Image
                 src="/corporatelaw.png"
-                alt="Corporate Legal Advisory"
+                alt="Cheque Bounce Legal Consultation"
                 width={1200}
                 height={600}
                 className="w-full rounded-xl shadow-lg"
@@ -289,7 +286,7 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-6"
             >
-              Why Choose Us for Corporate Law Advisory
+              Why Choose Us for Cheque Bounce Cases
             </motion.h3>
 
 
@@ -297,12 +294,9 @@ export default function CorporateLaw() {
               variants={fadeUp}
               className="text-gray-600 text-base md:text-lg leading-relaxed"
             >
-              Our firm delivers reliable, strategic, and business-focused legal
-              solutions tailored to corporate clients. With deep industry
-              expertise and a client-centric approach, we ensure every legal
-              strategy supports your business growth, compliance, and operational
-              success. We prioritize clarity, efficiency, and long-term value
-              in every engagement.
+              Our experienced legal team ensures fast, efficient, and professional
+              handling of cheque bounce matters. We focus on protecting your financial
+              rights, recovering dues, and providing strong legal representation.
             </motion.p>
 
           </div>
@@ -311,7 +305,7 @@ export default function CorporateLaw() {
 
 
 
-        {/* ================= CTA SECTION ================= */}
+        {/* ================= CTA ================= */}
 
         <motion.section
           initial={{ opacity: 0 }}
@@ -324,7 +318,7 @@ export default function CorporateLaw() {
 
             <Image
               src="/discussion.png"
-              alt="Consultation"
+              alt="Cheque Bounce Legal Support"
               fill
               className="object-cover"
             />
@@ -332,7 +326,6 @@ export default function CorporateLaw() {
             <div className="absolute inset-0 bg-black/70"></div>
 
           </div>
-
 
 
           <motion.div
@@ -343,45 +336,36 @@ export default function CorporateLaw() {
           >
 
             <p className="text-[#C9A24D] uppercase tracking-widest text-sm mb-4">
-              Get Expert Legal Support
+              Expert NI Act Legal Support
             </p>
 
 
             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-              Let’s Discuss Your Legal Needs
+              Recover Your Financial Dues Legally
             </h2>
 
 
             <p className="text-gray-300 text-base md:text-lg mb-10">
-              Our experienced corporate legal team is ready to help you navigate
-              complex legal matters, protect your business, and support your
-              long-term growth.
+              Get professional legal assistance for cheque bounce and NI Act cases.
             </p>
 
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-              <button className="
-                bg-[#C9A24D]
-                text-black
-                px-8 py-4
-                rounded-lg
-                font-semibold
-                hover:scale-105
-                transition
-              ">
-                Book Consultation
-              </button>
-              </Link>
-
-             
-
-            </div>
+            <Link href="/contact">
+            <button className="
+              bg-[#C9A24D]
+              text-black
+              px-8 py-4
+              rounded-lg
+              font-semibold
+              hover:scale-105
+              transition
+            ">
+              Book Consultation
+            </button>
+            </Link>
 
           </motion.div>
 
         </motion.section>
-
 
 
       </main>
