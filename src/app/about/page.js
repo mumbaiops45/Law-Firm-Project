@@ -1011,7 +1011,7 @@ export default function Page() {
 
       {/* ================= TEAM SECTION ================= */}
 
-      <section className="bg-black py-28">
+      {/* <section className="bg-black py-28">
 
         <div className="max-w-7xl mx-auto px-6">
 
@@ -1111,7 +1111,7 @@ export default function Page() {
 
         </div>
 
-      </section>
+      </section> */}
 
 
       <Footer />
