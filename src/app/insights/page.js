@@ -446,21 +446,21 @@ export default function InsightsPage() {
       title: "Benefits of Mediation and Arbitration in Legal Disputes",
       image: "/resource.png",
       category: "Resource",
-      date: "August 12, 2024",
+      // date: "August 12, 2024",
     },
     {
       slug: "risk-management",
       title: "The Importance of Risk Management for Small Businesses",
       image: "/legalblog.png",
       category: "Legal",
-      date: "September 02, 2024",
+      // date: "September 02, 2024",
     },
     {
       slug: "compliance-audit",
       title: "How to Prepare for Internal Compliance Audits",
       image: "/corporatelegal.png",
       category: "Corporate",
-      date: "September 12, 2024",
+      // date: "September 12, 2024",
     }
   ];
 
@@ -560,9 +560,9 @@ export default function InsightsPage() {
 
 
                     {/* DATE */}
-                    <p className="text-gray-500 text-sm">
+                    {/* <p className="text-gray-500 text-sm">
                       Posted on {blog.date}
-                    </p>
+                    </p> */}
 
                   </div>
 
