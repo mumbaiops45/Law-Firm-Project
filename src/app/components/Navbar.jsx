@@ -34,6 +34,15 @@ export default function Navbar() {
   { name: "Contact Us", href: "/contact" },
 ];
 
+const mobileMenu = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Practice Areas", isDropdown: true },
+  { name: "Our Team", href: "/team" },
+  { name: "Insights", href: "/insights" },
+  { name: "Contact Us", href: "/contact" },
+];
+
   const practiceAreas = [  
     { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
     { name: "Civil Litigation", href: "/services/civil-litigation" },
@@ -235,83 +244,82 @@ export default function Navbar() {
 
 
         {/* ✅ MOBILE MENU */}
-        <div
-          className={`
-      fixed top-0 right-0 h-full w-[75%] bg-[#0B1C2D]
-      transform transition-transform duration-300 z-[998]
-      ${isOpen ? "translate-x-0" : "translate-x-full"}
-    `}
-        >
+ {/* ✅ MOBILE MENU DRAWER */}
+<div
+  className={`
+    fixed top-0 right-0 h-full w-[85%] max-w-[380px]
+    bg-black
+    transform transition-transform duration-300 ease-in-out
+    z-[998]
+    ${isOpen ? "translate-x-0" : "translate-x-full"}
+  `}
+>
 
-          {/* <div className="flex flex-col mt-24 space-y-6 px-8 text-white"> */}
-          <div className="flex flex-col mt-24 space-y-6 px-8 text-white overflow-y-auto h-[calc(100vh-100px)]">
+  <div className="flex flex-col mt-24 space-y-6 px-6 text-white overflow-y-auto h-full pb-10">
 
+    {mobileMenu.map((item, index) => {
 
-            {links.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="text-lg border-b border-gray-700 pb-3 hover:text-[#C9A24D]"
-              >
-                {link.name}
-              </Link>
-            ))}
+      if (item.isDropdown) {
+        return (
+          <div key={index} className="border-b border-gray-700 pb-4">
 
-            {/* ===== SERVICES ACCORDION ===== */}
-            <div className="border-b border-gray-700 pb-3">
+            <button
+              onClick={() => setServicesOpen(!servicesOpen)}
+              className="flex items-center justify-between w-full text-lg hover:text-[#C9A24D]"
+            >
+              Practice Areas
+              <ChevronDown
+                size={18}
+                className={`transition-transform duration-300 ${
+                  servicesOpen ? "rotate-180 text-[#C9A24D]" : ""
+                }`}
+              />
+            </button>
 
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center justify-between w-full text-lg hover:text-[#C9A24D]"
-              >
-                Services
-                <ChevronDown
-                  size={18}
-                  className={`transition-transform duration-300 ${servicesOpen ? "rotate-180 text-[#C9A24D]" : ""
-                    }`}
-                />
-              </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                servicesOpen ? "max-h-[1000px] mt-4" : "max-h-0"
+              }`}
+            >
+              <div className="flex flex-col gap-3 pl-4">
 
-              <div
-                className={`overflow-hidden transition-all duration-300 ${servicesOpen ? "max-h-[1000px] mt-4" : "max-h-0"
-                  }`}
-              >
-                <div className="flex flex-col gap-3 pl-4">
+                {practiceAreas.map((service, i) => (
+                  <Link
+                    key={i}
+                    href={service.href}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setServicesOpen(false);
+                    }}
+                    className="text-sm text-gray-300 hover:text-[#C9A24D]"
+                  >
+                    {service.name}
+                  </Link>
+                ))}
 
-                  {practiceAreas.map((service, index) => (
-                    <Link
-                      key={index}
-                      href={service.href}
-                      onClick={() => {
-                        setIsOpen(false);
-                        setServicesOpen(false);
-                      }}
-                      className="text-sm text-gray-300 hover:text-[#C9A24D]"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-
-                </div>
               </div>
-
             </div>
 
-            {/* CTA BUTTON */}
-            <Link href="/contact" onClick={() => setIsOpen(false)}>
-              <button
-                className="mt-6 px-6 py-3 bg-[#C9A24D] text-black font-semibold rounded w-full"
-              >
-                Book Consultation
-              </button>
-            </Link>
-
-
           </div>
+        );
+      }
 
+      return (
+        <Link
+          key={index}
+          href={item.href}
+          onClick={() => setIsOpen(false)}
+          className="text-lg border-b border-gray-700 pb-4 hover:text-[#C9A24D]"
+        >
+          {item.name}
+        </Link>
+      );
 
-        </div>
+    })}
+
+  </div>
+
+</div>
 
 
         {/* OVERLAY */}

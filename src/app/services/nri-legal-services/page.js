@@ -268,7 +268,7 @@ export default function NRILegalServicesPage() {
             <motion.div variants={fadeUp} className="mb-16">
 
               <Image
-                src="/corporatelaw.png"
+                src="/nri.png"
                 alt="NRI Legal Consultation"
                 width={1200}
                 height={600}

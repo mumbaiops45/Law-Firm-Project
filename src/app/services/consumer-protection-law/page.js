@@ -268,7 +268,7 @@ export default function ConsumerProtectionLawPage() {
             <motion.div variants={fadeUp} className="mb-16">
 
               <Image
-                src="/corporatelaw.png"
+                src="/consumer.png"
                 alt="Consumer Protection Consultation"
                 width={1200}
                 height={600}

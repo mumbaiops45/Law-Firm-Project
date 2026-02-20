@@ -317,7 +317,244 @@
 
 
 
+// "use client";
+
+// import {
+//   FaBuilding,
+//   FaGavel,
+//   FaShieldAlt,
+//   FaUsers,
+//   FaHome,
+//   FaFileContract,
+// } from "react-icons/fa";
+
+// import { motion } from "framer-motion";
+
+// export default function PracticeAreas() {
+
+//   /* ================= SERVICES ================= */
+
+//   const services = [
+//     {
+//       name: "Corporate & Commercial Law",
+//       description: "Legal solutions for businesses and corporate entities.",
+//       icon: <FaBuilding size={26} />,
+//     },
+//     {
+//       name: "Civil Litigation",
+//       description: "Representation in civil disputes and legal proceedings.",
+//       icon: <FaGavel size={26} />,
+//     },
+//     {
+//       name: "Criminal Defense",
+//       description: "Strong defense and legal protection in criminal cases.",
+//       icon: <FaShieldAlt size={26} />,
+//     },
+//     {
+//       name: "Family & Divorce Law",
+//       description: "Professional handling of family and matrimonial matters.",
+//       icon: <FaUsers size={26} />,
+//     },
+//     {
+//       name: "Property & Real Estate",
+//       description: "Legal assistance in property and real estate matters.",
+//       icon: <FaHome size={26} />,
+//     },
+//     {
+//       name: "Legal Advisory",
+//       description: "Reliable advisory and regulatory legal services.",
+//       icon: <FaFileContract size={26} />,
+//     },
+//   ];
+
+
+//   /* ================= ANIMATION ================= */
+
+//   const container = {
+//     hidden: {},
+//     visible: {
+//       transition: {
+//         staggerChildren: 0.15,
+//       },
+//     },
+//   };
+
+//   const card = {
+//     hidden: {
+//       opacity: 0,
+//       y: 40,
+//     },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: {
+//         duration: 0.6,
+//         ease: "easeOut",
+//       },
+//     },
+//   };
+
+
+//   /* ================= COMPONENT ================= */
+
+//   return (
+
+//     <section className="bg-[#F4F4F4] py-24 px-6">
+
+//       {/* CONTAINER */}
+//       <div className="max-w-7xl mx-auto">
+
+
+//         {/* ================= HEADING ================= */}
+
+//         <motion.div
+//           initial={{ opacity: 0, y: 30 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.7 }}
+//           viewport={{ once: true }}
+//           className="text-center mb-20"
+//         >
+
+//           <h2 className="
+//             text-4xl
+//             md:text-5xl
+//             font-semibold
+//             text-[#111111]
+//           ">
+//             Our Practice Areas
+//           </h2>
+
+//           <div className="w-20 h-[3px] bg-[#C9A24D] mx-auto mt-6"></div>
+
+//         </motion.div>
+
+
+
+//         {/* ================= GRID ================= */}
+
+//         <motion.div
+//           variants={container}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           className="
+//             grid
+//             grid-cols-1
+//             sm:grid-cols-2
+//             md:grid-cols-3
+//             gap-10
+//           "
+//         >
+
+//           {services.map((service, index) => (
+
+//             <motion.div
+//               key={index}
+//               variants={card}
+
+//               whileHover={{
+//                 y: -10,
+//                 scale: 1.03,
+//               }}
+
+//               className="
+//                 bg-white
+//                 border border-gray-200
+//                 rounded-lg
+//                 p-10
+//                 text-center
+//                 hover:border-[#C9A24D]
+//                 hover:shadow-xl
+//                 transition-all duration-300
+//                 cursor-pointer
+//                 group
+//               "
+//             >
+
+
+//               {/* ICON */}
+
+//               <div className="flex justify-center mb-6">
+
+//                 <div className="
+//                   w-14 h-14
+//                   flex items-center justify-center
+//                   border border-[#C9A24D]
+//                   rounded-full
+//                   text-[#C9A24D]
+//                   group-hover:bg-[#C9A24D]
+//                   group-hover:text-white
+//                   transition-all duration-300
+//                 ">
+//                   {service.icon}
+//                 </div>
+
+//               </div>
+
+
+
+//               {/* TITLE */}
+
+//               <h3 className="
+//                 text-xl
+//                 font-semibold
+//                 text-[#111111]
+//                 mb-3
+//                 group-hover:text-[#C9A24D]
+//                 transition-colors duration-300
+//               ">
+//                 {service.name}
+//               </h3>
+
+
+
+//               {/* DESCRIPTION */}
+
+//               <p className="
+//                 text-gray-600
+//                 text-base
+//                 leading-relaxed
+//                 mb-4
+//                 max-w-[260px]
+//                 mx-auto
+//               ">
+//                 {service.description}
+//               </p>
+
+
+
+//               {/* LINK */}
+
+//               <span className="
+//                 text-[#C9A24D]
+//                 text-sm
+//                 font-medium
+//                 hover:underline
+//                 transition
+//               ">
+//                 Learn More →
+//               </span>
+
+
+//             </motion.div>
+
+//           ))}
+
+//         </motion.div>
+
+
+//       </div>
+
+//     </section>
+
+//   );
+
+// }
+
+
 "use client";
+
+import Link from "next/link";
 
 import {
   FaBuilding,
@@ -339,31 +576,37 @@ export default function PracticeAreas() {
       name: "Corporate & Commercial Law",
       description: "Legal solutions for businesses and corporate entities.",
       icon: <FaBuilding size={26} />,
+      link: "/services/corporate-law",
     },
     {
       name: "Civil Litigation",
       description: "Representation in civil disputes and legal proceedings.",
       icon: <FaGavel size={26} />,
+      link: "/services/civil-litigation",
     },
     {
       name: "Criminal Defense",
       description: "Strong defense and legal protection in criminal cases.",
       icon: <FaShieldAlt size={26} />,
+      link: "/services/criminal-defense",
     },
     {
       name: "Family & Divorce Law",
       description: "Professional handling of family and matrimonial matters.",
       icon: <FaUsers size={26} />,
+      link: "/services/family-divorce-law",
     },
     {
       name: "Property & Real Estate",
       description: "Legal assistance in property and real estate matters.",
       icon: <FaHome size={26} />,
+      link: "/services/property-real-estate-law",
     },
     {
       name: "Legal Advisory",
       description: "Reliable advisory and regulatory legal services.",
       icon: <FaFileContract size={26} />,
+      link: "/services/legal-advisory-regulatory-compliance",
     },
   ];
 
@@ -401,11 +644,9 @@ export default function PracticeAreas() {
 
     <section className="bg-[#F4F4F4] py-24 px-6">
 
-      {/* CONTAINER */}
       <div className="max-w-7xl mx-auto">
 
-
-        {/* ================= HEADING ================= */}
+        {/* HEADING */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -415,12 +656,7 @@ export default function PracticeAreas() {
           className="text-center mb-20"
         >
 
-          <h2 className="
-            text-4xl
-            md:text-5xl
-            font-semibold
-            text-[#111111]
-          ">
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#111111]">
             Our Practice Areas
           </h2>
 
@@ -429,119 +665,107 @@ export default function PracticeAreas() {
         </motion.div>
 
 
-
-        {/* ================= GRID ================= */}
+        {/* GRID */}
 
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="
-            grid
-            grid-cols-1
-            sm:grid-cols-2
-            md:grid-cols-3
-            gap-10
-          "
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
         >
 
           {services.map((service, index) => (
 
-            <motion.div
-              key={index}
-              variants={card}
+            <Link href={service.link} key={index}>
 
-              whileHover={{
-                y: -10,
-                scale: 1.03,
-              }}
-
-              className="
-                bg-white
-                border border-gray-200
-                rounded-lg
-                p-10
-                text-center
-                hover:border-[#C9A24D]
-                hover:shadow-xl
-                transition-all duration-300
-                cursor-pointer
-                group
-              "
-            >
-
-
-              {/* ICON */}
-
-              <div className="flex justify-center mb-6">
-
-                <div className="
-                  w-14 h-14
-                  flex items-center justify-center
-                  border border-[#C9A24D]
-                  rounded-full
-                  text-[#C9A24D]
-                  group-hover:bg-[#C9A24D]
-                  group-hover:text-white
+              <motion.div
+                variants={card}
+                whileHover={{
+                  y: -10,
+                  scale: 1.03,
+                }}
+                className="
+                  bg-white
+                  border border-gray-200
+                  rounded-lg
+                  p-10
+                  text-center
+                  hover:border-[#C9A24D]
+                  hover:shadow-xl
                   transition-all duration-300
-                ">
-                  {service.icon}
+                  cursor-pointer
+                  group
+                  h-full
+                "
+              >
+
+                {/* ICON */}
+
+                <div className="flex justify-center mb-6">
+
+                  <div className="
+                    w-14 h-14
+                    flex items-center justify-center
+                    border border-[#C9A24D]
+                    rounded-full
+                    text-[#C9A24D]
+                    group-hover:bg-[#C9A24D]
+                    group-hover:text-white
+                    transition-all duration-300
+                  ">
+                    {service.icon}
+                  </div>
+
                 </div>
 
-              </div>
+
+                {/* TITLE */}
+
+                <h3 className="
+                  text-xl
+                  font-semibold
+                  text-[#111111]
+                  mb-3
+                  group-hover:text-[#C9A24D]
+                  transition-colors duration-300
+                ">
+                  {service.name}
+                </h3>
 
 
+                {/* DESCRIPTION */}
 
-              {/* TITLE */}
-
-              <h3 className="
-                text-xl
-                font-semibold
-                text-[#111111]
-                mb-3
-                group-hover:text-[#C9A24D]
-                transition-colors duration-300
-              ">
-                {service.name}
-              </h3>
-
+                <p className="
+                  text-gray-600
+                  text-base
+                  leading-relaxed
+                  mb-4
+                  max-w-[260px]
+                  mx-auto
+                ">
+                  {service.description}
+                </p>
 
 
-              {/* DESCRIPTION */}
+                {/* LEARN MORE */}
 
-              <p className="
-                text-gray-600
-                text-base
-                leading-relaxed
-                mb-4
-                max-w-[260px]
-                mx-auto
-              ">
-                {service.description}
-              </p>
+                <span className="
+                  text-[#C9A24D]
+                  text-sm
+                  font-medium
+                  group-hover:underline
+                ">
+                  Learn More →
+                </span>
 
+              </motion.div>
 
-
-              {/* LINK */}
-
-              <span className="
-                text-[#C9A24D]
-                text-sm
-                font-medium
-                hover:underline
-                transition
-              ">
-                Learn More →
-              </span>
-
-
-            </motion.div>
+            </Link>
 
           ))}
 
         </motion.div>
-
 
       </div>
 
@@ -550,9 +774,6 @@ export default function PracticeAreas() {
   );
 
 }
-
-
-
 
 
 

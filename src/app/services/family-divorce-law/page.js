@@ -261,14 +261,24 @@ export default function FamilyDivorceLawPage() {
 
             {/* IMAGE */}
 
-            <motion.div variants={fadeUp} className="mb-16">
+            <motion.div
+              variants={fadeUp}
+              className="mb-16 max-w-4xl mx-auto"
+            >
 
               <Image
-                src="/corporatelaw.png"
+                src="/familylaw.png"
                 alt="Family Law Consultation"
-                width={1200}
+                width={900}
                 height={500}
-                className="w-full rounded-xl shadow-lg"
+                className="
+      w-full
+      h-[480px] md:h-[540px]
+      object-cover
+      rounded-xl
+      shadow-lg
+    "
+                sizes="(max-width: 768px) 100vw, 900px"
               />
 
             </motion.div>
@@ -345,9 +355,9 @@ export default function FamilyDivorceLawPage() {
             </p>
 
             <Link href="/contact">
-            <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
-              Book Consultation
-            </button>
+              <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
+                Book Consultation
+              </button>
             </Link>
 
           </motion.div>

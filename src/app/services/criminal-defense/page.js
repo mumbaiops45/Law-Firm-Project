@@ -269,7 +269,7 @@ export default function CriminalDefensePage() {
             <motion.div variants={fadeUp} className="mb-16">
 
               <Image
-                src="/corporatelaw.png"
+                src="/lagel.png"
                 alt="Criminal Legal Services"
                 width={1200}
                 height={600}

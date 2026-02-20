@@ -131,68 +131,55 @@ export default function InsightsPage() {
 
             {insights.map((item, index) => (
 
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="
-                  group
-                  bg-white/5
-                  border border-white/10
-                  backdrop-blur-lg
-                  rounded-xl
-                  overflow-hidden
-                  shadow-xl
-                  hover:border-[#C9A24D]
-                  transition duration-500
-                "
-              >
-                
-                {/* IMAGE */}
+             <motion.div
+  key={index}
+  variants={fadeUp}
+  className="
+    group
+    bg-white
+    rounded-xl
+    overflow-hidden
+    shadow-lg
+    hover:shadow-2xl
+    hover:-translate-y-2
+    transition duration-500
+    flex flex-col
+  "
+>
 
-                <div className="relative h-[240px] overflow-hidden">
+  {/* IMAGE */}
 
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition duration-700"
-                  />
+  <div className="relative h-[240px] overflow-hidden">
 
-                </div>
+    <Image
+      src={item.image}
+      alt={item.title}
+      fill
+      className="object-cover group-hover:scale-110 transition duration-700"
+    />
+
+  </div>
 
 
-                {/* CONTENT */}
+  {/* CONTENT */}
 
-                <div className="p-6">
+  <div className="p-6 flex flex-col flex-grow">
 
-                  <p className="text-[#C9A24D] text-sm mb-2 text-center">
-                    {item.category}
-                  </p>
+    <p className="text-[#C9A24D] text-sm mb-2 text-center font-medium">
+      {item.category}
+    </p>
 
-                  <h3 className="text-black text-xl font-semibold mb-3 text-center">
-                    {item.title}
-                  </h3>
+    <h3 className="text-black text-xl font-semibold mb-3 text-center">
+      {item.title}
+    </h3>
 
-                  <p className="text-gray-900 text-sm mb-6 ">
-                    {item.description}
-                  </p>
+    <p className="text-gray-600 text-sm leading-relaxed text-center flex-grow">
+      {item.description}
+    </p>
 
-                  {/* <Link href={item.link}>
-                    <button className="
-                      border border-[#C9A24D]
-                      text-[#C9A24D]
-                      px-5 py-2
-                      hover:bg-[#C9A24D]
-                      hover:text-black
-                      transition duration-300
-                    ">
-                      Learn More
-                    </button>
-                  </Link> */}
+  </div>
 
-                </div>
-
-              </motion.div>
+</motion.div>
 
             ))}
 

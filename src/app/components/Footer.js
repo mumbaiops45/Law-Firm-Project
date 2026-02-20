@@ -383,6 +383,189 @@
 //   );
 // }
 
+// "use client";
+
+// import Link from "next/link";
+
+// export default function Footer() {
+
+//   const practiceAreas = [
+//     "Corporate & Commercial Law",
+//     "Civil Litigation",
+//     "Criminal Defense & Prosecution",
+//     "Family & Divorce Law",
+//     "Property & Real Estate Law",
+//     "Legal Advisory & Regulatory Compliance",
+//   ];
+
+//   const quickLinks = [
+//     { name: "Home", href: "/" },
+//     { name: "About Us", href: "/about" },
+//     { name: "Our Team", href: "/team" },
+//     { name: "Insights", href: "/#blog" },
+//     { name: "Contact", href: "/contact" },
+//   ];
+
+//   // SAME GLOBAL CONTAINER
+//   const container =
+//     "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
+
+//   // SAME HEADING STYLE (scaled for footer)
+//   const footerHeading =
+//     "text-lg font-semibold text-[#C9A24D] mb-5";
+
+//   return (
+//     <footer className="bg-[#0c0c0c] text-white">
+
+//       {/* Main Content */}
+//       <div className={`${container} py-16 sm:py-20`}>
+
+//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+//           {/* Firm Overview */}
+//           <div>
+
+//             <h3 className={footerHeading}>
+//               S Jain Attorneys
+//             </h3>
+
+//             <p className="text-gray-300 text-sm leading-relaxed">
+//               Trusted legal counsel providing corporate, civil, and advisory
+//               services across India. We deliver ethical, strategic, and
+//               result-driven legal solutions tailored to client needs.
+//             </p>
+
+//           </div>
+
+
+//           {/* Practice Areas */}
+//           <div>
+
+//             <h3 className={footerHeading}>
+//               Practice Areas
+//             </h3>
+
+//             <ul className="space-y-3 text-sm">
+
+//               {practiceAreas.map((area, i) => (
+//                 <li key={i}>
+//                   <Link
+//                     href="#"
+//                     className="text-gray-300 hover:text-[#C9A24D] transition duration-300"
+//                   >
+//                     {area}
+//                   </Link>
+//                 </li>
+//               ))}
+
+//             </ul>
+
+//           </div>
+
+
+//           {/* Quick Links */}
+//           <div>
+
+//             <h3 className={footerHeading}>
+//               Quick Links
+//             </h3>
+
+//             <ul className="space-y-3 text-sm">
+
+//               {quickLinks.map((link, i) => (
+//                 <li key={i}>
+//                   <Link
+//                     href={link.href}
+//                     className="text-gray-300 hover:text-[#C9A24D] transition duration-300"
+//                   >
+//                     {link.name}
+//                   </Link>
+//                 </li>
+//               ))}
+
+//             </ul>
+
+//           </div>
+
+
+//           {/* Contact Info */}
+//           {/* Contact Info */}
+//           <div>
+
+//             <h3 className={footerHeading}>
+//               Contact Info
+//             </h3>
+
+//             <div className="space-y-3 text-gray-300 text-sm">
+
+//               <p>
+//                 S Jain Attorneys<br />
+//                 #42, 3rd Floor, Prestige Meridian II<br />
+//                 MG Road, Bengaluru, Karnataka 560001<br />
+//                 India
+//               </p>
+
+//               <p>
+//                 Phone: +91 98765 43210
+//               </p>
+
+//               <p>
+//                 Email: contact@sjainattorneys.com
+//               </p>
+
+//             </div>
+
+//           </div>
+
+
+//         </div>
+
+//       </div>
+
+
+//       {/* Bottom Bar */}
+//       <div className="border-t border-[#1a1a1a]">
+
+//         <div className={`${container} py-6`}>
+
+//           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+
+//             <p className="text-gray-200 text-sm text-center">
+//               © 2026 S Jain Attorneys. All Rights Reserved.
+//             </p>
+// {/* 
+//             <div className="flex gap-6">
+
+//               <Link
+//                 href="#"
+//                 className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
+//               >
+//                 Privacy Policy
+//               </Link>
+
+//               <Link
+//                 href="#"
+//                 className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
+//               >
+//                 Terms of Use
+//               </Link>
+
+//             </div> */}
+
+//           </div>
+
+//         </div>
+
+//       </div>
+
+//     </footer>
+//   );
+// }
+
+
+
+
+
 "use client";
 
 import Link from "next/link";
@@ -390,34 +573,33 @@ import Link from "next/link";
 export default function Footer() {
 
   const practiceAreas = [
-    "Corporate & Commercial Law",
-    "Civil Litigation",
-    "Criminal Defense & Prosecution",
-    "Family & Divorce Law",
-    "Property & Real Estate Law",
-    "Legal Advisory & Regulatory Compliance",
+    { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
+    { name: "Civil Litigation", href: "/services/civil-litigation" },
+    { name: "Criminal Defense & Prosecution", href: "/services/criminal-defense" },
+    { name: "Family & Divorce Law", href: "/services/family-divorce-law" },
+    { name: "Property & Real Estate Law", href: "/services/property-real-estate-law" },
+    { name: "Legal Advisory & Regulatory Compliance", href: "/services/legal-advisory-regulatory-compliance" },
   ];
 
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Our Team", href: "/team" },
-    { name: "Insights", href: "/#blog" },
+    { name: "Insights", href: "/insights" },
     { name: "Contact", href: "/contact" },
   ];
 
-  // SAME GLOBAL CONTAINER
   const container =
     "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
 
-  // SAME HEADING STYLE (scaled for footer)
   const footerHeading =
     "text-lg font-semibold text-[#C9A24D] mb-5";
 
   return (
     <footer className="bg-[#0c0c0c] text-white">
 
-      {/* Main Content */}
+      {/* ================= MAIN FOOTER ================= */}
+
       <div className={`${container} py-16 sm:py-20`}>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
@@ -430,9 +612,9 @@ export default function Footer() {
             </h3>
 
             <p className="text-gray-300 text-sm leading-relaxed">
-              Trusted legal counsel providing corporate, civil, and advisory
-              services across India. We deliver ethical, strategic, and
-              result-driven legal solutions tailored to client needs.
+              Trusted legal counsel providing corporate, civil, criminal,
+              and advisory legal services across India. We deliver ethical,
+              strategic, and result-driven legal solutions tailored to client needs.
             </p>
 
           </div>
@@ -450,10 +632,10 @@ export default function Footer() {
               {practiceAreas.map((area, i) => (
                 <li key={i}>
                   <Link
-                    href="#"
+                    href={area.href}
                     className="text-gray-300 hover:text-[#C9A24D] transition duration-300"
                   >
-                    {area}
+                    {area.name}
                   </Link>
                 </li>
               ))}
@@ -489,7 +671,6 @@ export default function Footer() {
 
 
           {/* Contact Info */}
-          {/* Contact Info */}
           <div>
 
             <h3 className={footerHeading}>
@@ -500,9 +681,9 @@ export default function Footer() {
 
               <p>
                 S Jain Attorneys<br />
-                #42, 3rd Floor, Prestige Meridian II<br />
-                MG Road, Bengaluru, Karnataka 560001<br />
-                India
+                #42, Prestige Meridian II<br />
+                MG Road, Bengaluru – 560001<br />
+                Karnataka, India
               </p>
 
               <p>
@@ -517,46 +698,121 @@ export default function Footer() {
 
           </div>
 
-
         </div>
 
       </div>
+      
+      {/* ================= SEO FOOTER EXTENSION ================= */}
 
+      <div className="bg-[#0b0b0b]">
 
-      {/* Bottom Bar */}
-      <div className="border-t border-[#1a1a1a]">
+        <div className={`${container} py-12 space-y-10 text-sm`}>
 
-        <div className={`${container} py-6`}>
+          {/* INDIA */}
+          <div>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+            <h4 className="text-[#C9A24D] font-semibold mb-3">
+              IN INDIA:
+            </h4>
 
-            <p className="text-gray-200 text-sm text-center">
-              © 2026 S Jain Attorneys. All Rights Reserved.
+            <p className="text-[#f8f7f5] leading-7">
+
+              Bangalore | Mumbai | Delhi | Hyderabad | Chennai |
+              Pune | Kolkata | Ahmedabad
+
             </p>
-{/* 
-            <div className="flex gap-6">
 
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
-              >
-                Privacy Policy
-              </Link>
+          </div>
 
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-[#C9A24D] text-sm transition"
-              >
-                Terms of Use
-              </Link>
 
-            </div> */}
+          {/* BANGALORE */}
+          <div>
+
+            <h4 className="text-[#C9A24D] font-semibold mb-3">
+              IN BANGALORE:
+            </h4>
+
+            <p className="text-gray-300 leading-7">
+
+              HSR Layout | Indiranagar | Whitefield | Koramangala |
+              Jayanagar | Rajajinagar | Electronic City |
+              Marathahalli | Yelahanka | Hebbal
+
+            </p>
+
+          </div>
+
+
+          {/* LEGAL SERVICES */}
+          <div>
+
+            <h4 className="text-[#C9A24D] font-semibold mb-3">
+              LEGAL SERVICES:
+            </h4>
+
+            <p className="text-gray-300 leading-7">
+
+              Corporate Lawyer in Bangalore |
+              Civil Litigation Lawyer |
+              Criminal Lawyer |
+              Divorce Lawyer |
+              Property Lawyer |
+              Consumer Court Lawyer |
+              Cheque Bounce Lawyer |
+              High Court Lawyer |
+              Supreme Court Lawyer |
+              Arbitration Lawyer |
+              Legal Notice Lawyer |
+              NRI Legal Services
+
+            </p>
+
+          </div>
+
+
+          {/* CONSULTATION */}
+          <div>
+
+            <h4 className="text-[#C9A24D] font-semibold mb-3">
+              LEGAL CONSULTATION:
+            </h4>
+
+            <p className="text-gray-300 leading-7">
+
+              Legal Advice in Bangalore |
+              Online Legal Consultation |
+              Corporate Legal Advisory |
+              Property Legal Advice |
+              Family Legal Consultation |
+              Criminal Legal Consultation |
+              Court Case Consultation |
+              Civil Case Legal Advice
+
+            </p>
 
           </div>
 
         </div>
 
       </div>
+
+
+
+      {/* ================= COPYRIGHT BAR ================= */}
+
+      <div className="border-t border-[#1a1a1a]">
+
+        <div className={`${container} py-6 text-center`}>
+
+          <p className="text-gray-400 text-sm">
+            © 2026 S Jain Attorneys. All Rights Reserved.
+          </p>
+
+        </div>
+
+      </div>
+
+
 
     </footer>
   );

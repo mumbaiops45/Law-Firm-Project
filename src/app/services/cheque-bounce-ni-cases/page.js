@@ -269,7 +269,7 @@ export default function ChequeBounceNICasesPage() {
             <motion.div variants={fadeUp} className="mb-16">
 
               <Image
-                src="/corporatelaw.png"
+                src="/cheque.png"
                 alt="Cheque Bounce Legal Consultation"
                 width={1200}
                 height={600}

@@ -265,17 +265,25 @@ export default function HighCourtSupremeCourtPracticePage() {
 
             {/* IMAGE */}
 
-            <motion.div variants={fadeUp} className="mb-16">
-
-              <Image
-                src="/corporatelaw.png"
-                alt="Court Legal Consultation"
-                width={1200}
-                height={600}
-                className="w-full rounded-xl shadow-lg"
-              />
-
-            </motion.div>
+            <motion.div
+  variants={fadeUp}
+  className="mb-16 max-w-3xl mx-auto"
+>
+  <Image
+    src="/high.png"
+    alt="Court Legal Consultation"
+    width={800}
+    height={400}
+    className="
+      w-full
+      h-[340px] md:h-[580px]
+      object-cover
+      rounded-xl
+      shadow-lg
+    "
+    sizes="(max-width: 768px) 100vw, 700px"
+  />
+</motion.div>
 
 
 

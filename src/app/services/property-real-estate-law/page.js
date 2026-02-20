@@ -206,7 +206,7 @@ export default function PropertyRealEstateLawPage() {
             <motion.div variants={fadeUp} className="mb-16">
 
               <Image
-                src="/corporatelaw.png"
+                src="/property1.png"
                 alt="Property Consultation"
                 width={1200}
                 height={600}

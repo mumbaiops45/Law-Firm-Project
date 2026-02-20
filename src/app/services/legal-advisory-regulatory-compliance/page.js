@@ -268,7 +268,7 @@ export default function LegalAdvisoryRegulatoryCompliancePage() {
             <motion.div variants={fadeUp} className="mb-16">
 
               <Image
-                src="/corporatelaw.png"
+                src="/legal-compliance.png"
                 alt="Legal Compliance Consultation"
                 width={1200}
                 height={600}
