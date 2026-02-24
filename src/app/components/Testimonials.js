@@ -221,125 +221,302 @@
 // }
 
 
+// "use client";
+
+// import { motion } from "framer-motion";
+
+// export default function Testimonials() {
+
+//   const testimonials = [
+//     {
+//       quote:
+//         "S Jain Attorneys guided us through a complex corporate matter with professionalism and clarity.",
+//       client: "Corporate Client",
+//       practice: "Corporate & Commercial Law",
+//     },
+//     {
+//       quote:
+//         "Their legal advice was precise, ethical, and focused on achieving the best possible outcome.",
+//       client: "Individual Client",
+//       practice: "Civil Litigation",
+//     },
+//     {
+//       quote:
+//         "We appreciated their transparent approach and commitment to protecting our interests.",
+//       client: "Business Client",
+//       practice: "Legal Advisory",
+//     },
+//   ];
+
+//   const cardVariants = {
+//     hidden: { opacity: 0, y: 25 },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: { duration: 0.6, ease: "easeOut" },
+//     },
+//   };
+
+//   // ===== GLOBAL SAME STYLES =====
+
+//   const container =
+//     "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28";
+
+//   const sectionTitle =
+//     "text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[#111111] text-center";
+
+//   const underline =
+//     "w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4 mb-14";
+
+
+//   return (
+
+//     <section className="bg-[#f4efef]">
+
+//       <div className={container}>
+
+//         {/* Section Title */}
+//         <div className="text-center">
+//           <h2 className={sectionTitle}>
+//             Client Testimonials
+//           </h2>
+//           <div className={underline}></div>
+//         </div>
+
+
+//         {/* Testimonials Grid */}
+//         <div className="grid md:grid-cols-3 gap-8">
+
+//           {testimonials.map((t, index) => (
+
+//             <motion.div
+//               key={index}
+//               variants={cardVariants}
+//               initial="hidden"
+//               whileInView="visible"
+//               viewport={{ once: true }}
+//               transition={{ delay: index * 0.15 }}
+//               whileHover={{ y: -4 }}
+//               className="
+//                 bg-[#1A1A1A]
+//                 border border-gray-800
+//                 rounded-md
+//                 p-6
+//                 text-center
+//                 transition-all duration-300
+//                 hover:border-[#C9A24D]
+//                 hover:shadow-md
+//               "
+//             >
+
+//               {/* Quote */}
+//               <p className="
+//                 text-gray-300
+//                 italic
+//                 leading-relaxed
+//                 mb-6
+//                 text-base
+//               ">
+//                 “{t.quote}”
+//               </p>
+
+//               {/* Client Name */}
+//               <h3 className="text-[#C9A24D] font-semibold text-base">
+//                 {t.client}
+//               </h3>
+
+//               {/* Practice Area */}
+//               {t.practice && (
+//                 <p className="text-gray-500 text-sm mt-1">
+//                   {t.practice}
+//                 </p>
+//               )}
+
+//             </motion.div>
+
+//           ))}
+
+//         </div>
+
+//       </div>
+
+//     </section>
+//   );
+// }
+
+
 "use client";
 
 import { motion } from "framer-motion";
+import { FaQuoteLeft } from "react-icons/fa";
 
 export default function Testimonials() {
 
   const testimonials = [
     {
       quote:
-        "S Jain Attorneys guided us through a complex corporate matter with professionalism and clarity.",
+        "S Jain Attorneys provided exceptional legal guidance for our corporate restructuring. Their professionalism and clarity were outstanding.",
       client: "Corporate Client",
       practice: "Corporate & Commercial Law",
+      initial: "C",
     },
     {
       quote:
-        "Their legal advice was precise, ethical, and focused on achieving the best possible outcome.",
+        "Their litigation expertise and strategic approach helped resolve our dispute efficiently and successfully.",
       client: "Individual Client",
       practice: "Civil Litigation",
+      initial: "I",
     },
     {
       quote:
-        "We appreciated their transparent approach and commitment to protecting our interests.",
+        "Highly professional, confidential, and responsive. We trust them for all our legal advisory needs.",
       client: "Business Client",
       practice: "Legal Advisory",
+      initial: "B",
+    },
+    {
+      quote:
+        "Their legal team demonstrated deep expertise and provided practical solutions tailored to our situation.",
+      client: "Private Client",
+      practice: "Property Law",
+      initial: "P",
+    },
+    {
+      quote:
+        "Transparent communication, ethical practice, and excellent legal representation throughout our case.",
+      client: "Startup Client",
+      practice: "Corporate Law",
+      initial: "S",
+    },
+    {
+      quote:
+        "We highly recommend S Jain Attorneys for their professionalism, dedication, and legal excellence.",
+      client: "International Client",
+      practice: "Legal Advisory",
+      initial: "I",
     },
   ];
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 25 },
+  const containerVariants = {
+    hidden: {},
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        staggerChildren: 0.15,
+      },
     },
   };
 
-  // ===== GLOBAL SAME STYLES =====
-
-  const container =
-    "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28";
-
-  const sectionTitle =
-    "text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[#111111] text-center";
-
-  const underline =
-    "w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4 mb-14";
-
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
 
   return (
 
-    <section className="bg-[#f4efef]">
+    <section className="bg-[#F4F4F4] py-16 sm:py-20 lg:py-24">
 
-      <div className={container}>
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
 
-        {/* Section Title */}
-        <div className="text-center">
-          <h2 className={sectionTitle}>
+        {/* Heading */}
+        <div className="text-center mb-16">
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#111111]">
             Client Testimonials
           </h2>
-          <div className={underline}></div>
+
+          <div className="w-24 h-[2px] bg-[#C9A24D] mx-auto mt-5 mb-5"></div>
+
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Trusted by individuals, businesses, and corporate clients for reliable legal representation.
+          </p>
+
         </div>
 
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
 
           {testimonials.map((t, index) => (
 
             <motion.div
               key={index}
               variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
-              whileHover={{ y: -4 }}
+              whileHover={{ y: -8 }}
               className="
-                bg-[#1A1A1A]
-                border border-gray-800
-                rounded-md
-                p-6
-                text-center
+                bg-white
+                rounded-lg
+                p-8
+                shadow-sm
+                border border-gray-200
                 transition-all duration-300
+                hover:shadow-xl
                 hover:border-[#C9A24D]
-                hover:shadow-md
               "
             >
 
+              {/* Quote Icon */}
+              <FaQuoteLeft className="text-[#C9A24D] text-xl mb-4" />
+
+
               {/* Quote */}
-              <p className="
-                text-gray-300
-                italic
-                leading-relaxed
-                mb-6
-                text-base
-              ">
+              <p className="text-gray-600 italic leading-relaxed mb-6">
                 “{t.quote}”
               </p>
 
-              {/* Client Name */}
-              <h3 className="text-[#C9A24D] font-semibold text-base">
-                {t.client}
-              </h3>
 
-              {/* Practice Area */}
-              {t.practice && (
-                <p className="text-gray-500 text-sm mt-1">
-                  {t.practice}
-                </p>
-              )}
+              {/* Client Info */}
+              <div className="flex items-center gap-4">
+
+                {/* Initial Circle */}
+                <div className="
+                  w-12 h-12
+                  rounded-full
+                  bg-[#C9A24D]
+                  text-white
+                  flex items-center justify-center
+                  font-semibold
+                ">
+                  {t.initial}
+                </div>
+
+                <div>
+
+                  <h4 className="font-semibold text-[#111111]">
+                    {t.client}
+                  </h4>
+
+                  <p className="text-sm text-gray-500">
+                    {t.practice}
+                  </p>
+
+                </div>
+
+              </div>
 
             </motion.div>
 
           ))}
 
-        </div>
+        </motion.div>
 
       </div>
 
     </section>
+
   );
 }

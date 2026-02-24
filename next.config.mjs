@@ -31,7 +31,7 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
+  output: "export",
 
   // Required for Netlify static hosting
   images: {

@@ -489,40 +489,241 @@
 // }
 
 
+// "use client";
+
+// import { useState } from "react";
+// import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+
+// export default function FAQsSection({ serviceName = "Corporate Law" }) {
+
+//   const faqs = [
+//     {
+//       question: "When should I consult a corporate lawyer?",
+//       answer:
+//         "You should consult a corporate lawyer before entering into contracts, business structuring, mergers, or regulatory matters to ensure compliance and prevent future legal risks.",
+//     },
+//     {
+//       question: "Do you handle litigation?",
+//       answer:
+//         "Yes, we provide representation in civil, corporate, and commercial litigation, ensuring professional handling and protection of your legal interests.",
+//     },
+//     {
+//       question: "Is my information confidential?",
+//       answer:
+//         "Absolutely. All client information and discussions are handled with strict confidentiality and in accordance with professional legal standards.",
+//     },
+//     {
+//       question: "What is the typical process for legal consultation?",
+//       answer:
+//         "Our process includes an initial consultation, detailed case assessment, legal strategy planning, and professional execution or representation as required.",
+//     },
+//     {
+//       question: "Can NRIs access your services?",
+//       answer:
+//         "Yes, we provide India-focused legal services for NRIs, including corporate, property, compliance, and advisory matters.",
+//     },
+//   ];
+
+//   const [activeIndex, setActiveIndex] = useState(null);
+
+//   const toggleAccordion = (index) => {
+//     setActiveIndex(activeIndex === index ? null : index);
+//   };
+
+
+//   // ===== SAME GLOBAL STYLES =====
+
+//   const container =
+//     "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28";
+
+//   const sectionTitle =
+//     "text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[#111111] text-center";
+
+//   const underline =
+//     "w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4 mb-14";
+
+
+//   return (
+
+//     <section className="bg-[#F5F5F5]">
+
+//       <div className={container}>
+
+//         {/* Section Title */}
+//         <div className="text-center">
+//           <h2 className={sectionTitle}>
+//             Frequently Asked Questions
+//           </h2>
+
+//           <div className={underline}></div>
+//         </div>
+
+
+//         {/* Accordion */}
+//         <div className="max-w-4xl mx-auto space-y-4">
+
+//           {faqs.map((faq, index) => (
+
+//             <div
+//               key={index}
+//               className="
+//                 bg-white
+//                 border border-gray-200
+//                 rounded-md
+//                 shadow-sm
+//                 transition
+//               "
+//             >
+
+//               {/* Question */}
+//               <button
+//                 onClick={() => toggleAccordion(index)}
+//                 className="
+//                   w-full
+//                   flex
+//                   justify-between
+//                   items-center
+//                   px-6
+//                   py-5
+//                   text-left
+//                   font-medium
+//                   text-[#111111]
+//                   hover:bg-gray-50
+//                   transition
+//                 "
+//               >
+
+//                 <span className="text-base">
+//                   {faq.question}
+//                 </span>
+
+//                 {activeIndex === index ? (
+//                   <FaChevronUp className="text-[#C9A24D]" />
+//                 ) : (
+//                   <FaChevronDown className="text-[#C9A24D]" />
+//                 )}
+
+//               </button>
+
+
+//               {/* Answer */}
+//               <div
+//                 className={`
+//                   overflow-hidden
+//                   transition-all duration-300
+//                   ${activeIndex === index
+//                     ? "max-h-96 opacity-100 pb-5 px-6"
+//                     : "max-h-0 opacity-0 px-6"}
+//                 `}
+//               >
+
+//                 <p className="text-gray-700 text-base leading-relaxed">
+//                   {faq.answer}
+//                 </p>
+
+//               </div>
+
+//             </div>
+
+//           ))}
+
+//         </div>
+
+
+
+//         {/* CTA Section */}
+//         <div className="
+//           mt-20
+//           max-w-4xl
+//           mx-auto
+//           bg-[#111111]
+//           text-white
+//           rounded-lg
+//           p-10
+//           text-center
+//         ">
+
+//           <h3 className="text-2xl md:text-3xl font-semibold mb-3">
+//             Need Legal Assistance in {serviceName}?
+//           </h3>
+
+//           <p className="text-gray-300 mb-6 text-base">
+//             Schedule a confidential consultation with our legal team.
+//           </p>
+
+//           <button
+//             className="
+//               px-8
+//               py-3
+//               bg-[#C9A24D]
+//               text-[#111111]
+//               font-semibold
+//               rounded-md
+//               hover:bg-[#B08D3C]
+//               transition
+//             "
+//           >
+//             Request Consultation
+//           </button>
+
+//         </div>
+
+
+//       </div>
+
+//     </section>
+
+//   );
+// }
+
+
+
 "use client";
 
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import Link from "next/link";
 
-export default function FAQsSection({ serviceName = "Corporate Law" }) {
+export default function FAQsSection() {
 
   const faqs = [
     {
       question: "When should I consult a corporate lawyer?",
       answer:
-        "You should consult a corporate lawyer before entering into contracts, business structuring, mergers, or regulatory matters to ensure compliance and prevent future legal risks.",
+        "You should consult a corporate lawyer before entering contracts, structuring business operations, or regulatory matters to prevent legal risks and ensure compliance.",
     },
     {
-      question: "Do you handle litigation?",
+      question: "Do you handle litigation matters?",
       answer:
-        "Yes, we provide representation in civil, corporate, and commercial litigation, ensuring professional handling and protection of your legal interests.",
+        "Yes, we represent clients in civil, corporate, property, and criminal litigation across courts and tribunals in Bangalore and India.",
     },
     {
-      question: "Is my information confidential?",
+      question: "Is my information kept confidential?",
       answer:
-        "Absolutely. All client information and discussions are handled with strict confidentiality and in accordance with professional legal standards.",
+        "Yes. All matters are handled with complete confidentiality and legal discretion, ensuring full privacy and protection of your interests.",
     },
     {
-      question: "What is the typical process for legal consultation?",
+      question: "What is the legal consultation process?",
       answer:
-        "Our process includes an initial consultation, detailed case assessment, legal strategy planning, and professional execution or representation as required.",
+        "Our process includes confidential consultation, case assessment, legal strategy planning, and professional representation tailored to your matter.",
     },
     {
-      question: "Can NRIs access your services?",
+      question: "Can divorce be settled without court trial?",
       answer:
-        "Yes, we provide India-focused legal services for NRIs, including corporate, property, compliance, and advisory matters.",
+        "Many divorce matters can be resolved through mutual consent, mediation, or settlement negotiations without full court trial.",
+    },
+    {
+      question: "How is alimony calculated?",
+      answer:
+        "Alimony depends on income, financial capacity, standard of living during marriage, and court discretion based on case-specific factors.",
+    },
+    {
+      question: "Do you provide services for NRIs?",
+      answer:
+        "Yes, we advise and represent NRI clients in property, family, corporate, and litigation matters across India.",
     },
   ];
+
 
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -531,13 +732,13 @@ export default function FAQsSection({ serviceName = "Corporate Law" }) {
   };
 
 
-  // ===== SAME GLOBAL STYLES =====
+  /* PREMIUM STYLES */
 
   const container =
     "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28";
 
   const sectionTitle =
-    "text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[#111111] text-center";
+    "text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#111111] text-center";
 
   const underline =
     "w-24 h-[2px] bg-[#C9A24D] mx-auto mt-4 mb-14";
@@ -545,21 +746,25 @@ export default function FAQsSection({ serviceName = "Corporate Law" }) {
 
   return (
 
-    <section className="bg-[#F5F5F5]">
+    <section className="bg-[#FAFAFA]">
 
       <div className={container}>
 
-        {/* Section Title */}
+        {/* HEADING */}
+
         <div className="text-center">
+
           <h2 className={sectionTitle}>
             Frequently Asked Questions
           </h2>
 
           <div className={underline}></div>
+
         </div>
 
 
-        {/* Accordion */}
+        {/* FAQ LIST */}
+
         <div className="max-w-4xl mx-auto space-y-4">
 
           {faqs.map((faq, index) => (
@@ -571,11 +776,12 @@ export default function FAQsSection({ serviceName = "Corporate Law" }) {
                 border border-gray-200
                 rounded-md
                 shadow-sm
-                transition
+                overflow-hidden
               "
             >
 
-              {/* Question */}
+              {/* QUESTION */}
+
               <button
                 onClick={() => toggleAccordion(index)}
                 className="
@@ -593,31 +799,28 @@ export default function FAQsSection({ serviceName = "Corporate Law" }) {
                 "
               >
 
-                <span className="text-base">
-                  {faq.question}
-                </span>
+                <span>{faq.question}</span>
 
-                {activeIndex === index ? (
-                  <FaChevronUp className="text-[#C9A24D]" />
-                ) : (
-                  <FaChevronDown className="text-[#C9A24D]" />
-                )}
+                {activeIndex === index
+                  ? <FaChevronUp className="text-[#C9A24D]" />
+                  : <FaChevronDown className="text-[#C9A24D]" />
+                }
 
               </button>
 
 
-              {/* Answer */}
+              {/* ANSWER */}
+
               <div
                 className={`
-                  overflow-hidden
-                  transition-all duration-300
+                  transition-all duration-300 ease-in-out overflow-hidden
                   ${activeIndex === index
-                    ? "max-h-96 opacity-100 pb-5 px-6"
+                    ? "max-h-96 opacity-100 px-6 pb-6"
                     : "max-h-0 opacity-0 px-6"}
                 `}
               >
 
-                <p className="text-gray-700 text-base leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {faq.answer}
                 </p>
 
@@ -631,42 +834,7 @@ export default function FAQsSection({ serviceName = "Corporate Law" }) {
 
 
 
-        {/* CTA Section */}
-        <div className="
-          mt-20
-          max-w-4xl
-          mx-auto
-          bg-[#111111]
-          text-white
-          rounded-lg
-          p-10
-          text-center
-        ">
-
-          <h3 className="text-2xl md:text-3xl font-semibold mb-3">
-            Need Legal Assistance in {serviceName}?
-          </h3>
-
-          <p className="text-gray-300 mb-6 text-base">
-            Schedule a confidential consultation with our legal team.
-          </p>
-
-          <button
-            className="
-              px-8
-              py-3
-              bg-[#C9A24D]
-              text-[#111111]
-              font-semibold
-              rounded-md
-              hover:bg-[#B08D3C]
-              transition
-            "
-          >
-            Request Consultation
-          </button>
-
-        </div>
+        {/* PREMIUM CTA */}
 
 
       </div>
@@ -674,4 +842,5 @@ export default function FAQsSection({ serviceName = "Corporate Law" }) {
     </section>
 
   );
+
 }
