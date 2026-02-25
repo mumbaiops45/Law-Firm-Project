@@ -111,7 +111,7 @@ export default function Index() {
   return (
     <main className="overflow-x-hidden">
 
-      <section id="hero">
+      <section id="/law-firm-in-bangalore">
         <HeroSection />
       </section>
 
@@ -136,7 +136,7 @@ export default function Index() {
 
       <FAQsSection />
 
-      <section id="contact">
+      <section id="legal-consultation-in-bangalore">
         <Consultation />
       </section>
 

@@ -2843,6 +2843,7 @@
 //   );
 
 // }
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -3019,7 +3020,7 @@ export default function Hero() {
 
             {/* RESPONSE ASSURANCE — CLIENT REQUIRED */}
             <p className="text-gray-400 text-sm mb-8">
-              Same-day consultation available. Response within 24 hours guaranteed.
+              Same-day consultation available.
             </p>
 
 

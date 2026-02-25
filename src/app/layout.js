@@ -89,19 +89,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import ScrollToTopButton from "./styles/ScrollToTopButton";
 
-/* ✅ ADD METADATA HERE */
-export const metadata = {
-  title: "Law Firm in Bangalore | S Jain Attorneys",
-  description:
-    "S Jain Attorneys is a leading law firm in Bangalore offering corporate, civil, criminal, family, property and advisory legal services with integrity and experience.",
-  keywords: [
-    "Law Firm in Bangalore",
-    "Corporate Lawyer Bangalore",
-    "Civil Lawyer Bangalore",
-    "Criminal Lawyer Bangalore",
-    "Property Lawyer Bangalore",
-  ],
-};
+
 
 export default function RootLayout({ children }) {
   return (

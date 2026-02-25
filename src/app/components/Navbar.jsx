@@ -2161,11 +2161,807 @@
 
 // }
 
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import Link from "next/link";
+// import { ChevronDown } from "lucide-react";
+// import { usePathname } from "next/navigation";
+
+// export default function Navbar() {
+
+//   const pathname = usePathname();
+
+//   const [isScrolled, setIsScrolled] = useState(false);
+//   const [servicesOpen, setServicesOpen] = useState(false);
+
+//   const [showDisclaimer, setShowDisclaimer] = useState(false);
+//   const [isChecked, setIsChecked] = useState(false);
+
+
+//   /* SCROLL EFFECT */
+//   useEffect(() => {
+
+//     const handleScroll = () => {
+//       setIsScrolled(window.scrollY > 20);
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+
+//     return () => window.removeEventListener("scroll", handleScroll);
+
+//   }, []);
+
+
+//   /* DISCLAIMER */
+//   useEffect(() => {
+
+//     if (pathname === "/") {
+
+//       const shown = sessionStorage.getItem("disclaimerShown");
+
+//       if (!shown) {
+
+//         setShowDisclaimer(true);
+
+//         document.body.style.overflow = "hidden";
+
+//       }
+
+//     }
+
+//   }, [pathname]);
+
+
+//   const handleAccept = () => {
+
+//     if (!isChecked) return;
+
+//     sessionStorage.setItem("disclaimerShown", "true");
+
+//     setShowDisclaimer(false);
+
+//     document.body.style.overflow = "auto";
+
+//   };
+
+
+//   const handleExit = () => {
+
+//     window.location.href = "https://www.google.com";
+
+//   };
+
+
+//   /* PRACTICE AREAS */
+//   const practiceAreas = [
+
+//     { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
+//     { name: "Civil Litigation", href: "/services/civil-litigation" },
+//     { name: "Criminal Defense", href: "/services/criminal-defense" },
+//     { name: "Property Law", href: "/services/property-law" },
+//     { name: "Family Law", href: "/services/family-law" },
+//     { name: "Employment & Labour Law", href: "/services/employment-law" },
+
+//   ];
+
+
+//   return (
+//     <>
+
+//       {/* NAVBAR */}
+//       <nav
+//         className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+//           isScrolled
+//             ? "bg-black shadow-[0_8px_30px_rgba(0,0,0,0.6)] py-3"
+//             : "bg-black/70 backdrop-blur-xl py-5"
+//         }`}
+//       >
+
+//         {/* FULL WIDTH CONTAINER */}
+//         <div className="w-full px-8 flex items-center justify-between">
+
+
+//           {/* LOGO */}
+//           <Link
+//             href="/"
+//             className="flex items-center gap-3 flex-shrink-0"
+//           >
+
+//             <img
+//               src="/logo2.jpg"
+//               alt="S Jain Attorneys"
+//               className="h-12 w-auto object-contain"
+//             />
+
+//             <div className="leading-tight">
+
+//               <div className="text-white font-semibold text-lg tracking-wide whitespace-nowrap">
+//                 S Jain <span className="text-[#C9A24D]">& Attorneys</span>
+//               </div>
+
+//               <div className="text-gray-400 text-xs tracking-widest uppercase whitespace-nowrap">
+//                 Advocates & Legal Consultants
+//               </div>
+
+//             </div>
+
+//           </Link>
+
+
+//           {/* CENTER MENU */}
+//           <ul className="hidden lg:flex items-center gap-8 xl:gap-10 text-[15px] font-medium text-gray-300 whitespace-nowrap">
+
+
+//             <li>
+//               <Link href="/" className="hover:text-[#C9A24D] transition">
+//                 Home
+//               </Link>
+//             </li>
+
+
+//             <li>
+//               <Link href="/about" className="hover:text-[#C9A24D] transition">
+//                 About Us
+//               </Link>
+//             </li>
+
+
+//             {/* PRACTICE AREAS */}
+//             <li
+//               className="relative"
+//               onMouseEnter={() => setServicesOpen(true)}
+//               onMouseLeave={() => setServicesOpen(false)}
+//             >
+
+//               <div className="flex items-center gap-1 cursor-pointer hover:text-[#C9A24D] transition">
+
+//                 Practice Areas
+
+//                 <ChevronDown size={16}/>
+
+//               </div>
+
+
+//               {servicesOpen && (
+
+//                 <div className="absolute top-full mt-4 w-64 bg-black border border-gray-800 shadow-2xl">
+
+//                   {practiceAreas.map((item, i) => (
+
+//                     <Link
+//                       key={i}
+//                       href={item.href}
+//                       className="block px-5 py-3 text-gray-300 hover:bg-[#C9A24D] hover:text-black transition"
+//                     >
+//                       {item.name}
+//                     </Link>
+
+//                   ))}
+
+//                 </div>
+
+//               )}
+
+//             </li>
+
+
+//             <li>
+//               <Link href="/team" className="hover:text-[#C9A24D] transition">
+//                 Our Team
+//               </Link>
+//             </li>
+
+
+//             <li>
+//               <Link href="/case-studies" className="hover:text-[#C9A24D] transition">
+//                 Case Studies
+//               </Link>
+//             </li>
+
+
+//             <li>
+//               <Link href="/insights" className="hover:text-[#C9A24D] transition">
+//                 Insights
+//               </Link>
+//             </li>
+
+
+//             <li>
+//               <Link href="/contact" className="hover:text-[#C9A24D] transition">
+//                 Contact
+//               </Link>
+//             </li>
+
+
+//           </ul>
+
+
+//           {/* CTA BUTTON */}
+//           <Link
+//             href="/contact"
+//             className="
+//             hidden lg:inline-flex
+//             items-center
+//             bg-[#C9A24D]
+//             text-black
+//             px-6 xl:px-7
+//             py-3
+//             font-semibold
+//             tracking-wide
+//             whitespace-nowrap
+//             transition-all duration-300
+//             hover:bg-[#b8963e]
+//             hover:scale-[1.03]
+//             shadow-[0_6px_20px_rgba(201,162,77,0.4)]"
+//           >
+//             Book Confidential Consultation
+//           </Link>
+
+
+//         </div>
+
+//       </nav>
+
+
+
+//       {/* DISCLAIMER POPUP */}
+//       {showDisclaimer && (
+
+//         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm">
+
+
+//           <div className="bg-white max-w-xl w-full mx-4 shadow-2xl">
+
+
+//             <div className="text-center p-6 border-b">
+
+//               <img src="/logo2.jpg" className="h-12 mx-auto mb-3"/>
+
+//               <h2 className="text-2xl font-semibold">
+//                 Disclaimer & Confirmation
+//               </h2>
+
+//               <div className="w-16 h-[2px] bg-[#C9A24D] mx-auto mt-3"></div>
+
+//             </div>
+
+
+
+//             <div className="p-6 text-gray-600 text-sm leading-relaxed max-h-[300px] overflow-y-auto">
+
+// <p>
+// As per the rules of the Bar Council of India, advocates are prohibited from advertising or soliciting work.
+// </p>
+
+// <br/>
+
+// <p>
+// By accessing this website, you acknowledge and confirm that you are seeking information relating to S Jain Attorneys voluntarily and that there has been no form of solicitation, advertisement, or inducement by the firm or its members.
+// </p>
+
+// <br/>
+
+// <p>
+// The content of this website is for informational purposes only and should not be interpreted as legal advice. Transmission, receipt, or use of this website does not create an attorney-client relationship.
+// </p>
+
+// <br/>
+
+// <p>
+// Any information obtained or materials downloaded from this website is completely at your own discretion and risk.
+// </p>
+
+// <br/>
+
+// <p>
+// S Jain Attorneys shall not be liable for any consequence of any action taken by the user relying on material or information provided on this website.
+// </p>
+
+// <br/>
+
+// <p>
+// By proceeding further and clicking on the "Accept & Enter" button, you acknowledge that you have read and understood this disclaimer.
+// </p>
+
+// </div>
+
+
+
+//             <div className="flex justify-center p-4">
+
+//               <label className="flex items-center gap-2 text-sm">
+
+//                 <input
+//                   type="checkbox"
+//                   checked={isChecked}
+//                   onChange={(e)=>setIsChecked(e.target.checked)}
+//                   className="accent-[#C9A24D]"
+//                 />
+
+//                 I have read and understood the disclaimer
+
+//               </label>
+
+//             </div>
+
+
+
+//             <div className="flex justify-center gap-4 pb-6">
+
+//               <button
+//                 onClick={handleAccept}
+//                 disabled={!isChecked}
+//                 className={`px-6 py-3 font-medium ${
+//                   isChecked
+//                     ? "bg-[#C9A24D] text-black"
+//                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
+//                 }`}
+//               >
+//                 Accept & Enter
+//               </button>
+
+
+//               {/* <button
+//                 onClick={handleExit}
+//                 className="px-6 py-3 bg-black text-white"
+//               >
+//                 Exit
+//               </button> */}
+
+//             </div>
+
+
+//           </div>
+
+//         </div>
+
+//       )}
+
+//     </>
+//   );
+
+// }
+
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import Link from "next/link";
+// import {
+//   ChevronDown,
+//   Menu,
+//   X
+// } from "lucide-react";
+// import { usePathname } from "next/navigation";
+
+// export default function Navbar() {
+
+//   const pathname = usePathname();
+
+//   const [isScrolled, setIsScrolled] = useState(false);
+//   const [servicesOpen, setServicesOpen] = useState(false);
+
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+//   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+//   const [showDisclaimer, setShowDisclaimer] = useState(false);
+//   const [isChecked, setIsChecked] = useState(false);
+
+
+//   /* ================= SCROLL EFFECT ================= */
+
+//   useEffect(() => {
+
+//     const handleScroll = () => {
+//       setIsScrolled(window.scrollY > 20);
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+
+//     return () => window.removeEventListener("scroll", handleScroll);
+
+//   }, []);
+
+
+
+//   /* ================= DISCLAIMER ================= */
+
+//   useEffect(() => {
+
+//     if (pathname === "/") {
+
+//       const shown = sessionStorage.getItem("disclaimerShown");
+
+//       if (!shown) {
+
+//         setShowDisclaimer(true);
+//         document.body.style.overflow = "hidden";
+
+//       }
+
+//     }
+
+//   }, [pathname]);
+
+
+//   const handleAccept = () => {
+
+//     if (!isChecked) return;
+
+//     sessionStorage.setItem("disclaimerShown", "true");
+
+//     setShowDisclaimer(false);
+
+//     document.body.style.overflow = "unset";
+
+//   };
+
+
+
+//   /* ================= PRACTICE AREAS ================= */
+
+//   const practiceAreas = [
+
+//     {
+//       name: "Corporate & Commercial Law",
+//       href: "/services/corporate-law"
+//     },
+
+//     {
+//       name: "Civil Litigation",
+//       href: "/services/civil-litigation"
+//     },
+
+//     {
+//       name: "Criminal Defense",
+//       href: "/services/criminal-defense"
+//     },
+
+//     {
+//       name: "Property Law",
+//       href: "/services/property-law"
+//     },
+
+//     {
+//       name: "Family Law",
+//       href: "/services/family-law"
+//     },
+
+//     {
+//       name: "Employment & Labour Law",
+//       href: "/services/employment-law"
+//     },
+
+//   ];
+
+
+//   return (
+//     <>
+
+//       {/* ================= NAVBAR ================= */}
+
+//       <nav
+//         className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+//           isScrolled
+//             ? "bg-black shadow-[0_8px_30px_rgba(0,0,0,0.6)] py-3"
+//             : "bg-black/70 backdrop-blur-xl py-5"
+//         }`}
+//       >
+
+//         <div className="w-full px-6 lg:px-10 flex items-center justify-between">
+
+
+//           {/* LOGO */}
+//           <Link href="/" className="flex items-center gap-3">
+
+//             <img
+//               src="/logo2.jpg"
+//               alt="S Jain Attorneys"
+//               className="h-11"
+//             />
+
+//             <div>
+
+//               <div className="text-white font-semibold text-lg">
+//                 S Jain <span className="text-[#C9A24D]">& Attorneys</span>
+//               </div>
+
+//               <div className="text-gray-400 text-xs uppercase tracking-widest">
+//                 Advocates & Legal Consultants
+//               </div>
+
+//             </div>
+
+//           </Link>
+
+
+
+//           {/* DESKTOP MENU */}
+
+//           <ul className="hidden lg:flex items-center gap-8 text-gray-300 font-medium">
+
+
+//             <li>
+//               <Link href="/" className="hover:text-[#C9A24D]">
+//                 Home
+//               </Link>
+//             </li>
+
+
+//             <li>
+//               <Link href="/about" className="hover:text-[#C9A24D]">
+//                 About
+//               </Link>
+//             </li>
+
+
+
+//             {/* DROPDOWN */}
+//             <li
+//               className="relative"
+//               onMouseEnter={() => setServicesOpen(true)}
+//               onMouseLeave={() => setServicesOpen(false)}
+//             >
+
+//               <div className="flex items-center gap-1 cursor-pointer hover:text-[#C9A24D]">
+
+//                 Practice Areas
+//                 <ChevronDown size={16} />
+
+//               </div>
+
+
+//               {servicesOpen && (
+
+//                 <div className="absolute top-full left-0 mt-4 w-64 bg-black border border-gray-800 shadow-xl">
+
+//                   {practiceAreas.map((item, i) => (
+
+//                     <Link
+//                       key={i}
+//                       href={item.href}
+//                       className="block px-5 py-3 hover:bg-[#C9A24D] hover:text-black"
+//                     >
+//                       {item.name}
+//                     </Link>
+
+//                   ))}
+
+//                 </div>
+
+//               )}
+
+//             </li>
+
+
+
+//             <li>
+//               <Link href="/team" className="hover:text-[#C9A24D]">
+//                 Team
+//               </Link>
+//             </li>
+
+
+//             <li>
+//               <Link href="/case-studies" className="hover:text-[#C9A24D]">
+//                 Case Studies
+//               </Link>
+//             </li>
+
+
+//             <li>
+//               <Link href="/insights" className="hover:text-[#C9A24D]">
+//                 Insights
+//               </Link>
+//             </li>
+
+
+//             <li>
+//               <Link href="/contact" className="hover:text-[#C9A24D]">
+//                 Contact
+//               </Link>
+//             </li>
+
+
+//           </ul>
+
+
+
+//           {/* CTA BUTTON */}
+
+//           <Link
+//             href="/contact"
+//             className="hidden lg:block bg-[#C9A24D] text-black px-6 py-3 font-semibold hover:bg-[#b8963e]"
+//           >
+//             Book Consultation
+//           </Link>
+
+
+
+//           {/* MOBILE MENU BUTTON */}
+
+//           <button
+//             className="lg:hidden text-white"
+//             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+//           >
+
+//             {mobileMenuOpen ? <X size={28}/> : <Menu size={28}/>}
+
+//           </button>
+
+
+//         </div>
+
+
+
+//         {/* MOBILE MENU */}
+
+//         {mobileMenuOpen && (
+
+//           <div className="lg:hidden bg-black border-t border-gray-800">
+
+//             <Link href="/" className="block px-6 py-4 border-b border-gray-800">
+//               Home
+//             </Link>
+
+
+//             <Link href="/about" className="block px-6 py-4 border-b border-gray-800">
+//               About
+//             </Link>
+
+
+
+//             {/* MOBILE DROPDOWN */}
+
+//             <div>
+
+//               <button
+//                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+//                 className="w-full flex justify-between px-6 py-4 border-b border-gray-800"
+//               >
+//                 Practice Areas
+//                 <ChevronDown size={18}/>
+//               </button>
+
+
+//               {mobileServicesOpen && (
+
+//                 <div>
+
+//                   {practiceAreas.map((item, i) => (
+
+//                     <Link
+//                       key={i}
+//                       href={item.href}
+//                       className="block px-10 py-3 border-b border-gray-800"
+//                     >
+//                       {item.name}
+//                     </Link>
+
+//                   ))}
+
+//                 </div>
+
+//               )}
+
+//             </div>
+
+
+
+//             <Link href="/team" className="block px-6 py-4 border-b border-gray-800">
+//               Team
+//             </Link>
+
+
+//             <Link href="/case-studies" className="block px-6 py-4 border-b border-gray-800">
+//               Case Studies
+//             </Link>
+
+
+//             <Link href="/insights" className="block px-6 py-4 border-b border-gray-800">
+//               Insights
+//             </Link>
+
+
+//             <Link href="/contact" className="block px-6 py-4">
+//               Contact
+//             </Link>
+
+//           </div>
+
+//         )}
+
+//       </nav>
+
+
+
+//       {/* ================= DISCLAIMER ================= */}
+
+//       {showDisclaimer && (
+
+//         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80">
+
+//           <div className="bg-white max-w-xl w-full mx-4 rounded-lg shadow-xl">
+
+//             <div className="p-6 text-center border-b">
+
+//               <img src="/logo2.jpg" className="h-12 mx-auto mb-3"/>
+
+//               <h2 className="text-2xl font-semibold">
+//                 Disclaimer & Confirmation
+//               </h2>
+
+//             </div>
+
+
+//             <div className="p-6 text-sm text-gray-700 space-y-4 max-h-[300px] overflow-y-auto">
+
+//               <p>
+//                 Under the rules of the Bar Council of India, law firms are not permitted to solicit work or advertise.
+//               </p>
+
+//               <p>
+//                 By proceeding further, you acknowledge that you are accessing this website voluntarily.
+//               </p>
+
+//               <p>
+//                 This website is for informational purposes only and does not create an attorney-client relationship.
+//               </p>
+
+//               <p className="font-medium">
+//                 By clicking Accept & Continue, you confirm you have read and understood.
+//               </p>
+
+//             </div>
+
+
+//             <div className="p-4 text-center">
+
+//               <label className="flex items-center justify-center gap-2 mb-4">
+
+//                 <input
+//                   type="checkbox"
+//                   checked={isChecked}
+//                   onChange={(e)=>setIsChecked(e.target.checked)}
+//                 />
+
+//                 I have read and understood the disclaimer
+
+//               </label>
+
+
+//               <button
+//                 onClick={handleAccept}
+//                 disabled={!isChecked}
+//                 className={`px-6 py-3 font-semibold ${
+//                   isChecked
+//                     ? "bg-[#C9A24D] text-black"
+//                     : "bg-gray-300 text-gray-500"
+//                 }`}
+//               >
+//                 Accept & Continue
+//               </button>
+
+//             </div>
+
+//           </div>
+
+//         </div>
+
+//       )}
+
+//     </>
+//   );
+
+// }
+
+
+
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -2173,13 +2969,21 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // desktop dropdown
   const [servicesOpen, setServicesOpen] = useState(false);
 
+  // mobile menu
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+  // disclaimer
   const [showDisclaimer, setShowDisclaimer] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
 
-  /* SCROLL EFFECT */
+  /* ================= SCROLL EFFECT ================= */
+
   useEffect(() => {
 
     const handleScroll = () => {
@@ -2193,7 +2997,9 @@ export default function Navbar() {
   }, []);
 
 
-  /* DISCLAIMER */
+
+  /* ================= DISCLAIMER ================= */
+
   useEffect(() => {
 
     if (pathname === "/") {
@@ -2201,11 +3007,8 @@ export default function Navbar() {
       const shown = sessionStorage.getItem("disclaimerShown");
 
       if (!shown) {
-
         setShowDisclaimer(true);
-
         document.body.style.overflow = "hidden";
-
       }
 
     }
@@ -2226,61 +3029,114 @@ export default function Navbar() {
   };
 
 
-  const handleExit = () => {
 
-    window.location.href = "https://www.google.com";
+  /* ================= PRACTICE AREAS ================= */
+const practiceAreas = [
+  {
+    name: "Corporate & Commercial Law",
+    href: "/corporate-commercial-law-firm",
+  },
+  {
+    name: "Civil Litigation",
+    href: "/civil-lawyer-in-bangalore",
+  },
+  {
+    name: "Family Law",
+    href: "/family-divorce-law",
+  },
+  {
+    name: "Property & Real Estate Law",
+    href: "/property-real-estate-law",
+  },
+  {
+    name: "Criminal Defense & Prosecution",
+    href: "/criminal-lawyer-in-bangalore",
+  },
+   {
+    name: "Cheque Bounce",
+    href: "/cheque-bounce-lawyer-in-bangalore",
+  },
+];
+  // const practiceAreas = [
 
-  };
+  //   {
+  //     name: "Corporate & Commercial Law",
+  //     href: "/corporate-commercial-law-firm"
+  //   },
+
+  //   {
+  //     name: "Civil Litigation",
+  //     href: "/civil-lawyer-in-bangalore"
+  //   },
+
+  //   {
+  //     name: "Family Law",
+  //     href: "family-divorce-law"
+  //   },
+
+  //   {
+  //     name: "Property & Real Estate Law",
+  //     href: "property-real-estate-law"
+  //   },
+
+  //   {
+  //     name: "Criminal Defense & Prosecution",
+  //     href: "criminal-lawyer-in-bangalore"
+  //   },
 
 
-  /* PRACTICE AREAS */
-  const practiceAreas = [
+  //   // {
+  //   //   name: "Criminal Defense",
+  //   //   href: "/services/criminal-defense"
+  //   // },
 
-    { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
-    { name: "Civil Litigation", href: "/services/civil-litigation" },
-    { name: "Criminal Defense", href: "/services/criminal-defense" },
-    { name: "Property Law", href: "/services/property-law" },
-    { name: "Family Law", href: "/services/family-law" },
-    { name: "Employment & Labour Law", href: "/services/employment-law" },
+  //   // {
+  //   //   name: "Property Law",
+  //   //   href: "/services/property-law"
+  //   // },
 
-  ];
+
+  //   // {
+  //   //   name: "Employment & Labour Law",
+  //   //   href: "/services/employment-law"
+  //   // },
+
+  // ];
+
 
 
   return (
     <>
 
-      {/* NAVBAR */}
+      {/* ================= NAVBAR ================= */}
+
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-          isScrolled
-            ? "bg-black shadow-[0_8px_30px_rgba(0,0,0,0.6)] py-3"
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
+            ? "bg-black shadow-lg py-3"
             : "bg-black/70 backdrop-blur-xl py-5"
-        }`}
+          }`}
       >
 
-        {/* FULL WIDTH CONTAINER */}
-        <div className="w-full px-8 flex items-center justify-between">
+        <div className="w-full px-6 lg:px-10 flex items-center justify-between">
 
 
           {/* LOGO */}
-          <Link
-            href="/"
-            className="flex items-center gap-3 flex-shrink-0"
-          >
+
+          <Link href="/" className="flex items-center gap-3">
 
             <img
               src="/logo2.jpg"
               alt="S Jain Attorneys"
-              className="h-12 w-auto object-contain"
+              className="h-11"
             />
 
-            <div className="leading-tight">
+            <div>
 
-              <div className="text-white font-semibold text-lg tracking-wide whitespace-nowrap">
+              <div className="text-white font-semibold text-lg">
                 S Jain <span className="text-[#C9A24D]">& Attorneys</span>
               </div>
 
-              <div className="text-gray-400 text-xs tracking-widest uppercase whitespace-nowrap">
+              <div className="text-gray-400 text-xs uppercase tracking-widest">
                 Advocates & Legal Consultants
               </div>
 
@@ -2289,8 +3145,10 @@ export default function Navbar() {
           </Link>
 
 
-          {/* CENTER MENU */}
-          <ul className="hidden lg:flex items-center gap-8 xl:gap-10 text-[15px] font-medium text-gray-300 whitespace-nowrap">
+
+          {/* ================= DESKTOP MENU ================= */}
+
+          <ul className="hidden lg:flex items-center gap-8 text-gray-300 font-medium">
 
 
             <li>
@@ -2301,31 +3159,36 @@ export default function Navbar() {
 
 
             <li>
-              <Link href="/about" className="hover:text-[#C9A24D] transition">
+              <Link href="/leading-law-firm-in-bangalore" className="hover:text-[#C9A24D] transition">
                 About Us
               </Link>
             </li>
 
 
-            {/* PRACTICE AREAS */}
-            <li
-              className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
 
-              <div className="flex items-center gap-1 cursor-pointer hover:text-[#C9A24D] transition">
+            {/* ================= DESKTOP DROPDOWN ================= */}
 
+            <li className="relative">
+
+              <button
+                onMouseEnter={() => setServicesOpen(true)}
+                className="flex items-center gap-1 hover:text-[#C9A24D] transition"
+              >
                 Practice Areas
-
-                <ChevronDown size={16}/>
-
-              </div>
+                <ChevronDown size={16} />
+              </button>
 
 
-              {servicesOpen && (
+              <div
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+                className={`absolute left-0 top-full pt-3 transition-all duration-200 ${servicesOpen
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible -translate-y-2"
+                  }`}
+              >
 
-                <div className="absolute top-full mt-4 w-64 bg-black border border-gray-800 shadow-2xl">
+                <div className="w-64 bg-black border border-gray-800 shadow-xl rounded-md overflow-hidden">
 
                   {practiceAreas.map((item, i) => (
 
@@ -2341,34 +3204,35 @@ export default function Navbar() {
 
                 </div>
 
-              )}
+              </div>
 
             </li>
 
 
+
             <li>
-              <Link href="/team" className="hover:text-[#C9A24D] transition">
+              <Link href="/lawyers-in-bangalore" className="hover:text-[#C9A24D] transition">
                 Our Team
               </Link>
             </li>
 
 
             <li>
-              <Link href="/case-studies" className="hover:text-[#C9A24D] transition">
-                Case Studies
+              <Link href="/successful-case-results-in-bangalore" className="hover:text-[#C9A24D] transition">
+                Success Stories
               </Link>
             </li>
 
 
             <li>
-              <Link href="/insights" className="hover:text-[#C9A24D] transition">
+              <Link href="/legal-advice-bangalore" className="hover:text-[#C9A24D] transition">
                 Insights
               </Link>
             </li>
 
 
             <li>
-              <Link href="/contact" className="hover:text-[#C9A24D] transition">
+              <Link href="/legal-consultation-in-bangalore" className="hover:text-[#C9A24D] transition">
                 Contact
               </Link>
             </li>
@@ -2377,48 +3241,133 @@ export default function Navbar() {
           </ul>
 
 
+
           {/* CTA BUTTON */}
+
           <Link
-            href="/contact"
-            className="
-            hidden lg:inline-flex
-            items-center
-            bg-[#C9A24D]
-            text-black
-            px-6 xl:px-7
-            py-3
-            font-semibold
-            tracking-wide
-            whitespace-nowrap
-            transition-all duration-300
-            hover:bg-[#b8963e]
-            hover:scale-[1.03]
-            shadow-[0_6px_20px_rgba(201,162,77,0.4)]"
+            href="/legal-consultation-in-bangalore"
+            className="hidden lg:block bg-[#C9A24D] text-black px-6 py-3 font-semibold hover:bg-[#b8963e] transition"
           >
-            Book Confidential Consultation
+            Book Consultation
           </Link>
 
 
+
+          {/* ================= MOBILE BUTTON ================= */}
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden text-white"
+          >
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+
+
         </div>
+
+
+
+        {/* ================= MOBILE MENU ================= */}
+
+        {mobileMenuOpen && (
+
+          <div className="lg:hidden bg-black border-t border-gray-800">
+
+
+            <Link href="/law-firm-in-bangalore" className="block px-6 py-4 border-b border-gray-800">
+              Home
+            </Link>
+
+
+            <Link href="/leading-law-firm-in-bangalore" className="block px-6 py-4 border-b border-gray-800">
+              About
+            </Link>
+
+
+
+            {/* MOBILE DROPDOWN */}
+
+            <button
+              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              className="w-full flex justify-between px-6 py-4 border-b border-gray-800"
+            >
+              Practice Areas
+              <ChevronDown size={18} />
+            </button>
+
+
+            {mobileServicesOpen && (
+
+              <div>
+
+                {practiceAreas.map((item, i) => (
+
+                  <Link
+                    key={i}
+                    href={item.href}
+                    className="block px-10 py-3 border-b border-gray-800"
+                  >
+                    {item.name}
+                  </Link>
+
+                ))}
+
+              </div>
+
+            )}
+
+
+
+            <Link href="/lawyers-in-bangalore" className="block px-6 py-4 border-b border-gray-800">
+              Team
+            </Link>
+
+
+            <Link href="/case-studies" className="block px-6 py-4 border-b border-gray-800">
+              Case Studies
+            </Link>
+
+
+            <Link href="/legal-advice-bangalore" className="block px-6 py-4 border-b border-gray-800">
+              Insights
+            </Link>
+
+
+            <Link href="/contact" className="block px-6 py-4">
+              Contact
+            </Link>
+
+
+          </div>
+
+        )}
 
       </nav>
 
 
 
-      {/* DISCLAIMER POPUP */}
+      {/* ================= DISCLAIMER ================= */}
+
+      {/* ================= DISCLAIMER ================= */}
+
       {showDisclaimer && (
 
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm">
 
+          <div className="bg-white max-w-xl w-full mx-4 rounded-lg shadow-2xl overflow-hidden">
 
-          <div className="bg-white max-w-xl w-full mx-4 shadow-2xl">
 
+            {/* HEADER */}
 
-            <div className="text-center p-6 border-b">
+            <div className="p-6 text-center border-b">
 
-              <img src="/logo2.jpg" className="h-12 mx-auto mb-3"/>
+              <img
+                src="/logo2.jpg"
+                alt="S Jain Attorneys"
+                className="h-12 mx-auto mb-3"
+              />
 
-              <h2 className="text-2xl font-semibold">
+              <h2 className="text-2xl font-semibold text-black">
                 Disclaimer & Confirmation
               </h2>
 
@@ -2428,58 +3377,44 @@ export default function Navbar() {
 
 
 
-            <div className="p-6 text-gray-600 text-sm leading-relaxed max-h-[300px] overflow-y-auto">
+            {/* CONTENT */}
 
-<p>
-As per the rules of the Bar Council of India, advocates are prohibited from advertising or soliciting work.
-</p>
+            <div className="p-6 text-sm text-gray-700 space-y-4 max-h-[350px] overflow-y-auto leading-relaxed">
 
-<br/>
+              <p>
+                Under the rules of the Bar Council of India, law firms are not permitted to solicit work or advertise.
+              </p>
 
-<p>
-By accessing this website, you acknowledge and confirm that you are seeking information relating to S Jain Attorneys voluntarily and that there has been no form of solicitation, advertisement, or inducement by the firm or its members.
-</p>
+              <p>
+                By proceeding further, you acknowledge that you are accessing this website of <strong>S Jain & Attorneys</strong> on your own accord and that there has been no solicitation, advertisement, or inducement by the firm or any of its members.
+              </p>
 
-<br/>
+              <p>
+                The content provided on this website is for general informational purposes only and does not constitute legal advice. Viewing or using this website does not create an attorney-client relationship. <strong>S Jain Attorneys</strong> does not guarantee the accuracy, completeness, or outcome of any legal matter.
+              </p>
 
-<p>
-The content of this website is for informational purposes only and should not be interpreted as legal advice. Transmission, receipt, or use of this website does not create an attorney-client relationship.
-</p>
+              <p className="font-medium text-black">
+                By clicking “Accept & Continue”, you confirm that you have read and understood this disclaimer and agree to the terms stated herein.
+              </p>
 
-<br/>
-
-<p>
-Any information obtained or materials downloaded from this website is completely at your own discretion and risk.
-</p>
-
-<br/>
-
-<p>
-S Jain Attorneys shall not be liable for any consequence of any action taken by the user relying on material or information provided on this website.
-</p>
-
-<br/>
-
-<p>
-By proceeding further and clicking on the "Accept & Enter" button, you acknowledge that you have read and understood this disclaimer.
-</p>
-
-</div>
+            </div>
 
 
 
-            <div className="flex justify-center p-4">
+            {/* CHECKBOX */}
 
-              <label className="flex items-center gap-2 text-sm">
+            <div className="px-6 pb-2">
+
+              <label className="flex items-center gap-2 text-sm cursor-pointer">
 
                 <input
                   type="checkbox"
                   checked={isChecked}
-                  onChange={(e)=>setIsChecked(e.target.checked)}
-                  className="accent-[#C9A24D]"
+                  onChange={(e) => setIsChecked(e.target.checked)}
+                  className="accent-[#C9A24D] w-4 h-4"
                 />
 
-                I have read and understood the disclaimer
+                I have read and understood the disclaimer.
 
               </label>
 
@@ -2487,26 +3422,19 @@ By proceeding further and clicking on the "Accept & Enter" button, you acknowled
 
 
 
-            <div className="flex justify-center gap-4 pb-6">
+            {/* BUTTON */}
+
+            <div className="p-6 pt-3 text-center">
 
               <button
                 onClick={handleAccept}
                 disabled={!isChecked}
-                className={`px-6 py-3 font-medium ${
-                  isChecked
-                    ? "bg-[#C9A24D] text-black"
+                className={`px-8 py-3 font-semibold rounded transition-all duration-300 ${isChecked
+                    ? "bg-[#C9A24D] text-black hover:bg-[#b8963e] cursor-pointer"
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                }`}
+                  }`}
               >
-                Accept & Enter
-              </button>
-
-
-              <button
-                onClick={handleExit}
-                className="px-6 py-3 bg-black text-white"
-              >
-                Exit
+                Accept & Continue
               </button>
 
             </div>
