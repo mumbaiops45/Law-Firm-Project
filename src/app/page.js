@@ -1,17 +1,152 @@
 
 
-// // // // import React from 'react'
+// // // // // // // import React from 'react'
 
-// // // // const page = () => {
+// // // // // // // const page = () => {
+// // // // // // //   return (
+// // // // // // //     <div>page</div>
+// // // // // // //   )
+// // // // // // // }
+
+// // // // // // // export default page
+
+// // // // // // "use client";
+
+
+// // // // // // import HeroSection from "./components/HeroSections";
+// // // // // // import PracticeAreas from "./components/PracticeAreas";
+// // // // // // import AboutFirm from "./components/AboutFirm";
+// // // // // // import WhyChooseUs from "./components/WhyChooseUs";
+// // // // // // import Testimonials from "./components/Testimonials";
+// // // // // // import Consultation from "./components/Consultation";
+// // // // // // import ServiceOverview from "./components/ServiceOverview";
+// // // // // // import LegalServicesSections from "./components/LegalServicesSections";
+// // // // // // import FAQsSection from "./components/FAQsSection";
+// // // // // // import Footer from "./components/Footer";
+
+// // // // // // export default function Index() {
+// // // // // //   return (
+// // // // // //     <main className="overflow-x-hidden">
+// // // // // //       <HeroSection />
+// // // // // //       <PracticeAreas />
+// // // // // //       <AboutFirm />
+// // // // // //       <WhyChooseUs />
+// // // // // //       <Testimonials/>
+// // // // // //       <Consultation/>
+// // // // // //       <ServiceOverview/>
+// // // // // //       <LegalServicesSections/>
+// // // // // //       <FAQsSection/>
+// // // // // //       <Footer/>
+// // // // // //     </main>
+// // // // // //   );
+// // // // // // }
+
+
+// // // // "use client";
+
+// // // // import HeroSection from "./components/HeroSections";
+// // // // import PracticeAreas from "./components/PracticeAreas";
+// // // // import AboutFirm from "./components/AboutFirm";
+// // // // import WhyChooseUs from "./components/WhyChooseUs";
+// // // // import Testimonials from "./components/Testimonials";
+// // // // import Consultation from "./components/Consultation";
+// // // // import ServiceOverview from "./components/ServiceOverview";
+// // // // import LegalServicesSections from "./components/LegalServicesSections";
+// // // // import FAQsSection from "./components/FAQsSection";
+// // // // import Footer from "./components/Footer";
+
+// // // // export default function Index() {
 // // // //   return (
-// // // //     <div>page</div>
-// // // //   )
+// // // //     <main className="overflow-x-hidden">
+
+// // // //       <section id="hero">
+// // // //         <HeroSection />
+// // // //       </section>
+// // // //       <section id="about">
+// // // //         <AboutFirm />
+// // // //       </section>
+// // // //       <ServiceOverview />
+
+// // // //       <section id="practice">
+// // // //         <PracticeAreas />
+// // // //       </section>
+
+
+
+// // // //       <section id="team">
+// // // //         <WhyChooseUs />
+// // // //       </section>
+// // // //       <LegalServicesSections />
+
+
+
+
+// // // //       <Testimonials />
+
+// // // //       <FAQsSection />
+// // // //       <section id="contact">
+// // // //         <Consultation />
+// // // //       </section>
+// // // //       <Footer />
+
+// // // //     </main>
+// // // //   );
 // // // // }
 
-// // // // export default page
+
+// // // // "use client";
+
+// // // // import HeroSection from "./components/HeroSections";
+// // // // import PracticeAreas from "./components/PracticeAreas";
+// // // // import AboutFirm from "./components/AboutFirm";
+// // // // import WhyChooseUs from "./components/WhyChooseUs";
+// // // // import Testimonials from "./components/Testimonials";
+// // // // import Consultation from "./components/Consultation";
+// // // // import ServiceOverview from "./components/ServiceOverview";
+// // // // import LegalServicesSections from "./components/LegalServicesSections";
+// // // // import FAQsSection from "./components/FAQsSection";
+// // // // import Footer from "./components/Footer";
+// // // // import CTASection from "./components/CTASection";
+// // // // export default function Index() {
+// // // //   return (
+// // // //     <main className="overflow-x-hidden">
+
+// // // //       <section id="/law-firm-in-bangalore">
+// // // //         <HeroSection />
+// // // //       </section>
+
+// // // //       <section id="about">
+// // // //         <AboutFirm />
+// // // //       </section>
+
+// // // //       <ServiceOverview />
+
+// // // //       <section id="practice">
+// // // //         <PracticeAreas />
+// // // //       </section>
+
+// // // //       <section id="team">
+// // // //         <WhyChooseUs />
+// // // //       </section>
+
+// // // //       <LegalServicesSections />
+
+// // // //       <Testimonials />
+// // // //        <CTASection />
+
+// // // //       <FAQsSection />
+
+// // // //       <section id="legal-consultation-in-bangalore">
+// // // //         <Consultation />
+// // // //       </section>
+
+// // // //       <Footer />
+
+// // // //     </main>
+// // // //   );
+// // // // }
 
 // // // "use client";
-
 
 // // // import HeroSection from "./components/HeroSections";
 // // // import PracticeAreas from "./components/PracticeAreas";
@@ -23,28 +158,137 @@
 // // // import LegalServicesSections from "./components/LegalServicesSections";
 // // // import FAQsSection from "./components/FAQsSection";
 // // // import Footer from "./components/Footer";
+// // // import CTASection from "./components/CTASection";
 
 // // // export default function Index() {
 // // //   return (
 // // //     <main className="overflow-x-hidden">
-// // //       <HeroSection />
-// // //       <PracticeAreas />
-// // //       <AboutFirm />
-// // //       <WhyChooseUs />
-// // //       <Testimonials/>
-// // //       <Consultation/>
-// // //       <ServiceOverview/>
-// // //       <LegalServicesSections/>
-// // //       <FAQsSection/>
-// // //       <Footer/>
+
+// // //       {/* HERO */}
+// // //       <section id="home">
+// // //         <HeroSection />
+// // //       </section>
+
+// // //       {/* ABOUT */}
+// // //       <section id="about">
+// // //         <AboutFirm />
+// // //       </section>
+
+// // //       {/* SERVICE OVERVIEW */}
+// // //       <section id="services">
+// // //         <ServiceOverview />
+// // //       </section>
+
+// // //       {/* PRACTICE AREAS */}
+// // //       <section id="practice-areas">
+// // //         <PracticeAreas />
+// // //       </section>
+
+// // //       {/* WHY CHOOSE US */}
+// // //       <section id="why-choose-us">
+// // //         <WhyChooseUs />
+// // //       </section>
+
+// // //       {/* LEGAL SERVICE DETAILS */}
+// // //       <LegalServicesSections />
+
+// // //       {/* TESTIMONIALS */}
+// // //       <section id="testimonials">
+// // //         <Testimonials />
+// // //       </section>
+
+// // //       {/* CTA */}
+// // //       <CTASection />
+
+// // //       {/* FAQ */}
+// // //       <section id="faqs">
+// // //         <FAQsSection />
+// // //       </section>
+
+// // //       {/* CONSULTATION */}
+// // //       <section id="consultation">
+// // //         <Consultation />
+// // //       </section>
+
+// // //       <Footer />
+
 // // //     </main>
 // // //   );
 // // // }
 
+// // // import HeroSection from "./components/HeroSections";
+// // import PracticeAreas from "./components/PracticeAreas";
+// // import AboutFirm from "./components/AboutFirm";
+// // import WhyChooseUs from "./components/WhyChooseUs";
+// // import Testimonials from "./components/Testimonials";
+// // import Consultation from "./components/Consultation";
+// // import ServiceOverview from "./components/ServiceOverview";
+// // import LegalServicesSections from "./components/LegalServicesSections";
+// // import FAQsSection from "./components/FAQsSection";
+// // import Footer from "./components/Footer";
+// // import CTASection from "./components/CTASection";
 
-// "use client";
+// // export default function Page() {
+// //   return (
+// //     <main className="overflow-x-hidden">
 
-// import HeroSection from "./components/HeroSections";
+// //       {/* HERO */}
+// //       {/* <section id="home">
+// //         <HeroSection />
+// //       </section> */}
+
+// //       {/* ABOUT */}
+// //       <section id="about">
+// //         <AboutFirm />
+// //       </section>
+
+// //       {/* SERVICE OVERVIEW */}
+// //       <section id="services">
+// //         <ServiceOverview />
+// //       </section>
+
+// //       {/* PRACTICE AREAS */}
+// //       <section id="practice-areas">
+// //         <PracticeAreas />
+// //       </section>
+
+// //       {/* WHY CHOOSE US */}
+// //       <section id="why-choose-us">
+// //         <WhyChooseUs />
+// //       </section>
+
+// //       {/* LEGAL SERVICE DETAILS */}
+// //       <section id="legal-services">
+// //         <LegalServicesSections />
+// //       </section>
+
+// //       {/* TESTIMONIALS */}
+// //       <section id="testimonials">
+// //         <Testimonials />
+// //       </section>
+
+// //       {/* CTA */}
+// //       <section id="cta">
+// //         <CTASection />
+// //       </section>
+
+// //       {/* FAQ */}
+// //       <section id="faqs">
+// //         <FAQsSection />
+// //       </section>
+
+// //       {/* CONSULTATION */}
+// //       <section id="consultation">
+// //         <Consultation />
+// //       </section>
+
+// //       <Footer />
+
+// //     </main>
+// //   );
+// // }
+
+// import Hero from "./components/HeroSections";
 // import PracticeAreas from "./components/PracticeAreas";
 // import AboutFirm from "./components/AboutFirm";
 // import WhyChooseUs from "./components/WhyChooseUs";
@@ -54,94 +298,60 @@
 // import LegalServicesSections from "./components/LegalServicesSections";
 // import FAQsSection from "./components/FAQsSection";
 // import Footer from "./components/Footer";
+// import CTASection from "./components/CTASection";
 
-// export default function Index() {
+// export default function Page() {
 //   return (
 //     <main className="overflow-x-hidden">
 
-//       <section id="hero">
-//         <HeroSection />
+//       <section id="home">
+//         <Hero />
 //       </section>
+
 //       <section id="about">
 //         <AboutFirm />
 //       </section>
-//       <ServiceOverview />
 
-//       <section id="practice">
+//       <section id="services">
+//         <ServiceOverview />
+//       </section>
+
+//       <section id="practice-areas">
 //         <PracticeAreas />
 //       </section>
 
-
-
-//       <section id="team">
+//       <section id="why-choose-us">
 //         <WhyChooseUs />
 //       </section>
-//       <LegalServicesSections />
 
+//       <section id="legal-services">
+//         <LegalServicesSections />
+//       </section>
 
+//       <section id="testimonials">
+//         <Testimonials />
+//       </section>
 
+//       <section id="cta">
+//         <CTASection />
+//       </section>
 
-//       <Testimonials />
+//       <section id="faqs">
+//         <FAQsSection />
+//       </section>
 
-//       <FAQsSection />
-//       <section id="contact">
+//       <section id="consultation">
 //         <Consultation />
 //       </section>
+
 //       <Footer />
 
 //     </main>
 //   );
 // }
 
+import { redirect } from "next/navigation";
 
-"use client";
-
-import HeroSection from "./components/HeroSections";
-import PracticeAreas from "./components/PracticeAreas";
-import AboutFirm from "./components/AboutFirm";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Testimonials from "./components/Testimonials";
-import Consultation from "./components/Consultation";
-import ServiceOverview from "./components/ServiceOverview";
-import LegalServicesSections from "./components/LegalServicesSections";
-import FAQsSection from "./components/FAQsSection";
-import Footer from "./components/Footer";
-import CTASection from "./components/CTASection";
-export default function Index() {
-  return (
-    <main className="overflow-x-hidden">
-
-      <section id="/law-firm-in-bangalore">
-        <HeroSection />
-      </section>
-
-      <section id="about">
-        <AboutFirm />
-      </section>
-
-      <ServiceOverview />
-
-      <section id="practice">
-        <PracticeAreas />
-      </section>
-
-      <section id="team">
-        <WhyChooseUs />
-      </section>
-
-      <LegalServicesSections />
-
-      <Testimonials />
-       <CTASection />
-
-      <FAQsSection />
-
-      <section id="legal-consultation-in-bangalore">
-        <Consultation />
-      </section>
-
-      <Footer />
-
-    </main>
-  );
+export default function Home() {
+  redirect("/law-firm-in-bangalore");
 }

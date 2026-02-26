@@ -258,7 +258,7 @@ export default function AboutFirm() {
             font-medium
             tracking-tight
             text-[#C9A24D]
-          ">
+            ">
             About S Jain Attorneys
           </h2>
 

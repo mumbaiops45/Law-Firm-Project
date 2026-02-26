@@ -775,10 +775,239 @@
 
 // }
 
+// "use client";
+
+// import Link from "next/link";
+
+// import {
+//   FaBuilding,
+//   FaGavel,
+//   FaUsers,
+//   FaHome,
+//   FaShieldAlt,
+//   FaBriefcase,
+// } from "react-icons/fa";
+
+// import { motion } from "framer-motion";
+
+// export default function PracticeAreas() {
+
+//   /* ================= SERVICES (CLIENT REQUIRED ORDER) ================= */
+
+//   const services = [
+//     {
+//       name: "Corporate & Commercial Law",
+//       description:
+//         "Strategic legal advisory, contracts, compliance, and dispute resolution for startups, businesses, and multinational companies.",
+//       icon: <FaBuilding size={26} />,
+//       link: "/services/corporate-law",
+//     },
+//     {
+//       name: "Civil Litigation",
+//       description:
+//         "Expert representation in civil disputes, recovery suits, injunction matters, and complex litigation before courts.",
+//       icon: <FaGavel size={26} />,
+//       link: "/services/civil-litigation",
+//     },
+//     {
+//       name: "Family & Divorce Law",
+//       description:
+//         "Confidential legal support in divorce, child custody, alimony, and matrimonial dispute resolution.",
+//       icon: <FaUsers size={26} />,
+//       link: "/services/family-divorce-law",
+//     },
+//     {
+//       name: "Property & Real Estate Law",
+//       description:
+//         "Legal assistance in property transactions, disputes, title verification, due diligence, and documentation.",
+//       icon: <FaHome size={26} />,
+//       link: "/services/property-real-estate-law",
+//     },
+//     {
+//       name: "Criminal Defense",
+//       description:
+//         "Strong legal defense in criminal cases including bail, trial representation, and criminal litigation.",
+//       icon: <FaShieldAlt size={26} />,
+//       link: "/services/criminal-defense",
+//     },
+//     {
+//       name: "Employment & Labour Law",
+//       description:
+//         "Advisory and representation in employment disputes, workplace compliance, wrongful termination, and labour matters.",
+//       icon: <FaBriefcase size={26} />,
+//       link: "/services/employment-labour-law",
+//     },
+//   ];
+
+
+//   /* ================= ANIMATION ================= */
+
+//   const container = {
+//     hidden: {},
+//     visible: {
+//       transition: {
+//         staggerChildren: 0.15,
+//       },
+//     },
+//   };
+
+//   const card = {
+//     hidden: {
+//       opacity: 0,
+//       y: 40,
+//     },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: {
+//         duration: 0.6,
+//       },
+//     },
+//   };
+
+
+//   /* ================= COMPONENT ================= */
+
+//   return (
+
+//     <section className="bg-[#F4F4F4] py-24 px-6">
+
+//       <div className="max-w-7xl mx-auto">
+
+
+//         {/* HEADING */}
+
+//         <motion.div
+//           initial={{ opacity: 0, y: 30 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.7 }}
+//           viewport={{ once: true }}
+//           className="text-center mb-20"
+//         >
+
+//           <h2 className="text-4xl md:text-5xl font-semibold text-[#111111]">
+//             Legal Services We Offer in Bangalore
+//           </h2>
+
+//           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+//             Comprehensive legal representation across corporate, civil, criminal, family, and property matters with complete confidentiality.
+//           </p>
+
+//           <div className="w-20 h-[3px] bg-[#C9A24D] mx-auto mt-6"></div>
+
+//         </motion.div>
+
+
+//         {/* GRID */}
+
+//         <motion.div
+//           variants={container}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+//         >
+
+//           {services.map((service, index) => (
+
+//             <Link href={service.link} key={index}>
+
+//               <motion.div
+//                 variants={card}
+//                 whileHover={{ y: -10, scale: 1.03 }}
+//                 className="
+//                   bg-white
+//                   border border-gray-200
+//                   rounded-lg
+//                   p-10
+//                   text-center
+//                   hover:border-[#C9A24D]
+//                   hover:shadow-xl
+//                   transition-all duration-300
+//                   cursor-pointer
+//                   group
+//                   h-full
+//                 "
+//               >
+
+//                 {/* ICON */}
+
+//                 <div className="flex justify-center mb-6">
+
+//                   <div className="
+//                     w-14 h-14
+//                     flex items-center justify-center
+//                     border border-[#C9A24D]
+//                     rounded-full
+//                     text-[#C9A24D]
+//                     group-hover:bg-[#C9A24D]
+//                     group-hover:text-white
+//                     transition-all duration-300
+//                   ">
+//                     {service.icon}
+//                   </div>
+
+//                 </div>
+
+
+//                 {/* TITLE */}
+
+//                 <h3 className="
+//                   text-xl
+//                   font-semibold
+//                   text-[#111111]
+//                   mb-3
+//                   group-hover:text-[#C9A24D]
+//                 ">
+//                   {service.name}
+//                 </h3>
+
+
+//                 {/* DESCRIPTION */}
+
+//                 <p className="
+//                   text-gray-600
+//                   text-base
+//                   leading-relaxed
+//                   mb-4
+//                 ">
+//                   {service.description}
+//                 </p>
+
+
+//                 {/* LEARN MORE */}
+
+//                 <span className="
+//                   text-[#C9A24D]
+//                   text-sm
+//                   font-medium
+//                   group-hover:underline
+//                 ">
+//                   Learn More →
+//                 </span>
+
+//               </motion.div>
+
+//             </Link>
+
+//           ))}
+
+//         </motion.div>
+
+//       </div>
+
+//     </section>
+
+//   );
+
+// }
+
+
+
 "use client";
 
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 import {
   FaBuilding,
   FaGavel,
@@ -788,94 +1017,83 @@ import {
   FaBriefcase,
 } from "react-icons/fa";
 
-import { motion } from "framer-motion";
+/* ================= SEO META ================= */
 
-export default function PracticeAreas() {
+export const metadata = {
+  title: "Comprehensive Legal Services in Bangalore | S Jain & Attorneys",
+  description:
+    "Comprehensive legal services in Bangalore for corporate, civil, criminal, family and property matters. Get strategic legal guidance and book a confidential consultation today.",
+};
 
-  /* ================= SERVICES (CLIENT REQUIRED ORDER) ================= */
+/* ================= COMPONENT ================= */
 
+export default function LegalServicesPage() {
   const services = [
     {
       name: "Corporate & Commercial Law",
       description:
-        "Strategic legal advisory, contracts, compliance, and dispute resolution for startups, businesses, and multinational companies.",
+        "Strategic legal advisory, contracts, compliance, due diligence, and dispute resolution for startups, corporates, and multinational businesses.",
       icon: <FaBuilding size={26} />,
-      link: "/services/corporate-law",
+      link: "/corporate-commercial-law-firm",
     },
     {
       name: "Civil Litigation",
       description:
-        "Expert representation in civil disputes, recovery suits, injunction matters, and complex litigation before courts.",
+        "Expert representation in civil disputes, recovery suits, injunction matters, property conflicts, and complex litigation before courts.",
       icon: <FaGavel size={26} />,
-      link: "/services/civil-litigation",
+      link: "/civil-lawyer-in-bangalore",
     },
     {
       name: "Family & Divorce Law",
       description:
-        "Confidential legal support in divorce, child custody, alimony, and matrimonial dispute resolution.",
+        "Confidential legal assistance in divorce, child custody, alimony, matrimonial property and financial settlements.",
       icon: <FaUsers size={26} />,
-      link: "/services/family-divorce-law",
+      link: "/family-divorce-law",
     },
     {
       name: "Property & Real Estate Law",
       description:
-        "Legal assistance in property transactions, disputes, title verification, due diligence, and documentation.",
+        "Trusted legal support in property transactions, disputes, title verification, documentation, and real estate due diligence.",
       icon: <FaHome size={26} />,
-      link: "/services/property-real-estate-law",
+      link: "/property-real-estate-law",
     },
     {
       name: "Criminal Defense",
       description:
-        "Strong legal defense in criminal cases including bail, trial representation, and criminal litigation.",
+        "Strong legal defense in criminal cases including bail applications, trial representation, white-collar crimes, and criminal litigation.",
       icon: <FaShieldAlt size={26} />,
-      link: "/services/criminal-defense",
+      link: "/criminal-lawyer-in-bangalore",
     },
     {
       name: "Employment & Labour Law",
       description:
-        "Advisory and representation in employment disputes, workplace compliance, wrongful termination, and labour matters.",
+        "Advisory and representation in employment disputes, workplace compliance, wrongful termination, and labour law matters.",
       icon: <FaBriefcase size={26} />,
-      link: "/services/employment-labour-law",
+      link: "/employment-lawyer-in-bangalore",
     },
   ];
-
-
-  /* ================= ANIMATION ================= */
 
   const container = {
     hidden: {},
     visible: {
-      transition: {
-        staggerChildren: 0.15,
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
   const card = {
-    hidden: {
-      opacity: 0,
-      y: 40,
-    },
+    hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-      },
+      transition: { duration: 0.6 },
     },
   };
 
-
-  /* ================= COMPONENT ================= */
-
   return (
-
     <section className="bg-[#F4F4F4] py-24 px-6">
-
       <div className="max-w-7xl mx-auto">
 
-
-        {/* HEADING */}
+        {/* ================= HEADING ================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -884,21 +1102,18 @@ export default function PracticeAreas() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
+          <h1 className="text-4xl md:text-5xl font-semibold text-[#111111]">
+            Comprehensive Legal Services in Bangalore
+          </h1>
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#111111]">
-            Legal Services We Offer in Bangalore
-          </h2>
-
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Comprehensive legal representation across corporate, civil, criminal, family, and property matters with complete confidentiality.
+          <p className="text-gray-600 mt-6 max-w-3xl mx-auto leading-relaxed">
+            S Jain & Attorneys provides full-service legal representation across litigation, advisory, and regulatory matters. We represent individuals, startups, corporates, and NRIs with strategic precision and strict confidentiality.
           </p>
 
           <div className="w-20 h-[3px] bg-[#C9A24D] mx-auto mt-6"></div>
-
         </motion.div>
 
-
-        {/* GRID */}
+        {/* ================= SERVICES GRID ================= */}
 
         <motion.div
           variants={container}
@@ -907,11 +1122,8 @@ export default function PracticeAreas() {
           viewport={{ once: true }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
         >
-
           {services.map((service, index) => (
-
             <Link href={service.link} key={index}>
-
               <motion.div
                 variants={card}
                 whileHover={{ y: -10, scale: 1.03 }}
@@ -929,75 +1141,73 @@ export default function PracticeAreas() {
                   h-full
                 "
               >
-
                 {/* ICON */}
-
                 <div className="flex justify-center mb-6">
-
-                  <div className="
-                    w-14 h-14
-                    flex items-center justify-center
-                    border border-[#C9A24D]
-                    rounded-full
-                    text-[#C9A24D]
-                    group-hover:bg-[#C9A24D]
-                    group-hover:text-white
-                    transition-all duration-300
-                  ">
+                  <div
+                    className="
+                      w-14 h-14
+                      flex items-center justify-center
+                      border border-[#C9A24D]
+                      rounded-full
+                      text-[#C9A24D]
+                      group-hover:bg-[#C9A24D]
+                      group-hover:text-white
+                      transition-all duration-300
+                    "
+                  >
                     {service.icon}
                   </div>
-
                 </div>
 
-
                 {/* TITLE */}
-
-                <h3 className="
-                  text-xl
-                  font-semibold
-                  text-[#111111]
-                  mb-3
-                  group-hover:text-[#C9A24D]
-                ">
+                <h2
+                  className="
+                    text-xl
+                    font-semibold
+                    text-[#111111]
+                    mb-3
+                    group-hover:text-[#C9A24D]
+                  "
+                >
                   {service.name}
-                </h3>
-
+                </h2>
 
                 {/* DESCRIPTION */}
-
-                <p className="
-                  text-gray-600
-                  text-base
-                  leading-relaxed
-                  mb-4
-                ">
+                <p
+                  className="
+                    text-gray-600
+                    text-base
+                    leading-relaxed
+                    mb-4
+                  "
+                >
                   {service.description}
                 </p>
 
-
                 {/* LEARN MORE */}
-
-                <span className="
-                  text-[#C9A24D]
-                  text-sm
-                  font-medium
-                  group-hover:underline
-                ">
+                <span
+                  className="
+                    text-[#C9A24D]
+                    text-sm
+                    font-medium
+                    group-hover:underline
+                  "
+                >
                   Learn More →
                 </span>
-
               </motion.div>
-
             </Link>
-
           ))}
-
         </motion.div>
 
+        {/* ================= TRUST LINE ================= */}
+
+        <div className="text-center mt-24">
+          <p className="text-gray-700 text-lg font-medium">
+            All matters handled with complete confidentiality and legal discretion.
+          </p>
+        </div>
       </div>
-
     </section>
-
   );
-
 }

@@ -924,7 +924,7 @@ export default function CorporateLaw() {
               Get Immediate Legal Help from a Corporate Lawyer in Bangalore
             </h2>
 
-            <p className="text-gray-800 mb-10 text-lg">
+            <p className="text-gray-400 mb-10 text-lg">
               Consult our experienced Corporate & Commercial Law Firm today.
             </p>
 
@@ -942,7 +942,7 @@ export default function CorporateLaw() {
               </Link>
             </div>
 
-            <p className="text-gray-800 text-sm mt-8">
+            <p className="text-gray-400 text-sm mt-8">
               All matters handled with complete confidentiality and legal discretion.
             </p>
           </div>

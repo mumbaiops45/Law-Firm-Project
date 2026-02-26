@@ -3031,77 +3031,60 @@ export default function Navbar() {
 
 
   /* ================= PRACTICE AREAS ================= */
-const practiceAreas = [
-  {
-    name: "Corporate & Commercial Law",
-    href: "/corporate-commercial-law-firm",
-  },
-  {
-    name: "Civil Litigation",
-    href: "/civil-lawyer-in-bangalore",
-  },
-  {
-    name: "Family Law",
-    href: "/family-divorce-law",
-  },
-  {
-    name: "Property & Real Estate Law",
-    href: "/property-real-estate-law",
-  },
-  {
-    name: "Criminal Defense & Prosecution",
-    href: "/criminal-lawyer-in-bangalore",
-  },
-   {
-    name: "Cheque Bounce",
-    href: "/cheque-bounce-lawyer-in-bangalore",
-  },
-];
-  // const practiceAreas = [
-
-  //   {
-  //     name: "Corporate & Commercial Law",
-  //     href: "/corporate-commercial-law-firm"
-  //   },
-
-  //   {
-  //     name: "Civil Litigation",
-  //     href: "/civil-lawyer-in-bangalore"
-  //   },
-
-  //   {
-  //     name: "Family Law",
-  //     href: "family-divorce-law"
-  //   },
-
-  //   {
-  //     name: "Property & Real Estate Law",
-  //     href: "property-real-estate-law"
-  //   },
-
-  //   {
-  //     name: "Criminal Defense & Prosecution",
-  //     href: "criminal-lawyer-in-bangalore"
-  //   },
-
-
-  //   // {
-  //   //   name: "Criminal Defense",
-  //   //   href: "/services/criminal-defense"
-  //   // },
-
-  //   // {
-  //   //   name: "Property Law",
-  //   //   href: "/services/property-law"
-  //   // },
-
-
-  //   // {
-  //   //   name: "Employment & Labour Law",
-  //   //   href: "/services/employment-law"
-  //   // },
-
-  // ];
+  const practiceAreas = [
+    {
+      name: "Corporate & Commercial Law",
+      href: "/corporate-commercial-law-firm",
+    },
+    {
+      name: "Civil Litigation",
+      href: "/civil-lawyer-in-bangalore",
+    },
+    {
+      name: "Family Law",
+      href: "/family-divorce-law",
+    },
+    {
+      name: "Property & Real Estate Law",
+      href: "/property-real-estate-law",
+    },
+    {
+      name: "Criminal Defense & Prosecution",
+      href: "/criminal-lawyer-in-bangalore",
+    },
+    {
+      name: "Cheque Bounce Matters",
+      href: "/cheque-bounce-lawyer-in-bangalore",
+    },
+    {
+      name: "High Court Litigation",
+      href: "/high-court-lawyer-in-bangalore",
+    },
+    {
+      name: "Consumer Protection Law ",
+      href: "/consumer-court-lawyer-in-bangalore",
+    },
+    {
+      name: "Legal Advisory & Regulatory Compliance ",
+      href: "/legal-advisor-in-bangalore",
+    },
+    {
+      name: "Alternative Dispute Resolution (ADR)",
+      href: "/mediation-lawyer-in-bangalore",
+    },
+    {
+      name: "NRI Legal Services",
+      href: "/nri-lawyer-in-bangalore",
+    },
+    {
+      name: "International Private Law",
+      href: "/international-lawyer-in-bangalore",
+    },
+    {
+      name: "Employment & Labour Law",
+      href: "/employment-lawyer-in-bangalore",
+    },
+  ];
 
 
 
@@ -3112,8 +3095,8 @@ const practiceAreas = [
 
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
-            ? "bg-black shadow-lg py-3"
-            : "bg-black/70 backdrop-blur-xl py-5"
+          ? "bg-black shadow-lg py-3"
+          : "bg-black/70 backdrop-blur-xl py-5"
           }`}
       >
 
@@ -3152,7 +3135,7 @@ const practiceAreas = [
 
 
             <li>
-              <Link href="/" className="hover:text-[#C9A24D] transition">
+              <Link href="/law-firm-in-bangalore" className="hover:text-[#C9A24D] transition">
                 Home
               </Link>
             </li>
@@ -3178,20 +3161,17 @@ const practiceAreas = [
                 <ChevronDown size={16} />
               </button>
 
-
               <div
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
                 className={`absolute left-0 top-full pt-3 transition-all duration-200 ${servicesOpen
-                    ? "opacity-100 visible translate-y-0"
-                    : "opacity-0 invisible -translate-y-2"
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2"
                   }`}
               >
-
-                <div className="w-64 bg-black border border-gray-800 shadow-xl rounded-md overflow-hidden">
+                <div className="w-72 max-h-[420px] overflow-y-auto bg-black border border-gray-800 shadow-xl rounded-md custom-scrollbar">
 
                   {practiceAreas.map((item, i) => (
-
                     <Link
                       key={i}
                       href={item.href}
@@ -3199,17 +3179,12 @@ const practiceAreas = [
                     >
                       {item.name}
                     </Link>
-
                   ))}
 
                 </div>
-
               </div>
 
             </li>
-
-
-
             <li>
               <Link href="/lawyers-in-bangalore" className="hover:text-[#C9A24D] transition">
                 Our Team
@@ -3248,7 +3223,7 @@ const practiceAreas = [
             href="/legal-consultation-in-bangalore"
             className="hidden lg:block bg-[#C9A24D] text-black px-6 py-3 font-semibold hover:bg-[#b8963e] transition"
           >
-            Book Consultation
+            Book Confidential Consultation
           </Link>
 
 
@@ -3323,7 +3298,7 @@ const practiceAreas = [
             </Link>
 
 
-            <Link href="/case-studies" className="block px-6 py-4 border-b border-gray-800">
+            <Link href="/successful-case-results-in-bangalore" className="block px-6 py-4 border-b border-gray-800">
               Case Studies
             </Link>
 
@@ -3390,7 +3365,7 @@ const practiceAreas = [
               </p>
 
               <p>
-                The content provided on this website is for general informational purposes only and does not constitute legal advice. Viewing or using this website does not create an attorney-client relationship. <strong>S Jain Attorneys</strong> does not guarantee the accuracy, completeness, or outcome of any legal matter.
+                The content provided on this website is for general informational purposes only and does not constitute legal advice. Viewing or using this website does not create an attorney-client relationship. <strong>S Jain & Attorneys</strong> does not guarantee the accuracy, completeness, or outcome of any legal matter.
               </p>
 
               <p className="font-medium text-black">
@@ -3430,8 +3405,8 @@ const practiceAreas = [
                 onClick={handleAccept}
                 disabled={!isChecked}
                 className={`px-8 py-3 font-semibold rounded transition-all duration-300 ${isChecked
-                    ? "bg-[#C9A24D] text-black hover:bg-[#b8963e] cursor-pointer"
-                    : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  ? "bg-[#C9A24D] text-black hover:bg-[#b8963e] cursor-pointer"
+                  : "bg-gray-300 text-gray-500 cursor-not-allowed"
                   }`}
               >
                 Accept & Continue
@@ -3450,3 +3425,21 @@ const practiceAreas = [
   );
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

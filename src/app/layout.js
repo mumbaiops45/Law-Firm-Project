@@ -99,6 +99,8 @@ export default function RootLayout({ children }) {
         <Navbar />
 
         {children}
+        <footer/>
+
 
         <ScrollToTopButton />
 

@@ -470,7 +470,11 @@ export default function CivilLitigation() {
               Response within 24 hours guaranteed.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex justify-center gap-6 flex-wrap">
+            {/* <motion.div variants={fadeUp} className="flex justify-center gap-6 flex-wrap"> */}
+            <motion.div
+  variants={fadeUp}
+  className="relative z-30 flex justify-center gap-6 flex-wrap"
+>
               <Link
                 href="/legal-consultation-in-bangalore"
                 className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition inline-block"
@@ -487,8 +491,8 @@ export default function CivilLitigation() {
           </motion.div>
 
           {/* HERO IMAGE */}
-          <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-6 z-20">
-            <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
+          <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-8 z-3 0">
+            <div className="rounded-xl overflow-hidden shadow-2xl mt-54">
               <Image
                 src="/CivilLitigation1.jpg"
                 alt="Civil Lawyer in Bangalore"
@@ -605,7 +609,7 @@ export default function CivilLitigation() {
               Get Immediate Legal Help from a Civil Lawyer in Bangalore
             </h2>
 
-            <p className="text-gray-800 mb-10 text-lg">
+            <p className="text-gray-400 mb-10 text-lg">
               Speak with our experienced civil litigation attorneys today.
             </p>
 
@@ -623,7 +627,7 @@ export default function CivilLitigation() {
               </Link>
             </div>
 
-            <p className="text-gray-900 text-sm mt-8">
+            <p className="text-gray-400 text-sm mt-8">
               All matters handled with complete confidentiality and legal discretion.
             </p>
           </div>

@@ -369,8 +369,9 @@ export default function PropertyRealEstateLawPage() {
               Response within 24 hours guaranteed.
             </motion.p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
+            {/* <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"> */}
+            <div className="relative z-20 mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/legal-consultation-in-bangalore">
                 <button className="bg-[#C9A24D] text-black px-8 py-3 rounded-lg font-semibold hover:scale-105 transition">
                   Book Confidential Consultation
                 </button>
@@ -384,21 +385,21 @@ export default function PropertyRealEstateLawPage() {
           </motion.div>
 
           {/* HERO IMAGE */}
-          <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-6">
-            <div className="rounded-xl overflow-hidden shadow-2xl bg-white">
-              <Image
-                src="/property.png"
-                alt="Property & Real Estate Lawyer in Bangalore"
-                width={1400}
-                height={800}
-                className="w-full h-[450px] md:h-[550px] object-cover"
-                priority
-              />
-            </div>
-          </div>
+         <div className="max-w-6xl mx-auto px-6 mt-16">
+  <div className="rounded-xl overflow-hidden shadow-2xl bg-white">
+    <Image
+      src="/property.png"
+      alt="Property & Real Estate Lawyer in Bangalore"
+      width={1000}
+      height={500}
+      className="w-full h-[450px] md:h-[550px] object-cover"
+      priority
+    />
+  </div>
+</div>
         </section>
 
-        <div className="h-64 md:h-80"></div>
+        {/* <div className="h-64 md:h-80"></div> */}
 
         {/* ================= CONTENT ================= */}
 
@@ -529,19 +530,19 @@ export default function PropertyRealEstateLawPage() {
               Get Immediate Legal Help from a Property Lawyer in Bangalore
             </h2>
 
-            <p className="text-gray-300 mb-10">
+            <p className="text-gray-400 mb-10">
               Schedule a consultation with our experienced attorneys today.
               All matters handled with complete confidentiality and legal discretion.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
+              <Link href="/legal-consultation-in-bangalore">
                 <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold">
                   Book Confidential Consultation
                 </button>
               </Link>
 
-              <Link href="/contact">
+              <Link href="tel:+919000000000">
                 <button className="border border-white text-white px-8 py-4 rounded-lg">
                   Request Call Back
                 </button>
