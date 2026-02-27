@@ -2994,38 +2994,68 @@ useEffect(() => {
 
   /* ================= DISCLAIMER ================= */
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    // if (pathname === "/") {
-    if (pathname === "/law-firm-in-bangalore") {
+  //   // if (pathname === "/") {
+  //   if (pathname === "/law-firm-in-bangalore") {
 
-      const shown = sessionStorage.getItem("disclaimerShown");
+  //     const shown = sessionStorage.getItem("disclaimerShown");
 
-      if (!shown) {
-        setShowDisclaimer(true);
-        // document.body.style.overflow = "hidden";
-        document.body.classList.add("overflow-hidden");
-      }
+  //     if (!shown) {
+  //       setShowDisclaimer(true);
+  //       document.body.style.overflow = "hidden";
+  //       // document.body.classList.add("overflow-hidden");
+  //     }
 
+  //   }
+
+  // }, [pathname]);
+//   useEffect(() => {
+//   const shown = sessionStorage.getItem("disclaimerShown");
+
+//   // Show popup on homepage only
+//   if (!shown && (pathname === "/" || pathname === "/law-firm-in-bangalore")) {
+//     setShowDisclaimer(true);
+//     document.body.style.overflow = "hidden";
+//   }
+
+//   return () => {
+//     document.body.style.overflow = "auto";
+//   };
+// }, [pathname]);
+useEffect(() => {
+  const checkDisclaimer = () => {
+    const shown = sessionStorage.getItem("disclaimerShown");
+
+    if (!shown) {
+      setShowDisclaimer(true);
+      document.body.style.overflow = "hidden";
     }
-
-  }, [pathname]);
-
-
-  const handleAccept = () => {
-
-    if (!isChecked) return;
-
-    sessionStorage.setItem("disclaimerShown", "true");
-
-    setShowDisclaimer(false);
-
-    // document.body.style.overflow = "auto";
-    document.body.classList.remove("overflow-hidden");
-
   };
 
+  checkDisclaimer();
+}, []);
 
+  // const handleAccept = () => {
+
+  //   if (!isChecked) return;
+
+  //   sessionStorage.setItem("disclaimerShown", "true");
+
+  //   setShowDisclaimer(false);
+
+  //   document.body.style.overflow = "auto";
+  //   // document.body.classList.remove("overflow-hidden");
+
+  // };
+
+const handleAccept = () => {
+  if (!isChecked) return;
+
+  sessionStorage.setItem("disclaimerShown", "true");
+  setShowDisclaimer(false);
+  document.body.style.overflow = "auto";
+};
 
   /* ================= PRACTICE AREAS ================= */
   const practiceAreas = [
