@@ -2187,6 +2187,229 @@
 // }
 
 
+// "use client";
+
+// import { useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { PhoneCall, Plus } from "lucide-react";
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
+
+// /* ================= ANIMATION VARIANTS ================= */
+
+// const fadeUp = {
+//   hidden: { opacity: 0, y: 40 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { duration: 0.6, ease: "easeOut" },
+//   },
+// };
+
+// export default function Page() {
+//   const [activeIndex, setActiveIndex] = useState(null);
+
+//   const faqs = [
+//     {
+//       question:
+//         "What types of successful court cases in Bangalore has your firm handled?",
+//       answer:
+//         "S Jain & Attorneys has handled corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
+//     },
+//     {
+//       question:
+//         "How does your law firm achieve strong court case results in Bangalore?",
+//       answer:
+//         "Our team follows a structured process including detailed case analysis, legal research, strategic planning, and strong courtroom advocacy to deliver consistent and reliable legal outcomes.",
+//     },
+//     {
+//       question:
+//         "Are your lawyer case results compliant with confidentiality standards?",
+//       answer:
+//         "Yes. All case summaries are shared without disclosing confidential client information. We strictly adhere to professional and ethical standards.",
+//     },
+//     {
+//       question:
+//         "Do successful court cases guarantee similar outcomes?",
+//       answer:
+//         "No legal outcome can be guaranteed. Every matter depends on its specific facts and legal complexities. We strive to provide the strongest possible representation in each case.",
+//     },
+//   ];
+
+//   return (
+//     <>
+//       <Navbar />
+
+//       {/* ================= HERO SECTION ================= */}
+//       <section className="relative bg-black text-white pt-36 pb-24 px-6 overflow-hidden">
+
+//         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.12),transparent_70%)]"></div>
+
+//         <div className="max-w-5xl mx-auto text-center relative z-10">
+
+//           <motion.h1
+//             initial="hidden"
+//             animate="visible"
+//             variants={fadeUp}
+//             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
+//           >
+//             Proven Strategy. Strong Advocacy. Real Results.
+//           </motion.h1>
+
+//           <motion.p
+//             variants={fadeUp}
+//             initial="hidden"
+//             animate="visible"
+//             className="text-gray-300 text-lg leading-relaxed mb-10"
+//           >
+//             Our track record of successful court cases in Bangalore reflects our
+//             commitment to strategic preparation, courtroom strength, and ethical
+//             representation across complex legal disputes.
+//           </motion.p>
+
+//           <div className="flex flex-col sm:flex-row justify-center gap-6">
+//             <a
+//               href="/legal-consultation-in-bangalore"
+//               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+//             >
+//               Book Confidential Consultation
+//             </a>
+
+//             <a
+//               href="tel:+91XXXXXXXXXX"
+//               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+//             >
+//               <PhoneCall size={18} />
+//               Call Now
+//             </a>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* ================= CASE STUDIES ================= */}
+//       <section className="bg-[#0A0A0A] text-white py-24 px-6">
+//         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+//           {[
+//             {
+//               title: "Corporate & Commercial Dispute",
+//               text: "High-value contractual dispute resolved through strategic negotiation and structured litigation readiness."
+//             },
+//             {
+//               title: "Criminal Defense Matter",
+//               text: "Urgent court intervention securing relief and safeguarding client reputation."
+//             },
+//             {
+//               title: "Property & Real Estate Conflict",
+//               text: "Successful title verification and court affirmation of ownership rights."
+//             },
+//             {
+//               title: "Family & Matrimonial Case",
+//               text: "Balanced negotiation and litigation strategy ensuring equitable settlement."
+//             }
+//           ].map((item, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, y: 30 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.5, delay: index * 0.1 }}
+//               viewport={{ once: true }}
+//               className="bg-black/40 backdrop-blur-xl border border-[#C9A24D]/20 p-8 rounded-2xl hover:border-[#C9A24D]/60 hover:shadow-[0_0_25px_rgba(201,162,77,0.2)] transition"
+//             >
+//               <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
+//                 {item.title}
+//               </h3>
+//               <p className="text-gray-300 leading-relaxed">
+//                 {item.text}
+//               </p>
+//             </motion.div>
+//           ))}
+
+//         </div>
+//       </section>
+
+//       {/* ================= FAQ SECTION ================= */}
+//       <section className="bg-black text-white py-24 px-6">
+//         <div className="max-w-4xl mx-auto">
+
+//           <h2 className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mb-14">
+//             Frequently Asked Questions
+//           </h2>
+
+//           <div className="space-y-6">
+//             {faqs.map((faq, index) => {
+//               const isOpen = activeIndex === index;
+
+//               return (
+//                 <div
+//                   key={index}
+//                   className="border border-[#C9A24D]/20 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-xl"
+//                 >
+//                   <button
+//                     onClick={() => setActiveIndex(isOpen ? null : index)}
+//                     className="w-full flex justify-between items-center px-6 py-6 text-left"
+//                   >
+//                     <span className="font-medium text-lg">
+//                       {faq.question}
+//                     </span>
+
+//                     <motion.div
+//                       animate={{ rotate: isOpen ? 180 : 0 }}
+//                       transition={{ duration: 0.3 }}
+//                       className="text-[#C9A24D]"
+//                     >
+//                       <Plus size={22} />
+//                     </motion.div>
+//                   </button>
+
+//                   <AnimatePresence>
+//                     {isOpen && (
+//                       <motion.div
+//                         initial={{ height: 0, opacity: 0 }}
+//                         animate={{ height: "auto", opacity: 1 }}
+//                         exit={{ height: 0, opacity: 0 }}
+//                         transition={{ duration: 0.4 }}
+//                         className="px-6 pb-6 text-gray-300 leading-relaxed"
+//                       >
+//                         {faq.answer}
+//                       </motion.div>
+//                     )}
+//                   </AnimatePresence>
+//                 </div>
+//               );
+//             })}
+//           </div>
+
+//         </div>
+//       </section>
+
+//       {/* ================= FINAL CTA ================= */}
+//       <section className="bg-[#0A0A0A] text-center py-24 px-6">
+//         <h2 className="text-3xl font-semibold text-[#C9A24D] mb-6">
+//           Discuss Your Legal Matter With Our Experts
+//         </h2>
+
+//         <p className="text-gray-300 mb-10 max-w-3xl mx-auto">
+//           Confidential consultations. Strategic guidance. Result-oriented
+//           representation. Speak with experienced litigation lawyers in
+//           Bangalore today.
+//         </p>
+
+//         <a
+//           href="/legal-consultation-in-bangalore"
+//           className="bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+//         >
+//           Schedule Consultation
+//         </a>
+//       </section>
+
+//       <Footer />
+//     </>
+//   );
+// }
+
+
+
 "use client";
 
 import { useState } from "react";
@@ -2195,7 +2418,9 @@ import { PhoneCall, Plus } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-/* ================= ANIMATION VARIANTS ================= */
+
+
+/* ================= ANIMATION ================= */
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -2234,6 +2459,12 @@ export default function Page() {
       answer:
         "No legal outcome can be guaranteed. Every matter depends on its specific facts and legal complexities. We strive to provide the strongest possible representation in each case.",
     },
+    {
+      question:
+        "How can I consult a successful lawyer in Bangalore?",
+      answer:
+        "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
+    },
   ];
 
   return (
@@ -2253,18 +2484,29 @@ export default function Page() {
             variants={fadeUp}
             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
           >
-            Proven Strategy. Strong Advocacy. Real Results.
+            Successful Court Cases in Bangalore
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="text-gray-300 text-lg leading-relaxed mb-10"
+            className="text-gray-300 text-lg leading-relaxed mb-6"
           >
-            Our track record of successful court cases in Bangalore reflects our
-            commitment to strategic preparation, courtroom strength, and ethical
-            representation across complex legal disputes.
+            At S Jain & Attorneys, our reputation is built on delivering measurable
+            and strategic legal outcomes. Our track record reflects our commitment
+            to excellence, preparation, and powerful courtroom advocacy.
+          </motion.p>
+
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="text-gray-400 text-base leading-relaxed mb-10"
+          >
+            Recognized among the firms led by a successful lawyer in Bangalore,
+            we handle complex legal disputes with integrity, discretion, and a
+            client-focused approach.
           </motion.p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -2276,37 +2518,56 @@ export default function Page() {
             </a>
 
             <a
-              href="tel:+91XXXXXXXXXX"
+              href="#"
               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
             >
               <PhoneCall size={18} />
-              Call Now
+              Request Call Back
             </a>
           </div>
+
         </div>
       </section>
 
-      {/* ================= CASE STUDIES ================= */}
+      {/* ================= STRATEGY SECTION ================= */}
       <section className="bg-[#0A0A0A] text-white py-24 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
+            Proven Strategy. Strong Advocacy. Real Results.
+          </h2>
+
+          <p className="text-gray-300 leading-relaxed mb-16">
+            Our team has successfully represented individuals, businesses,
+            startups, and NRIs across diverse legal matters. Each case is
+            approached with detailed legal research, strategic planning,
+            and meticulous execution to achieve strong court case results in Bangalore.
+            <br /><br />
+            Response within 24 hours guaranteed.
+          </p>
+
+        </div>
+
+        {/* CASE STUDIES */}
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
           {[
             {
               title: "Corporate & Commercial Dispute",
-              text: "High-value contractual dispute resolved through strategic negotiation and structured litigation readiness."
+              text: "High-value contractual dispute resolved through structured negotiation and litigation readiness. Favorable settlement protecting commercial interests.",
             },
             {
               title: "Criminal Defense Matter",
-              text: "Urgent court intervention securing relief and safeguarding client reputation."
+              text: "Urgent court intervention securing relief and safeguarding client reputation through strong courtroom advocacy.",
             },
             {
-              title: "Property & Real Estate Conflict",
-              text: "Successful title verification and court affirmation of ownership rights."
+              title: "Property & Real Estate Dispute",
+              text: "Successful court order affirming lawful ownership rights after comprehensive title verification and structured proceedings.",
             },
             {
               title: "Family & Matrimonial Case",
-              text: "Balanced negotiation and litigation strategy ensuring equitable settlement."
-            }
+              text: "Equitable settlement achieved through balanced negotiation and litigation preparedness in contested divorce proceedings.",
+            },
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -2328,10 +2589,35 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ================= FAQ SECTION ================= */}
+      {/* ================= WHY TRUST ================= */}
       <section className="bg-black text-white py-24 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto text-center">
 
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
+            Why Clients Trust Our Legal Expertise
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8 text-left">
+            <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
+              Strategic and research-driven legal approach
+            </div>
+            <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
+              Strong courtroom advocacy
+            </div>
+            <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
+              Ethical and confidential representation
+            </div>
+            <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
+              Personalized legal solutions
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= FAQ ================= */}
+      <section className="bg-[#0A0A0A] text-white py-24 px-6">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mb-14">
             Frequently Asked Questions
           </h2>
@@ -2379,28 +2665,7 @@ export default function Page() {
               );
             })}
           </div>
-
         </div>
-      </section>
-
-      {/* ================= FINAL CTA ================= */}
-      <section className="bg-[#0A0A0A] text-center py-24 px-6">
-        <h2 className="text-3xl font-semibold text-[#C9A24D] mb-6">
-          Discuss Your Legal Matter With Our Experts
-        </h2>
-
-        <p className="text-gray-300 mb-10 max-w-3xl mx-auto">
-          Confidential consultations. Strategic guidance. Result-oriented
-          representation. Speak with experienced litigation lawyers in
-          Bangalore today.
-        </p>
-
-        <a
-          href="/legal-consultation-in-bangalore"
-          className="bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
-        >
-          Schedule Consultation
-        </a>
       </section>
 
       <Footer />
