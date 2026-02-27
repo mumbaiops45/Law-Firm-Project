@@ -2983,12 +2983,15 @@ export default function Navbar() {
 
 
   /* ================= SCROLL EFFECT ================= */
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, [pathname]);
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-   
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setMobileServicesOpen(false);
+  }, [pathname]);
 
 
 
@@ -3010,31 +3013,31 @@ useEffect(() => {
   //   }
 
   // }, [pathname]);
-//   useEffect(() => {
-//   const shown = sessionStorage.getItem("disclaimerShown");
+  //   useEffect(() => {
+  //   const shown = sessionStorage.getItem("disclaimerShown");
 
-//   // Show popup on homepage only
-//   if (!shown && (pathname === "/" || pathname === "/law-firm-in-bangalore")) {
-//     setShowDisclaimer(true);
-//     document.body.style.overflow = "hidden";
-//   }
+  //   // Show popup on homepage only
+  //   if (!shown && (pathname === "/" || pathname === "/law-firm-in-bangalore")) {
+  //     setShowDisclaimer(true);
+  //     document.body.style.overflow = "hidden";
+  //   }
 
-//   return () => {
-//     document.body.style.overflow = "auto";
-//   };
-// }, [pathname]);
-useEffect(() => {
-  const checkDisclaimer = () => {
-    const shown = sessionStorage.getItem("disclaimerShown");
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [pathname]);
+  useEffect(() => {
+    const checkDisclaimer = () => {
+      const shown = sessionStorage.getItem("disclaimerShown");
 
-    if (!shown) {
-      setShowDisclaimer(true);
-      document.body.style.overflow = "hidden";
-    }
-  };
+      if (!shown) {
+        setShowDisclaimer(true);
+        document.body.style.overflow = "hidden";
+      }
+    };
 
-  checkDisclaimer();
-}, []);
+    checkDisclaimer();
+  }, []);
 
   // const handleAccept = () => {
 
@@ -3049,13 +3052,13 @@ useEffect(() => {
 
   // };
 
-const handleAccept = () => {
-  if (!isChecked) return;
+  const handleAccept = () => {
+    if (!isChecked) return;
 
-  sessionStorage.setItem("disclaimerShown", "true");
-  setShowDisclaimer(false);
-  document.body.style.overflow = "auto";
-};
+    sessionStorage.setItem("disclaimerShown", "true");
+    setShowDisclaimer(false);
+    document.body.style.overflow = "auto";
+  };
 
   /* ================= PRACTICE AREAS ================= */
   const practiceAreas = [
@@ -3273,20 +3276,20 @@ const handleAccept = () => {
 
         {mobileMenuOpen && (
 
-          <div className="lg:hidden bg-black border-t border-gray-800">
+          <div className="lg:hidden bg-black border-t border-gray-800 text-white nt-5">
 
 
-            <Link href="/law-firm-in-bangalore" className="block px-6 py-4 border-b border-gray-800">
+            {/* <Link href="/law-firm-in-bangalore" className="block px-6 py-4 border-b border-gray-800">
               Home
-            </Link>
-
-
-            <Link href="/leading-law-firm-in-bangalore" className="block px-6 py-4 border-b border-gray-800">
+            </Link> */}
+            <Link
+              href="/law-firm-in-bangalore"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-6 py-4 border-b border-gray-800"
+            >Home</Link>
+            <Link href="/leading-law-firm-in-bangalore" onClick={() => setMobileMenuOpen(false)} className="block px-6 py-4 border-b border-gray-800">
               About
             </Link>
-
-
-
             {/* MOBILE DROPDOWN */}
 
             <button
@@ -3320,22 +3323,22 @@ const handleAccept = () => {
 
 
 
-            <Link href="/lawyers-in-bangalore" className="block px-6 py-4 border-b border-gray-800">
-              Team
+            <Link href="/lawyers-in-bangalore" onClick={() => setMobileMenuOpen(false)} className="block px-6 py-4 border-b border-gray-800">
+              Our Team
             </Link>
 
 
-            <Link href="/successful-case-results-in-bangalore" className="block px-6 py-4 border-b border-gray-800">
-              Case Studies
+            <Link href="/successful-case-results-in-bangalore" onClick={() => setMobileMenuOpen(false)} className="block px-6 py-4 border-b border-gray-800">
+              Success Stories
             </Link>
 
 
-            <Link href="/legal-advice-bangalore" className="block px-6 py-4 border-b border-gray-800">
+            <Link href="/legal-advice-bangalore" onClick={() => setMobileMenuOpen(false)} className="block px-6 py-4 border-b border-gray-800">
               Insights
             </Link>
 
 
-            <Link href="/contact" className="block px-6 py-4">
+            <Link href="/legal-consultation-in-bangalore" onClick={() => setMobileMenuOpen(false)} className="block px-6 py-4">
               Contact
             </Link>
 
@@ -3347,8 +3350,6 @@ const handleAccept = () => {
       </nav>
 
 
-
-      {/* ================= DISCLAIMER ================= */}
 
       {/* ================= DISCLAIMER ================= */}
 
