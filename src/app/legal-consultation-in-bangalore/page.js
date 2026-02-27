@@ -1831,9 +1831,222 @@
 //   );
 // }
 
+// "use client";
+
+// import { useState } from "react";
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
+
+// export default function Page() {
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     phone: "",
+//     service: "",
+//     message: "",
+//   });
+
+//   const handleChange = (e) => {
+//     setFormData({
+//       ...formData,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     console.log(formData);
+//   };
+
+//   const services = [
+//     "Corporate",
+//     "Civil",
+//     "Criminal",
+//     "Family",
+//     "Property",
+//     "NRI",
+//     "Employment",
+//     "Other",
+//   ];
+
+//   return (
+//     <>
+//       <Navbar />
+
+//       {/* ================= HERO SECTION ================= */}
+//       <section className="bg-black text-white relative overflow-hidden pt-32 md:pt-24 pb-24 px-6">
+
+//         {/* Gold Glow Background */}
+//         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,#C9A24D,transparent_70%)]"></div>
+
+//         <div className="max-w-6xl mx-auto relative z-10 text-center">
+
+//           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#C9A24D] leading-tight mb-6">
+//             Legal Consultation in Bangalore
+//           </h1>
+
+//           <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed text-lg mb-6">
+//             Speak with the experienced legal team at{" "}
+//             <strong>S Jain & Attorneys</strong> for clear, strategic, and
+//             confidential legal consultation in Bangalore. We provide structured
+//             legal guidance tailored to your specific matter with precision and
+//             professionalism.
+//           </p>
+
+//           <p className="text-[#C9A24D] font-semibold mb-8">
+//             Response within 24 hours guaranteed.
+//           </p>
+
+//           {/* CTA Buttons */}
+//           <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+//             <a
+//               href="#consultation-form"
+//               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
+//             >
+//               Book Confidential Consultation
+//             </a>
+
+//             <a
+//               href="tel:+91XXXXXXXXXX"
+//               className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
+//             >
+//               📞 Call Now
+//             </a>
+
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* ================= CONTACT + FORM SECTION ================= */}
+//       <section
+//         id="consultation-form"
+//         className="bg-[#0A0A0A] text-white py-24 px-6"
+//       >
+//         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+
+//           {/* LEFT SIDE - CONTACT DETAILS */}
+//           <div>
+//             <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-8">
+//               Contact Details
+//             </h2>
+
+//             <div className="space-y-8 text-gray-300">
+
+//               <div>
+//                 <p className="font-semibold text-white mb-1">Office Address</p>
+//                 <p>[Your Office Address], Bangalore</p>
+//               </div>
+
+//               <div>
+//                 <p className="font-semibold text-white mb-1">Phone</p>
+//                 <p>+91 XXXXX XXXXX</p>
+//               </div>
+
+//               <div>
+//                 <p className="font-semibold text-white mb-1">Email</p>
+//                 <p>info@yourlawfirm.com</p>
+//               </div>
+
+//               <div>
+//                 <p className="font-semibold text-white mb-1">Working Hours</p>
+//                 <p>Monday – Saturday | 9:30 AM – 6:30 PM</p>
+//               </div>
+
+//             </div>
+//           </div>
+
+//           {/* RIGHT SIDE - FORM */}
+//           <div className="bg-black border border-[#C9A24D]/30 rounded-xl p-8 md:p-10 shadow-[0_0_40px_rgba(201,162,77,0.15)]">
+
+//             <h3 className="text-xl font-semibold text-white mb-6 text-center">
+//               Book Confidential Consultation
+//             </h3>
+
+//             <form onSubmit={handleSubmit} className="space-y-5">
+
+//               <input
+//                 type="text"
+//                 name="name"
+//                 placeholder="Full Name"
+//                 required
+//                 onChange={handleChange}
+//                 className="w-full bg-[#0A0A0A] border border-gray-800 px-4 py-3 rounded-md text-white focus:border-[#C9A24D] outline-none transition"
+//               />
+
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder="Email Address"
+//                 required
+//                 onChange={handleChange}
+//                 className="w-full bg-[#0A0A0A] border border-gray-800 px-4 py-3 rounded-md text-white focus:border-[#C9A24D] outline-none transition"
+//               />
+
+//               <input
+//                 type="tel"
+//                 name="phone"
+//                 placeholder="Phone Number"
+//                 required
+//                 onChange={handleChange}
+//                 className="w-full bg-[#0A0A0A] border border-gray-800 px-4 py-3 rounded-md text-white focus:border-[#C9A24D] outline-none transition"
+//               />
+
+//               <select
+//                 name="service"
+//                 required
+//                 onChange={handleChange}
+//                 className="w-full bg-[#0A0A0A] border border-gray-800 px-4 py-3 rounded-md text-white focus:border-[#C9A24D] outline-none transition"
+//               >
+//                 <option value="">Service Required</option>
+//                 {services.map((service, index) => (
+//                   <option key={index} value={service}>
+//                     {service}
+//                   </option>
+//                 ))}
+//               </select>
+
+//               <textarea
+//                 name="message"
+//                 rows="4"
+//                 placeholder="Message"
+//                 required
+//                 onChange={handleChange}
+//                 className="w-full bg-[#0A0A0A] border border-gray-800 px-4 py-3 rounded-md text-white focus:border-[#C9A24D] outline-none transition"
+//               />
+
+//               <div className="flex flex-col sm:flex-row gap-4 pt-4">
+
+//                 <button
+//                   type="submit"
+//                   className="flex-1 bg-[#C9A24D] text-black font-semibold py-3 rounded-md hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
+//                 >
+//                   Book Consultation
+//                 </button>
+
+//                 <a
+//                   href="tel:+91XXXXXXXXXX"
+//                   className="flex-1 bg-[#111] border border-[#C9A24D] text-[#C9A24D] font-semibold py-3 rounded-md text-center hover:bg-[#C9A24D] hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
+//                 >
+//                   📞 Call Now
+//                 </a>
+
+//               </div>
+
+//             </form>
+//           </div>
+//         </div>
+//       </section>
+
+//       <Footer />
+//     </>
+//   );
+// }
+
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -1869,6 +2082,44 @@ export default function Page() {
     "Other",
   ];
 
+  /* ================= ANIMATION VARIANTS ================= */
+
+  const containerVariant = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeRight = {
+    hidden: { opacity: 0, x: 60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
     <>
       <Navbar />
@@ -1876,30 +2127,43 @@ export default function Page() {
       {/* ================= HERO SECTION ================= */}
       <section className="bg-black text-white relative overflow-hidden pt-32 md:pt-24 pb-24 px-6">
 
-        {/* Gold Glow Background */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,#C9A24D,transparent_70%)]"></div>
 
-        <div className="max-w-6xl mx-auto relative z-10 text-center">
-
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#C9A24D] leading-tight mb-6">
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          animate="visible"
+          className="max-w-6xl mx-auto relative z-10 text-center"
+        >
+          <motion.h1
+            variants={fadeUp}
+            className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#C9A24D] leading-tight mb-6"
+          >
             Legal Consultation in Bangalore
-          </h1>
+          </motion.h1>
 
-          <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed text-lg mb-6">
+          <motion.p
+            variants={fadeUp}
+            className="text-gray-300 max-w-3xl mx-auto leading-relaxed text-lg mb-6"
+          >
             Speak with the experienced legal team at{" "}
             <strong>S Jain & Attorneys</strong> for clear, strategic, and
             confidential legal consultation in Bangalore. We provide structured
             legal guidance tailored to your specific matter with precision and
             professionalism.
-          </p>
+          </motion.p>
 
-          <p className="text-[#C9A24D] font-semibold mb-8">
+          <motion.p
+            variants={fadeUp}
+            className="text-[#C9A24D] font-semibold mb-8"
+          >
             Response within 24 hours guaranteed.
-          </p>
+          </motion.p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-
+          <motion.div
+            variants={fadeUp}
+            className="flex flex-col sm:flex-row justify-center gap-4"
+          >
             <a
               href="#consultation-form"
               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
@@ -1913,9 +2177,8 @@ export default function Page() {
             >
               📞 Call Now
             </a>
-
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* ================= CONTACT + FORM SECTION ================= */}
@@ -1925,14 +2188,18 @@ export default function Page() {
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
 
-          {/* LEFT SIDE - CONTACT DETAILS */}
-          <div>
+          {/* LEFT SIDE */}
+          <motion.div
+            variants={fadeLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-8">
               Contact Details
             </h2>
 
             <div className="space-y-8 text-gray-300">
-
               <div>
                 <p className="font-semibold text-white mb-1">Office Address</p>
                 <p>[Your Office Address], Bangalore</p>
@@ -1952,13 +2219,17 @@ export default function Page() {
                 <p className="font-semibold text-white mb-1">Working Hours</p>
                 <p>Monday – Saturday | 9:30 AM – 6:30 PM</p>
               </div>
-
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT SIDE - FORM */}
-          <div className="bg-black border border-[#C9A24D]/30 rounded-xl p-8 md:p-10 shadow-[0_0_40px_rgba(201,162,77,0.15)]">
-
+          <motion.div
+            variants={fadeRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className="bg-black border border-[#C9A24D]/30 rounded-xl p-8 md:p-10 shadow-[0_0_40px_rgba(201,162,77,0.15)]"
+          >
             <h3 className="text-xl font-semibold text-white mb-6 text-center">
               Book Confidential Consultation
             </h3>
@@ -2016,7 +2287,6 @@ export default function Page() {
               />
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-
                 <button
                   type="submit"
                   className="flex-1 bg-[#C9A24D] text-black font-semibold py-3 rounded-md hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
@@ -2030,11 +2300,10 @@ export default function Page() {
                 >
                   📞 Call Now
                 </a>
-
               </div>
-
             </form>
-          </div>
+          </motion.div>
+
         </div>
       </section>
 

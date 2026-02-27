@@ -208,24 +208,31 @@
 //   );
 // }
 
-
+"use client";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
-/* ================= SEO META ================= */
 
-export const metadata = {
-  title: "Employment Lawyer in Bangalore | S Jain & Attorneys",
-  description:
-    "Experienced Employment Lawyer in Bangalore handling workplace disputes, labour court cases, wrongful termination, and HR compliance advisory services.",
-  alternates: {
-    canonical: "https://yourdomain.com/employment-lawyer-in-bangalore",
-  },
-};
+// /* ================= SEO META ================= */
+
+// export const metadata = {
+//   title: "Employment Lawyer in Bangalore | S Jain & Attorneys",
+//   description:
+//     "Experienced Employment Lawyer in Bangalore handling workplace disputes, labour court cases, wrongful termination, and HR compliance advisory services.",
+//   alternates: {
+//     canonical: "https://yourdomain.com/employment-lawyer-in-bangalore",
+//   },
+// };
 
 export default function EmploymentLawyerPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+const toggleFAQ = (index) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
   return (
     <>
       <Navbar />
@@ -443,25 +450,41 @@ export default function EmploymentLawyerPage() {
               Frequently Asked Questions
             </h2>
 
-            {[
-              ["What types of employment disputes do you handle?",
-                "We handle wrongful termination, wage disputes, workplace harassment, disciplinary proceedings, industrial disputes, and labour court litigation matters."],
-              ["Can an employee challenge unlawful termination?",
-                "Yes, an employee can challenge illegal dismissal before appropriate labour authorities."],
-              ["Do you represent clients in labour court proceedings?",
-                "Yes, we represent both employers and employees in industrial and service-related disputes."],
-              ["Do companies need HR compliance advisory?",
-                "Yes, businesses benefit from structured guidance to avoid penalties and litigation risks."],
-              ["What remedies are available in wrongful termination cases?",
-                "Remedies may include reinstatement, compensation, back wages, or structured settlement depending on the facts."],
-              ["Do you provide ongoing legal retainership services?",
-                "Yes, we offer continuous employment law advisory, compliance audits, and dispute management support."],
-            ].map(([q, a], i) => (
-              <div key={i} className="bg-gray-50 p-6 rounded-xl shadow">
-                <h4 className="font-semibold mb-2">{q}</h4>
-                <p>{a}</p>
-              </div>
-            ))}
+           {[
+  ["What types of employment disputes do you handle?",
+    "We handle wrongful termination, wage disputes, workplace harassment, disciplinary proceedings, industrial disputes, and labour court litigation matters."],
+  ["Can an employee challenge unlawful termination?",
+    "Yes, an employee can challenge illegal dismissal before appropriate labour authorities."],
+  ["Do you represent clients in labour court proceedings?",
+    "Yes, we represent both employers and employees in industrial and service-related disputes."],
+  ["Do companies need HR compliance advisory?",
+    "Yes, businesses benefit from structured guidance to avoid penalties and litigation risks."],
+  ["What remedies are available in wrongful termination cases?",
+    "Remedies may include reinstatement, compensation, back wages, or structured settlement depending on the facts."],
+  ["Do you provide ongoing legal retainership services?",
+    "Yes, we offer continuous employment law advisory, compliance audits, and dispute management support."],
+].map(([q, a], i) => (
+  <div
+    key={i}
+    className="bg-gray-50 rounded-xl shadow transition-all duration-300"
+  >
+    <button
+      onClick={() => toggleFAQ(i)}
+      className="w-full text-left p-6 font-semibold flex justify-between items-center"
+    >
+      {q}
+      <span className="text-[#C9A24D] text-xl">
+        {openIndex === i ? "−" : "+"}
+      </span>
+    </button>
+
+    {openIndex === i && (
+      <div className="px-6 pb-6 text-gray-700">
+        {a}
+      </div>
+    )}
+  </div>
+))}
 
           </div>
         </section>

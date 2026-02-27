@@ -841,8 +841,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function LegalAdvisorPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
     <>
       <Navbar />
@@ -990,61 +996,55 @@ export default function LegalAdvisorPage() {
               Frequently Asked Questions
             </h3>
 
-            <div className="space-y-10 text-gray-800">
+            <div className="space-y-6 text-gray-800">
 
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q1: What does a legal advisor do for businesses?
-                </h4>
-                <p className="mt-2">
-                  A legal advisor provides strategic guidance on compliance, contracts, governance, and risk management to protect business interests.
-                </p>
-              </div>
+              {[
+                {
+                  q: "Q1: What does a legal advisor do for businesses?",
+                  a: "A legal advisor provides strategic guidance on compliance, contracts, governance, and risk management to protect business interests."
+                },
+                {
+                  q: "Q2: Why is regulatory compliance important?",
+                  a: "Compliance helps avoid penalties, litigation, and reputational risk while ensuring smooth business operations."
+                },
+                {
+                  q: "Q3: Do you provide ongoing legal support for companies?",
+                  a: "Yes, we offer retainership and continuous advisory services tailored to business needs."
+                },
+                {
+                  q: "Q4: Can startups benefit from legal advisory services?",
+                  a: "Yes, startups benefit from structured legal frameworks, compliance planning, and contract management from early stages."
+                },
+                {
+                  q: "Q5: Do you assist with internal policy drafting and corporate governance frameworks?",
+                  a: "Yes, we draft and review internal policies, compliance manuals, governance frameworks, and corporate documentation to strengthen legal structure and regulatory alignment."
+                },
+                {
+                  q: "Q6: Can you conduct legal audits and compliance health checks?",
+                  a: "Yes, we perform structured legal audits and compliance assessments to identify risk areas and provide actionable recommendations."
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 cursor-pointer transition"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <h4 className="font-semibold text-lg">
+                      {faq.q}
+                    </h4>
+                    <span className="text-2xl font-bold text-[#C9A24D]">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
+                  </div>
 
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q2: Why is regulatory compliance important?
-                </h4>
-                <p className="mt-2">
-                  Compliance helps avoid penalties, litigation, and reputational risk while ensuring smooth business operations.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q3: Do you provide ongoing legal support for companies?
-                </h4>
-                <p className="mt-2">
-                  Yes, we offer retainership and continuous advisory services tailored to business needs.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q4: Can startups benefit from legal advisory services?
-                </h4>
-                <p className="mt-2">
-                  Yes, startups benefit from structured legal frameworks, compliance planning, and contract management from early stages.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q5: Do you assist with internal policy drafting and corporate governance frameworks?
-                </h4>
-                <p className="mt-2">
-                  Yes, we draft and review internal policies, compliance manuals, governance frameworks, and corporate documentation to strengthen legal structure and regulatory alignment.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q6: Can you conduct legal audits and compliance health checks?
-                </h4>
-                <p className="mt-2">
-                  Yes, we perform structured legal audits and compliance assessments to identify risk areas and provide actionable recommendations.
-                </p>
-              </div>
+                  {openIndex === index && (
+                    <p className="mt-4 text-gray-700">
+                      {faq.a}
+                    </p>
+                  )}
+                </div>
+              ))}
 
             </div>
           </div>

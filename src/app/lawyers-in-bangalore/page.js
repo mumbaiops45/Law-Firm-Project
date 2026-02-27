@@ -498,21 +498,14 @@
 //   );
 // }
 
-
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 /* ================= SEO META ================= */
 
-export const metadata = {
-  title: "Lawyers in Bangalore | S Jain & Attorneys",
-  description:
-    "Meet experienced lawyers in Bangalore at S Jain & Attorneys providing strategic legal representation across corporate, civil, criminal, family and regulatory matters.",
-  alternates: {
-    canonical: "https://yourdomain.com/lawyers-in-bangalore",
-  },
-};
 
 /* ================= TEAM DATA ================= */
 
@@ -523,6 +516,11 @@ const teamMembers = [
 ];
 
 export default function LawyersPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+const toggleFAQ = (index) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
   return (
     <>
       <Navbar />
@@ -614,39 +612,54 @@ export default function LawyersPage() {
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-8 text-gray-300">
+        <div className="space-y-4">
 
-            <div>
-              <h3 className="text-[#C9A24D] font-semibold">1. Who are the lawyers in Bangalore at S Jain & Attorneys?</h3>
-              <p className="mt-2">Our team consists of qualified and experienced lawyers in Bangalore specializing in corporate law, civil litigation, criminal defense, family law, property disputes, employment matters, and advisory services.</p>
-            </div>
+  {[
+    ["Who are the lawyers in Bangalore at S Jain & Attorneys?",
+      "Our team consists of qualified and experienced lawyers in Bangalore specializing in corporate law, civil litigation, criminal defense, family law, property disputes, employment matters, and advisory services."],
 
-            <div>
-              <h3 className="text-[#C9A24D] font-semibold">2. What makes your team among the best lawyers in Bangalore?</h3>
-              <p className="mt-2">We focus on strategic legal planning, thorough case preparation, ethical representation, and personalized legal guidance tailored to each client’s objectives.</p>
-            </div>
+    ["What makes your team among the best lawyers in Bangalore?",
+      "We focus on strategic legal planning, thorough case preparation, ethical representation, and personalized legal guidance tailored to each client’s objectives."],
 
-            <div>
-              <h3 className="text-[#C9A24D] font-semibold">3. Do you have experienced advocates in Bangalore for litigation matters?</h3>
-              <p className="mt-2">Yes. Our experienced advocates regularly represent clients before trial courts, tribunals, High Court benches, and regulatory forums.</p>
-            </div>
+    ["Do you have experienced advocates in Bangalore for litigation matters?",
+      "Yes. Our experienced advocates regularly represent clients before trial courts, tribunals, High Court benches, and regulatory forums."],
 
-            <div>
-              <h3 className="text-[#C9A24D] font-semibold">4. What practice areas do your top legal consultants in Bangalore handle?</h3>
-              <p className="mt-2">We provide services in corporate and commercial law, civil disputes, criminal defense, matrimonial matters, property law, employment law, regulatory compliance, and dispute resolution.</p>
-            </div>
+    ["What practice areas do your top legal consultants in Bangalore handle?",
+      "We provide services in corporate and commercial law, civil disputes, criminal defense, matrimonial matters, property law, employment law, regulatory compliance, and dispute resolution."],
 
-            <div>
-              <h3 className="text-[#C9A24D] font-semibold">5. How can I book a consultation with your legal team?</h3>
-              <p className="mt-2">You can schedule a confidential consultation through our website or contact our office directly for immediate assistance.</p>
-            </div>
+    ["How can I book a consultation with your legal team?",
+      "You can schedule a confidential consultation through our website or contact our office directly for immediate assistance."],
 
-            <div>
-              <h3 className="text-[#C9A24D] font-semibold">6. Do you represent clients outside Bangalore?</h3>
-              <p className="mt-2">Yes, we serve clients across Karnataka and represent NRI clients globally in litigation, advisory, and cross-border matters.</p>
-            </div>
+    ["Do you represent clients outside Bangalore?",
+      "Yes, we serve clients across Karnataka and represent NRI clients globally in litigation, advisory, and cross-border matters."]
+  ].map(([question, answer], index) => (
 
-          </div>
+    <div
+      key={index}
+      className="border border-[#C9A24D] rounded-lg transition-all duration-300"
+    >
+
+      <button
+        onClick={() => toggleFAQ(index)}
+        className="w-full text-left p-6 flex justify-between items-center font-semibold text-[#C9A24D]"
+      >
+        <span>{question}</span>
+        <span className="text-xl">
+          {openIndex === index ? "−" : "+"}
+        </span>
+      </button>
+
+      {openIndex === index && (
+        <div className="px-6 pb-6 text-gray-300">
+          {answer}
+        </div>
+      )}
+
+    </div>
+
+  ))}
+
+</div>
 
         </div>
       </section>

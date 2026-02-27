@@ -384,9 +384,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import Image from "next/image";
-import { Import } from "lucide-react";
+import { useState } from "react";
 
 export default function NRILawyerPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
     <>
       <Navbar />
@@ -546,61 +551,55 @@ export default function NRILawyerPage() {
               Frequently Asked Questions
             </h3>
 
-            <div className="space-y-10 text-gray-800">
+            <div className="space-y-6 text-gray-800">
 
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q1: Can NRIs handle property disputes without travelling to India?
-                </h4>
-                <p className="mt-2">
-                  Yes, through a valid Power of Attorney, legal proceedings can be managed by your appointed representative.
-                </p>
-              </div>
+              {[
+                {
+                  q: "Q1: Can NRIs handle property disputes without travelling to India?",
+                  a: "Yes, through a valid Power of Attorney, legal proceedings can be managed by your appointed representative."
+                },
+                {
+                  q: "Q2: How is Power of Attorney used for NRIs?",
+                  a: "It authorizes a trusted person in India to act on your behalf for legal, property, and litigation matters."
+                },
+                {
+                  q: "Q3: Do you represent NRIs in family court matters?",
+                  a: "Yes, we handle divorce, custody, maintenance, and matrimonial disputes for Non-Resident Indians."
+                },
+                {
+                  q: "Q4: What documents are required for NRI legal cases?",
+                  a: "Passport copies, overseas address proof, property documents, agreements, and case-related records depending on the matter."
+                },
+                {
+                  q: "Q5: How do I verify clear property title?",
+                  a: "Through legal title verification, encumbrance search, and detailed document review conducted by our property lawyers."
+                },
+                {
+                  q: "Q6: Can NRIs buy or sell property through legal representation?",
+                  a: "Yes, transactions can be managed through legally executed Power of Attorney and structured documentation support."
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 cursor-pointer transition"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <h4 className="font-semibold text-lg">
+                      {faq.q}
+                    </h4>
+                    <span className="text-2xl font-bold text-[#C9A24D]">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
+                  </div>
 
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q2: How is Power of Attorney used for NRIs?
-                </h4>
-                <p className="mt-2">
-                  It authorizes a trusted person in India to act on your behalf for legal, property, and litigation matters.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q3: Do you represent NRIs in family court matters?
-                </h4>
-                <p className="mt-2">
-                  Yes, we handle divorce, custody, maintenance, and matrimonial disputes for Non-Resident Indians.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q4: What documents are required for NRI legal cases?
-                </h4>
-                <p className="mt-2">
-                  Passport copies, overseas address proof, property documents, agreements, and case-related records depending on the matter.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q5: How do I verify clear property title?
-                </h4>
-                <p className="mt-2">
-                  Through legal title verification, encumbrance search, and detailed document review conducted by our property lawyers.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q6: Can NRIs buy or sell property through legal representation?
-                </h4>
-                <p className="mt-2">
-                  Yes, transactions can be managed through legally executed Power of Attorney and structured documentation support.
-                </p>
-              </div>
+                  {openIndex === index && (
+                    <p className="mt-4 text-gray-700">
+                      {faq.a}
+                    </p>
+                  )}
+                </div>
+              ))}
 
             </div>
 

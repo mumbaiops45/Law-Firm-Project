@@ -372,8 +372,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function MediationLawyerPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+const toggleFAQ = (index) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
   return (
     <>
       <Navbar />
@@ -521,63 +527,57 @@ export default function MediationLawyerPage() {
               Frequently Asked Questions
             </h3>
 
-            <div className="space-y-10 text-gray-800">
+           <div className="space-y-6 text-gray-800">
 
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q1: What is mediation and how does it work?
-                </h4>
-                <p className="mt-2">
-                  Mediation is a structured negotiation process where a neutral mediator helps parties reach a mutually acceptable settlement.
-                </p>
-              </div>
+  {[
+    {
+      q: "Q1: What is mediation and how does it work?",
+      a: "Mediation is a structured negotiation process where a neutral mediator helps parties reach a mutually acceptable settlement."
+    },
+    {
+      q: "Q2: How is arbitration different from litigation?",
+      a: "Arbitration is a private dispute resolution process, often faster and more flexible than court litigation."
+    },
+    {
+      q: "Q3: Is ADR legally binding?",
+      a: "Yes, arbitration awards and properly executed settlement agreements are legally enforceable."
+    },
+    {
+      q: "Q4: Can disputes be resolved without going to court?",
+      a: "Yes, many disputes can be effectively resolved through mediation or arbitration."
+    },
+    {
+      q: "Q5: Can mediation be used in ongoing court cases?",
+      a: "Yes, courts often refer matters to mediation during pending litigation, and we represent clients in court-referred mediation."
+    },
+    {
+      q: "Q6: Do you assist in drafting and enforcing settlement agreements?",
+      a: "Yes, we draft legally enforceable settlement agreements and consent terms to ensure compliance and clarity."
+    }
+  ].map((faq, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 cursor-pointer transition"
+      onClick={() => toggleFAQ(index)}
+    >
+      <div className="flex justify-between items-center">
+        <h4 className="font-semibold text-lg">
+          {faq.q}
+        </h4>
+        <span className="text-2xl font-bold text-[#C9A24D]">
+          {openIndex === index ? "−" : "+"}
+        </span>
+      </div>
 
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q2: How is arbitration different from litigation?
-                </h4>
-                <p className="mt-2">
-                  Arbitration is a private dispute resolution process, often faster and more flexible than court litigation.
-                </p>
-              </div>
+      {openIndex === index && (
+        <p className="mt-4 text-gray-700">
+          {faq.a}
+        </p>
+      )}
+    </div>
+  ))}
 
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q3: Is ADR legally binding?
-                </h4>
-                <p className="mt-2">
-                  Yes, arbitration awards and properly executed settlement agreements are legally enforceable.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q4: Can disputes be resolved without going to court?
-                </h4>
-                <p className="mt-2">
-                  Yes, many disputes can be effectively resolved through mediation or arbitration.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q5: Can mediation be used in ongoing court cases?
-                </h4>
-                <p className="mt-2">
-                  Yes, courts often refer matters to mediation during pending litigation, and we represent clients in court-referred mediation.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q6: Do you assist in drafting and enforcing settlement agreements?
-                </h4>
-                <p className="mt-2">
-                  Yes, we draft legally enforceable settlement agreements and consent terms to ensure compliance and clarity.
-                </p>
-              </div>
-
-            </div>
+</div>
           </div>
         </section>
 

@@ -1348,13 +1348,13 @@ export default function Footer() {
               <strong>S Jain & Attorneys</strong> is a leading law firm in Bangalore providing full-service legal representation across litigation, advisory, and regulatory matters.
             </p>
 
-            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+            {/* <p className="text-gray-400 text-sm leading-relaxed mb-4">
               Our experienced lawyers deliver strategic, result-oriented legal solutions across corporate, civil, criminal, family, property, employment, NRI, and dispute resolution matters with integrity, confidentiality, and professionalism.
             </p>
 
             <p className="text-gray-400 text-sm leading-relaxed">
               Serving clients across Bangalore, Karnataka, throughout India, and representing NRI clients globally with structured and professional legal representation.
-            </p>
+            </p> */}
           </div>
 
           {/* ================= PRACTICE AREAS ================= */}

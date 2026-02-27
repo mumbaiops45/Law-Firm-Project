@@ -387,8 +387,14 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function CriminalDefensePage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -464,14 +470,16 @@ export default function CriminalDefensePage() {
           </motion.div>
 
           {/* HERO IMAGE */}
-          <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-6 z-20">
-            <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
+          {/* <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-6 z-20"> */}
+          <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-6 z-0">
+            <div className="rounded-xl overflow-hidden shadow-xl mt-64">
+              
               <Image
                 src="/criminal-law.png"
                 alt="Criminal Lawyer in Bangalore"
                 width={1400}
                 height={800}
-                className="w-full h-[400px] md:h-[500px] object-cover"
+                className="w-full h-[300px] md:h-[500px] object-cover"
                 priority
               />
             </div>
@@ -483,7 +491,7 @@ export default function CriminalDefensePage() {
 
         {/* ================= STRATEGIC SUPPORT ================= */}
 
-        <section className="max-w-6xl mx-auto px-6 py-16 mt-16">
+        <section className="max-w-6xl mx-auto px-6 py-16 mt-24">
 
           <h2 className="text-4xl font-semibold mb-6">
             Strategic Criminal Defense & Prosecution Support
@@ -522,7 +530,7 @@ export default function CriminalDefensePage() {
             className="w-full rounded-xl shadow-lg mb-16"
           />
 
-          {/* APPROACH */}  
+          {/* APPROACH */}
           <h3 className="text-3xl font-semibold mb-6">
             Our Approach / How We Work
           </h3>
@@ -568,30 +576,63 @@ export default function CriminalDefensePage() {
               Frequently Asked Questions
             </h3>
 
-            <div className="space-y-8 text-gray-700">
-              <p><strong>Q1: How soon should I contact a criminal lawyer?</strong><br />
-                Immediately after receiving notice, FIR, arrest, or police inquiry.
-              </p>
+            <div className="space-y-4">
+              {[
+                {
+                  question: "How soon should I contact a criminal lawyer?",
+                  answer:
+                    "Immediately after receiving notice, FIR, arrest, or police inquiry.",
+                },
+                {
+                  question: "Can you help with bail matters?",
+                  answer:
+                    "Yes, we handle regular and anticipatory bail applications.",
+                },
+                {
+                  question: "Do you handle both defense and prosecution cases?",
+                  answer:
+                    "Yes, we provide Criminal Defense & Prosecution services.",
+                },
+                {
+                  question: "What documents should I bring?",
+                  answer:
+                    "FIR copy, notice, charge sheet, arrest memo and relevant documents.",
+                },
+                {
+                  question: "Can a criminal case be settled?",
+                  answer:
+                    "Some cases may be legally compoundable depending on the offence.",
+                },
+                {
+                  question: "What happens after an FIR is filed?",
+                  answer:
+                    "Police investigation begins followed by court proceedings.",
+                },
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm"
+                >
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition"
+                  >
+                    <span className="font-semibold text-lg text-black">
+                      {faq.question}
+                    </span>
 
-              <p><strong>Q2: Can you help with bail matters?</strong><br />
-                Yes, we handle regular and anticipatory bail applications.
-              </p>
+                    <span className="text-[#C9A24D] text-2xl font-bold">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
+                  </button>
 
-              <p><strong>Q3: Do you handle both defense and prosecution cases?</strong><br />
-                Yes, we provide Criminal Defense & Prosecution services.
-              </p>
-
-              <p><strong>Q4: What documents should I bring?</strong><br />
-                FIR copy, notice, charge sheet, arrest memo and relevant documents.
-              </p>
-
-              <p><strong>Q5: Can a criminal case be settled?</strong><br />
-                Some cases may be legally compoundable depending on the offence.
-              </p>
-
-              <p><strong>Q6: What happens after an FIR is filed?</strong><br />
-                Police investigation begins followed by court proceedings.
-              </p>
+                  {openIndex === index && (
+                    <div className="px-6 py-4 text-gray-600 bg-gray-50">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </section>

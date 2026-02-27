@@ -413,9 +413,16 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 export default function CivilLitigation() {
 
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
@@ -472,9 +479,9 @@ export default function CivilLitigation() {
 
             {/* <motion.div variants={fadeUp} className="flex justify-center gap-6 flex-wrap"> */}
             <motion.div
-  variants={fadeUp}
-  className="relative z-30 flex justify-center gap-6 flex-wrap"
->
+              variants={fadeUp}
+              className="relative z-30 flex justify-center gap-6 flex-wrap"
+            >
               <Link
                 href="/legal-consultation-in-bangalore"
                 className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition inline-block"
@@ -588,13 +595,60 @@ export default function CivilLitigation() {
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-6 text-gray-700 text-lg">
-            <p><strong>Q1:</strong> What types of civil cases do you handle?<br />We handle property disputes, contract matters, recovery suits, injunctions, partition cases, and commercial civil litigation.</p>
-            <p><strong>Q2:</strong> How long does a civil case take?<br />Timelines vary depending on case complexity, court workload, evidence review, and procedural stages.</p>
-            <p><strong>Q3:</strong> Can civil disputes be settled outside court?<br />Yes, many disputes can be resolved through negotiation, mediation, or structured settlement discussions.</p>
-            <p><strong>Q4:</strong> What documents are required for filing a civil suit?<br />Relevant contracts, title documents, correspondence, financial records, and supporting evidence are typically required.</p>
-            <p><strong>Q5:</strong> Do you handle appeals in civil matters?<br />Yes, our Civil Litigation Lawyer team represents clients in appeals and revisions before appellate courts.</p>
-            <p><strong>Q6:</strong> Can you assist with urgent injunction or stay orders?<br />Yes, we handle urgent injunction and stay applications to protect your legal rights and prevent further loss or damage.</p>
+          <div className="space-y-4">
+            {[
+              {
+                question: "What types of civil cases do you handle?",
+                answer:
+                  "We handle property disputes, contract matters, recovery suits, injunctions, partition cases, and commercial civil litigation."
+              },
+              {
+                question: "How long does a civil case take?",
+                answer:
+                  "Timelines vary depending on case complexity, court workload, evidence review, and procedural stages."
+              },
+              {
+                question: "Can civil disputes be settled outside court?",
+                answer:
+                  "Yes, many disputes can be resolved through negotiation, mediation, or structured settlement discussions."
+              },
+              {
+                question: "What documents are required for filing a civil suit?",
+                answer:
+                  "Relevant contracts, title documents, correspondence, financial records, and supporting evidence are typically required."
+              },
+              {
+                question: "Do you handle appeals in civil matters?",
+                answer:
+                  "Yes, our Civil Litigation Lawyer team represents clients in appeals and revisions before appellate courts."
+              },
+              {
+                question: "Can you assist with urgent injunction or stay orders?",
+                answer:
+                  "Yes, we handle urgent injunction and stay applications to protect your legal rights and prevent further loss or damage."
+              }
+            ].map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl shadow">
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex justify-between items-center p-6 text-left"
+                >
+                  <span className="font-semibold">
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    className={`transition-transform duration-300 ${activeIndex === index ? "rotate-180 text-[#C9A24D]" : ""
+                      }`}
+                  />
+                </button>
+
+                {activeIndex === index && (
+                  <div className="px-6 pb-6 text-gray-700">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </section>
 

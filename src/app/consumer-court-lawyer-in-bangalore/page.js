@@ -384,8 +384,14 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function ConsumerCourtLawyerPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -552,74 +558,55 @@ export default function ConsumerCourtLawyerPage() {
               Frequently Asked Questions
             </h3>
 
-            <div className="space-y-10">
+            <div className="space-y-6">
 
-              {/* Q1 */}
-              <div>
-                <h4 className="text-xl font-semibold text-black">
-                  Q1: What cases can be filed in Consumer Court?
-                </h4>
-                <p className="mt-3 text-gray-700 leading-relaxed">
-                  Cases involving defective goods, service deficiencies, unfair trade practices,
-                  misleading advertisements, and e-commerce disputes.
-                </p>
-              </div>
+              {[
+                {
+                  q: "Q1: What cases can be filed in Consumer Court?",
+                  a: "Cases involving defective goods, service deficiencies, unfair trade practices, misleading advertisements, and e-commerce disputes."
+                },
+                {
+                  q: "Q2: How long does a consumer complaint take?",
+                  a: "Timelines vary depending on case complexity, documentation, and forum schedule."
+                },
+                {
+                  q: "Q3: Can I claim compensation for mental harassment?",
+                  a: "Yes, compensation can be sought for financial loss and mental agony, subject to evaluation by the Consumer Commission."
+                },
+                {
+                  q: "Q4: Can businesses also file consumer cases?",
+                  a: "In certain situations, small businesses may qualify as consumers under applicable law."
+                },
+                {
+                  q: "Q5: Is it mandatory to send a legal notice before filing a consumer complaint?",
+                  a: "While not always mandatory, sending a legal notice is advisable as it gives the opposite party an opportunity to resolve the dispute and strengthens your case."
+                },
+                {
+                  q: "Q6: Can consumer court orders be appealed?",
+                  a: "Yes, orders passed by the District Consumer Commission can be appealed before the State Commission, and further appeals can be made before the National Commission within statutory timelines."
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-6 shadow-sm cursor-pointer border border-gray-200 transition"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <h4 className="text-xl font-semibold text-black">
+                      {faq.q}
+                    </h4>
+                    <span className="text-2xl font-bold text-[#C9A24D]">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
+                  </div>
 
-              {/* Q2 */}
-              <div>
-                <h4 className="text-xl font-semibold text-black">
-                  Q2: How long does a consumer complaint take?
-                </h4>
-                <p className="mt-3 text-gray-700 leading-relaxed">
-                  Timelines vary depending on case complexity, documentation, and forum schedule.
-                </p>
-              </div>
-
-              {/* Q3 */}
-              <div>
-                <h4 className="text-xl font-semibold text-black">
-                  Q3: Can I claim compensation for mental harassment?
-                </h4>
-                <p className="mt-3 text-gray-700 leading-relaxed">
-                  Yes, compensation can be sought for financial loss and mental agony,
-                  subject to evaluation by the Consumer Commission.
-                </p>
-              </div>
-
-              {/* Q4 */}
-              <div>
-                <h4 className="text-xl font-semibold text-black">
-                  Q4: Can businesses also file consumer cases?
-                </h4>
-                <p className="mt-3 text-gray-700 leading-relaxed">
-                  In certain situations, small businesses may qualify as consumers
-                  under applicable law.
-                </p>
-              </div>
-
-              {/* Q5 */}
-              <div>
-                <h4 className="text-xl font-semibold text-black">
-                  Q5: Is it mandatory to send a legal notice before filing a consumer complaint?
-                </h4>
-                <p className="mt-3 text-gray-700 leading-relaxed">
-                  While not always mandatory, sending a legal notice is advisable as it
-                  gives the opposite party an opportunity to resolve the dispute and
-                  strengthens your case.
-                </p>
-              </div>
-
-              {/* Q6 */}
-              <div>
-                <h4 className="text-xl font-semibold text-black">
-                  Q6: Can consumer court orders be appealed?
-                </h4>
-                <p className="mt-3 text-gray-700 leading-relaxed">
-                  Yes, orders passed by the District Consumer Commission can be appealed
-                  before the State Commission, and further appeals can be made before
-                  the National Commission within statutory timelines.
-                </p>
-              </div>
+                  {openIndex === index && (
+                    <p className="mt-4 text-gray-700 leading-relaxed">
+                      {faq.a}
+                    </p>
+                  )}
+                </div>
+              ))}
 
             </div>
 

@@ -308,7 +308,7 @@
 
 "use client";
 
-
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
@@ -316,6 +316,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function PropertyRealEstateLawPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+const toggleFAQ = (index) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -486,31 +491,64 @@ export default function PropertyRealEstateLawPage() {
               Frequently Asked Questions
             </h3>
 
-            <div className="space-y-8 text-gray-700">
-              <p><strong>Q1: Why is property due diligence important?</strong><br />
-                It helps identify ownership issues, encumbrances, zoning restrictions, and legal risks before purchase.
-              </p>
+           <div className="space-y-4">
+  {[
+    {
+      question: "Why is property due diligence important?",
+      answer:
+        "It helps identify ownership issues, encumbrances, zoning restrictions, and legal risks before purchase.",
+    },
+    {
+      question: "What documents are required for property verification?",
+      answer:
+        "Title deed, encumbrance certificate, tax receipts, layout approvals, identity proof, and previous ownership records.",
+    },
+    {
+      question: "How long does a property dispute case take?",
+      answer:
+        "Timelines depend on complexity, court proceedings, documentation, and evidence review.",
+    },
+    {
+      question: "Do you handle builder disputes?",
+      answer:
+        "Yes, we assist in resolving builder delays, agreement breaches, and RERA-related matters.",
+    },
+    {
+      question: "How do I verify clear property title?",
+      answer:
+        "Through legal title verification, encumbrance search, document review, and verification of ownership records.",
+    },
+    {
+      question: "Can NRIs buy or sell property through legal representation?",
+      answer:
+        "Yes, transactions can be handled through legal authorization, Power of Attorney documentation, and structured legal oversight.",
+    },
+  ].map((faq, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm"
+    >
+      <button
+        onClick={() => toggleFAQ(index)}
+        className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition"
+      >
+        <span className="font-semibold text-lg text-black">
+          {faq.question}
+        </span>
 
-              <p><strong>Q2: What documents are required for property verification?</strong><br />
-                Title deed, encumbrance certificate, tax receipts, layout approvals, identity proof, and previous ownership records.
-              </p>
+        <span className="text-[#C9A24D] text-2xl font-bold">
+          {openIndex === index ? "−" : "+"}
+        </span>
+      </button>
 
-              <p><strong>Q3: How long does a property dispute case take?</strong><br />
-                Timelines depend on complexity, court proceedings, documentation, and evidence review.
-              </p>
-
-              <p><strong>Q4: Do you handle builder disputes?</strong><br />
-                Yes, we assist in resolving builder delays, agreement breaches, and RERA-related matters.
-              </p>
-
-              <p><strong>Q5: How do I verify clear property title?</strong><br />
-                Through legal title verification, encumbrance search, document review, and verification of ownership records.
-              </p>
-
-              <p><strong>Q6: Can NRIs buy or sell property through legal representation?</strong><br />
-                Yes, transactions can be handled through legal authorization, Power of Attorney documentation, and structured legal oversight.
-              </p>
-            </div>
+      {openIndex === index && (
+        <div className="px-6 py-4 text-gray-600 bg-gray-50">
+          {faq.answer}
+        </div>
+      )}
+    </div>
+  ))}
+</div>
           </div>
         </section>
 

@@ -594,6 +594,7 @@
 
 "use client";
 
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
@@ -601,6 +602,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function FamilyDivorceLawPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+const toggleFAQ = (index) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -800,13 +806,51 @@ export default function FamilyDivorceLawPage() {
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-6 text-gray-700 text-lg">
-            <p><strong>Q1:</strong> How long does a divorce process take?<br />The timeline depends on whether it is mutual consent or contested.</p>
-            <p><strong>Q2:</strong> What documents are required?<br />Marriage certificate, address proof, identity documents, and income details.</p>
-            <p><strong>Q3:</strong> How is child custody decided?<br />Custody decisions are based on the welfare of the child.</p>
-            <p><strong>Q4:</strong> Can divorce be settled without trial?<br />Yes, through mutual consent or structured settlement negotiations.</p>
-            <p><strong>Q5:</strong> How is alimony calculated?<br />Based on income, financial capacity, and court discretion.</p>
-          </div>
+         <div className="space-y-4">
+  {[
+    {
+      question: "How long does a divorce process take?",
+      answer: "The timeline depends on whether it is mutual consent or contested."
+    },
+    {
+      question: "What documents are required?",
+      answer: "Marriage certificate, address proof, identity documents, and income details."
+    },
+    {
+      question: "How is child custody decided?",
+      answer: "Custody decisions are based on the welfare of the child."
+    },
+    {
+      question: "Can divorce be settled without trial?",
+      answer: "Yes, through mutual consent or structured settlement negotiations."
+    },
+    {
+      question: "How is alimony calculated?",
+      answer: "Based on income, financial capacity, and court discretion."
+    }
+  ].map((faq, index) => (
+    <div
+      key={index}
+      className="border border-gray-200 rounded-xl overflow-hidden"
+    >
+      <button
+        onClick={() => toggleFAQ(index)}
+        className="w-full text-left px-6 py-4 flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition"
+      >
+        <span className="font-semibold text-lg">{faq.question}</span>
+        <span className="text-[#C9A24D] text-xl">
+          {openIndex === index ? "−" : "+"}
+        </span>
+      </button>
+
+      {openIndex === index && (
+        <div className="px-6 py-4 text-gray-700 bg-white">
+          {faq.answer}
+        </div>
+      )}
+    </div>
+  ))}
+</div>
 
         </section>
 

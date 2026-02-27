@@ -727,15 +727,20 @@
 
 
 "use client";
-
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Head from "next/head";
 
+import { ChevronDown } from "lucide-react";
 export default function CorporateLaw() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+const toggleFAQ = (index) => {
+  setActiveIndex(activeIndex === index ? null : index);
+};
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -744,18 +749,7 @@ export default function CorporateLaw() {
 
   return (
     <>
-      {/* ================= SEO ================= */}
-      {/* <Head>
-        <title>Corporate Lawyer in Bangalore | S Jain & Attorneys</title>
-        <meta
-          name="description"
-          content="Corporate & Commercial Law Firm in Bangalore offering corporate law services, commercial contract drafting, M&A advisory, and business legal compliance support."
-        />
-        <link
-          rel="canonical"
-          href="https://yourdomain.com/corporate-commercial-law-firm"
-        />
-      </Head> */}
+    
 
       <Navbar />
 
@@ -903,14 +897,64 @@ export default function CorporateLaw() {
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-6 text-gray-700 text-lg">
-            <p><strong>Q1:</strong> Do you assist startups and SMEs?<br/>Yes, we provide tailored Corporate Law Services for businesses of all sizes.</p>
-            <p><strong>Q2:</strong> Can you draft customized commercial contracts?<br/>Yes, our Commercial Contract Lawyer team drafts agreements aligned with your business goals.</p>
-            <p><strong>Q3:</strong> Do you offer ongoing advisory support?<br/>Yes, we provide structured Business Legal Advisory Services for long-term compliance and growth.</p>
-            <p><strong>Q4:</strong> Do you assist with mergers and acquisitions?<br/>Yes, we handle due diligence, structuring, and transaction documentation.</p>
-            <p><strong>Q5:</strong> Do you assist with corporate due diligence and risk assessment?<br/>Yes, we conduct comprehensive due diligence, compliance reviews, and risk assessments to identify legal exposures and ensure secure business transactions.</p>
-            <p><strong>Q6:</strong> Can you help with regulatory approvals and licensing?<br/>Yes, our Corporate & Commercial Law Firm assists businesses in obtaining regulatory approvals, licenses, and ensuring ongoing compliance with applicable laws and authorities.</p>
-          </div>
+          <div className="space-y-4">
+  {[
+    {
+      question: "Do you assist startups and SMEs?",
+      answer:
+        "Yes, we provide tailored Corporate Law Services for businesses of all sizes."
+    },
+    {
+      question: "Can you draft customized commercial contracts?",
+      answer:
+        "Yes, our Commercial Contract Lawyer team drafts agreements aligned with your business goals."
+    },
+    {
+      question: "Do you offer ongoing advisory support?",
+      answer:
+        "Yes, we provide structured Business Legal Advisory Services for long-term compliance and growth."
+    },
+    {
+      question: "Do you assist with mergers and acquisitions?",
+      answer:
+        "Yes, we handle due diligence, structuring, and transaction documentation."
+    },
+    {
+      question:
+        "Do you assist with corporate due diligence and risk assessment?",
+      answer:
+        "Yes, we conduct comprehensive due diligence, compliance reviews, and risk assessments to identify legal exposures and ensure secure business transactions."
+    },
+    {
+      question:
+        "Can you help with regulatory approvals and licensing?",
+      answer:
+        "Yes, our Corporate & Commercial Law Firm assists businesses in obtaining regulatory approvals, licenses, and ensuring ongoing compliance with applicable laws and authorities."
+    }
+  ].map((faq, index) => (
+    <div key={index} className="bg-white rounded-xl shadow-md">
+      <button
+        onClick={() => toggleFAQ(index)}
+        className="w-full flex justify-between items-center p-6 text-left"
+      >
+        <span className="font-semibold text-gray-800">
+          {faq.question}
+        </span>
+        <ChevronDown
+          className={`transition-transform duration-300 ${
+            activeIndex === index ? "rotate-180 text-[#C9A24D]" : ""
+          }`}
+        />
+      </button>
+
+      {activeIndex === index && (
+        <div className="px-6 pb-6 text-gray-700">
+          {faq.answer}
+        </div>
+      )}
+    </div>
+  ))}
+</div>
         </section>
 
         {/* ================= FINAL CTA ================= */}

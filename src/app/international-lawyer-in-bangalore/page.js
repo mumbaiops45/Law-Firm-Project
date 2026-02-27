@@ -699,8 +699,14 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function InternationalLawyerPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -905,61 +911,63 @@ export default function InternationalLawyerPage() {
               Frequently Asked Questions
             </h3>
 
-            <div className="space-y-8 text-gray-800">
+            <div className="space-y-6 text-gray-800">
 
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q1: What is international private law?
-                </h4>
-                <p className="mt-2">
-                  It governs disputes involving foreign parties, cross-border transactions, and jurisdictional conflicts.
-                </p>
-              </div>
+              {[
+                {
+                  q: "Q1: What is international private law?",
+                  a: "It governs disputes involving foreign parties, cross-border transactions, and jurisdictional conflicts."
+                },
+                {
+                  q: "Q2: How are cross-border disputes resolved?",
+                  a: "Through litigation, international arbitration, mediation, or negotiated settlements depending on contractual terms."
+                },
+                {
+                  q: "Q3: Can foreign judgments be enforced in India?",
+                  a: "Yes, subject to recognition and enforcement procedures under applicable Indian laws and reciprocal arrangements."
+                },
+                {
+                  q: "Q4: Do you handle international arbitration matters?",
+                  a: "Yes, we represent clients in domestic and international arbitration proceedings before appropriate tribunals."
+                },
+                {
+                  q: "Q5: How do you determine the correct jurisdiction in a cross-border dispute?",
+                  a: "We analyze contractual clauses, governing law provisions, place of cause of action, and applicable international conventions to determine the appropriate forum."
+                },
+                {
+                  q: "Q6: Can you assist with drafting international commercial contracts?",
+                  a: "Yes, we draft and review cross-border agreements with clear jurisdiction, governing law, dispute resolution, and enforcement clauses."
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 cursor-pointer transition"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <h4 className="font-semibold text-lg">
+                      {faq.q}
+                    </h4>
+                    <span className="text-2xl font-bold text-[#C9A24D]">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
+                  </div>
 
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q2: How are cross-border disputes resolved?
-                </h4>
-                <p className="mt-2">
-                  Through litigation, international arbitration, mediation, or negotiated settlements depending on contractual terms.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q3: Can foreign judgments be enforced in India?
-                </h4>
-                <p className="mt-2">
-                  Yes, subject to recognition and enforcement procedures under applicable Indian laws and reciprocal arrangements.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q4: Do you handle international arbitration matters?
-                </h4>
-                <p className="mt-2">
-                  Yes, we represent clients in domestic and international arbitration proceedings before appropriate tribunals.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q5: How do you determine the correct jurisdiction in a cross-border dispute?
-                </h4>
-                <p className="mt-2">
-                  We analyze contractual clauses, governing law provisions, place of cause of action, and applicable international conventions to determine the appropriate forum.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Q6: Can you assist with drafting international commercial contracts?
-                </h4>
-                <p className="mt-2">
-                  Yes, we draft and review cross-border agreements with clear jurisdiction, governing law, dispute resolution, and enforcement clauses.
-                </p>
-              </div>
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: openIndex === index ? "auto" : 0,
+                      opacity: openIndex === index ? 1 : 0
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="mt-4 text-gray-700">
+                      {faq.a}
+                    </p>
+                  </motion.div>
+                </div>
+              ))}
 
             </div>
 

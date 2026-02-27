@@ -2983,18 +2983,12 @@ export default function Navbar() {
 
 
   /* ================= SCROLL EFFECT ================= */
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, [pathname]);
+  
 
-  useEffect(() => {
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-
-  }, []);
+   
 
 
 
@@ -3008,7 +3002,8 @@ export default function Navbar() {
 
       if (!shown) {
         setShowDisclaimer(true);
-        document.body.style.overflow = "hidden";
+        // document.body.style.overflow = "hidden";
+        document.body.classList.add("overflow-hidden");
       }
 
     }
@@ -3024,7 +3019,8 @@ export default function Navbar() {
 
     setShowDisclaimer(false);
 
-    document.body.style.overflow = "auto";
+    // document.body.style.overflow = "auto";
+    document.body.classList.remove("overflow-hidden");
 
   };
 

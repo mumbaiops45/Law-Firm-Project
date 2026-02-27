@@ -393,8 +393,14 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function HighCourtLawyerPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -445,27 +451,27 @@ export default function HighCourtLawyerPage() {
 
             <motion.div variants={fadeUp} className="flex justify-center gap-4 flex-wrap">
 
-  <Link
-    href="/legal-consultation-in-bangalore"
-    className="bg-[#C9A24D] text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition inline-block"
-  >
-    Book Confidential Consultation
-  </Link>
+              <Link
+                href="/legal-consultation-in-bangalore"
+                className="bg-[#C9A24D] text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition inline-block"
+              >
+                Book Confidential Consultation
+              </Link>
 
-  <a
-    href="tel:+919000000000"
-    className="border border-[#C9A24D] text-[#C9A24D] px-6 py-3 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition inline-block"
-  >
-    Call Now
-  </a>
+              <a
+                href="tel:+919000000000"
+                className="border border-[#C9A24D] text-[#C9A24D] px-6 py-3 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition inline-block"
+              >
+                Call Now
+              </a>
 
-</motion.div>
+            </motion.div>
 
           </motion.div>
 
           {/* HERO IMAGE (NOT REMOVED) */}
           <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-6 z-0 pointer-events-none">
-          {/* <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-6 z-20"> */}
+            {/* <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-6 z-20"> */}
             <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
               <Image
                 src="/highcourt-supreme.jpg"
@@ -551,61 +557,53 @@ export default function HighCourtLawyerPage() {
               Frequently Asked Questions
             </h3>
 
-            <div className="space-y-10 text-lg text-gray-800">
+            <div className="space-y-6 text-lg text-gray-800">
 
-              <div>
-                <p className="font-semibold">
-                  Q1: What types of cases can be filed in the High Court?
-                </p>
-                <p className="mt-2 text-gray-700">
-                  Writ petitions, appeals, revisions, and constitutional matters can be filed before the High Court.
-                </p>
-              </div>
+              {[
+                {
+                  q: "Q1: What types of cases can be filed in the High Court?",
+                  a: "Writ petitions, appeals, revisions, and constitutional matters can be filed before the High Court."
+                },
+                {
+                  q: "Q2: What is a Special Leave Petition (SLP)?",
+                  a: "An SLP is filed before the Supreme Court to challenge High Court judgments."
+                },
+                {
+                  q: "Q3: Can High Court decisions be challenged?",
+                  a: "Yes, decisions can be challenged before the Supreme Court through appropriate legal remedies."
+                },
+                {
+                  q: "Q4: How long does an appeal process take?",
+                  a: "The timeline depends on the nature of the case and court schedule."
+                },
+                {
+                  q: "Q5: Do you handle urgent stay and interim relief matters?",
+                  a: "Yes, we file and argue urgent interim applications, stay petitions, and injunction matters to protect clients’ rights during appellate proceedings."
+                },
+                {
+                  q: "Q6: Can you represent clients from other cities or states?",
+                  a: "Yes, we represent clients across India in appellate and constitutional matters, including coordination, drafting, and court appearances."
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-200 rounded-lg p-6 cursor-pointer transition"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <p className="font-semibold">{faq.q}</p>
+                    <span className="text-xl text-[#C9A24D]">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
+                  </div>
 
-              <div>
-                <p className="font-semibold">
-                  Q2: What is a Special Leave Petition (SLP)?
-                </p>
-                <p className="mt-2 text-gray-700">
-                  An SLP is filed before the Supreme Court to challenge High Court judgments.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold">
-                  Q3: Can High Court decisions be challenged?
-                </p>
-                <p className="mt-2 text-gray-700">
-                  Yes, decisions can be challenged before the Supreme Court through appropriate legal remedies.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold">
-                  Q4: How long does an appeal process take?
-                </p>
-                <p className="mt-2 text-gray-700">
-                  The timeline depends on the nature of the case and court schedule.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold">
-                  Q5: Do you handle urgent stay and interim relief matters?
-                </p>
-                <p className="mt-2 text-gray-700">
-                  Yes, we file and argue urgent interim applications, stay petitions, and injunction matters to protect clients’ rights during appellate proceedings.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold">
-                  Q6: Can you represent clients from other cities or states?
-                </p>
-                <p className="mt-2 text-gray-700">
-                  Yes, we represent clients across India in appellate and constitutional matters, including coordination, drafting, and court appearances.
-                </p>
-              </div>
+                  {openIndex === index && (
+                    <p className="mt-4 text-gray-700">
+                      {faq.a}
+                    </p>
+                  )}
+                </div>
+              ))}
 
             </div>
 
