@@ -1090,7 +1090,7 @@ export default function LegalServicesPage() {
   };
 
   return (
-    <section className="bg-[#F4F4F4] py-24 px-6">
+    <section id="practice-areas" className="bg-[#F4F4F4] py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* ================= HEADING ================= */}
