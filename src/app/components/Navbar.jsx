@@ -2996,7 +2996,8 @@ useEffect(() => {
 
   useEffect(() => {
 
-    if (pathname === "/") {
+    // if (pathname === "/") {
+    if (pathname === "/law-firm-in-bangalore") {
 
       const shown = sessionStorage.getItem("disclaimerShown");
 
