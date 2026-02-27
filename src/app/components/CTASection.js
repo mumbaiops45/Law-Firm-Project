@@ -49,7 +49,7 @@ export default function CTASection() {
 
         {/* RESPONSE LINE */}
         <p className="text-[#C9A24D] text-sm mb-10 font-medium">
-          Same-day consultation available. Response within 24 hours guaranteed.
+          Response within 24 hours guaranteed.
         </p>
 
 
@@ -58,17 +58,17 @@ export default function CTASection() {
 
 
           {/* CALL NOW ICON BUTTON */}
-          <a
+          {/* <a
             href="tel:+919000000000"
             className="flex items-center gap-3 border border-gray-700 px-6 py-3 rounded-md hover:border-[#C9A24D] hover:text-[#C9A24D] transition duration-300"
           >
             <FaPhoneAlt />
             Call Now
-          </a>
+          </a> */}
 
 
           {/* REQUEST CALLBACK */}
-          <Link href="/contact">
+          <Link href="/legal-consultation-in-bangalore">
             <button className="border border-[#C9A24D] text-[#C9A24D] px-7 py-3 font-semibold rounded-md hover:bg-[#C9A24D] hover:text-black transition duration-300">
               Request Callback
             </button>
@@ -76,7 +76,7 @@ export default function CTASection() {
 
 
           {/* BOOK CONSULTATION */}
-          <Link href="/contact">
+          <Link href="/legal-consultation-in-bangalore">
             <button className="bg-[#C9A24D] text-black px-7 py-3 font-semibold rounded-md hover:scale-105 transition duration-300 shadow-lg">
               Book Confidential Consultation
             </button>

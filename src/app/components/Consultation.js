@@ -974,13 +974,314 @@
 // }
 
 
+
+
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import { useState } from "react";
+// import { motion } from "framer-motion";
+
+// export default function Consultation() {
+
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     phone: "",
+//     email: "",
+//     practiceArea: "",
+//     message: "",
+//   });
+
+//   const handleChange = (e) => {
+//     setFormData({
+//       ...formData,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     console.log(formData);
+//   };
+
+//   const practiceAreas = [
+//     "Corporate & Commercial Law",
+//     "Civil Litigation",
+//     "Criminal Defense & Prosecution",
+//     "Family & Divorce Law",
+//     "Property & Real Estate Law",
+//     "Legal Advisory & Compliance",
+//     "NRI Legal Services",
+//     "Consumer Protection Law",
+//   ];
+
+//   const fadeIn = {
+//     hidden: { opacity: 0, y: 30 },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: { duration: 0.7 }
+//     },
+//   };
+
+//   /* ===== SAME GLOBAL SYSTEM AS OTHER PAGES ===== */
+
+//   const container =
+//     "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
+
+//   const sectionPadding =
+//     "py-16 sm:py-20 md:py-24 lg:py-28";
+
+//   const sectionTitle =
+//     "text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight";
+
+//   const subHeading =
+//     "text-2xl sm:text-3xl md:text-4xl font-semibold";
+
+
+
+//   return (
+//     <section className={`bg-white ${sectionPadding}`}>
+//       <h2 className={`${sectionTitle} text-[#C9A24D] mb-8 text-center` }>
+//                Request a Consultation
+//              </h2>
+
+//       <div className={container}>
+
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+//           {/* LEFT — CONSULTATION FORM */}
+
+//           <motion.div
+//             variants={fadeIn}
+//             initial="hidden"
+//             whileInView="visible"
+//             viewport={{ once: true }}
+//             className="
+//               bg-black
+//               p-8 sm:p-10
+//               rounded-md
+//               border border-[#C9A24D]/30
+//               shadow-[0_0_20px_rgba(201,162,77,0.15)]
+//               transition duration-500
+//             "
+//           >
+
+//             <h2 className={`${subHeading} text-[#C9A24D] mb-8`}>
+//               Request a Consultation
+//             </h2>
+
+
+//             <form onSubmit={handleSubmit} className="space-y-5">
+
+//               <input
+//                 type="text"
+//                 name="name"
+//                 placeholder="Full Name"
+//                 value={formData.name}
+//                 onChange={handleChange}
+//                 required
+//                 className="
+//                   w-full px-4 py-3
+//                   bg-black
+//                   border border-gray-800
+//                   rounded-md
+//                   text-white
+//                   placeholder-gray-500
+//                   focus:outline-none
+//                   focus:border-[#C9A24D]
+//                   transition duration-300
+//                 "
+//               />
+
+
+//               <input
+//                 type="tel"
+//                 name="phone"
+//                 placeholder="Phone Number"
+//                 value={formData.phone}
+//                 onChange={handleChange}
+//                 required
+//                 className="
+//                   w-full px-4 py-3
+//                   bg-black
+//                   border border-gray-800
+//                   rounded-md
+//                   text-white
+//                   placeholder-gray-500
+//                   focus:outline-none
+//                   focus:border-[#C9A24D]
+//                   transition duration-300
+//                 "
+//               />
+
+
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder="Email Address"
+//                 value={formData.email}
+//                 onChange={handleChange}
+//                 required
+//                 className="
+//                   w-full px-4 py-3
+//                   bg-black
+//                   border border-gray-800
+//                   rounded-md
+//                   text-white
+//                   placeholder-gray-500
+//                   focus:outline-none
+//                   focus:border-[#C9A24D]
+//                   transition duration-300
+//                 "
+//               />
+
+
+//               <select
+//                 name="practiceArea"
+//                 value={formData.practiceArea}
+//                 onChange={handleChange}
+//                 required
+//                 className="
+//                   w-full px-4 py-3
+//                   bg-black
+//                   border border-gray-800
+//                   rounded-md
+//                   text-white
+//                   focus:outline-none
+//                   focus:border-[#C9A24D]
+//                   transition duration-300
+//                 "
+//               >
+
+//                 <option value="">Select Practice Area</option>
+
+//                 {practiceAreas.map((area, index) => (
+//                   <option key={index} value={area}>
+//                     {area}
+//                   </option>
+//                 ))}
+
+//               </select>
+
+
+//               <textarea
+//                 name="message"
+//                 rows="4"
+//                 placeholder="Your Message"
+//                 value={formData.message}
+//                 onChange={handleChange}
+//                 required
+//                 className="
+//                   w-full px-4 py-3
+//                   bg-black
+//                   border border-gray-800
+//                   rounded-md
+//                   text-white
+//                   placeholder-gray-500
+//                   focus:outline-none
+//                   focus:border-[#C9A24D]
+//                   transition duration-300
+//                 "
+//               ></textarea>
+
+
+//               <button
+//                 type="submit"
+//                 className="
+//                   w-full py-3
+//                   rounded-md
+//                   font-semibold
+//                   text-black
+//                   bg-[#C9A24D]
+//                   hover:bg-[#B08D3C]
+//                   transition duration-300
+//                 "
+//               >
+//                 Request Consultation
+//               </button>
+
+
+//             </form>
+
+//           </motion.div>
+
+
+
+//           {/* RIGHT — OFFICE DETAILS */}
+
+//           <motion.div
+//             variants={fadeIn}
+//             initial="hidden"
+//             whileInView="visible"
+//             viewport={{ once: true }}
+//           >
+
+//             <h2 className={`${subHeading} text-black mb-6`}>
+//               Office Details
+//             </h2>
+
+
+//             <div className="space-y-6 text-gray-700 text-lg">
+
+//               <p>
+//                 <span className="font-semibold text-black">Office Name:</span><br />
+//                 S Jain Attorneys
+//               </p>
+
+//               <p>
+//                 <span className="font-semibold text-black">Address:</span><br />
+//                 #42, 2nd Floor,<br />
+//                 MG Road,<br />
+//                 Bengaluru, Karnataka 560001,<br />
+//                 India
+//               </p>
+
+//               <p>
+//                 <span className="font-semibold text-black">Phone:</span><br />
+//                 +91 98765 43210
+//               </p>
+
+//               <p>
+//                 <span className="font-semibold text-black">Email:</span><br />
+//                 contact@sjainattorneys.com
+//               </p>
+
+//               <p>
+//                 <span className="font-semibold text-black">Working Hours:</span><br />
+//                 Monday – Saturday<br />
+//                 9:30 AM – 7:00 PM
+//               </p>
+
+//             </div>
+
+
+//           </motion.div>
+
+
+//         </div>
+
+//       </div>
+
+//     </section>
+//   );
+// }
+
+
 "use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Consultation() {
-
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -1013,59 +1314,40 @@ export default function Consultation() {
   ];
 
   const fadeIn = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7 }
+      transition: { duration: 0.8 },
     },
   };
 
-  /* ===== SAME GLOBAL SYSTEM AS OTHER PAGES ===== */
-
-  const container =
-    "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
-
-  const sectionPadding =
-    "py-16 sm:py-20 md:py-24 lg:py-28";
-
-  const sectionTitle =
-    "text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight";
-
-  const subHeading =
-    "text-2xl sm:text-3xl md:text-4xl font-semibold";
-
-
-
   return (
-    <section className={`bg-white ${sectionPadding}`}>
+    <section className="bg-white py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Section Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#C9A24D]">
+            Request a Consultation
+          </h2>
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            Speak with experienced legal professionals and get expert advice
+            tailored to your situation.
+          </p>
+        </div>
 
-      <div className={container}>
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
-
-          {/* LEFT — CONSULTATION FORM */}
-
+          {/* LEFT — FORM */}
           <motion.div
             variants={fadeIn}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="
-              bg-black
-              p-8 sm:p-10
-              rounded-md
-              border border-[#C9A24D]/30
-              shadow-[0_0_20px_rgba(201,162,77,0.15)]
-              transition duration-500
-            "
+            className="bg-black p-10 rounded-xl border border-[#C9A24D]/30 shadow-lg"
           >
-
-            <h2 className={`${subHeading} text-[#C9A24D] mb-8`}>
-              Request a Consultation
-            </h2>
-
-
             <form onSubmit={handleSubmit} className="space-y-5">
 
               <input
@@ -1075,19 +1357,8 @@ export default function Consultation() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="
-                  w-full px-4 py-3
-                  bg-black
-                  border border-gray-800
-                  rounded-md
-                  text-white
-                  placeholder-gray-500
-                  focus:outline-none
-                  focus:border-[#C9A24D]
-                  transition duration-300
-                "
+                className="w-full px-4 py-3 bg-black border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:border-[#C9A24D]"
               />
-
 
               <input
                 type="tel"
@@ -1096,19 +1367,8 @@ export default function Consultation() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="
-                  w-full px-4 py-3
-                  bg-black
-                  border border-gray-800
-                  rounded-md
-                  text-white
-                  placeholder-gray-500
-                  focus:outline-none
-                  focus:border-[#C9A24D]
-                  transition duration-300
-                "
+                className="w-full px-4 py-3 bg-black border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:border-[#C9A24D]"
               />
-
 
               <input
                 type="email"
@@ -1117,47 +1377,23 @@ export default function Consultation() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="
-                  w-full px-4 py-3
-                  bg-black
-                  border border-gray-800
-                  rounded-md
-                  text-white
-                  placeholder-gray-500
-                  focus:outline-none
-                  focus:border-[#C9A24D]
-                  transition duration-300
-                "
+                className="w-full px-4 py-3 bg-black border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:border-[#C9A24D]"
               />
-
 
               <select
                 name="practiceArea"
                 value={formData.practiceArea}
                 onChange={handleChange}
                 required
-                className="
-                  w-full px-4 py-3
-                  bg-black
-                  border border-gray-800
-                  rounded-md
-                  text-white
-                  focus:outline-none
-                  focus:border-[#C9A24D]
-                  transition duration-300
-                "
+                className="w-full px-4 py-3 bg-black border border-gray-800 rounded-md text-white focus:outline-none focus:border-[#C9A24D]"
               >
-
                 <option value="">Select Practice Area</option>
-
                 {practiceAreas.map((area, index) => (
                   <option key={index} value={area}>
                     {area}
                   </option>
                 ))}
-
               </select>
-
 
               <textarea
                 name="message"
@@ -1166,61 +1402,35 @@ export default function Consultation() {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="
-                  w-full px-4 py-3
-                  bg-black
-                  border border-gray-800
-                  rounded-md
-                  text-white
-                  placeholder-gray-500
-                  focus:outline-none
-                  focus:border-[#C9A24D]
-                  transition duration-300
-                "
-              ></textarea>
-
+                className="w-full px-4 py-3 bg-black border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:border-[#C9A24D]"
+              />
 
               <button
                 type="submit"
-                className="
-                  w-full py-3
-                  rounded-md
-                  font-semibold
-                  text-black
-                  bg-[#C9A24D]
-                  hover:bg-[#B08D3C]
-                  transition duration-300
-                "
+                className="w-full py-3 rounded-md font-semibold text-black bg-[#C9A24D] hover:bg-[#B08D3C] transition"
               >
                 Request Consultation
               </button>
 
-
             </form>
-
           </motion.div>
 
-
-
           {/* RIGHT — OFFICE DETAILS */}
-
           <motion.div
             variants={fadeIn}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            className="space-y-6"
           >
-
-            <h2 className={`${subHeading} text-black mb-6`}>
+            <h3 className="text-3xl font-semibold text-black">
               Office Details
-            </h2>
+            </h3>
 
-
-            <div className="space-y-6 text-gray-700 text-lg">
-
+            <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
               <p>
                 <span className="font-semibold text-black">Office Name:</span><br />
-                S Jain Attorneys
+                S Jain & Attorneys
               </p>
 
               <p>
@@ -1233,7 +1443,7 @@ export default function Consultation() {
 
               <p>
                 <span className="font-semibold text-black">Phone:</span><br />
-                +91 98765 43210
+                +91 xxxxx xxxxx
               </p>
 
               <p>
@@ -1246,17 +1456,11 @@ export default function Consultation() {
                 Monday – Saturday<br />
                 9:30 AM – 7:00 PM
               </p>
-
             </div>
-
-
           </motion.div>
 
-
         </div>
-
       </div>
-
     </section>
   );
 }
