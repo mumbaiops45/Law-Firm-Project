@@ -738,9 +738,9 @@ import { ChevronDown } from "lucide-react";
 export default function CorporateLaw() {
   const [activeIndex, setActiveIndex] = useState(null);
 
-const toggleFAQ = (index) => {
-  setActiveIndex(activeIndex === index ? null : index);
-};
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -749,7 +749,7 @@ const toggleFAQ = (index) => {
 
   return (
     <>
-    
+
 
       <Navbar />
 
@@ -794,19 +794,20 @@ const toggleFAQ = (index) => {
               Response within 24 hours guaranteed.
             </p>
 
-            <div className="flex justify-center gap-6 flex-wrap">
-              <Link href="/legal-consultation-in-bangalore">
-                <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold shadow-lg hover:scale-105 transition">
-                  Book Confidential Consultation
-                </button>
-              </Link>
+            {/* <div className="flex justify-center gap-6 flex-wrap"> */}
+           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+  <Link href="/legal-consultation-in-bangalore">
+    <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold shadow-lg hover:scale-105 transition">
+      Book Confidential Consultation
+    </button>
+  </Link>
 
-              <Link href="tel:+919000000000">
-                <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
-                  Call Now
-                </button>
-              </Link>
-            </div>
+  <Link href="tel:+919000000000">
+    <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
+      Call Now
+    </button>
+  </Link>
+</div>
           </motion.div>
         </section>
 
@@ -898,63 +899,62 @@ const toggleFAQ = (index) => {
           </h2>
 
           <div className="space-y-4">
-  {[
-    {
-      question: "Do you assist startups and SMEs?",
-      answer:
-        "Yes, we provide tailored Corporate Law Services for businesses of all sizes."
-    },
-    {
-      question: "Can you draft customized commercial contracts?",
-      answer:
-        "Yes, our Commercial Contract Lawyer team drafts agreements aligned with your business goals."
-    },
-    {
-      question: "Do you offer ongoing advisory support?",
-      answer:
-        "Yes, we provide structured Business Legal Advisory Services for long-term compliance and growth."
-    },
-    {
-      question: "Do you assist with mergers and acquisitions?",
-      answer:
-        "Yes, we handle due diligence, structuring, and transaction documentation."
-    },
-    {
-      question:
-        "Do you assist with corporate due diligence and risk assessment?",
-      answer:
-        "Yes, we conduct comprehensive due diligence, compliance reviews, and risk assessments to identify legal exposures and ensure secure business transactions."
-    },
-    {
-      question:
-        "Can you help with regulatory approvals and licensing?",
-      answer:
-        "Yes, our Corporate & Commercial Law Firm assists businesses in obtaining regulatory approvals, licenses, and ensuring ongoing compliance with applicable laws and authorities."
-    }
-  ].map((faq, index) => (
-    <div key={index} className="bg-white rounded-xl shadow-md">
-      <button
-        onClick={() => toggleFAQ(index)}
-        className="w-full flex justify-between items-center p-6 text-left"
-      >
-        <span className="font-semibold text-gray-800">
-          {faq.question}
-        </span>
-        <ChevronDown
-          className={`transition-transform duration-300 ${
-            activeIndex === index ? "rotate-180 text-[#C9A24D]" : ""
-          }`}
-        />
-      </button>
+            {[
+              {
+                question: "Do you assist startups and SMEs?",
+                answer:
+                  "Yes, we provide tailored Corporate Law Services for businesses of all sizes."
+              },
+              {
+                question: "Can you draft customized commercial contracts?",
+                answer:
+                  "Yes, our Commercial Contract Lawyer team drafts agreements aligned with your business goals."
+              },
+              {
+                question: "Do you offer ongoing advisory support?",
+                answer:
+                  "Yes, we provide structured Business Legal Advisory Services for long-term compliance and growth."
+              },
+              {
+                question: "Do you assist with mergers and acquisitions?",
+                answer:
+                  "Yes, we handle due diligence, structuring, and transaction documentation."
+              },
+              {
+                question:
+                  "Do you assist with corporate due diligence and risk assessment?",
+                answer:
+                  "Yes, we conduct comprehensive due diligence, compliance reviews, and risk assessments to identify legal exposures and ensure secure business transactions."
+              },
+              {
+                question:
+                  "Can you help with regulatory approvals and licensing?",
+                answer:
+                  "Yes, our Corporate & Commercial Law Firm assists businesses in obtaining regulatory approvals, licenses, and ensuring ongoing compliance with applicable laws and authorities."
+              }
+            ].map((faq, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-md">
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex justify-between items-center p-6 text-left"
+                >
+                  <span className="font-semibold text-gray-800">
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    className={`transition-transform duration-300 ${activeIndex === index ? "rotate-180 text-[#C9A24D]" : ""
+                      }`}
+                  />
+                </button>
 
-      {activeIndex === index && (
-        <div className="px-6 pb-6 text-gray-700">
-          {faq.answer}
-        </div>
-      )}
-    </div>
-  ))}
-</div>
+                {activeIndex === index && (
+                  <div className="px-6 pb-6 text-gray-700">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* ================= FINAL CTA ================= */}
@@ -972,19 +972,21 @@ const toggleFAQ = (index) => {
               Consult our experienced Corporate & Commercial Law Firm today.
             </p>
 
-            <div className="flex gap-6 justify-center flex-wrap">
-              <Link href="/legal-consultation-in-bangalore">
-                <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold shadow-lg hover:scale-105 transition">
-                  Book Confidential Consultation
-                </button>
-              </Link>
+            {/* <div className="flex gap-6 justify-center flex-wrap"> */}
+              {/* <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6"> */}
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+  <Link href="/legal-consultation-in-bangalore">
+    <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold shadow-lg hover:scale-105 transition">
+      Book Confidential Consultation
+    </button>
+  </Link>
 
-              <Link href="tel:+919000000000">
-                <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
-                  Call Now
-                </button>
-              </Link>
-            </div>
+  <Link href="tel:+919000000000">
+    <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
+      Call Now
+    </button>
+  </Link>
+</div>
 
             <p className="text-gray-400 text-sm mt-8">
               All matters handled with complete confidentiality and legal discretion.

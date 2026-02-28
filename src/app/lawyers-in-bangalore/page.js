@@ -548,7 +548,9 @@ const toggleFAQ = (index) => {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 mt-10">
+          {/* <div className="flex flex-wrap justify-center gap-6 mt-10"> */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-10">
+            
             <Link href="/legal-consultation-in-bangalore" className="bg-[#C9A24D] text-black px-8 py-3 font-semibold">
               Book Confidential Consultation
             </Link>
@@ -680,7 +682,8 @@ const toggleFAQ = (index) => {
             Confidential consultations. Strategic legal advice. Strong courtroom representation.
           </p>
 
-          <div className="mt-10 flex justify-center gap-6 flex-wrap">
+          {/* <div className="mt-10 flex justify-center gap-6 flex-wrap"> */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-10">
             <Link href="/legal-consultation-in-bangalore" className="bg-[#C9A24D] text-black px-8 py-3 font-semibold">
               Book Confidential Consultation
             </Link>

@@ -2150,38 +2150,52 @@ export default function LeadingLawFirmPage() {
         <Navbar />
 
         {/* ================= HERO ================= */}
-        <section className="relative overflow-hidden bg-black text-white py-32 px-6">
-          
-          {/* Animated Golden Background Glow */}
-          <motion.div
-            className="absolute inset-0"
-            animate={{
-              background: [
-                "radial-gradient(circle at 20% 20%, rgba(201,162,77,0.15), transparent 40%)",
-                "radial-gradient(circle at 80% 80%, rgba(201,162,77,0.15), transparent 40%)",
-                "radial-gradient(circle at 20% 20%, rgba(201,162,77,0.15), transparent 40%)",
-              ],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-          />
+     {/* ================= HERO ================= */}
+<section className="relative overflow-hidden bg-black text-white py-28 md:py-32 px-6">
 
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="relative max-w-4xl mx-auto text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-serif font-semibold text-[#C9A24D] leading-tight">
-              Leading Law Firm in Bangalore – About S Jain & Attorneys
-            </h1>
+  {/* Animated Golden Background Glow */}
+  <motion.div
+    className="absolute inset-0"
+    animate={{
+      background: [
+        "radial-gradient(circle at 20% 20%, rgba(201,162,77,0.15), transparent 40%)",
+        "radial-gradient(circle at 80% 80%, rgba(201,162,77,0.15), transparent 40%)",
+        "radial-gradient(circle at 20% 20%, rgba(201,162,77,0.15), transparent 40%)",
+      ],
+    }}
+    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+  />
 
-            <div className="w-24 h-[3px] bg-[#C9A24D] mx-auto my-8"></div>
+  <div className="relative max-w-4xl mx-auto text-center">
 
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-              A leading law firm in Bangalore providing full-service legal representation across litigation, advisory, and regulatory matters.
-            </p>
-          </motion.div>
-        </section>
+    {/* Animated H1 */}
+    <motion.h1
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="text-4xl md:text-6xl font-serif font-semibold text-[#C9A24D] leading-tight"
+    >
+      Leading Law Firm in Bangalore – About S Jain & Attorneys
+    </motion.h1>
+
+    <motion.div
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      className="w-24 h-[3px] bg-[#C9A24D] mx-auto my-8 origin-left"
+    />
+
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.8, duration: 0.8 }}
+      className="text-gray-300 text-lg md:text-xl leading-relaxed"
+    >
+      A leading law firm in Bangalore providing full-service legal representation across litigation, advisory, and regulatory matters.
+    </motion.p>
+
+  </div>
+</section>
 
         {/* ================= ABOUT ================= */}
         <section className="py-20 px-6 bg-white">
@@ -2224,16 +2238,20 @@ export default function LeadingLawFirmPage() {
               Response within 24 hours guaranteed.
             </p>
 
-            <div className="flex flex-wrap gap-6">
-              <Link href="/legal-consultation-in-bangalore"
-                className="bg-[#C9A24D] text-black px-8 py-4 font-semibold rounded-md hover:bg-[#b8963e] transition">
-                Book Confidential Consultation
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <Link
+  href="/legal-consultation-in-bangalore"
+  className="w-full sm:w-auto text-center bg-[#C9A24D] text-black px-8 py-4 font-semibold rounded-md hover:bg-[#b8963e] transition"
+>
+  Book Confidential Consultation
+</Link>
 
-              <Link href="/contact"
-                className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 font-semibold rounded-md hover:bg-[#C9A24D] hover:text-black transition">
-                Request Call Back
-              </Link>
+<Link
+  href="/contact"
+  className="w-full sm:w-auto text-center border border-[#C9A24D] text-[#C9A24D] px-8 py-4 font-semibold rounded-md hover:bg-[#C9A24D] hover:text-black transition"
+>
+  Request Call Back
+</Link>
             </div>
           </div>
         </section>
@@ -2350,7 +2368,7 @@ export default function LeadingLawFirmPage() {
             Get Trusted Legal Guidance Today
           </h2>
 
-          <div className="flex justify-center gap-6 flex-wrap">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
             <Link href="/legal-consultation-in-bangalore"
               className="bg-[#C9A24D] text-black px-10 py-4 font-semibold rounded-md hover:bg-[#b8963e] transition">
               Book Confidential Consultation
