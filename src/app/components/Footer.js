@@ -1273,13 +1273,343 @@
 
 
 
+// "use client";
+
+// import Link from "next/link";
+
+// export default function Footer() {
+
+//   /* ================= PRACTICE AREAS ================= */
+//   const practiceAreas = [
+//     { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
+//     { name: "Civil Litigation Services", href: "/services/civil-litigation" },
+//     { name: "Criminal Defense & Prosecution", href: "/services/criminal-defense" },
+//     { name: "Family & Divorce Law", href: "/services/family-divorce-law" },
+//     { name: "Property & Real Estate Law", href: "/services/property-real-estate-law" },
+//     { name: "Employment & Labour Law", href: "/services/employment-labour-law" },
+//     { name: "Cheque Bounce & NI Act Cases", href: "/services/cheque-bounce-lawyer" },
+//     { name: "High Court & Supreme Court Practice", href: "/services/high-court-lawyer" },
+//     { name: "Consumer Protection Law", href: "/services/consumer-court-lawyer" },
+//     { name: "Mediation & ADR", href: "/services/adr" },
+//     { name: "NRI Legal Services", href: "/services/nri-legal-services" },
+//     { name: "International & Cross-Border Legal Services", href: "/services/international-legal-services" },
+//   ];
+
+//   /* ================= LEGAL SERVICES ================= */
+//   const legalServices = [
+//     { name: "Legal Consultation in Bangalore", href: "/services/legal-consultation" },
+//     { name: "Corporate Legal Advisory & Compliance", href: "/services/corporate-law" },
+//     { name: "Civil & Commercial Dispute Resolution", href: "/services/civil-litigation" },
+//     { name: "Criminal Trial & Appellate Representation", href: "/services/criminal-defense" },
+//     { name: "Regulatory Compliance & Risk Advisory", href: "/services/legal-advisory-regulatory-compliance" },
+//     { name: "Arbitration & Mediation Services", href: "/services/adr" },
+//     { name: "Cross-Border & NRI Representation", href: "/services/cross-border-legal-services" },
+//   ];
+
+//   /* ================= QUICK LINKS ================= */
+//   const quickLinks = [
+//     { name: "About Us", href: "/about" },
+//     { name: "Practice Areas", href: "/services" },
+//     { name: "Our Team", href: "/team" },
+//     { name: "Insights / Legal Articles", href: "/insights" },
+//     { name: "Contact", href: "/contact" },
+//     { name: "Book Consultation", href: "/contact" },
+//   ];
+
+//   /* ================= LEGAL LINKS ================= */
+//   const legalLinks = [
+//     { name: "Privacy Policy", href: "/privacy-policy" },
+//     { name: "Terms of Use", href: "/terms-of-use" },
+//     { name: "Disclaimer", href: "/disclaimer" },
+//   ];
+
+//   const container =
+//     "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
+
+//   const footerHeading =
+//     "text-lg font-semibold text-[#C9A24D] mb-5";
+
+//   return (
+//     <footer className="bg-[#0c0c0c] text-white">
+
+//       {/* ================= MAIN FOOTER ================= */}
+//       <div className={`${container} py-16`}>
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+//           {/* ================= ABOUT ================= */}
+//           <div>
+//             <img
+//               src="/logo2.jpg"
+//               className="h-12 mb-4"
+//               alt="S Jain & Attorneys Law Firm Bangalore"
+//             />
+
+//             <p className="text-gray-300 text-sm leading-relaxed mb-4">
+//               <strong>S Jain & Attorneys</strong> is a leading law firm in Bangalore providing full-service legal representation across litigation, advisory, and regulatory matters.
+//             </p>
+
+//             {/* <p className="text-gray-400 text-sm leading-relaxed mb-4">
+//               Our experienced lawyers deliver strategic, result-oriented legal solutions across corporate, civil, criminal, family, property, employment, NRI, and dispute resolution matters with integrity, confidentiality, and professionalism.
+//             </p>
+
+//             <p className="text-gray-400 text-sm leading-relaxed">
+//               Serving clients across Bangalore, Karnataka, throughout India, and representing NRI clients globally with structured and professional legal representation.
+//             </p> */}
+//           </div>
+
+//           {/* ================= PRACTICE AREAS ================= */}
+//           <div>
+//             <h3 className={footerHeading}>Practice Areas</h3>
+//             <ul className="space-y-3 text-sm max-h-64  pr-2">
+//               {practiceAreas.map((area, i) => (
+//                 <li key={i}>
+//                   <Link
+//                     href={area.href}
+//                     className="text-gray-300 hover:text-[#C9A24D] transition"
+//                   >
+//                     {area.name}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           {/* ================= LEGAL SERVICES ================= */}
+//           <div>
+//             <h3 className={footerHeading}>Legal Services</h3>
+//             <ul className="space-y-3 text-sm">
+//               {legalServices.map((service, i) => (
+//                 <li key={i}>
+//                   <Link
+//                     href={service.href}
+//                     className="text-gray-300 hover:text-[#C9A24D] transition"
+//                   >
+//                     {service.name}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+
+//             <div className="mt-8">
+//               <h3 className={footerHeading}>Office Hours</h3>
+//               <p className="text-gray-300 text-sm">
+//                 Monday – Saturday<br />
+//                 9:30 AM – 6:30 PM
+//               </p>
+//               <p className="text-gray-400 text-sm mt-2">
+//                 Same-day consultation available.<br />
+//                 Response within 24 hours guaranteed.
+//               </p>
+//             </div>
+//           </div>
+
+//           {/* ================= CONTACT ================= */}
+//           <div>
+//             <h3 className={footerHeading}>Office Address</h3>
+
+//             <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+//               S Jain & Attorneys<br />
+//               [Full Office Address Line 1]<br />
+//               [Full Office Address Line 2]<br />
+//               Bangalore – 5600XX<br />
+//               Karnataka, India
+//             </p>
+
+//             <p className="text-gray-300 text-sm mb-2">
+//               📞 +91 XXXXX XXXXX
+//             </p>
+
+//             <p className="text-gray-300 text-sm mb-4">
+//               📧 info@yourlawfirm.com
+//             </p>
+
+//             <div className="rounded-lg overflow-hidden border border-gray-800">
+//               <iframe
+//                 src="https://maps.google.com/maps?q=Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+//                 width="100%"
+//                 height="180"
+//                 loading="lazy"
+//               />
+//             </div>
+//           </div>
+
+//         </div>
+//       </div>
+
+//       {/* ================= FOOTER BOTTOM ================= */}
+//       <div className="border-t border-[#1a1a1a]">
+//         <div className={`${container} py-6 flex flex-col md:flex-row justify-between items-center gap-4`}>
+
+//           <p className="text-gray-400 text-sm text-center md:text-left">
+//             © 2026 S Jain & Attorneys | Law Firm in Bangalore | All Rights Reserved
+//           </p>
+
+//           <div className="flex flex-wrap gap-6 text-sm justify-center">
+            
+
+//             {legalLinks.map((link, i) => (
+//               <Link
+//                 key={i}
+//                 href={link.href}
+//                 className="text-gray-400 hover:text-[#C9A24D]"
+//               >
+//                 {link.name}
+//               </Link>
+//             ))}
+//           </div>
+
+//         </div>
+//       </div>
+
+//     </footer>
+//   );
+// }
+
+// "use client";
+
+// import Link from "next/link";
+
+// export default function Footer() {
+//   const practiceAreas = [
+//     { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
+//     { name: "Civil Litigation Services", href: "/services/civil-litigation" },
+//     { name: "Criminal Defense & Prosecution", href: "/services/criminal-defense" },
+//     { name: "Family & Divorce Law", href: "/services/family-divorce-law" },
+//     { name: "Property & Real Estate Law", href: "/services/property-real-estate-law" },
+//     { name: "Employment & Labour Law", href: "/services/employment-labour-law" },
+//     { name: "Cheque Bounce & NI Act Cases", href: "/services/cheque-bounce-lawyer" },
+//     { name: "High Court & Supreme Court Practice", href: "/services/high-court-lawyer" },
+//     { name: "Consumer Protection Law", href: "/services/consumer-court-lawyer" },
+//     { name: "Mediation & ADR", href: "/services/adr" },
+//     { name: "NRI Legal Services", href: "/services/nri-legal-services" },
+//     { name: "International & Cross-Border Legal Services", href: "/services/international-legal-services" },
+//   ];
+
+//   const legalServices = [
+//     { name: "Legal Consultation in Bangalore", href: "/services/legal-consultation" },
+//     { name: "Corporate Legal Advisory & Compliance", href: "/services/corporate-law" },
+//     { name: "Civil & Commercial Dispute Resolution", href: "/services/civil-litigation" },
+//     { name: "Criminal Trial & Appellate Representation", href: "/services/criminal-defense" },
+//     { name: "Regulatory Compliance & Risk Advisory", href: "/services/legal-advisory-regulatory-compliance" },
+//     { name: "Arbitration & Mediation Services", href: "/services/adr" },
+//     { name: "Cross-Border & NRI Representation", href: "/services/cross-border-legal-services" },
+//   ];
+
+//   const legalLinks = [
+//     { name: "Privacy Policy", href: "/privacy-policy" },
+//     { name: "Terms of Use", href: "/terms-of-use" },
+//     { name: "Disclaimer", href: "/disclaimer" },
+//   ];
+
+//   const container = "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
+//   const footerHeading = "text-lg font-semibold text-[#C9A24D] mb-5";
+
+//   return (
+//     <footer className="bg-[#0c0c0c] text-white">
+//       {/* MAIN FOOTER */}
+//       <div className={`${container} py-16`}>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+//           {/* ABOUT */}
+//           <div>
+//             <img src="/logo2.jpg" className="h-12 mb-4" alt="S Jain & Attorneys Law Firm Bangalore" />
+//             <p className="text-gray-300 text-sm leading-relaxed mb-4">
+//               <strong>S Jain & Attorneys</strong> is a leading law firm in Bangalore providing full-service legal representation across litigation, advisory, and regulatory matters.
+//             </p>
+//           </div>
+
+//           {/* PRACTICE AREAS */}
+//           <div>
+//             <h3 className={footerHeading}>Practice Areas</h3>
+//             <ul className="space-y-2 text-sm max-h-64  pr-2">
+//               {practiceAreas.map((area, i) => (
+//                 <li key={i}>
+//                   <Link href={area.href} className="text-gray-300 hover:text-[#C9A24D] transition">
+//                     {area.name}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           {/* LEGAL SERVICES */}
+//           <div>
+//             <h3 className={footerHeading}>Legal Services</h3>
+//             <ul className="space-y-2 text-sm">
+//               {legalServices.map((service, i) => (
+//                 <li key={i}>
+//                   <Link href={service.href} className="text-gray-300 hover:text-[#C9A24D] transition">
+//                     {service.name}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+
+//             <div className="mt-8">
+//               <h3 className={footerHeading}>Office Hours</h3>
+//               <p className="text-gray-300 text-sm">
+//                 Monday – Saturday<br />
+//                 9:30 AM – 6:30 PM
+//               </p>
+//               <p className="text-gray-400 text-sm mt-2">
+//                 Same-day consultation available.<br />
+//                 Response within 24 hours guaranteed.
+//               </p>
+//             </div>
+//           </div>
+
+//           {/* CONTACT */}
+//           <div>
+//             <h3 className={footerHeading}>Office Address</h3>
+//             <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+//               S Jain & Attorneys<br />
+//               #42, 2nd Floor, MG Road<br />
+//               Bengaluru – 560001<br />
+//               Karnataka, India
+//             </p>
+//             <p className="text-gray-300 text-sm mb-2">📞 +91 XXXXX XXXXX</p>
+//             <p className="text-gray-300 text-sm mb-4">📧 info@yourlawfirm.com</p>
+
+//             {/* GOOGLE MAP */}
+//             <div className="rounded-lg overflow-hidden border border-gray-800">
+//               <iframe
+//                 src="https://maps.google.com/maps?q=Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+//                 width="100%"
+//                 height="180"
+//                 className="w-full"
+//                 loading="lazy"
+//               />
+//             </div>
+//           </div>
+
+//         </div>
+//       </div>
+
+//       {/* FOOTER BOTTOM */}
+//       <div className="border-t border-[#1a1a1a]">
+//         <div className={`${container} py-6 flex flex-col md:flex-row justify-between items-center gap-4`}>
+//           <p className="text-gray-400 text-sm text-center md:text-left">
+//             © 2026 S Jain & Attorneys | Law Firm in Bangalore | All Rights Reserved
+//           </p>
+
+//           <div className="flex flex-wrap gap-6 text-sm justify-center">
+//             {legalLinks.map((link, i) => (
+//               <Link key={i} href={link.href} className="text-gray-400 hover:text-[#C9A24D]">
+//                 {link.name}
+//               </Link>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// }
+
 "use client";
 
 import Link from "next/link";
 
 export default function Footer() {
-
-  /* ================= PRACTICE AREAS ================= */
   const practiceAreas = [
     { name: "Corporate & Commercial Law", href: "/services/corporate-law" },
     { name: "Civil Litigation Services", href: "/services/civil-litigation" },
@@ -1295,7 +1625,6 @@ export default function Footer() {
     { name: "International & Cross-Border Legal Services", href: "/services/international-legal-services" },
   ];
 
-  /* ================= LEGAL SERVICES ================= */
   const legalServices = [
     { name: "Legal Consultation in Bangalore", href: "/services/legal-consultation" },
     { name: "Corporate Legal Advisory & Compliance", href: "/services/corporate-law" },
@@ -1306,67 +1635,36 @@ export default function Footer() {
     { name: "Cross-Border & NRI Representation", href: "/services/cross-border-legal-services" },
   ];
 
-  /* ================= QUICK LINKS ================= */
-  const quickLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Practice Areas", href: "/services" },
-    { name: "Our Team", href: "/team" },
-    { name: "Insights / Legal Articles", href: "/insights" },
-    { name: "Contact", href: "/contact" },
-    { name: "Book Consultation", href: "/contact" },
-  ];
-
-  /* ================= LEGAL LINKS ================= */
   const legalLinks = [
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms of Use", href: "/terms-of-use" },
     { name: "Disclaimer", href: "/disclaimer" },
   ];
 
-  const container =
-    "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
-
-  const footerHeading =
-    "text-lg font-semibold text-[#C9A24D] mb-5";
+  const container = "max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20";
+  const footerHeading = "text-lg font-semibold text-[#C9A24D] mb-5";
 
   return (
     <footer className="bg-[#0c0c0c] text-white">
-
-      {/* ================= MAIN FOOTER ================= */}
+      {/* MAIN FOOTER */}
       <div className={`${container} py-16`}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
 
-          {/* ================= ABOUT ================= */}
-          <div>
-            <img
-              src="/logo2.jpg"
-              className="h-12 mb-4"
-              alt="S Jain & Attorneys Law Firm Bangalore"
-            />
-
+          {/* ABOUT */}
+          <div className="break-words">
+            <img src="/logo2.jpg" className="h-12 mb-4" alt="S Jain & Attorneys Law Firm Bangalore" />
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
               <strong>S Jain & Attorneys</strong> is a leading law firm in Bangalore providing full-service legal representation across litigation, advisory, and regulatory matters.
             </p>
-
-            {/* <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Our experienced lawyers deliver strategic, result-oriented legal solutions across corporate, civil, criminal, family, property, employment, NRI, and dispute resolution matters with integrity, confidentiality, and professionalism.
-            </p>
-
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Serving clients across Bangalore, Karnataka, throughout India, and representing NRI clients globally with structured and professional legal representation.
-            </p> */}
           </div>
 
-          {/* ================= PRACTICE AREAS ================= */}
-          <div>
+          {/* PRACTICE AREAS */}
+          <div className="break-words">
             <h3 className={footerHeading}>Practice Areas</h3>
-            <ul className="space-y-3 text-sm max-h-64  pr-2">
+            <ul className="space-y-2 text-sm max-h-64  pr-2">
               {practiceAreas.map((area, i) => (
                 <li key={i}>
-                  <Link
-                    href={area.href}
-                    className="text-gray-300 hover:text-[#C9A24D] transition"
-                  >
+                  <Link href={area.href} className="text-gray-300 hover:text-[#C9A24D] transition break-words">
                     {area.name}
                   </Link>
                 </li>
@@ -1374,20 +1672,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* ================= LEGAL SERVICES ================= */}
-          <div>
+          {/* LEGAL SERVICES */}
+          <div className="break-words mt-12 sm:mt-0">
             <h3 className={footerHeading}>Legal Services</h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2 text-sm">
               {legalServices.map((service, i) => (
                 <li key={i}>
-                  <Link
-                    href={service.href}
-                    className="text-gray-300 hover:text-[#C9A24D] transition"
-                  >
+                  <Link href={service.href} className="text-gray-300 hover:text-[#C9A24D] transition break-words">
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              ))} 
             </ul>
 
             <div className="mt-8">
@@ -1403,31 +1698,25 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* ================= CONTACT ================= */}
-          <div>
+          {/* CONTACT */}
+          <div className="break-words">
             <h3 className={footerHeading}>Office Address</h3>
-
             <p className="text-gray-300 text-sm mb-4 leading-relaxed">
               S Jain & Attorneys<br />
-              [Full Office Address Line 1]<br />
-              [Full Office Address Line 2]<br />
-              Bangalore – 5600XX<br />
+              #42, 2nd Floor, MG Road<br />
+              Bengaluru – 560001<br />
               Karnataka, India
             </p>
+            <p className="text-gray-300 text-sm mb-2">📞 +91 XXXXX XXXXX</p>
+            <p className="text-gray-300 text-sm mb-4">📧 info@yourlawfirm.com</p>
 
-            <p className="text-gray-300 text-sm mb-2">
-              📞 +91 XXXXX XXXXX
-            </p>
-
-            <p className="text-gray-300 text-sm mb-4">
-              📧 info@yourlawfirm.com
-            </p>
-
+            {/* GOOGLE MAP */}
             <div className="rounded-lg overflow-hidden border border-gray-800">
               <iframe
                 src="https://maps.google.com/maps?q=Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="180"
+                className="w-full"
                 loading="lazy"
               />
             </div>
@@ -1436,31 +1725,22 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ================= FOOTER BOTTOM ================= */}
+      {/* FOOTER BOTTOM */}
       <div className="border-t border-[#1a1a1a]">
         <div className={`${container} py-6 flex flex-col md:flex-row justify-between items-center gap-4`}>
-
-          <p className="text-gray-400 text-sm text-center md:text-left">
+          <p className="text-gray-400 text-sm text-center md:text-left break-words">
             © 2026 S Jain & Attorneys | Law Firm in Bangalore | All Rights Reserved
           </p>
 
           <div className="flex flex-wrap gap-6 text-sm justify-center">
-            
-
             {legalLinks.map((link, i) => (
-              <Link
-                key={i}
-                href={link.href}
-                className="text-gray-400 hover:text-[#C9A24D]"
-              >
+              <Link key={i} href={link.href} className="text-gray-400 hover:text-[#C9A24D] break-words">
                 {link.name}
               </Link>
             ))}
           </div>
-
         </div>
       </div>
-
     </footer>
   );
 }
