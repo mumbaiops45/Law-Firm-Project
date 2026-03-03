@@ -230,9 +230,9 @@ import { useState } from "react";
 export default function EmploymentLawyerPage() {
   const [openIndex, setOpenIndex] = useState(null);
 
-const toggleFAQ = (index) => {
-  setOpenIndex(openIndex === index ? null : index);
-};
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
     <>
       <Navbar />
@@ -266,17 +266,17 @@ const toggleFAQ = (index) => {
                 Response within 24 hours guaranteed.
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <Link
                   href="/legal-consultation-in-bangalore"
-                  className="bg-[#C9A24D] text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition inline-block"
+                  className="bg-[#C9A24D] text-black w-full md:w-auto px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-center hover:scale-105 transition"
                 >
                   Book Confidential Consultation
                 </Link>
 
                 <a
                   href="tel:+919000000000"
-                  className="border border-[#C9A24D] text-[#C9A24D] px-6 py-3 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition inline-block"
+                  className="border border-[#C9A24D] text-[#C9A24D] w-full md:w-auto px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-center hover:bg-[#C9A24D] hover:text-black transition"
                 >
                   Call Now
                 </a>
@@ -450,41 +450,41 @@ const toggleFAQ = (index) => {
               Frequently Asked Questions
             </h2>
 
-           {[
-  ["What types of employment disputes do you handle?",
-    "We handle wrongful termination, wage disputes, workplace harassment, disciplinary proceedings, industrial disputes, and labour court litigation matters."],
-  ["Can an employee challenge unlawful termination?",
-    "Yes, an employee can challenge illegal dismissal before appropriate labour authorities."],
-  ["Do you represent clients in labour court proceedings?",
-    "Yes, we represent both employers and employees in industrial and service-related disputes."],
-  ["Do companies need HR compliance advisory?",
-    "Yes, businesses benefit from structured guidance to avoid penalties and litigation risks."],
-  ["What remedies are available in wrongful termination cases?",
-    "Remedies may include reinstatement, compensation, back wages, or structured settlement depending on the facts."],
-  ["Do you provide ongoing legal retainership services?",
-    "Yes, we offer continuous employment law advisory, compliance audits, and dispute management support."],
-].map(([q, a], i) => (
-  <div
-    key={i}
-    className="bg-gray-50 rounded-xl shadow transition-all duration-300"
-  >
-    <button
-      onClick={() => toggleFAQ(i)}
-      className="w-full text-left p-6 font-semibold flex justify-between items-center"
-    >
-      {q}
-      <span className="text-[#C9A24D] text-xl">
-        {openIndex === i ? "−" : "+"}
-      </span>
-    </button>
+            {[
+              ["What types of employment disputes do you handle?",
+                "We handle wrongful termination, wage disputes, workplace harassment, disciplinary proceedings, industrial disputes, and labour court litigation matters."],
+              ["Can an employee challenge unlawful termination?",
+                "Yes, an employee can challenge illegal dismissal before appropriate labour authorities."],
+              ["Do you represent clients in labour court proceedings?",
+                "Yes, we represent both employers and employees in industrial and service-related disputes."],
+              ["Do companies need HR compliance advisory?",
+                "Yes, businesses benefit from structured guidance to avoid penalties and litigation risks."],
+              ["What remedies are available in wrongful termination cases?",
+                "Remedies may include reinstatement, compensation, back wages, or structured settlement depending on the facts."],
+              ["Do you provide ongoing legal retainership services?",
+                "Yes, we offer continuous employment law advisory, compliance audits, and dispute management support."],
+            ].map(([q, a], i) => (
+              <div
+                key={i}
+                className="bg-gray-50 rounded-xl shadow transition-all duration-300"
+              >
+                <button
+                  onClick={() => toggleFAQ(i)}
+                  className="w-full text-left p-6 font-semibold flex justify-between items-center"
+                >
+                  {q}
+                  <span className="text-[#C9A24D] text-xl">
+                    {openIndex === i ? "−" : "+"}
+                  </span>
+                </button>
 
-    {openIndex === i && (
-      <div className="px-6 pb-6 text-gray-700">
-        {a}
-      </div>
-    )}
-  </div>
-))}
+                {openIndex === i && (
+                  <div className="px-6 pb-6 text-gray-700">
+                    {a}
+                  </div>
+                )}
+              </div>
+            ))}
 
           </div>
         </section>
@@ -501,17 +501,17 @@ const toggleFAQ = (index) => {
             and dependable legal support.
           </p>
 
-          <div className="flex gap-6 justify-center flex-wrap">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="/legal-consultation-in-bangalore"
-              className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition inline-block"
+              className="bg-[#C9A24D] text-black w-full md:w-auto px-4 py-2 md:px-8 md:py-4 rounded-lg font-semibold text-center hover:scale-105 transition"
             >
               Book Confidential Consultation
             </Link>
 
             <Link
               href="/contact"
-              className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition inline-block"
+              className="border border-[#C9A24D] text-[#C9A24D] w-full md:w-auto px-4 py-2 md:px-8 md:py-4 rounded-lg font-semibold text-center hover:bg-[#C9A24D] hover:text-black transition"
             >
               Request Call Back
             </Link>

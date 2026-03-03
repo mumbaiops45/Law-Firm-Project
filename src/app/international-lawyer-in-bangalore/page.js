@@ -728,7 +728,7 @@ export default function InternationalLawyerPage() {
 
         {/* ================= HERO ================= */}
 
-        <section className="bg-[#0B0F14] pt-32 pb-24 text-center">
+        <section className="bg-[#0B0F14] pt-32 pb-28 text-center">
 
           <motion.div
             variants={stagger}
@@ -765,7 +765,7 @@ export default function InternationalLawyerPage() {
               Response within 24 hours guaranteed.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex justify-center gap-4 flex-wrap mb-12">
+            <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 justify-center mb-12">
 
               <Link
                 href="/legal-consultation-in-bangalore"
@@ -792,9 +792,9 @@ export default function InternationalLawyerPage() {
               <Image
                 src="/international-law.png"
                 alt="International Lawyer in Bangalore"
-                width={1400}
+                width={1000}
                 height={800}
-                className="w-full h-[400px] md:h-[550px] object-cover"
+                className="w-full h-[400px] md:h-[650] object-cover"
                 priority
               />
             </div>
@@ -990,23 +990,21 @@ export default function InternationalLawyerPage() {
               Consult our experienced international dispute resolution team today for strategic and reliable representation.
             </p>
 
-            <div className="flex justify-center gap-4 flex-wrap">
+           <div className="flex flex-col md:flex-row gap-4 justify-center">
+  <Link
+    href="/legal-consultation-in-bangalore"
+    className="bg-[#C9A24D] text-black w-full md:w-auto px-4 py-2 md:px-8 md:py-4 rounded-lg font-semibold text-center hover:scale-105 transition"
+  >
+    Book Confidential Consultation
+  </Link>
 
-              <Link
-                href="/legal-consultation-in-bangalore"
-                className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition"
-              >
-                Book Confidential Consultation
-              </Link>
-
-              <Link
-                href="/contact"
-                className="border border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition"
-              >
-                Request Call Back
-              </Link>
-
-            </div>
+  <Link
+    href="/contact"
+    className="border border-white w-full md:w-auto px-4 py-2 md:px-8 md:py-4 rounded-lg font-semibold text-center hover:bg-white hover:text-black transition"
+  >
+    Request Call Back
+  </Link>
+</div>
 
             <p className="text-gray-400 mt-8 text-sm">
               All matters handled with complete confidentiality and legal discretion.

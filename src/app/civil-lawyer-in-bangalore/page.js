@@ -478,23 +478,27 @@ export default function CivilLitigation() {
             </motion.p>
 
             {/* <motion.div variants={fadeUp} className="flex justify-center gap-6 flex-wrap"> */}
-            <motion.div
-              variants={fadeUp}
-              className="relative z-30 flex justify-center gap-6 flex-wrap"
-            >
+             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full">
+
               <Link
                 href="/legal-consultation-in-bangalore"
-                className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition inline-block"
+                className="w-full sm:w-auto"
               >
-                Book Confidential Consultation
+                <button className="w-full sm:w-auto text-center bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold shadow-lg hover:scale-105 transition">
+                  Book Confidential Consultation
+                </button>
               </Link>
 
-              <Link href="tel:+919000000000">
-                <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
+              <Link
+                href="tel:"
+                className="w-full sm:w-auto"
+              >
+                <button className="w-full sm:w-auto text-center border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
                   Call Now
                 </button>
               </Link>
-            </motion.div>
+
+            </div>
           </motion.div>
 
           {/* HERO IMAGE */}
@@ -516,7 +520,7 @@ export default function CivilLitigation() {
 
         {/* ================= SERVICES ================= */}
 
-        <section className="max-w-6xl mx-auto px-6 py-20 mt-14">
+        <section className="max-w-6xl mx-auto px-6 py-20 mt-28">
 
           <h2 className="text-4xl font-semibold mb-6">
             Strategic Civil Litigation Representation
@@ -667,19 +671,19 @@ export default function CivilLitigation() {
               Speak with our experienced civil litigation attorneys today.
             </p>
 
-            <div className="flex gap-6 justify-center flex-wrap">
-              <Link
-                href="/legal-consultation-in-bangalore"
-                className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition inline-block"
-              >
-                Book Confidential Consultation
-              </Link>
-              <Link href="tel:+919000000000">
-                <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
-                  Call Now
-                </button>
-              </Link>
-            </div>
+           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center flex-wrap">
+  <Link
+    href="/legal-consultation-in-bangalore"
+    className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition w-full sm:w-auto text-center"
+  >
+    Book Confidential Consultation
+  </Link>
+  <Link href="tel:+919000000000">
+    <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition w-full sm:w-auto">
+      Call Now
+    </button>
+  </Link>
+</div>
 
             <p className="text-gray-400 text-sm mt-8">
               All matters handled with complete confidentiality and legal discretion.

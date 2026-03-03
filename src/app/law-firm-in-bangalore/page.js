@@ -1566,7 +1566,7 @@
 //                 </button>
 //               </Link>
 
-              
+
 //             </div>
 //             {/* Response Text */}
 //             <p className="text-gray-300 text-sm mb-10">
@@ -1615,6 +1615,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Phone, Scale, Briefcase, Award } from "lucide-react";
 import { useState, useEffect } from "react";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 import AboutFirm from "../components/AboutFirm";
 import ServiceOverview from "../components/ServiceOverview";
@@ -1693,10 +1695,10 @@ export default function HeroSection() {
   //     }
   //   }
   // };
-const handlePhoneClick = () => {
-  const phoneNumber = "";
-  window.location.href = `tel:${phoneNumber}`;
-};
+  const handlePhoneClick = () => {
+    const phoneNumber = "";
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <>
       {/* ================= Hero Section ================= */}
@@ -1787,14 +1789,31 @@ const handlePhoneClick = () => {
         </div>
 
         {/* ================= Sticky Left Phone Button ================= */}
-       <div className="fixed left-4 bottom-12 z-50 flex items-center">
-  <button
-    onClick={handlePhoneClick}
-    className="flex items-center justify-center w-14 h-14 rounded-full border border-[#C9A24D] bg-[#C9A24D]/80 hover:bg-[#C9A24D] transition-all duration-300 shadow-lg"
-  >
-    <Phone size={22} className="text-white hover:text-black" />
-  </button>
-</div>
+        {/* <div className="fixed left-4 bottom-12 z-50 flex items-center">
+          <button
+            onClick={handlePhoneClick}
+            className="flex items-center justify-center w-14 h-14 rounded-full border border-[#C9A24D] bg-[#C9A24D]/80 hover:bg-[#C9A24D] transition-all duration-300 shadow-lg"
+          >
+            <Phone size={22} className="text-white hover:text-black" />
+          </button>
+        </div> */}
+        <div className="fixed left-4 bottom-12 z-50 flex flex-col gap-4">
+
+          {/* CALL BUTTON */}
+          <button
+            onClick={handlePhoneClick}
+            className="flex items-center justify-center w-14 h-14 rounded-full border border-[#C9A24D] bg-[#C9A24D]/80 hover:bg-[#C9A24D] transition-all duration-300 shadow-lg"
+          >
+            <Phone size={22} className="text-white hover:text-black" />
+          </button>
+
+          {/* WHATSAPP BUTTON */}
+          <a href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener noreferrer"
+            className="flex items-center justify-center w-14 h-14 rounded-full border border-green-500 bg-green-500/80 hover:bg-green-500 transition-all duration-300 shadow-lg">
+            <FaWhatsapp size={22} className="text-white hover:text-black" />
+          </a>
+
+        </div>
       </section>
 
       {/* ================= Other Sections ================= */}
