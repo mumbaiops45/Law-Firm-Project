@@ -1,670 +1,861 @@
+// // // // // // // // // import Navbar from "../components/Navbar";
+// // // // // // // // // import Footer from "../components/Footer";
+
+// // // // // // // // // /* ================= SEO META ================= */
+// // // // // // // // // export const metadata = {
+// // // // // // // // //   title: "Successful Court Cases in Bangalore | S Jain & Attorneys",
+// // // // // // // // //   description:
+// // // // // // // // //     "Explore successful court case results in Bangalore by S Jain & Attorneys. Trusted lawyers delivering strategic, result-driven legal representation across practice areas.",
+// // // // // // // // //   alternates: {
+// // // // // // // // //     canonical: "/successful-case-results-in-bangalore",
+// // // // // // // // //   },
+// // // // // // // // // };
+
+// // // // // // // // // export default function Page() {
+// // // // // // // // //   return (
+// // // // // // // // //     <>
+// // // // // // // // //       <Navbar />
+
+// // // // // // // // //       {/* ================= HERO ================= */}
+// // // // // // // // //       <section className="bg-black text-white pt-30 pb-24 px-6 border-b border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-6xl mx-auto text-center">
+// // // // // // // // //           <h1 className="text-4xl md:text-6xl font-bold text-[#C9A24D] mb-8">
+// // // // // // // // //             Successful Court Cases in Bangalore
+// // // // // // // // //           </h1>
+
+// // // // // // // // //           <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
+// // // // // // // // //             At <strong>S Jain & Attorneys</strong>, our reputation is built on delivering measurable and strategic legal outcomes. Our track record of successful court cases in Bangalore and strong court case results in Bangalore reflects our commitment to excellence, preparation, and powerful courtroom advocacy.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-gray-400 max-w-4xl mx-auto mt-6 leading-relaxed">
+// // // // // // // // //             Recognized among the firms led by a successful lawyer in Bangalore, we handle complex legal disputes with integrity, discretion, and a client-focused approach. Our consistent lawyer case results in Bangalore demonstrate our ability to navigate challenging legal matters effectively.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <div className="w-24 h-[2px] bg-[#C9A24D] mx-auto my-10"></div>
+
+// // // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-5">
+// // // // // // // // //             <a
+// // // // // // // // //               href="#contact"
+// // // // // // // // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+// // // // // // // // //             >
+// // // // // // // // //               Book Confidential Consultation
+// // // // // // // // //             </a>
+
+// // // // // // // // //             <a
+// // // // // // // // //               href="tel:+91XXXXXXXXXX"
+// // // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// // // // // // // // //             >
+// // // // // // // // //               Request Call Back
+// // // // // // // // //             </a>
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= STRATEGY SECTION ================= */}
+// // // // // // // // //       <section className="bg-[#0A0A0A] text-white py-28 px-6">
+// // // // // // // // //         <div className="max-w-5xl mx-auto text-center">
+// // // // // // // // //           <h2 className="text-3xl md:text-4xl font-bold text-[#C9A24D] mb-8">
+// // // // // // // // //             Proven Strategy. Strong Advocacy. Real Results.
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <p className="text-gray-300 leading-relaxed">
+// // // // // // // // //             Our team of top lawyers in Bangalore has successfully represented individuals, businesses, startups, and NRIs across diverse legal matters. Each case is approached with detailed legal research, strategic planning, and meticulous execution to achieve strong court case results in Bangalore.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-gray-400 mt-6 leading-relaxed">
+// // // // // // // // //             Below are selected law firm success stories in Bangalore, presented in compliance with professional standards and without disclosing confidential client information.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-[#C9A24D] font-semibold mt-8">
+// // // // // // // // //             Response within 24 hours guaranteed.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-5 mt-10">
+// // // // // // // // //             <a
+// // // // // // // // //               href="#contact"
+// // // // // // // // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+// // // // // // // // //             >
+// // // // // // // // //               Book Confidential Consultation
+// // // // // // // // //             </a>
+
+// // // // // // // // //             <a
+// // // // // // // // //               href="tel:+91XXXXXXXXXX"
+// // // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// // // // // // // // //             >
+// // // // // // // // //               Request Call Back
+// // // // // // // // //             </a>
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= CASE STUDIES ================= */}
+// // // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-6xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-16 text-center">
+// // // // // // // // //             Selected Case Studies
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <div className="grid md:grid-cols-2 gap-12">
+
+// // // // // // // // //             {/* Corporate */}
+// // // // // // // // //             <div className="bg-[#0A0A0A] p-10 rounded-xl border border-[#C9A24D]/20">
+// // // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // // // //                 Corporate & Commercial Dispute
+// // // // // // // // //               </h3>
+// // // // // // // // //               <p><strong>Background:</strong> Representation of a mid-sized business in a high-value contractual and financial dispute.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             {/* Criminal */}
+// // // // // // // // //             <div className="bg-[#0A0A0A] p-10 rounded-xl border border-[#C9A24D]/20">
+// // // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // // // //                 Criminal Defense Matter
+// // // // // // // // //               </h3>
+// // // // // // // // //               <p><strong>Background:</strong> Defense in a serious criminal allegation requiring urgent court intervention.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Detailed evidence analysis, procedural safeguards, and strong courtroom representation by a successful criminal lawyer Bangalore clients rely on.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Relief granted by the court, safeguarding the client’s legal rights and professional reputation.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             {/* Property */}
+// // // // // // // // //             <div className="bg-[#0A0A0A] p-10 rounded-xl border border-[#C9A24D]/20">
+// // // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // // // //                 Property & Real Estate Dispute
+// // // // // // // // //               </h3>
+// // // // // // // // //               <p><strong>Background:</strong> Complex ownership conflict involving title discrepancies and competing claims.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Extensive documentation review, title verification, and structured civil litigation proceedings.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             {/* Family */}
+// // // // // // // // //             <div className="bg-[#0A0A0A] p-10 rounded-xl border border-[#C9A24D]/20">
+// // // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // // // //                 Family & Matrimonial Case
+// // // // // // // // //               </h3>
+// // // // // // // // //               <p><strong>Background:</strong> Contested divorce involving custody and financial settlement issues.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Balanced negotiation approach combined with litigation preparedness to ensure fair resolution led by a successful divorce lawyer Bangalore families trust.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Structured settlement ensuring financial security and equitable custody arrangement.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= WHY TRUST ================= */}
+// // // // // // // // //       <section className="bg-[#0A0A0A] text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-5xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-10 text-center">
+// // // // // // // // //             Why Clients Trust Our Legal Expertise
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <ul className="space-y-4 text-gray-300 text-lg">
+// // // // // // // // //             <li>✔ Strategic and research-driven legal approach</li>
+// // // // // // // // //             <li>✔ Strong courtroom advocacy</li>
+// // // // // // // // //             <li>✔ Ethical and confidential representation</li>
+// // // // // // // // //             <li>✔ Personalized legal solutions</li>
+// // // // // // // // //             <li>✔ Proven successful court cases in Bangalore</li>
+// // // // // // // // //           </ul>
+
+// // // // // // // // //           <p className="text-gray-400 mt-8">
+// // // // // // // // //             As experienced litigation lawyers in Bangalore, we focus on delivering practical solutions while protecting our clients’ rights and interests at every stage of the legal process.
+// // // // // // // // //           </p>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= FAQ ================= */}
+// // // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-4xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-12 text-center">
+// // // // // // // // //             Frequently Asked Questions (FAQs)
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <div className="space-y-8 text-gray-300 leading-relaxed">
+// // // // // // // // //             <div>
+// // // // // // // // //               <p className="font-semibold text-white">1. What types of successful court cases in Bangalore has your firm handled?</p>
+// // // // // // // // //               <p>S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             <div>
+// // // // // // // // //               <p className="font-semibold text-white">2. How does your law firm achieve strong court case results in Bangalore?</p>
+// // // // // // // // //               <p>Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             <div>
+// // // // // // // // //               <p className="font-semibold text-white">3. Are your lawyer case results in Bangalore compliant with confidentiality standards?</p>
+// // // // // // // // //               <p>Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards while showcasing our legal expertise.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             <div>
+// // // // // // // // //               <p className="font-semibold text-white">4. Do successful court cases guarantee similar outcomes in my case?</p>
+// // // // // // // // //               <p>No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations. Our team strives to provide the strongest possible representation based on the circumstances of your case.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             <div>
+// // // // // // // // //               <p className="font-semibold text-white">5. How can I consult a successful lawyer in Bangalore regarding my legal matter?</p>
+// // // // // // // // //               <p>You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.</p>
+// // // // // // // // //             </div>
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= FINAL CTA ================= */}
+// // // // // // // // //       <section id="contact" className="bg-black text-white py-32 px-6 text-center border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-3xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-6">
+// // // // // // // // //             Discuss Your Legal Matter With Our Experts
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <p className="text-gray-300 mb-6">
+// // // // // // // // //             If you are seeking representation backed by proven court case results in Bangalore, S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-gray-400 mb-10">
+// // // // // // // // //             Confidential consultations. Practical guidance. Result-oriented representation.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-5">
+// // // // // // // // //             <a href="#" className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition">
+// // // // // // // // //               Book Confidential Consultation
+// // // // // // // // //             </a>
+
+// // // // // // // // //             <a href="tel:+91XXXXXXXXXX" className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition">
+// // // // // // // // //               Request Call Back
+// // // // // // // // //             </a>
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       <Footer />
+// // // // // // // // //     </>
+// // // // // // // // //   );
+// // // // // // // // // }
+
+
+
+// // // // // // // // // import Navbar from "../components/Navbar";
+// // // // // // // // // import Footer from "../components/Footer";
+
+// // // // // // // // // /* ================= SEO META ================= */
+// // // // // // // // // export const metadata = {
+// // // // // // // // //   title: "Successful Court Cases in Bangalore | S Jain & Attorneys",
+// // // // // // // // //   description:
+// // // // // // // // //     "Explore successful court case results in Bangalore by S Jain & Attorneys. Trusted lawyers delivering strategic, result-driven legal representation across practice areas.",
+// // // // // // // // //   alternates: {
+// // // // // // // // //     canonical: "/successful-case-results-in-bangalore",
+// // // // // // // // //   },
+// // // // // // // // // };
+
+// // // // // // // // // export default function Page() {
+// // // // // // // // //   return (
+// // // // // // // // //     <>
+// // // // // // // // //       <Navbar />
+
+// // // // // // // // //       {/* ================= HERO ================= */}
+// // // // // // // // //       <section className="relative bg-black text-white pt-32 pb-28 px-6 overflow-hidden">
+
+// // // // // // // // //         {/* GOLD GRADIENT GLOW */}
+// // // // // // // // //         <div className="absolute inset-0 bg-gradient-to-b from-[#C9A24D]/10 via-transparent to-transparent"></div>
+
+// // // // // // // // //         <div className="max-w-6xl mx-auto text-center relative z-10">
+
+// // // // // // // // //           <div className="w-20 h-[2px] bg-[#C9A24D] mx-auto mb-8"></div>
+
+// // // // // // // // //           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-10">
+// // // // // // // // //             <span className="text-[#C9A24D]">
+// // // // // // // // //               Successful Court Cases
+// // // // // // // // //             </span>{" "}
+// // // // // // // // //             in Bangalore
+// // // // // // // // //           </h1>
+
+// // // // // // // // //           <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
+// // // // // // // // //             At <strong>S Jain & Attorneys</strong>, our reputation is built on delivering measurable and strategic legal outcomes. Our track record of successful court cases in Bangalore and strong court case results in Bangalore reflects our commitment to excellence, preparation, and powerful courtroom advocacy.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-gray-400 max-w-4xl mx-auto mt-6 leading-relaxed">
+// // // // // // // // //             Recognized among the firms led by a successful lawyer in Bangalore, we handle complex legal disputes with integrity, discretion, and a client-focused approach. Our consistent lawyer case results in Bangalore demonstrate our ability to navigate challenging legal matters effectively.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-6 mt-12">
+// // // // // // // // //             <a
+// // // // // // // // //               href="#contact"
+// // // // // // // // //               className="bg-[#C9A24D] text-black px-10 py-4 rounded-md font-semibold tracking-wide hover:scale-105 transition duration-300 shadow-lg"
+// // // // // // // // //             >
+// // // // // // // // //               Book Confidential Consultation
+// // // // // // // // //             </a>
+
+// // // // // // // // //             <a
+// // // // // // // // //               href="tel:+91XXXXXXXXXX"
+// // // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-10 py-4 rounded-md font-semibold tracking-wide hover:bg-[#C9A24D] hover:text-black transition duration-300"
+// // // // // // // // //             >
+// // // // // // // // //               Request Call Back
+// // // // // // // // //             </a>
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= STRATEGY ================= */}
+// // // // // // // // //       <section className="bg-[#0B0B0B] text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-5xl mx-auto text-center">
+
+// // // // // // // // //           <h2 className="text-3xl md:text-4xl font-bold text-[#C9A24D] mb-10">
+// // // // // // // // //             Proven Strategy. Strong Advocacy. Real Results.
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <p className="text-gray-300 leading-relaxed text-lg">
+// // // // // // // // //             Our team of top lawyers in Bangalore has successfully represented individuals, businesses, startups, and NRIs across diverse legal matters. Each case is approached with detailed legal research, strategic planning, and meticulous execution to achieve strong court case results in Bangalore.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-gray-400 mt-6 leading-relaxed">
+// // // // // // // // //             Below are selected law firm success stories in Bangalore, presented in compliance with professional standards and without disclosing confidential client information.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-[#C9A24D] font-semibold mt-8 text-lg">
+// // // // // // // // //             Response within 24 hours guaranteed.
+// // // // // // // // //           </p>
+
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= CASE STUDIES ================= */}
+// // // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-6xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-16 text-center">
+// // // // // // // // //             Selected Case Studies
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <div className="grid md:grid-cols-2 gap-10">
+
+// // // // // // // // //             {[
+// // // // // // // // //               {
+// // // // // // // // //                 title: "Corporate & Commercial Dispute",
+// // // // // // // // //                 content: [
+// // // // // // // // //                   "Representation of a mid-sized business in a high-value contractual and financial dispute.",
+// // // // // // // // //                   "Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.",
+// // // // // // // // //                   "Favorable settlement protecting commercial interests and minimizing liability."
+// // // // // // // // //                 ]
+// // // // // // // // //               },
+// // // // // // // // //               {
+// // // // // // // // //                 title: "Criminal Defense Matter",
+// // // // // // // // //                 content: [
+// // // // // // // // //                   "Defense in a serious criminal allegation requiring urgent court intervention.",
+// // // // // // // // //                   "Detailed evidence analysis and strong courtroom representation.",
+// // // // // // // // //                   "Relief granted by the court safeguarding legal rights and reputation."
+// // // // // // // // //                 ]
+// // // // // // // // //               },
+// // // // // // // // //               {
+// // // // // // // // //                 title: "Property & Real Estate Dispute",
+// // // // // // // // //                 content: [
+// // // // // // // // //                   "Complex ownership conflict involving title discrepancies.",
+// // // // // // // // //                   "Extensive documentation review and structured civil litigation.",
+// // // // // // // // //                   "Successful court order affirming lawful ownership rights."
+// // // // // // // // //                 ]
+// // // // // // // // //               },
+// // // // // // // // //               {
+// // // // // // // // //                 title: "Family & Matrimonial Case",
+// // // // // // // // //                 content: [
+// // // // // // // // //                   "Contested divorce involving custody and settlement issues.",
+// // // // // // // // //                   "Balanced negotiation with litigation preparedness.",
+// // // // // // // // //                   "Structured settlement ensuring financial security and equitable custody."
+// // // // // // // // //                 ]
+// // // // // // // // //               }
+// // // // // // // // //             ].map((item, index) => (
+// // // // // // // // //               <div
+// // // // // // // // //                 key={index}
+// // // // // // // // //                 className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20 hover:border-[#C9A24D] transition duration-300 hover:shadow-[0_0_40px_rgba(201,162,77,0.15)]"
+// // // // // // // // //               >
+// // // // // // // // //                 <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // // // //                   {item.title}
+// // // // // // // // //                 </h3>
+// // // // // // // // //                 <p className="text-gray-300 leading-relaxed">
+// // // // // // // // //                   <strong>Background:</strong> {item.content[0]}
+// // // // // // // // //                 </p>
+// // // // // // // // //                 <p className="text-gray-400 mt-4 leading-relaxed">
+// // // // // // // // //                   <strong>Legal Strategy:</strong> {item.content[1]}
+// // // // // // // // //                 </p>
+// // // // // // // // //                 <p className="text-gray-300 mt-4 leading-relaxed">
+// // // // // // // // //                   <strong>Outcome:</strong> {item.content[2]}
+// // // // // // // // //                 </p>
+// // // // // // // // //               </div>
+// // // // // // // // //             ))}
+
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= WHY TRUST ================= */}
+// // // // // // // // //       <section className="bg-[#0B0B0B] text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-4xl mx-auto text-center">
+
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-12">
+// // // // // // // // //             Why Clients Trust Our Legal Expertise
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <div className="grid md:grid-cols-2 gap-6 text-gray-300 text-lg">
+// // // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg">Strategic and research-driven legal approach</div>
+// // // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg">Strong courtroom advocacy</div>
+// // // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg">Ethical and confidential representation</div>
+// // // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg">Personalized legal solutions</div>
+// // // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg md:col-span-2">Proven successful court cases in Bangalore</div>
+// // // // // // // // //           </div>
+
+// // // // // // // // //           <p className="text-gray-400 mt-10 leading-relaxed">
+// // // // // // // // //             As experienced litigation lawyers in Bangalore, we focus on delivering practical solutions while protecting our clients’ rights and interests at every stage of the legal process.
+// // // // // // // // //           </p>
+
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= FINAL CTA ================= */}
+// // // // // // // // //       <section id="contact" className="relative bg-black text-white py-32 px-6 text-center border-t border-[#C9A24D]/20">
+
+// // // // // // // // //         <div className="absolute inset-0 bg-gradient-to-t from-[#C9A24D]/10 via-transparent to-transparent"></div>
+
+// // // // // // // // //         <div className="relative z-10 max-w-3xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-6">
+// // // // // // // // //             Discuss Your Legal Matter With Our Experts
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <p className="text-gray-300 mb-6">
+// // // // // // // // //             If you are seeking representation backed by proven court case results in Bangalore, S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-gray-400 mb-10">
+// // // // // // // // //             Confidential consultations. Practical guidance. Result-oriented representation.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-6">
+// // // // // // // // //             <a
+// // // // // // // // //               href="#"
+// // // // // // // // //               className="bg-[#C9A24D] text-black px-10 py-4 rounded-md font-semibold hover:scale-105 transition duration-300"
+// // // // // // // // //             >
+// // // // // // // // //               Book Confidential Consultation
+// // // // // // // // //             </a>
+
+// // // // // // // // //             <a
+// // // // // // // // //               href="tel:+91XXXXXXXXXX"
+// // // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-10 py-4 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300"
+// // // // // // // // //             >
+// // // // // // // // //               Request Call Back
+// // // // // // // // //             </a>
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       <Footer />
+// // // // // // // // //     </>
+// // // // // // // // //   );
+// // // // // // // // // }
+
+
+// // // // // // // // // import Navbar from "../components/Navbar";
+// // // // // // // // // import Footer from "../components/Footer";
+
+// // // // // // // // // /* ================= SEO META ================= */
+// // // // // // // // // export const metadata = {
+// // // // // // // // //   title: "Successful Court Cases in Bangalore | S Jain & Attorneys",
+// // // // // // // // //   description:
+// // // // // // // // //     "Explore successful court case results in Bangalore by S Jain & Attorneys. Trusted lawyers delivering strategic, result-driven legal representation across practice areas.",
+// // // // // // // // //   alternates: {
+// // // // // // // // //     canonical: "/successful-case-results-in-bangalore",
+// // // // // // // // //   },
+// // // // // // // // // };
+
+// // // // // // // // // export default function Page() {
+// // // // // // // // //   return (
+// // // // // // // // //     <>
+// // // // // // // // //       <Navbar />
+
+// // // // // // // // //       {/* ================= HERO ================= */}
+// // // // // // // // //       <section className="relative bg-black text-white pt-24 pb-28 px-6 overflow-hidden">
+// // // // // // // // //         <div className="absolute inset-0 bg-gradient-to-b from-[#C9A24D]/10 via-transparent to-transparent"></div>
+
+// // // // // // // // //         <div className="max-w-6xl mx-auto text-center relative z-10">
+// // // // // // // // //           <div className="w-20 h-[2px] bg-[#C9A24D] mx-auto mb-8"></div>
+
+// // // // // // // // //           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-10">
+// // // // // // // // //             <span className="text-[#C9A24D]">
+// // // // // // // // //               Successful Court Cases in Bangalore
+// // // // // // // // //             </span>
+// // // // // // // // //           </h1>
+
+// // // // // // // // //           <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
+// // // // // // // // //             At <strong>S Jain & Attorneys</strong>, our reputation is built on
+// // // // // // // // //             delivering measurable and strategic legal outcomes. Our track record
+// // // // // // // // //             of successful court cases in Bangalore and strong court case results
+// // // // // // // // //             in Bangalore reflects our commitment to excellence, preparation,
+// // // // // // // // //             and powerful courtroom advocacy.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-gray-400 max-w-4xl mx-auto mt-6 leading-relaxed">
+// // // // // // // // //             Recognized among the firms led by a successful lawyer in Bangalore,
+// // // // // // // // //             we handle complex legal disputes with integrity, discretion, and a
+// // // // // // // // //             client-focused approach. Our consistent lawyer case results in
+// // // // // // // // //             Bangalore demonstrate our ability to navigate challenging legal
+// // // // // // // // //             matters effectively.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-6 mt-12">
+// // // // // // // // //             <a
+// // // // // // // // //               href="/legal-consultation-in-bangalore"
+// // // // // // // // //               className="bg-[#C9A24D] text-black px-10 py-4 rounded-md font-semibold hover:scale-105 transition duration-300"
+// // // // // // // // //             >
+// // // // // // // // //               Book Confidential Consultation
+// // // // // // // // //             </a>
+
+// // // // // // // // //             <a
+// // // // // // // // //               href="tel:+91XXXXXXXXXX"
+// // // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-10 py-4 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300"
+// // // // // // // // //             >
+// // // // // // // // //               Request Call Back
+// // // // // // // // //             </a>
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= STRATEGY ================= */}
+// // // // // // // // //       <section className="bg-[#0B0B0B] text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-5xl mx-auto text-center">
+// // // // // // // // //           <h2 className="text-3xl md:text-4xl font-bold text-[#C9A24D] mb-10">
+// // // // // // // // //             Proven Strategy. Strong Advocacy. Real Results.
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <p className="text-gray-300 leading-relaxed text-lg">
+// // // // // // // // //             Our team of top lawyers in Bangalore has successfully represented
+// // // // // // // // //             individuals, businesses, startups, and NRIs across diverse legal
+// // // // // // // // //             matters. Each case is approached with detailed legal research,
+// // // // // // // // //             strategic planning, and meticulous execution to achieve strong court
+// // // // // // // // //             case results in Bangalore.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-gray-400 mt-6 leading-relaxed">
+// // // // // // // // //             Below are selected law firm success stories in Bangalore,
+// // // // // // // // //             presented in compliance with professional standards and without
+// // // // // // // // //             disclosing confidential client information.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <p className="text-[#C9A24D] font-semibold mt-8 text-lg">
+// // // // // // // // //             Response within 24 hours guaranteed.
+// // // // // // // // //           </p>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= CASE STUDIES ================= */}
+// // // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-6xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-16 text-center">
+// // // // // // // // //             Selected Case Studies
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <div className="grid md:grid-cols-2 gap-10">
+
+// // // // // // // // //             {/* Corporate */}
+// // // // // // // // //             <div className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20">
+// // // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // // // //                 Corporate & Commercial Dispute
+// // // // // // // // //               </h3>
+// // // // // // // // //               <p><strong>Background:</strong> Representation of a mid-sized business in a high-value contractual and financial dispute.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             {/* Criminal */}
+// // // // // // // // //             <div className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20">
+// // // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // // // //                 Criminal Defense Matter
+// // // // // // // // //               </h3>
+// // // // // // // // //               <p><strong>Background:</strong> Defense in a serious criminal allegation requiring urgent court intervention.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Detailed evidence analysis, procedural safeguards, and strong courtroom representation by a successful criminal lawyer Bangalore clients rely on.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Relief granted by the court, safeguarding the client’s legal rights and professional reputation.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             {/* Property */}
+// // // // // // // // //             <div className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20">
+// // // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // // // //                 Property & Real Estate Dispute
+// // // // // // // // //               </h3>
+// // // // // // // // //               <p><strong>Background:</strong> Complex ownership conflict involving title discrepancies and competing claims.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Extensive documentation review, title verification, and structured civil litigation proceedings.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             {/* Family */}
+// // // // // // // // //             <div className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20">
+// // // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // // // //                 Family & Matrimonial Case
+// // // // // // // // //               </h3>
+// // // // // // // // //               <p><strong>Background:</strong> Contested divorce involving custody and financial settlement issues.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Balanced negotiation approach combined with litigation preparedness to ensure fair resolution led by a successful divorce lawyer Bangalore families trust.</p>
+// // // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Structured settlement ensuring financial security and equitable custody arrangement.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= WHY TRUST ================= */}
+// // // // // // // // //       <section className="bg-[#0B0B0B] text-white py-28 px-6 border-t border-[#C9A24D]/20 text-center">
+// // // // // // // // //         <div className="max-w-4xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-12">
+// // // // // // // // //             Why Clients Trust Our Legal Expertise
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <ul className="grid md:grid-cols-2 gap-6 text-lg">
+// // // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20">Strategic and research-driven legal approach</li>
+// // // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20">Strong courtroom advocacy</li>
+// // // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20">Ethical and confidential representation</li>
+// // // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20">Personalized legal solutions</li>
+// // // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20 md:col-span-2">Proven successful court cases in Bangalore</li>
+// // // // // // // // //           </ul>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= FAQ ================= */}
+// // // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-4xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-12 text-center">
+// // // // // // // // //             Frequently Asked Questions (FAQs)
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <div className="space-y-8 text-gray-300">
+// // // // // // // // //             <div>
+// // // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">1. What types of successful court cases in Bangalore has your firm handled?</h3>
+// // // // // // // // //               <p className="mt-2">S Jain & Attorneys has handled corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases with a strategic and client-focused approach.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             <div>
+// // // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">2. How does your law firm achieve strong court case results in Bangalore?</h3>
+// // // // // // // // //               <p className="mt-2">Through detailed case analysis, legal research, structured planning, negotiation, and decisive courtroom representation.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             <div>
+// // // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">3. Are your lawyer case results compliant with confidentiality standards?</h3>
+// // // // // // // // //               <p className="mt-2">Yes. All success stories are shared without disclosing confidential client information and in compliance with ethical standards.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             <div>
+// // // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">4. Do successful court cases guarantee similar outcomes in my case?</h3>
+// // // // // // // // //               <p className="mt-2">No outcome can be guaranteed. Each matter depends on its specific facts and legal complexities.</p>
+// // // // // // // // //             </div>
+
+// // // // // // // // //             <div>
+// // // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">5. How can I consult a successful lawyer in Bangalore?</h3>
+// // // // // // // // //               <p className="mt-2">You can schedule a confidential consultation with our team to discuss your legal concerns.</p>
+// // // // // // // // //             </div>
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       {/* ================= FINAL CTA ================= */}
+// // // // // // // // //       <section id="contact" className="bg-[#0B0B0B] text-white py-28 px-6 text-center border-t border-[#C9A24D]/20">
+// // // // // // // // //         <div className="max-w-3xl mx-auto">
+// // // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-6">
+// // // // // // // // //             Discuss Your Legal Matter With Our Experts
+// // // // // // // // //           </h2>
+
+// // // // // // // // //           <p className="text-gray-300 mb-8">
+// // // // // // // // //             If you are seeking representation backed by proven court case results in Bangalore, S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
+// // // // // // // // //           </p>
+
+// // // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-6">
+// // // // // // // // //             <a href="/legal-consultation-in-bangalore" className="bg-[#C9A24D] text-black px-10 py-4 rounded-md font-semibold">
+// // // // // // // // //               Book Confidential Consultation
+// // // // // // // // //             </a>
+
+// // // // // // // // //             <a href="tel:+91XXXXXXXXXX" className="border border-[#C9A24D] text-[#C9A24D] px-10 py-4 rounded-md font-semibold">
+// // // // // // // // //               Request Call Back
+// // // // // // // // //             </a>
+// // // // // // // // //           </div>
+// // // // // // // // //         </div>
+// // // // // // // // //       </section>
+
+// // // // // // // // //       <Footer />
+// // // // // // // // //     </>
+// // // // // // // // //   );
+// // // // // // // // // }
+
+// // // // // // // // "use client";
+
+// // // // // // // // import { useState } from "react";
+// // // // // // // // import { motion } from "framer-motion";
 // // // // // // // // import Navbar from "../components/Navbar";
 // // // // // // // // import Footer from "../components/Footer";
+// // // // // // // // import Link from "next/link";
 
-// // // // // // // // /* ================= SEO META ================= */
-// // // // // // // // export const metadata = {
-// // // // // // // //   title: "Successful Court Cases in Bangalore | S Jain & Attorneys",
-// // // // // // // //   description:
-// // // // // // // //     "Explore successful court case results in Bangalore by S Jain & Attorneys. Trusted lawyers delivering strategic, result-driven legal representation across practice areas.",
-// // // // // // // //   alternates: {
-// // // // // // // //     canonical: "/successful-case-results-in-bangalore",
-// // // // // // // //   },
-// // // // // // // // };
+// // // // // // // // export default function SuccessfulCases() {
+// // // // // // // //   const [openIndex, setOpenIndex] = useState(null);
 
-// // // // // // // // export default function Page() {
+// // // // // // // //   const toggleFAQ = (index) => {
+// // // // // // // //     setOpenIndex(openIndex === index ? null : index);
+// // // // // // // //   };
+
+// // // // // // // //   const fadeUp = {
+// // // // // // // //     hidden: { opacity: 0, y: 60 },
+// // // // // // // //     visible: {
+// // // // // // // //       opacity: 1,
+// // // // // // // //       y: 0,
+// // // // // // // //       transition: { duration: 0.8, ease: "easeOut" },
+// // // // // // // //     },
+// // // // // // // //   };
+
+// // // // // // // //   const faqs = [
+// // // // // // // //     {
+// // // // // // // //       question:
+// // // // // // // //         "What types of successful court cases in Bangalore has your firm handled?",
+// // // // // // // //       answer:
+// // // // // // // //         "We handle corporate disputes, civil litigation, criminal defense, property conflicts, and family law matters with a strategic and client-focused legal approach.",
+// // // // // // // //     },
+// // // // // // // //     {
+// // // // // // // //       question:
+// // // // // // // //         "How does your law firm achieve strong court case results in Bangalore?",
+// // // // // // // //       answer:
+// // // // // // // //         "Through deep legal research, strategic planning, structured litigation, and strong courtroom advocacy.",
+// // // // // // // //     },
+// // // // // // // //     {
+// // // // // // // //       question:
+// // // // // // // //         "Are your lawyer case results compliant with confidentiality standards?",
+// // // // // // // //       answer:
+// // // // // // // //         "Yes. All case studies are shared without disclosing confidential client information.",
+// // // // // // // //     },
+// // // // // // // //     {
+// // // // // // // //       question:
+// // // // // // // //         "Do successful court cases guarantee similar outcomes?",
+// // // // // // // //       answer:
+// // // // // // // //         "No legal result can be guaranteed. Each case depends on its specific facts and legal considerations.",
+// // // // // // // //     },
+// // // // // // // //   ];
+
 // // // // // // // //   return (
 // // // // // // // //     <>
 // // // // // // // //       <Navbar />
 
 // // // // // // // //       {/* ================= HERO ================= */}
-// // // // // // // //       <section className="bg-black text-white pt-30 pb-24 px-6 border-b border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-6xl mx-auto text-center">
-// // // // // // // //           <h1 className="text-4xl md:text-6xl font-bold text-[#C9A24D] mb-8">
+// // // // // // // //       <section className="relative bg-black text-white py-32 px-6 overflow-hidden">
+// // // // // // // //         <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-[#C9A24D]/10 opacity-40" />
+
+// // // // // // // //         <motion.div
+// // // // // // // //           initial="hidden"
+// // // // // // // //           animate="visible"
+// // // // // // // //           variants={fadeUp}
+// // // // // // // //           className="relative max-w-6xl mx-auto text-center"
+// // // // // // // //         >
+// // // // // // // //           <h1 className="text-5xl md:text-6xl font-semibold mb-6 leading-tight bg-gradient-to-r from-[#C9A24D] to-yellow-300 bg-clip-text text-transparent">
 // // // // // // // //             Successful Court Cases in Bangalore
 // // // // // // // //           </h1>
 
-// // // // // // // //           <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-// // // // // // // //             At <strong>S Jain & Attorneys</strong>, our reputation is built on delivering measurable and strategic legal outcomes. Our track record of successful court cases in Bangalore and strong court case results in Bangalore reflects our commitment to excellence, preparation, and powerful courtroom advocacy.
+// // // // // // // //           <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
+// // // // // // // //             Delivering measurable legal outcomes through strategic advocacy,
+// // // // // // // //             preparation, and powerful courtroom representation.
 // // // // // // // //           </p>
 
-// // // // // // // //           <p className="text-gray-400 max-w-4xl mx-auto mt-6 leading-relaxed">
-// // // // // // // //             Recognized among the firms led by a successful lawyer in Bangalore, we handle complex legal disputes with integrity, discretion, and a client-focused approach. Our consistent lawyer case results in Bangalore demonstrate our ability to navigate challenging legal matters effectively.
-// // // // // // // //           </p>
-
-// // // // // // // //           <div className="w-24 h-[2px] bg-[#C9A24D] mx-auto my-10"></div>
-
-// // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-5">
-// // // // // // // //             <a
-// // // // // // // //               href="#contact"
-// // // // // // // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+// // // // // // // //           <div className="flex justify-center gap-6 mt-10">
+// // // // // // // //             <Link
+// // // // // // // //               href="/contact"
+// // // // // // // //               className="px-8 py-4 bg-[#C9A24D] text-black font-semibold rounded-lg shadow-lg hover:scale-105 transition duration-300"
 // // // // // // // //             >
 // // // // // // // //               Book Confidential Consultation
-// // // // // // // //             </a>
+// // // // // // // //             </Link>
 
-// // // // // // // //             <a
-// // // // // // // //               href="tel:+91XXXXXXXXXX"
-// // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// // // // // // // //             <Link
+// // // // // // // //               href="/contact"
+// // // // // // // //               className="px-8 py-4 border border-[#C9A24D] text-[#C9A24D] rounded-lg hover:bg-[#C9A24D] hover:text-black transition duration-300"
 // // // // // // // //             >
 // // // // // // // //               Request Call Back
-// // // // // // // //             </a>
+// // // // // // // //             </Link>
 // // // // // // // //           </div>
-// // // // // // // //         </div>
+// // // // // // // //         </motion.div>
 // // // // // // // //       </section>
 
-// // // // // // // //       {/* ================= STRATEGY SECTION ================= */}
-// // // // // // // //       <section className="bg-[#0A0A0A] text-white py-28 px-6">
-// // // // // // // //         <div className="max-w-5xl mx-auto text-center">
-// // // // // // // //           <h2 className="text-3xl md:text-4xl font-bold text-[#C9A24D] mb-8">
+// // // // // // // //       {/* ================= STRATEGY ================= */}
+// // // // // // // //       <section className="bg-[#0f0f0f] text-gray-300 py-28 px-6">
+// // // // // // // //         <motion.div
+// // // // // // // //           initial="hidden"
+// // // // // // // //           whileInView="visible"
+// // // // // // // //           viewport={{ once: true }}
+// // // // // // // //           variants={fadeUp}
+// // // // // // // //           className="max-w-5xl mx-auto"
+// // // // // // // //         >
+// // // // // // // //           <h2 className="text-4xl font-semibold text-[#C9A24D] mb-8 relative inline-block">
 // // // // // // // //             Proven Strategy. Strong Advocacy. Real Results.
+// // // // // // // //             <span className="block h-1 w-full bg-[#C9A24D] mt-3 rounded-full animate-pulse" />
 // // // // // // // //           </h2>
 
-// // // // // // // //           <p className="text-gray-300 leading-relaxed">
-// // // // // // // //             Our team of top lawyers in Bangalore has successfully represented individuals, businesses, startups, and NRIs across diverse legal matters. Each case is approached with detailed legal research, strategic planning, and meticulous execution to achieve strong court case results in Bangalore.
+// // // // // // // //           <p className="text-lg leading-relaxed">
+// // // // // // // //             Our team represents individuals, businesses, startups, and NRIs
+// // // // // // // //             across complex legal disputes in Bangalore. Every case is handled
+// // // // // // // //             with detailed legal research, strategic preparation, and courtroom
+// // // // // // // //             precision.
 // // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-gray-400 mt-6 leading-relaxed">
-// // // // // // // //             Below are selected law firm success stories in Bangalore, presented in compliance with professional standards and without disclosing confidential client information.
-// // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-[#C9A24D] font-semibold mt-8">
-// // // // // // // //             Response within 24 hours guaranteed.
-// // // // // // // //           </p>
-
-// // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-5 mt-10">
-// // // // // // // //             <a
-// // // // // // // //               href="#contact"
-// // // // // // // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
-// // // // // // // //             >
-// // // // // // // //               Book Confidential Consultation
-// // // // // // // //             </a>
-
-// // // // // // // //             <a
-// // // // // // // //               href="tel:+91XXXXXXXXXX"
-// // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
-// // // // // // // //             >
-// // // // // // // //               Request Call Back
-// // // // // // // //             </a>
-// // // // // // // //           </div>
-// // // // // // // //         </div>
+// // // // // // // //         </motion.div>
 // // // // // // // //       </section>
 
 // // // // // // // //       {/* ================= CASE STUDIES ================= */}
-// // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-6xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-16 text-center">
-// // // // // // // //             Selected Case Studies
-// // // // // // // //           </h2>
+// // // // // // // //       <section className="bg-black text-gray-300 py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // //         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
 
-// // // // // // // //           <div className="grid md:grid-cols-2 gap-12">
-
-// // // // // // // //             {/* Corporate */}
-// // // // // // // //             <div className="bg-[#0A0A0A] p-10 rounded-xl border border-[#C9A24D]/20">
-// // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
-// // // // // // // //                 Corporate & Commercial Dispute
+// // // // // // // //           {[
+// // // // // // // //             "Corporate & Commercial Dispute",
+// // // // // // // //             "Criminal Defense Matter",
+// // // // // // // //             "Property & Real Estate Dispute",
+// // // // // // // //             "Family & Matrimonial Case",
+// // // // // // // //           ].map((title, i) => (
+// // // // // // // //             <motion.div
+// // // // // // // //               key={i}
+// // // // // // // //               initial={{ opacity: 0, y: 40 }}
+// // // // // // // //               whileInView={{ opacity: 1, y: 0 }}
+// // // // // // // //               transition={{ duration: 0.6, delay: i * 0.2 }}
+// // // // // // // //               viewport={{ once: true }}
+// // // // // // // //               className="p-8 border border-[#C9A24D]/20 rounded-xl hover:border-[#C9A24D] transition duration-300 bg-gradient-to-br from-[#111] to-black"
+// // // // // // // //             >
+// // // // // // // //               <h3 className="text-xl font-semibold text-white mb-4">
+// // // // // // // //                 {title}
 // // // // // // // //               </h3>
-// // // // // // // //               <p><strong>Background:</strong> Representation of a mid-sized business in a high-value contractual and financial dispute.</p>
-// // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.</p>
-// // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.</p>
-// // // // // // // //             </div>
+// // // // // // // //               <p>
+// // // // // // // //                 Structured legal strategy and decisive representation leading
+// // // // // // // //                 to favorable legal outcomes.
+// // // // // // // //               </p>
+// // // // // // // //             </motion.div>
+// // // // // // // //           ))}
 
-// // // // // // // //             {/* Criminal */}
-// // // // // // // //             <div className="bg-[#0A0A0A] p-10 rounded-xl border border-[#C9A24D]/20">
-// // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
-// // // // // // // //                 Criminal Defense Matter
-// // // // // // // //               </h3>
-// // // // // // // //               <p><strong>Background:</strong> Defense in a serious criminal allegation requiring urgent court intervention.</p>
-// // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Detailed evidence analysis, procedural safeguards, and strong courtroom representation by a successful criminal lawyer Bangalore clients rely on.</p>
-// // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Relief granted by the court, safeguarding the client’s legal rights and professional reputation.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             {/* Property */}
-// // // // // // // //             <div className="bg-[#0A0A0A] p-10 rounded-xl border border-[#C9A24D]/20">
-// // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
-// // // // // // // //                 Property & Real Estate Dispute
-// // // // // // // //               </h3>
-// // // // // // // //               <p><strong>Background:</strong> Complex ownership conflict involving title discrepancies and competing claims.</p>
-// // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Extensive documentation review, title verification, and structured civil litigation proceedings.</p>
-// // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             {/* Family */}
-// // // // // // // //             <div className="bg-[#0A0A0A] p-10 rounded-xl border border-[#C9A24D]/20">
-// // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
-// // // // // // // //                 Family & Matrimonial Case
-// // // // // // // //               </h3>
-// // // // // // // //               <p><strong>Background:</strong> Contested divorce involving custody and financial settlement issues.</p>
-// // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Balanced negotiation approach combined with litigation preparedness to ensure fair resolution led by a successful divorce lawyer Bangalore families trust.</p>
-// // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Structured settlement ensuring financial security and equitable custody arrangement.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //           </div>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= WHY TRUST ================= */}
-// // // // // // // //       <section className="bg-[#0A0A0A] text-white py-28 px-6 border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-5xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-10 text-center">
-// // // // // // // //             Why Clients Trust Our Legal Expertise
-// // // // // // // //           </h2>
-
-// // // // // // // //           <ul className="space-y-4 text-gray-300 text-lg">
-// // // // // // // //             <li>✔ Strategic and research-driven legal approach</li>
-// // // // // // // //             <li>✔ Strong courtroom advocacy</li>
-// // // // // // // //             <li>✔ Ethical and confidential representation</li>
-// // // // // // // //             <li>✔ Personalized legal solutions</li>
-// // // // // // // //             <li>✔ Proven successful court cases in Bangalore</li>
-// // // // // // // //           </ul>
-
-// // // // // // // //           <p className="text-gray-400 mt-8">
-// // // // // // // //             As experienced litigation lawyers in Bangalore, we focus on delivering practical solutions while protecting our clients’ rights and interests at every stage of the legal process.
-// // // // // // // //           </p>
 // // // // // // // //         </div>
 // // // // // // // //       </section>
 
 // // // // // // // //       {/* ================= FAQ ================= */}
-// // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
+// // // // // // // //       <section className="bg-[#0f0f0f] text-white py-28 px-6">
 // // // // // // // //         <div className="max-w-4xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-12 text-center">
-// // // // // // // //             Frequently Asked Questions (FAQs)
+// // // // // // // //           <h2 className="text-4xl font-bold text-[#C9A24D] mb-12 text-center">
+// // // // // // // //             Frequently Asked Questions
 // // // // // // // //           </h2>
 
-// // // // // // // //           <div className="space-y-8 text-gray-300 leading-relaxed">
-// // // // // // // //             <div>
-// // // // // // // //               <p className="font-semibold text-white">1. What types of successful court cases in Bangalore has your firm handled?</p>
-// // // // // // // //               <p>S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             <div>
-// // // // // // // //               <p className="font-semibold text-white">2. How does your law firm achieve strong court case results in Bangalore?</p>
-// // // // // // // //               <p>Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             <div>
-// // // // // // // //               <p className="font-semibold text-white">3. Are your lawyer case results in Bangalore compliant with confidentiality standards?</p>
-// // // // // // // //               <p>Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards while showcasing our legal expertise.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             <div>
-// // // // // // // //               <p className="font-semibold text-white">4. Do successful court cases guarantee similar outcomes in my case?</p>
-// // // // // // // //               <p>No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations. Our team strives to provide the strongest possible representation based on the circumstances of your case.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             <div>
-// // // // // // // //               <p className="font-semibold text-white">5. How can I consult a successful lawyer in Bangalore regarding my legal matter?</p>
-// // // // // // // //               <p>You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.</p>
-// // // // // // // //             </div>
-// // // // // // // //           </div>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= FINAL CTA ================= */}
-// // // // // // // //       <section id="contact" className="bg-black text-white py-32 px-6 text-center border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-3xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-6">
-// // // // // // // //             Discuss Your Legal Matter With Our Experts
-// // // // // // // //           </h2>
-
-// // // // // // // //           <p className="text-gray-300 mb-6">
-// // // // // // // //             If you are seeking representation backed by proven court case results in Bangalore, S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
-// // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-gray-400 mb-10">
-// // // // // // // //             Confidential consultations. Practical guidance. Result-oriented representation.
-// // // // // // // //           </p>
-
-// // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-5">
-// // // // // // // //             <a href="#" className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition">
-// // // // // // // //               Book Confidential Consultation
-// // // // // // // //             </a>
-
-// // // // // // // //             <a href="tel:+91XXXXXXXXXX" className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition">
-// // // // // // // //               Request Call Back
-// // // // // // // //             </a>
-// // // // // // // //           </div>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       <Footer />
-// // // // // // // //     </>
-// // // // // // // //   );
-// // // // // // // // }
-
-
-
-// // // // // // // // import Navbar from "../components/Navbar";
-// // // // // // // // import Footer from "../components/Footer";
-
-// // // // // // // // /* ================= SEO META ================= */
-// // // // // // // // export const metadata = {
-// // // // // // // //   title: "Successful Court Cases in Bangalore | S Jain & Attorneys",
-// // // // // // // //   description:
-// // // // // // // //     "Explore successful court case results in Bangalore by S Jain & Attorneys. Trusted lawyers delivering strategic, result-driven legal representation across practice areas.",
-// // // // // // // //   alternates: {
-// // // // // // // //     canonical: "/successful-case-results-in-bangalore",
-// // // // // // // //   },
-// // // // // // // // };
-
-// // // // // // // // export default function Page() {
-// // // // // // // //   return (
-// // // // // // // //     <>
-// // // // // // // //       <Navbar />
-
-// // // // // // // //       {/* ================= HERO ================= */}
-// // // // // // // //       <section className="relative bg-black text-white pt-32 pb-28 px-6 overflow-hidden">
-
-// // // // // // // //         {/* GOLD GRADIENT GLOW */}
-// // // // // // // //         <div className="absolute inset-0 bg-gradient-to-b from-[#C9A24D]/10 via-transparent to-transparent"></div>
-
-// // // // // // // //         <div className="max-w-6xl mx-auto text-center relative z-10">
-
-// // // // // // // //           <div className="w-20 h-[2px] bg-[#C9A24D] mx-auto mb-8"></div>
-
-// // // // // // // //           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-10">
-// // // // // // // //             <span className="text-[#C9A24D]">
-// // // // // // // //               Successful Court Cases
-// // // // // // // //             </span>{" "}
-// // // // // // // //             in Bangalore
-// // // // // // // //           </h1>
-
-// // // // // // // //           <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-// // // // // // // //             At <strong>S Jain & Attorneys</strong>, our reputation is built on delivering measurable and strategic legal outcomes. Our track record of successful court cases in Bangalore and strong court case results in Bangalore reflects our commitment to excellence, preparation, and powerful courtroom advocacy.
-// // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-gray-400 max-w-4xl mx-auto mt-6 leading-relaxed">
-// // // // // // // //             Recognized among the firms led by a successful lawyer in Bangalore, we handle complex legal disputes with integrity, discretion, and a client-focused approach. Our consistent lawyer case results in Bangalore demonstrate our ability to navigate challenging legal matters effectively.
-// // // // // // // //           </p>
-
-// // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-6 mt-12">
-// // // // // // // //             <a
-// // // // // // // //               href="#contact"
-// // // // // // // //               className="bg-[#C9A24D] text-black px-10 py-4 rounded-md font-semibold tracking-wide hover:scale-105 transition duration-300 shadow-lg"
+// // // // // // // //           {faqs.map((faq, index) => (
+// // // // // // // //             <div
+// // // // // // // //               key={index}
+// // // // // // // //               className="mb-6 border border-[#C9A24D]/20 rounded-lg overflow-hidden"
 // // // // // // // //             >
-// // // // // // // //               Book Confidential Consultation
-// // // // // // // //             </a>
-
-// // // // // // // //             <a
-// // // // // // // //               href="tel:+91XXXXXXXXXX"
-// // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-10 py-4 rounded-md font-semibold tracking-wide hover:bg-[#C9A24D] hover:text-black transition duration-300"
-// // // // // // // //             >
-// // // // // // // //               Request Call Back
-// // // // // // // //             </a>
-// // // // // // // //           </div>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= STRATEGY ================= */}
-// // // // // // // //       <section className="bg-[#0B0B0B] text-white py-28 px-6 border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-5xl mx-auto text-center">
-
-// // // // // // // //           <h2 className="text-3xl md:text-4xl font-bold text-[#C9A24D] mb-10">
-// // // // // // // //             Proven Strategy. Strong Advocacy. Real Results.
-// // // // // // // //           </h2>
-
-// // // // // // // //           <p className="text-gray-300 leading-relaxed text-lg">
-// // // // // // // //             Our team of top lawyers in Bangalore has successfully represented individuals, businesses, startups, and NRIs across diverse legal matters. Each case is approached with detailed legal research, strategic planning, and meticulous execution to achieve strong court case results in Bangalore.
-// // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-gray-400 mt-6 leading-relaxed">
-// // // // // // // //             Below are selected law firm success stories in Bangalore, presented in compliance with professional standards and without disclosing confidential client information.
-// // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-[#C9A24D] font-semibold mt-8 text-lg">
-// // // // // // // //             Response within 24 hours guaranteed.
-// // // // // // // //           </p>
-
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= CASE STUDIES ================= */}
-// // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-6xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-16 text-center">
-// // // // // // // //             Selected Case Studies
-// // // // // // // //           </h2>
-
-// // // // // // // //           <div className="grid md:grid-cols-2 gap-10">
-
-// // // // // // // //             {[
-// // // // // // // //               {
-// // // // // // // //                 title: "Corporate & Commercial Dispute",
-// // // // // // // //                 content: [
-// // // // // // // //                   "Representation of a mid-sized business in a high-value contractual and financial dispute.",
-// // // // // // // //                   "Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.",
-// // // // // // // //                   "Favorable settlement protecting commercial interests and minimizing liability."
-// // // // // // // //                 ]
-// // // // // // // //               },
-// // // // // // // //               {
-// // // // // // // //                 title: "Criminal Defense Matter",
-// // // // // // // //                 content: [
-// // // // // // // //                   "Defense in a serious criminal allegation requiring urgent court intervention.",
-// // // // // // // //                   "Detailed evidence analysis and strong courtroom representation.",
-// // // // // // // //                   "Relief granted by the court safeguarding legal rights and reputation."
-// // // // // // // //                 ]
-// // // // // // // //               },
-// // // // // // // //               {
-// // // // // // // //                 title: "Property & Real Estate Dispute",
-// // // // // // // //                 content: [
-// // // // // // // //                   "Complex ownership conflict involving title discrepancies.",
-// // // // // // // //                   "Extensive documentation review and structured civil litigation.",
-// // // // // // // //                   "Successful court order affirming lawful ownership rights."
-// // // // // // // //                 ]
-// // // // // // // //               },
-// // // // // // // //               {
-// // // // // // // //                 title: "Family & Matrimonial Case",
-// // // // // // // //                 content: [
-// // // // // // // //                   "Contested divorce involving custody and settlement issues.",
-// // // // // // // //                   "Balanced negotiation with litigation preparedness.",
-// // // // // // // //                   "Structured settlement ensuring financial security and equitable custody."
-// // // // // // // //                 ]
-// // // // // // // //               }
-// // // // // // // //             ].map((item, index) => (
-// // // // // // // //               <div
-// // // // // // // //                 key={index}
-// // // // // // // //                 className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20 hover:border-[#C9A24D] transition duration-300 hover:shadow-[0_0_40px_rgba(201,162,77,0.15)]"
+// // // // // // // //               <button
+// // // // // // // //                 onClick={() => toggleFAQ(index)}
+// // // // // // // //                 className="w-full px-6 py-5 flex justify-between items-center bg-[#111] hover:bg-[#1a1a1a] transition"
 // // // // // // // //               >
-// // // // // // // //                 <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
-// // // // // // // //                   {item.title}
-// // // // // // // //                 </h3>
-// // // // // // // //                 <p className="text-gray-300 leading-relaxed">
-// // // // // // // //                   <strong>Background:</strong> {item.content[0]}
-// // // // // // // //                 </p>
-// // // // // // // //                 <p className="text-gray-400 mt-4 leading-relaxed">
-// // // // // // // //                   <strong>Legal Strategy:</strong> {item.content[1]}
-// // // // // // // //                 </p>
-// // // // // // // //                 <p className="text-gray-300 mt-4 leading-relaxed">
-// // // // // // // //                   <strong>Outcome:</strong> {item.content[2]}
-// // // // // // // //                 </p>
-// // // // // // // //               </div>
-// // // // // // // //             ))}
+// // // // // // // //                 <span className="text-left font-semibold text-[#C9A24D]">
+// // // // // // // //                   {faq.question}
+// // // // // // // //                 </span>
+// // // // // // // //                 <span className="text-2xl">
+// // // // // // // //                   {openIndex === index ? "−" : "+"}
+// // // // // // // //                 </span>
+// // // // // // // //               </button>
 
-// // // // // // // //           </div>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= WHY TRUST ================= */}
-// // // // // // // //       <section className="bg-[#0B0B0B] text-white py-28 px-6 border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-4xl mx-auto text-center">
-
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-12">
-// // // // // // // //             Why Clients Trust Our Legal Expertise
-// // // // // // // //           </h2>
-
-// // // // // // // //           <div className="grid md:grid-cols-2 gap-6 text-gray-300 text-lg">
-// // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg">Strategic and research-driven legal approach</div>
-// // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg">Strong courtroom advocacy</div>
-// // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg">Ethical and confidential representation</div>
-// // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg">Personalized legal solutions</div>
-// // // // // // // //             <div className="border border-[#C9A24D]/20 p-6 rounded-lg md:col-span-2">Proven successful court cases in Bangalore</div>
-// // // // // // // //           </div>
-
-// // // // // // // //           <p className="text-gray-400 mt-10 leading-relaxed">
-// // // // // // // //             As experienced litigation lawyers in Bangalore, we focus on delivering practical solutions while protecting our clients’ rights and interests at every stage of the legal process.
-// // // // // // // //           </p>
-
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= FINAL CTA ================= */}
-// // // // // // // //       <section id="contact" className="relative bg-black text-white py-32 px-6 text-center border-t border-[#C9A24D]/20">
-
-// // // // // // // //         <div className="absolute inset-0 bg-gradient-to-t from-[#C9A24D]/10 via-transparent to-transparent"></div>
-
-// // // // // // // //         <div className="relative z-10 max-w-3xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-6">
-// // // // // // // //             Discuss Your Legal Matter With Our Experts
-// // // // // // // //           </h2>
-
-// // // // // // // //           <p className="text-gray-300 mb-6">
-// // // // // // // //             If you are seeking representation backed by proven court case results in Bangalore, S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
-// // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-gray-400 mb-10">
-// // // // // // // //             Confidential consultations. Practical guidance. Result-oriented representation.
-// // // // // // // //           </p>
-
-// // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-6">
-// // // // // // // //             <a
-// // // // // // // //               href="#"
-// // // // // // // //               className="bg-[#C9A24D] text-black px-10 py-4 rounded-md font-semibold hover:scale-105 transition duration-300"
-// // // // // // // //             >
-// // // // // // // //               Book Confidential Consultation
-// // // // // // // //             </a>
-
-// // // // // // // //             <a
-// // // // // // // //               href="tel:+91XXXXXXXXXX"
-// // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-10 py-4 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300"
-// // // // // // // //             >
-// // // // // // // //               Request Call Back
-// // // // // // // //             </a>
-// // // // // // // //           </div>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       <Footer />
-// // // // // // // //     </>
-// // // // // // // //   );
-// // // // // // // // }
-
-
-// // // // // // // // import Navbar from "../components/Navbar";
-// // // // // // // // import Footer from "../components/Footer";
-
-// // // // // // // // /* ================= SEO META ================= */
-// // // // // // // // export const metadata = {
-// // // // // // // //   title: "Successful Court Cases in Bangalore | S Jain & Attorneys",
-// // // // // // // //   description:
-// // // // // // // //     "Explore successful court case results in Bangalore by S Jain & Attorneys. Trusted lawyers delivering strategic, result-driven legal representation across practice areas.",
-// // // // // // // //   alternates: {
-// // // // // // // //     canonical: "/successful-case-results-in-bangalore",
-// // // // // // // //   },
-// // // // // // // // };
-
-// // // // // // // // export default function Page() {
-// // // // // // // //   return (
-// // // // // // // //     <>
-// // // // // // // //       <Navbar />
-
-// // // // // // // //       {/* ================= HERO ================= */}
-// // // // // // // //       <section className="relative bg-black text-white pt-24 pb-28 px-6 overflow-hidden">
-// // // // // // // //         <div className="absolute inset-0 bg-gradient-to-b from-[#C9A24D]/10 via-transparent to-transparent"></div>
-
-// // // // // // // //         <div className="max-w-6xl mx-auto text-center relative z-10">
-// // // // // // // //           <div className="w-20 h-[2px] bg-[#C9A24D] mx-auto mb-8"></div>
-
-// // // // // // // //           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-10">
-// // // // // // // //             <span className="text-[#C9A24D]">
-// // // // // // // //               Successful Court Cases in Bangalore
-// // // // // // // //             </span>
-// // // // // // // //           </h1>
-
-// // // // // // // //           <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-// // // // // // // //             At <strong>S Jain & Attorneys</strong>, our reputation is built on
-// // // // // // // //             delivering measurable and strategic legal outcomes. Our track record
-// // // // // // // //             of successful court cases in Bangalore and strong court case results
-// // // // // // // //             in Bangalore reflects our commitment to excellence, preparation,
-// // // // // // // //             and powerful courtroom advocacy.
-// // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-gray-400 max-w-4xl mx-auto mt-6 leading-relaxed">
-// // // // // // // //             Recognized among the firms led by a successful lawyer in Bangalore,
-// // // // // // // //             we handle complex legal disputes with integrity, discretion, and a
-// // // // // // // //             client-focused approach. Our consistent lawyer case results in
-// // // // // // // //             Bangalore demonstrate our ability to navigate challenging legal
-// // // // // // // //             matters effectively.
-// // // // // // // //           </p>
-
-// // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-6 mt-12">
-// // // // // // // //             <a
-// // // // // // // //               href="/legal-consultation-in-bangalore"
-// // // // // // // //               className="bg-[#C9A24D] text-black px-10 py-4 rounded-md font-semibold hover:scale-105 transition duration-300"
-// // // // // // // //             >
-// // // // // // // //               Book Confidential Consultation
-// // // // // // // //             </a>
-
-// // // // // // // //             <a
-// // // // // // // //               href="tel:+91XXXXXXXXXX"
-// // // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-10 py-4 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300"
-// // // // // // // //             >
-// // // // // // // //               Request Call Back
-// // // // // // // //             </a>
-// // // // // // // //           </div>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= STRATEGY ================= */}
-// // // // // // // //       <section className="bg-[#0B0B0B] text-white py-28 px-6 border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-5xl mx-auto text-center">
-// // // // // // // //           <h2 className="text-3xl md:text-4xl font-bold text-[#C9A24D] mb-10">
-// // // // // // // //             Proven Strategy. Strong Advocacy. Real Results.
-// // // // // // // //           </h2>
-
-// // // // // // // //           <p className="text-gray-300 leading-relaxed text-lg">
-// // // // // // // //             Our team of top lawyers in Bangalore has successfully represented
-// // // // // // // //             individuals, businesses, startups, and NRIs across diverse legal
-// // // // // // // //             matters. Each case is approached with detailed legal research,
-// // // // // // // //             strategic planning, and meticulous execution to achieve strong court
-// // // // // // // //             case results in Bangalore.
-// // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-gray-400 mt-6 leading-relaxed">
-// // // // // // // //             Below are selected law firm success stories in Bangalore,
-// // // // // // // //             presented in compliance with professional standards and without
-// // // // // // // //             disclosing confidential client information.
-// // // // // // // //           </p>
-
-// // // // // // // //           <p className="text-[#C9A24D] font-semibold mt-8 text-lg">
-// // // // // // // //             Response within 24 hours guaranteed.
-// // // // // // // //           </p>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= CASE STUDIES ================= */}
-// // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-6xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-16 text-center">
-// // // // // // // //             Selected Case Studies
-// // // // // // // //           </h2>
-
-// // // // // // // //           <div className="grid md:grid-cols-2 gap-10">
-
-// // // // // // // //             {/* Corporate */}
-// // // // // // // //             <div className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20">
-// // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
-// // // // // // // //                 Corporate & Commercial Dispute
-// // // // // // // //               </h3>
-// // // // // // // //               <p><strong>Background:</strong> Representation of a mid-sized business in a high-value contractual and financial dispute.</p>
-// // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.</p>
-// // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.</p>
+// // // // // // // //               <motion.div
+// // // // // // // //                 initial={false}
+// // // // // // // //                 animate={{
+// // // // // // // //                   height: openIndex === index ? "auto" : 0,
+// // // // // // // //                   opacity: openIndex === index ? 1 : 0,
+// // // // // // // //                 }}
+// // // // // // // //                 transition={{ duration: 0.4 }}
+// // // // // // // //                 className="overflow-hidden px-6"
+// // // // // // // //               >
+// // // // // // // //                 <p className="py-4 text-gray-300">{faq.answer}</p>
+// // // // // // // //               </motion.div>
 // // // // // // // //             </div>
-
-// // // // // // // //             {/* Criminal */}
-// // // // // // // //             <div className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20">
-// // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
-// // // // // // // //                 Criminal Defense Matter
-// // // // // // // //               </h3>
-// // // // // // // //               <p><strong>Background:</strong> Defense in a serious criminal allegation requiring urgent court intervention.</p>
-// // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Detailed evidence analysis, procedural safeguards, and strong courtroom representation by a successful criminal lawyer Bangalore clients rely on.</p>
-// // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Relief granted by the court, safeguarding the client’s legal rights and professional reputation.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             {/* Property */}
-// // // // // // // //             <div className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20">
-// // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
-// // // // // // // //                 Property & Real Estate Dispute
-// // // // // // // //               </h3>
-// // // // // // // //               <p><strong>Background:</strong> Complex ownership conflict involving title discrepancies and competing claims.</p>
-// // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Extensive documentation review, title verification, and structured civil litigation proceedings.</p>
-// // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             {/* Family */}
-// // // // // // // //             <div className="bg-[#0F0F0F] p-10 rounded-xl border border-[#C9A24D]/20">
-// // // // // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-6">
-// // // // // // // //                 Family & Matrimonial Case
-// // // // // // // //               </h3>
-// // // // // // // //               <p><strong>Background:</strong> Contested divorce involving custody and financial settlement issues.</p>
-// // // // // // // //               <p className="mt-4"><strong>Legal Strategy:</strong> Balanced negotiation approach combined with litigation preparedness to ensure fair resolution led by a successful divorce lawyer Bangalore families trust.</p>
-// // // // // // // //               <p className="mt-4"><strong>Outcome:</strong> Structured settlement ensuring financial security and equitable custody arrangement.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //           </div>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= WHY TRUST ================= */}
-// // // // // // // //       <section className="bg-[#0B0B0B] text-white py-28 px-6 border-t border-[#C9A24D]/20 text-center">
-// // // // // // // //         <div className="max-w-4xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-12">
-// // // // // // // //             Why Clients Trust Our Legal Expertise
-// // // // // // // //           </h2>
-
-// // // // // // // //           <ul className="grid md:grid-cols-2 gap-6 text-lg">
-// // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20">Strategic and research-driven legal approach</li>
-// // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20">Strong courtroom advocacy</li>
-// // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20">Ethical and confidential representation</li>
-// // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20">Personalized legal solutions</li>
-// // // // // // // //             <li className="border p-6 rounded-lg border-[#C9A24D]/20 md:col-span-2">Proven successful court cases in Bangalore</li>
-// // // // // // // //           </ul>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= FAQ ================= */}
-// // // // // // // //       <section className="bg-black text-white py-28 px-6 border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-4xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-12 text-center">
-// // // // // // // //             Frequently Asked Questions (FAQs)
-// // // // // // // //           </h2>
-
-// // // // // // // //           <div className="space-y-8 text-gray-300">
-// // // // // // // //             <div>
-// // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">1. What types of successful court cases in Bangalore has your firm handled?</h3>
-// // // // // // // //               <p className="mt-2">S Jain & Attorneys has handled corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases with a strategic and client-focused approach.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             <div>
-// // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">2. How does your law firm achieve strong court case results in Bangalore?</h3>
-// // // // // // // //               <p className="mt-2">Through detailed case analysis, legal research, structured planning, negotiation, and decisive courtroom representation.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             <div>
-// // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">3. Are your lawyer case results compliant with confidentiality standards?</h3>
-// // // // // // // //               <p className="mt-2">Yes. All success stories are shared without disclosing confidential client information and in compliance with ethical standards.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             <div>
-// // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">4. Do successful court cases guarantee similar outcomes in my case?</h3>
-// // // // // // // //               <p className="mt-2">No outcome can be guaranteed. Each matter depends on its specific facts and legal complexities.</p>
-// // // // // // // //             </div>
-
-// // // // // // // //             <div>
-// // // // // // // //               <h3 className="font-semibold text-[#C9A24D]">5. How can I consult a successful lawyer in Bangalore?</h3>
-// // // // // // // //               <p className="mt-2">You can schedule a confidential consultation with our team to discuss your legal concerns.</p>
-// // // // // // // //             </div>
-// // // // // // // //           </div>
-// // // // // // // //         </div>
-// // // // // // // //       </section>
-
-// // // // // // // //       {/* ================= FINAL CTA ================= */}
-// // // // // // // //       <section id="contact" className="bg-[#0B0B0B] text-white py-28 px-6 text-center border-t border-[#C9A24D]/20">
-// // // // // // // //         <div className="max-w-3xl mx-auto">
-// // // // // // // //           <h2 className="text-3xl font-bold text-[#C9A24D] mb-6">
-// // // // // // // //             Discuss Your Legal Matter With Our Experts
-// // // // // // // //           </h2>
-
-// // // // // // // //           <p className="text-gray-300 mb-8">
-// // // // // // // //             If you are seeking representation backed by proven court case results in Bangalore, S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
-// // // // // // // //           </p>
-
-// // // // // // // //           <div className="flex flex-col sm:flex-row justify-center gap-6">
-// // // // // // // //             <a href="/legal-consultation-in-bangalore" className="bg-[#C9A24D] text-black px-10 py-4 rounded-md font-semibold">
-// // // // // // // //               Book Confidential Consultation
-// // // // // // // //             </a>
-
-// // // // // // // //             <a href="tel:+91XXXXXXXXXX" className="border border-[#C9A24D] text-[#C9A24D] px-10 py-4 rounded-md font-semibold">
-// // // // // // // //               Request Call Back
-// // // // // // // //             </a>
-// // // // // // // //           </div>
+// // // // // // // //           ))}
 // // // // // // // //         </div>
 // // // // // // // //       </section>
 
@@ -675,21 +866,25 @@
 
 // // // // // // // "use client";
 
-// // // // // // // import { useState } from "react";
 // // // // // // // import { motion } from "framer-motion";
+// // // // // // // import { PhoneCall } from "lucide-react";
 // // // // // // // import Navbar from "../components/Navbar";
 // // // // // // // import Footer from "../components/Footer";
-// // // // // // // import Link from "next/link";
 
-// // // // // // // export default function SuccessfulCases() {
-// // // // // // //   const [openIndex, setOpenIndex] = useState(null);
+// // // // // // // export default function Page() {
+// // // // // // //   /* ================= ANIMATION VARIANTS ================= */
 
-// // // // // // //   const toggleFAQ = (index) => {
-// // // // // // //     setOpenIndex(openIndex === index ? null : index);
+// // // // // // //   const containerVariant = {
+// // // // // // //     hidden: {},
+// // // // // // //     visible: {
+// // // // // // //       transition: {
+// // // // // // //         staggerChildren: 0.2,
+// // // // // // //       },
+// // // // // // //     },
 // // // // // // //   };
 
 // // // // // // //   const fadeUp = {
-// // // // // // //     hidden: { opacity: 0, y: 60 },
+// // // // // // //     hidden: { opacity: 0, y: 50 },
 // // // // // // //     visible: {
 // // // // // // //       opacity: 1,
 // // // // // // //       y: 0,
@@ -697,30 +892,48 @@
 // // // // // // //     },
 // // // // // // //   };
 
-// // // // // // //   const faqs = [
+// // // // // // //   const fadeLeft = {
+// // // // // // //     hidden: { opacity: 0, x: -60 },
+// // // // // // //     visible: {
+// // // // // // //       opacity: 1,
+// // // // // // //       x: 0,
+// // // // // // //       transition: { duration: 0.8, ease: "easeOut" },
+// // // // // // //     },
+// // // // // // //   };
+
+// // // // // // //   const fadeRight = {
+// // // // // // //     hidden: { opacity: 0, x: 60 },
+// // // // // // //     visible: {
+// // // // // // //       opacity: 1,
+// // // // // // //       x: 0,
+// // // // // // //       transition: { duration: 0.8, ease: "easeOut" },
+// // // // // // //     },
+// // // // // // //   };
+
+// // // // // // //   const cases = [
 // // // // // // //     {
-// // // // // // //       question:
-// // // // // // //         "What types of successful court cases in Bangalore has your firm handled?",
-// // // // // // //       answer:
-// // // // // // //         "We handle corporate disputes, civil litigation, criminal defense, property conflicts, and family law matters with a strategic and client-focused legal approach.",
+// // // // // // //       title: "Corporate Dispute Resolution",
+// // // // // // //       result: "₹12 Crore Settlement Secured",
+// // // // // // //       description:
+// // // // // // //         "Successfully represented a Bangalore-based corporate client in a high-value commercial dispute, achieving strategic settlement without prolonged litigation.",
 // // // // // // //     },
 // // // // // // //     {
-// // // // // // //       question:
-// // // // // // //         "How does your law firm achieve strong court case results in Bangalore?",
-// // // // // // //       answer:
-// // // // // // //         "Through deep legal research, strategic planning, structured litigation, and strong courtroom advocacy.",
+// // // // // // //       title: "Criminal Defense Victory",
+// // // // // // //       result: "Full Acquittal",
+// // // // // // //       description:
+// // // // // // //         "Defended client in serious criminal proceedings before Sessions Court, securing full acquittal after detailed cross-examination and evidence analysis.",
 // // // // // // //     },
 // // // // // // //     {
-// // // // // // //       question:
-// // // // // // //         "Are your lawyer case results compliant with confidentiality standards?",
-// // // // // // //       answer:
-// // // // // // //         "Yes. All case studies are shared without disclosing confidential client information.",
+// // // // // // //       title: "Property Litigation",
+// // // // // // //       result: "Favorable High Court Order",
+// // // // // // //       description:
+// // // // // // //         "Obtained injunction and final relief protecting client's property rights in a contested civil matter.",
 // // // // // // //     },
 // // // // // // //     {
-// // // // // // //       question:
-// // // // // // //         "Do successful court cases guarantee similar outcomes?",
-// // // // // // //       answer:
-// // // // // // //         "No legal result can be guaranteed. Each case depends on its specific facts and legal considerations.",
+// // // // // // //       title: "Family Law Settlement",
+// // // // // // //       result: "Mutually Structured Divorce Decree",
+// // // // // // //       description:
+// // // // // // //         "Resolved complex matrimonial dispute through strategic negotiation, ensuring client’s financial and custodial interests were protected.",
 // // // // // // //     },
 // // // // // // //   ];
 
@@ -728,134 +941,125 @@
 // // // // // // //     <>
 // // // // // // //       <Navbar />
 
-// // // // // // //       {/* ================= HERO ================= */}
-// // // // // // //       <section className="relative bg-black text-white py-32 px-6 overflow-hidden">
-// // // // // // //         <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-[#C9A24D]/10 opacity-40" />
+// // // // // // //       {/* ================= HERO SECTION ================= */}
+// // // // // // //       <section className="bg-black text-white relative overflow-hidden pt-32 md:pt-24 pb-24 px-6">
+
+// // // // // // //         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,#C9A24D,transparent_70%)]"></div>
 
 // // // // // // //         <motion.div
+// // // // // // //           variants={containerVariant}
 // // // // // // //           initial="hidden"
 // // // // // // //           animate="visible"
-// // // // // // //           variants={fadeUp}
-// // // // // // //           className="relative max-w-6xl mx-auto text-center"
+// // // // // // //           className="max-w-6xl mx-auto relative z-10 text-center"
 // // // // // // //         >
-// // // // // // //           <h1 className="text-5xl md:text-6xl font-semibold mb-6 leading-tight bg-gradient-to-r from-[#C9A24D] to-yellow-300 bg-clip-text text-transparent">
-// // // // // // //             Successful Court Cases in Bangalore
-// // // // // // //           </h1>
+// // // // // // //           <motion.h1
+// // // // // // //             variants={fadeUp}
+// // // // // // //             className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#C9A24D] leading-tight mb-6"
+// // // // // // //           >
+// // // // // // //             Successful Case Results in Bangalore
+// // // // // // //           </motion.h1>
 
-// // // // // // //           <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
-// // // // // // //             Delivering measurable legal outcomes through strategic advocacy,
-// // // // // // //             preparation, and powerful courtroom representation.
-// // // // // // //           </p>
+// // // // // // //           <motion.p
+// // // // // // //             variants={fadeUp}
+// // // // // // //             className="text-gray-300 max-w-3xl mx-auto leading-relaxed text-lg mb-8"
+// // // // // // //           >
+// // // // // // //             At <strong>S Jain & Attorneys</strong>, our legal strategies are
+// // // // // // //             driven by precision, preparation, and performance. Below are
+// // // // // // //             selected successful outcomes reflecting our commitment to
+// // // // // // //             excellence in litigation and advisory matters.
+// // // // // // //           </motion.p>
 
-// // // // // // //           <div className="flex justify-center gap-6 mt-10">
-// // // // // // //             <Link
-// // // // // // //               href="/contact"
-// // // // // // //               className="px-8 py-4 bg-[#C9A24D] text-black font-semibold rounded-lg shadow-lg hover:scale-105 transition duration-300"
+// // // // // // //            <motion.div
+// // // // // // //             variants={fadeUp}
+// // // // // // //             className="flex flex-col sm:flex-row justify-center gap-4"
+// // // // // // //           >
+// // // // // // //              <a
+// // // // // // //               href="#consultation-form"
+// // // // // // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
 // // // // // // //             >
 // // // // // // //               Book Confidential Consultation
-// // // // // // //             </Link>
+// // // // // // //             </a>
 
-// // // // // // //             <Link
-// // // // // // //               href="/contact"
-// // // // // // //               className="px-8 py-4 border border-[#C9A24D] text-[#C9A24D] rounded-lg hover:bg-[#C9A24D] hover:text-black transition duration-300"
+// // // // // // //             <a
+// // // // // // //               href="tel:+91XXXXXXXXXX"
+// // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
 // // // // // // //             >
-// // // // // // //               Request Call Back
-// // // // // // //             </Link>
-// // // // // // //           </div>
+// // // // // // //               📞 Call Now
+// // // // // // //             </a>
+// // // // // // //           </motion.div>
 // // // // // // //         </motion.div>
 // // // // // // //       </section>
 
-// // // // // // //       {/* ================= STRATEGY ================= */}
-// // // // // // //       <section className="bg-[#0f0f0f] text-gray-300 py-28 px-6">
-// // // // // // //         <motion.div
-// // // // // // //           initial="hidden"
-// // // // // // //           whileInView="visible"
-// // // // // // //           viewport={{ once: true }}
-// // // // // // //           variants={fadeUp}
-// // // // // // //           className="max-w-5xl mx-auto"
-// // // // // // //         >
-// // // // // // //           <h2 className="text-4xl font-semibold text-[#C9A24D] mb-8 relative inline-block">
-// // // // // // //             Proven Strategy. Strong Advocacy. Real Results.
-// // // // // // //             <span className="block h-1 w-full bg-[#C9A24D] mt-3 rounded-full animate-pulse" />
-// // // // // // //           </h2>
+// // // // // // //       {/* ================= CASE RESULTS SECTION ================= */}
+// // // // // // //       <section className="bg-[#0A0A0A] text-white py-24 px-6">
+// // // // // // //         <div className="max-w-6xl mx-auto">
 
-// // // // // // //           <p className="text-lg leading-relaxed">
-// // // // // // //             Our team represents individuals, businesses, startups, and NRIs
-// // // // // // //             across complex legal disputes in Bangalore. Every case is handled
-// // // // // // //             with detailed legal research, strategic preparation, and courtroom
-// // // // // // //             precision.
-// // // // // // //           </p>
-// // // // // // //         </motion.div>
-// // // // // // //       </section>
-
-// // // // // // //       {/* ================= CASE STUDIES ================= */}
-// // // // // // //       <section className="bg-black text-gray-300 py-28 px-6 border-t border-[#C9A24D]/20">
-// // // // // // //         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-
-// // // // // // //           {[
-// // // // // // //             "Corporate & Commercial Dispute",
-// // // // // // //             "Criminal Defense Matter",
-// // // // // // //             "Property & Real Estate Dispute",
-// // // // // // //             "Family & Matrimonial Case",
-// // // // // // //           ].map((title, i) => (
-// // // // // // //             <motion.div
-// // // // // // //               key={i}
-// // // // // // //               initial={{ opacity: 0, y: 40 }}
-// // // // // // //               whileInView={{ opacity: 1, y: 0 }}
-// // // // // // //               transition={{ duration: 0.6, delay: i * 0.2 }}
-// // // // // // //               viewport={{ once: true }}
-// // // // // // //               className="p-8 border border-[#C9A24D]/20 rounded-xl hover:border-[#C9A24D] transition duration-300 bg-gradient-to-br from-[#111] to-black"
-// // // // // // //             >
-// // // // // // //               <h3 className="text-xl font-semibold text-white mb-4">
-// // // // // // //                 {title}
-// // // // // // //               </h3>
-// // // // // // //               <p>
-// // // // // // //                 Structured legal strategy and decisive representation leading
-// // // // // // //                 to favorable legal outcomes.
-// // // // // // //               </p>
-// // // // // // //             </motion.div>
-// // // // // // //           ))}
-
-// // // // // // //         </div>
-// // // // // // //       </section>
-
-// // // // // // //       {/* ================= FAQ ================= */}
-// // // // // // //       <section className="bg-[#0f0f0f] text-white py-28 px-6">
-// // // // // // //         <div className="max-w-4xl mx-auto">
-// // // // // // //           <h2 className="text-4xl font-bold text-[#C9A24D] mb-12 text-center">
-// // // // // // //             Frequently Asked Questions
-// // // // // // //           </h2>
-
-// // // // // // //           {faqs.map((faq, index) => (
-// // // // // // //             <div
-// // // // // // //               key={index}
-// // // // // // //               className="mb-6 border border-[#C9A24D]/20 rounded-lg overflow-hidden"
-// // // // // // //             >
-// // // // // // //               <button
-// // // // // // //                 onClick={() => toggleFAQ(index)}
-// // // // // // //                 className="w-full px-6 py-5 flex justify-between items-center bg-[#111] hover:bg-[#1a1a1a] transition"
-// // // // // // //               >
-// // // // // // //                 <span className="text-left font-semibold text-[#C9A24D]">
-// // // // // // //                   {faq.question}
-// // // // // // //                 </span>
-// // // // // // //                 <span className="text-2xl">
-// // // // // // //                   {openIndex === index ? "−" : "+"}
-// // // // // // //                 </span>
-// // // // // // //               </button>
-
+// // // // // // //           <motion.div
+// // // // // // //             variants={containerVariant}
+// // // // // // //             initial="hidden"
+// // // // // // //             whileInView="visible"
+// // // // // // //             viewport={{ once: true }}
+// // // // // // //             className="grid md:grid-cols-2 gap-10"
+// // // // // // //           >
+// // // // // // //             {cases.map((item, index) => (
 // // // // // // //               <motion.div
-// // // // // // //                 initial={false}
-// // // // // // //                 animate={{
-// // // // // // //                   height: openIndex === index ? "auto" : 0,
-// // // // // // //                   opacity: openIndex === index ? 1 : 0,
-// // // // // // //                 }}
-// // // // // // //                 transition={{ duration: 0.4 }}
-// // // // // // //                 className="overflow-hidden px-6"
+// // // // // // //                 key={index}
+// // // // // // //                 variants={fadeUp}
+// // // // // // //                 className="bg-black border border-[#C9A24D]/30 rounded-xl p-8 shadow-[0_0_40px_rgba(201,162,77,0.15)] hover:shadow-[0_0_50px_rgba(201,162,77,0.25)] transition duration-500"
 // // // // // // //               >
-// // // // // // //                 <p className="py-4 text-gray-300">{faq.answer}</p>
+// // // // // // //                 <h3 className="text-xl font-semibold text-[#C9A24D] mb-3">
+// // // // // // //                   {item.title}
+// // // // // // //                 </h3>
+
+// // // // // // //                 <p className="text-white font-semibold mb-3">
+// // // // // // //                   {item.result}
+// // // // // // //                 </p>
+
+// // // // // // //                 <p className="text-gray-400 leading-relaxed">
+// // // // // // //                   {item.description}
+// // // // // // //                 </p>
 // // // // // // //               </motion.div>
+// // // // // // //             ))}
+// // // // // // //           </motion.div>
+
+// // // // // // //           {/* CTA Section */}
+// // // // // // //           <motion.div
+// // // // // // //             variants={fadeUp}
+// // // // // // //             initial="hidden"
+// // // // // // //             whileInView="visible"
+// // // // // // //             viewport={{ once: true }}
+// // // // // // //             className="text-center mt-20"
+// // // // // // //           >
+// // // // // // //             <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
+// // // // // // //               Need Strong Legal Representation?
+// // // // // // //             </h2>
+
+// // // // // // //             <div className="flex flex-col sm:flex-row justify-center gap-6">
+
+// // // // // // //               <a
+// // // // // // //                 href="/legal-consultation-in-bangalore"
+// // // // // // //                 className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
+// // // // // // //               >
+// // // // // // //                 Book Confidential Consultation
+// // // // // // //               </a>
+
+// // // // // // //               {/* <a
+// // // // // // //                 href="tel:+91XXXXXXXXXX"
+// // // // // // //                 className="flex items-center justify-center gap-3 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
+// // // // // // //               >
+// // // // // // //                 <PhoneCall size={20} weight="fill" />
+// // // // // // //                 Call Now
+// // // // // // //               </a> */}
+// // // // // // //                <a
+// // // // // // //               href="tel:+91XXXXXXXXXX"
+// // // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
+// // // // // // //             >
+// // // // // // //               📞 Call Now
+// // // // // // //             </a>
+
 // // // // // // //             </div>
-// // // // // // //           ))}
+// // // // // // //           </motion.div>
+
 // // // // // // //         </div>
 // // // // // // //       </section>
 
@@ -864,6 +1068,7 @@
 // // // // // // //   );
 // // // // // // // }
 
+
 // // // // // // "use client";
 
 // // // // // // import { motion } from "framer-motion";
@@ -871,45 +1076,27 @@
 // // // // // // import Navbar from "../components/Navbar";
 // // // // // // import Footer from "../components/Footer";
 
+// // // // // // /* ================= ANIMATION VARIANTS ================= */
+
+// // // // // // const containerVariant = {
+// // // // // //   hidden: {},
+// // // // // //   visible: {
+// // // // // //     transition: {
+// // // // // //       staggerChildren: 0.2,
+// // // // // //     },
+// // // // // //   },
+// // // // // // };
+
+// // // // // // const fadeUp = {
+// // // // // //   hidden: { opacity: 0, y: 50 },
+// // // // // //   visible: {
+// // // // // //     opacity: 1,
+// // // // // //     y: 0,
+// // // // // //     transition: { duration: 0.8, ease: "easeOut" },
+// // // // // //   },
+// // // // // // };
+
 // // // // // // export default function Page() {
-// // // // // //   /* ================= ANIMATION VARIANTS ================= */
-
-// // // // // //   const containerVariant = {
-// // // // // //     hidden: {},
-// // // // // //     visible: {
-// // // // // //       transition: {
-// // // // // //         staggerChildren: 0.2,
-// // // // // //       },
-// // // // // //     },
-// // // // // //   };
-
-// // // // // //   const fadeUp = {
-// // // // // //     hidden: { opacity: 0, y: 50 },
-// // // // // //     visible: {
-// // // // // //       opacity: 1,
-// // // // // //       y: 0,
-// // // // // //       transition: { duration: 0.8, ease: "easeOut" },
-// // // // // //     },
-// // // // // //   };
-
-// // // // // //   const fadeLeft = {
-// // // // // //     hidden: { opacity: 0, x: -60 },
-// // // // // //     visible: {
-// // // // // //       opacity: 1,
-// // // // // //       x: 0,
-// // // // // //       transition: { duration: 0.8, ease: "easeOut" },
-// // // // // //     },
-// // // // // //   };
-
-// // // // // //   const fadeRight = {
-// // // // // //     hidden: { opacity: 0, x: 60 },
-// // // // // //     visible: {
-// // // // // //       opacity: 1,
-// // // // // //       x: 0,
-// // // // // //       transition: { duration: 0.8, ease: "easeOut" },
-// // // // // //     },
-// // // // // //   };
-
 // // // // // //   const cases = [
 // // // // // //     {
 // // // // // //       title: "Corporate Dispute Resolution",
@@ -942,15 +1129,16 @@
 // // // // // //       <Navbar />
 
 // // // // // //       {/* ================= HERO SECTION ================= */}
-// // // // // //       <section className="bg-black text-white relative overflow-hidden pt-32 md:pt-24 pb-24 px-6">
+// // // // // //       <section className="relative bg-black text-white pt-32 md:pt-28 pb-24 px-6 overflow-hidden">
 
-// // // // // //         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,#C9A24D,transparent_70%)]"></div>
+// // // // // //         {/* Gold Glow Background */}
+// // // // // //         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.15),transparent_70%)]"></div>
 
 // // // // // //         <motion.div
 // // // // // //           variants={containerVariant}
 // // // // // //           initial="hidden"
 // // // // // //           animate="visible"
-// // // // // //           className="max-w-6xl mx-auto relative z-10 text-center"
+// // // // // //           className="max-w-6xl mx-auto text-center relative z-10"
 // // // // // //         >
 // // // // // //           <motion.h1
 // // // // // //             variants={fadeUp}
@@ -961,7 +1149,7 @@
 
 // // // // // //           <motion.p
 // // // // // //             variants={fadeUp}
-// // // // // //             className="text-gray-300 max-w-3xl mx-auto leading-relaxed text-lg mb-8"
+// // // // // //             className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed mb-10"
 // // // // // //           >
 // // // // // //             At <strong>S Jain & Attorneys</strong>, our legal strategies are
 // // // // // //             driven by precision, preparation, and performance. Below are
@@ -969,12 +1157,12 @@
 // // // // // //             excellence in litigation and advisory matters.
 // // // // // //           </motion.p>
 
-// // // // // //            <motion.div
+// // // // // //           <motion.div
 // // // // // //             variants={fadeUp}
-// // // // // //             className="flex flex-col sm:flex-row justify-center gap-4"
+// // // // // //             className="flex flex-col sm:flex-row justify-center gap-6"
 // // // // // //           >
-// // // // // //              <a
-// // // // // //               href="#consultation-form"
+// // // // // //             <a
+// // // // // //               href="/legal-consultation-in-bangalore"
 // // // // // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
 // // // // // //             >
 // // // // // //               Book Confidential Consultation
@@ -982,15 +1170,16 @@
 
 // // // // // //             <a
 // // // // // //               href="tel:+91XXXXXXXXXX"
-// // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
+// // // // // //               className="flex items-center justify-center gap-3 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.2)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
 // // // // // //             >
-// // // // // //               📞 Call Now
+// // // // // //               <PhoneCall size={18} />
+// // // // // //               Call Now
 // // // // // //             </a>
 // // // // // //           </motion.div>
 // // // // // //         </motion.div>
 // // // // // //       </section>
 
-// // // // // //       {/* ================= CASE RESULTS SECTION ================= */}
+// // // // // //       {/* ================= CASE RESULTS ================= */}
 // // // // // //       <section className="bg-[#0A0A0A] text-white py-24 px-6">
 // // // // // //         <div className="max-w-6xl mx-auto">
 
@@ -1005,7 +1194,7 @@
 // // // // // //               <motion.div
 // // // // // //                 key={index}
 // // // // // //                 variants={fadeUp}
-// // // // // //                 className="bg-black border border-[#C9A24D]/30 rounded-xl p-8 shadow-[0_0_40px_rgba(201,162,77,0.15)] hover:shadow-[0_0_50px_rgba(201,162,77,0.25)] transition duration-500"
+// // // // // //                 className="bg-black border border-[#C9A24D]/30 rounded-xl p-8 shadow-[0_0_40px_rgba(201,162,77,0.15)] hover:shadow-[0_0_50px_rgba(201,162,77,0.3)] transition duration-500"
 // // // // // //               >
 // // // // // //                 <h3 className="text-xl font-semibold text-[#C9A24D] mb-3">
 // // // // // //                   {item.title}
@@ -1022,7 +1211,7 @@
 // // // // // //             ))}
 // // // // // //           </motion.div>
 
-// // // // // //           {/* CTA Section */}
+// // // // // //           {/* ================= FINAL CTA ================= */}
 // // // // // //           <motion.div
 // // // // // //             variants={fadeUp}
 // // // // // //             initial="hidden"
@@ -1030,12 +1219,11 @@
 // // // // // //             viewport={{ once: true }}
 // // // // // //             className="text-center mt-20"
 // // // // // //           >
-// // // // // //             <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
+// // // // // //             <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-8">
 // // // // // //               Need Strong Legal Representation?
 // // // // // //             </h2>
 
 // // // // // //             <div className="flex flex-col sm:flex-row justify-center gap-6">
-
 // // // // // //               <a
 // // // // // //                 href="/legal-consultation-in-bangalore"
 // // // // // //                 className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
@@ -1043,20 +1231,13 @@
 // // // // // //                 Book Confidential Consultation
 // // // // // //               </a>
 
-// // // // // //               {/* <a
+// // // // // //               <a
 // // // // // //                 href="tel:+91XXXXXXXXXX"
-// // // // // //                 className="flex items-center justify-center gap-3 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
+// // // // // //                 className="flex items-center justify-center gap-3 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.2)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
 // // // // // //               >
-// // // // // //                 <PhoneCall size={20} weight="fill" />
+// // // // // //                 <PhoneCall size={18} />
 // // // // // //                 Call Now
-// // // // // //               </a> */}
-// // // // // //                <a
-// // // // // //               href="tel:+91XXXXXXXXXX"
-// // // // // //               className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
-// // // // // //             >
-// // // // // //               📞 Call Now
-// // // // // //             </a>
-
+// // // // // //               </a>
 // // // // // //             </div>
 // // // // // //           </motion.div>
 
@@ -1068,7 +1249,6 @@
 // // // // // //   );
 // // // // // // }
 
-
 // // // // // "use client";
 
 // // // // // import { motion } from "framer-motion";
@@ -1076,85 +1256,62 @@
 // // // // // import Navbar from "../components/Navbar";
 // // // // // import Footer from "../components/Footer";
 
-// // // // // /* ================= ANIMATION VARIANTS ================= */
+// // // // // /* ================= ANIMATION ================= */
 
-// // // // // const containerVariant = {
+// // // // // const container = {
 // // // // //   hidden: {},
-// // // // //   visible: {
-// // // // //     transition: {
-// // // // //       staggerChildren: 0.2,
-// // // // //     },
-// // // // //   },
+// // // // //   visible: { transition: { staggerChildren: 0.15 } },
 // // // // // };
 
 // // // // // const fadeUp = {
-// // // // //   hidden: { opacity: 0, y: 50 },
+// // // // //   hidden: { opacity: 0, y: 40 },
 // // // // //   visible: {
 // // // // //     opacity: 1,
 // // // // //     y: 0,
-// // // // //     transition: { duration: 0.8, ease: "easeOut" },
+// // // // //     transition: { duration: 0.7, ease: "easeOut" },
 // // // // //   },
 // // // // // };
 
 // // // // // export default function Page() {
-// // // // //   const cases = [
-// // // // //     {
-// // // // //       title: "Corporate Dispute Resolution",
-// // // // //       result: "₹12 Crore Settlement Secured",
-// // // // //       description:
-// // // // //         "Successfully represented a Bangalore-based corporate client in a high-value commercial dispute, achieving strategic settlement without prolonged litigation.",
-// // // // //     },
-// // // // //     {
-// // // // //       title: "Criminal Defense Victory",
-// // // // //       result: "Full Acquittal",
-// // // // //       description:
-// // // // //         "Defended client in serious criminal proceedings before Sessions Court, securing full acquittal after detailed cross-examination and evidence analysis.",
-// // // // //     },
-// // // // //     {
-// // // // //       title: "Property Litigation",
-// // // // //       result: "Favorable High Court Order",
-// // // // //       description:
-// // // // //         "Obtained injunction and final relief protecting client's property rights in a contested civil matter.",
-// // // // //     },
-// // // // //     {
-// // // // //       title: "Family Law Settlement",
-// // // // //       result: "Mutually Structured Divorce Decree",
-// // // // //       description:
-// // // // //         "Resolved complex matrimonial dispute through strategic negotiation, ensuring client’s financial and custodial interests were protected.",
-// // // // //     },
-// // // // //   ];
-
 // // // // //   return (
 // // // // //     <>
 // // // // //       <Navbar />
 
-// // // // //       {/* ================= HERO SECTION ================= */}
-// // // // //       <section className="relative bg-black text-white pt-32 md:pt-28 pb-24 px-6 overflow-hidden">
-
-// // // // //         {/* Gold Glow Background */}
+// // // // //       {/* ================= HERO ================= */}
+// // // // //       <section className="bg-black text-white pt-32 pb-20 px-6 relative overflow-hidden">
 // // // // //         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.15),transparent_70%)]"></div>
 
 // // // // //         <motion.div
-// // // // //           variants={containerVariant}
+// // // // //           variants={container}
 // // // // //           initial="hidden"
 // // // // //           animate="visible"
-// // // // //           className="max-w-6xl mx-auto text-center relative z-10"
+// // // // //           className="max-w-5xl mx-auto text-center relative z-10"
 // // // // //         >
 // // // // //           <motion.h1
 // // // // //             variants={fadeUp}
-// // // // //             className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#C9A24D] leading-tight mb-6"
+// // // // //             className="text-3xl md:text-5xl font-semibold text-[#C9A24D] mb-6"
 // // // // //           >
-// // // // //             Successful Case Results in Bangalore
+// // // // //             Successful Court Cases in Bangalore
 // // // // //           </motion.h1>
 
 // // // // //           <motion.p
 // // // // //             variants={fadeUp}
-// // // // //             className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed mb-10"
+// // // // //             className="text-gray-300 text-lg leading-relaxed mb-6"
 // // // // //           >
-// // // // //             At <strong>S Jain & Attorneys</strong>, our legal strategies are
-// // // // //             driven by precision, preparation, and performance. Below are
-// // // // //             selected successful outcomes reflecting our commitment to
-// // // // //             excellence in litigation and advisory matters.
+// // // // //             At <strong>S Jain & Attorneys</strong>, our reputation is built on
+// // // // //             delivering measurable and strategic legal outcomes. Our track record
+// // // // //             of <strong>successful court cases in Bangalore</strong> and strong
+// // // // //             court case results in Bangalore reflects our commitment to
+// // // // //             excellence, preparation, and powerful courtroom advocacy.
+// // // // //           </motion.p>
+
+// // // // //           <motion.p
+// // // // //             variants={fadeUp}
+// // // // //             className="text-gray-400 leading-relaxed mb-8"
+// // // // //           >
+// // // // //             Recognized among the firms led by a successful lawyer in Bangalore,
+// // // // //             we handle complex legal disputes with integrity, discretion, and a
+// // // // //             client-focused approach.
 // // // // //           </motion.p>
 
 // // // // //           <motion.div
@@ -1163,84 +1320,168 @@
 // // // // //           >
 // // // // //             <a
 // // // // //               href="/legal-consultation-in-bangalore"
-// // // // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
+// // // // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition"
 // // // // //             >
 // // // // //               Book Confidential Consultation
 // // // // //             </a>
 
 // // // // //             <a
 // // // // //               href="tel:+91XXXXXXXXXX"
-// // // // //               className="flex items-center justify-center gap-3 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.2)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
+// // // // //               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
 // // // // //             >
 // // // // //               <PhoneCall size={18} />
-// // // // //               Call Now
+// // // // //               Request Call Back
 // // // // //             </a>
 // // // // //           </motion.div>
+
+// // // // //           <motion.p
+// // // // //             variants={fadeUp}
+// // // // //             className="mt-6 text-sm text-[#C9A24D]"
+// // // // //           >
+// // // // //             Response within 24 hours guaranteed.
+// // // // //           </motion.p>
 // // // // //         </motion.div>
 // // // // //       </section>
 
-// // // // //       {/* ================= CASE RESULTS ================= */}
-// // // // //       <section className="bg-[#0A0A0A] text-white py-24 px-6">
-// // // // //         <div className="max-w-6xl mx-auto">
-
-// // // // //           <motion.div
-// // // // //             variants={containerVariant}
-// // // // //             initial="hidden"
-// // // // //             whileInView="visible"
-// // // // //             viewport={{ once: true }}
-// // // // //             className="grid md:grid-cols-2 gap-10"
-// // // // //           >
-// // // // //             {cases.map((item, index) => (
-// // // // //               <motion.div
-// // // // //                 key={index}
-// // // // //                 variants={fadeUp}
-// // // // //                 className="bg-black border border-[#C9A24D]/30 rounded-xl p-8 shadow-[0_0_40px_rgba(201,162,77,0.15)] hover:shadow-[0_0_50px_rgba(201,162,77,0.3)] transition duration-500"
-// // // // //               >
-// // // // //                 <h3 className="text-xl font-semibold text-[#C9A24D] mb-3">
-// // // // //                   {item.title}
-// // // // //                 </h3>
-
-// // // // //                 <p className="text-white font-semibold mb-3">
-// // // // //                   {item.result}
-// // // // //                 </p>
-
-// // // // //                 <p className="text-gray-400 leading-relaxed">
-// // // // //                   {item.description}
-// // // // //                 </p>
-// // // // //               </motion.div>
-// // // // //             ))}
-// // // // //           </motion.div>
-
-// // // // //           {/* ================= FINAL CTA ================= */}
-// // // // //           <motion.div
+// // // // //       {/* ================= STRATEGY SECTION ================= */}
+// // // // //       <section className="bg-[#0A0A0A] text-white py-20 px-6">
+// // // // //         <motion.div
+// // // // //           variants={container}
+// // // // //           initial="hidden"
+// // // // //           whileInView="visible"
+// // // // //           viewport={{ once: true }}
+// // // // //           className="max-w-5xl mx-auto"
+// // // // //         >
+// // // // //           <motion.h2
 // // // // //             variants={fadeUp}
-// // // // //             initial="hidden"
-// // // // //             whileInView="visible"
-// // // // //             viewport={{ once: true }}
-// // // // //             className="text-center mt-20"
+// // // // //             className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6"
 // // // // //           >
-// // // // //             <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-8">
-// // // // //               Need Strong Legal Representation?
-// // // // //             </h2>
+// // // // //             Proven Strategy. Strong Advocacy. Real Results.
+// // // // //           </motion.h2>
 
-// // // // //             <div className="flex flex-col sm:flex-row justify-center gap-6">
-// // // // //               <a
-// // // // //                 href="/legal-consultation-in-bangalore"
-// // // // //                 className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
-// // // // //               >
-// // // // //                 Book Confidential Consultation
-// // // // //               </a>
+// // // // //           <motion.p variants={fadeUp} className="text-gray-300 leading-relaxed mb-8">
+// // // // //             Our team of top lawyers in Bangalore has successfully represented
+// // // // //             individuals, businesses, startups, and NRIs across diverse legal
+// // // // //             matters. Each case is approached with detailed legal research,
+// // // // //             strategic planning, and meticulous execution.
+// // // // //           </motion.p>
+// // // // //         </motion.div>
+// // // // //       </section>
 
-// // // // //               <a
-// // // // //                 href="tel:+91XXXXXXXXXX"
-// // // // //                 className="flex items-center justify-center gap-3 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.2)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
-// // // // //               >
-// // // // //                 <PhoneCall size={18} />
-// // // // //                 Call Now
-// // // // //               </a>
+// // // // //       {/* ================= CASE STUDIES ================= */}
+// // // // //       <section className="bg-black text-white py-20 px-6">
+// // // // //         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+// // // // //           {[
+// // // // //             {
+// // // // //               title: "Corporate & Commercial Dispute",
+// // // // //               outcome:
+// // // // //                 "Favorable settlement protecting the client’s commercial interests and minimizing financial liability.",
+// // // // //             },
+// // // // //             {
+// // // // //               title: "Criminal Defense Matter",
+// // // // //               outcome:
+// // // // //                 "Relief granted by the court, safeguarding the client’s legal rights and professional reputation.",
+// // // // //             },
+// // // // //             {
+// // // // //               title: "Property & Real Estate Dispute",
+// // // // //               outcome:
+// // // // //                 "Successful court order affirming the client’s lawful ownership rights.",
+// // // // //             },
+// // // // //             {
+// // // // //               title: "Family & Matrimonial Case",
+// // // // //               outcome:
+// // // // //                 "Structured settlement ensuring financial security and equitable custody arrangement.",
+// // // // //             },
+// // // // //           ].map((item, i) => (
+// // // // //             <motion.div
+// // // // //               key={i}
+// // // // //               variants={fadeUp}
+// // // // //               initial="hidden"
+// // // // //               whileInView="visible"
+// // // // //               viewport={{ once: true }}
+// // // // //               className="border border-[#C9A24D]/30 rounded-xl p-8 hover:shadow-[0_0_40px_rgba(201,162,77,0.2)] transition"
+// // // // //             >
+// // // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
+// // // // //                 {item.title}
+// // // // //               </h3>
+
+// // // // //               <p className="text-gray-300">{item.outcome}</p>
+// // // // //             </motion.div>
+// // // // //           ))}
+// // // // //         </div>
+// // // // //       </section>
+
+// // // // //       {/* ================= WHY TRUST US ================= */}
+// // // // //       <section className="bg-[#0A0A0A] text-white py-20 px-6">
+// // // // //         <div className="max-w-5xl mx-auto">
+// // // // //           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-8">
+// // // // //             Why Clients Trust Our Legal Expertise
+// // // // //           </h2>
+
+// // // // //           <ul className="space-y-4 text-gray-300">
+// // // // //             <li>✔ Strategic and research-driven legal approach</li>
+// // // // //             <li>✔ Strong courtroom advocacy</li>
+// // // // //             <li>✔ Ethical and confidential representation</li>
+// // // // //             <li>✔ Personalized legal solutions</li>
+// // // // //             <li>✔ Proven successful court cases in Bangalore</li>
+// // // // //           </ul>
+// // // // //         </div>
+// // // // //       </section>
+
+// // // // //       {/* ================= FAQ ================= */}
+// // // // //       <section className="bg-black text-white py-20 px-6">
+// // // // //         <div className="max-w-5xl mx-auto space-y-8">
+// // // // //           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D]">
+// // // // //             Frequently Asked Questions (FAQs)
+// // // // //           </h2>
+
+// // // // //           {[
+// // // // //             "What types of successful court cases in Bangalore has your firm handled?",
+// // // // //             "How does your law firm achieve strong court case results in Bangalore?",
+// // // // //             "Are your lawyer case results compliant with confidentiality standards?",
+// // // // //             "Do successful court cases guarantee similar outcomes?",
+// // // // //             "How can I consult a successful lawyer in Bangalore?",
+// // // // //           ].map((q, i) => (
+// // // // //             <div key={i}>
+// // // // //               <h3 className="font-semibold text-[#C9A24D] mb-2">
+// // // // //                 {i + 1}. {q}
+// // // // //               </h3>
+// // // // //               <p className="text-gray-400 text-sm leading-relaxed">
+// // // // //                 Please contact our office for personalized legal guidance.
+// // // // //                 Each case depends on its specific facts and legal circumstances.
+// // // // //               </p>
 // // // // //             </div>
-// // // // //           </motion.div>
+// // // // //           ))}
+// // // // //         </div>
+// // // // //       </section>
 
+// // // // //       {/* ================= FINAL CTA ================= */}
+// // // // //       <section className="bg-[#0A0A0A] text-center py-20 px-6">
+// // // // //         <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
+// // // // //           Discuss Your Legal Matter With Our Experts
+// // // // //         </h2>
+
+// // // // //         <p className="text-gray-300 mb-10">
+// // // // //           Confidential consultations. Practical guidance. Result-oriented
+// // // // //           representation.
+// // // // //         </p>
+
+// // // // //         <div className="flex flex-col sm:flex-row justify-center gap-6">
+// // // // //           <a
+// // // // //             href="/legal-consultation-in-bangalore"
+// // // // //             className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition"
+// // // // //           >
+// // // // //             Book Confidential Consultation
+// // // // //           </a>
+
+// // // // //           <a
+// // // // //             href="tel:+91XXXXXXXXXX"
+// // // // //             className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// // // // //           >
+// // // // //             <PhoneCall size={18} />
+// // // // //             Request Call Back
+// // // // //           </a>
 // // // // //         </div>
 // // // // //       </section>
 
@@ -1249,10 +1490,12 @@
 // // // // //   );
 // // // // // }
 
+
 // // // // "use client";
 
-// // // // import { motion } from "framer-motion";
-// // // // import { PhoneCall } from "lucide-react";
+// // // // import { useState } from "react";
+// // // // import { motion, AnimatePresence } from "framer-motion";
+// // // // import { PhoneCall, Plus, Minus } from "lucide-react";
 // // // // import Navbar from "../components/Navbar";
 // // // // import Footer from "../components/Footer";
 
@@ -1268,26 +1511,56 @@
 // // // //   visible: {
 // // // //     opacity: 1,
 // // // //     y: 0,
-// // // //     transition: { duration: 0.7, ease: "easeOut" },
+// // // //     transition: { duration: 0.6, ease: "easeOut" },
 // // // //   },
 // // // // };
 
 // // // // export default function Page() {
+// // // //   const [activeIndex, setActiveIndex] = useState(null);
+
+// // // //   const faqs = [
+// // // //     {
+// // // //       question:
+// // // //         "What types of successful court cases in Bangalore has your firm handled?",
+// // // //       answer:
+// // // //         "S Jain & Attorneys has handled corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
+// // // //     },
+// // // //     {
+// // // //       question:
+// // // //         "How does your law firm achieve strong court case results in Bangalore?",
+// // // //       answer:
+// // // //         "Our team follows a structured process including detailed case analysis, legal research, strategic planning, and strong courtroom advocacy before courts and tribunals.",
+// // // //     },
+// // // //     {
+// // // //       question:
+// // // //         "Are your lawyer case results compliant with confidentiality standards?",
+// // // //       answer:
+// // // //         "Yes. All case summaries are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards.",
+// // // //     },
+// // // //     {
+// // // //       question:
+// // // //         "Do successful court cases guarantee similar outcomes in my case?",
+// // // //       answer:
+// // // //         "No legal outcome can be guaranteed. Each matter depends on its specific facts, legal complexities, and judicial considerations.",
+// // // //     },
+// // // //     {
+// // // //       question:
+// // // //         "How can I consult a successful lawyer in Bangalore regarding my legal matter?",
+// // // //       answer:
+// // // //         "You can schedule a confidential consultation with our team to receive personalized legal guidance tailored to your situation.",
+// // // //     },
+// // // //   ];
+
 // // // //   return (
 // // // //     <>
 // // // //       <Navbar />
 
 // // // //       {/* ================= HERO ================= */}
-// // // //       <section className="bg-black text-white pt-32 pb-20 px-6 relative overflow-hidden">
-// // // //         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.15),transparent_70%)]"></div>
-
-// // // //         <motion.div
-// // // //           variants={container}
-// // // //           initial="hidden"
-// // // //           animate="visible"
-// // // //           className="max-w-5xl mx-auto text-center relative z-10"
-// // // //         >
+// // // //       <section className="bg-black text-white pt-32 pb-20 px-6">
+// // // //         <div className="max-w-5xl mx-auto text-center">
 // // // //           <motion.h1
+// // // //             initial="hidden"
+// // // //             animate="visible"
 // // // //             variants={fadeUp}
 // // // //             className="text-3xl md:text-5xl font-semibold text-[#C9A24D] mb-6"
 // // // //           >
@@ -1295,177 +1568,86 @@
 // // // //           </motion.h1>
 
 // // // //           <motion.p
+// // // //             initial="hidden"
+// // // //             animate="visible"
 // // // //             variants={fadeUp}
-// // // //             className="text-gray-300 text-lg leading-relaxed mb-6"
+// // // //             className="text-gray-300 leading-relaxed"
 // // // //           >
 // // // //             At <strong>S Jain & Attorneys</strong>, our reputation is built on
-// // // //             delivering measurable and strategic legal outcomes. Our track record
-// // // //             of <strong>successful court cases in Bangalore</strong> and strong
-// // // //             court case results in Bangalore reflects our commitment to
-// // // //             excellence, preparation, and powerful courtroom advocacy.
+// // // //             delivering measurable and strategic legal outcomes backed by
+// // // //             strong courtroom advocacy.
 // // // //           </motion.p>
-
-// // // //           <motion.p
-// // // //             variants={fadeUp}
-// // // //             className="text-gray-400 leading-relaxed mb-8"
-// // // //           >
-// // // //             Recognized among the firms led by a successful lawyer in Bangalore,
-// // // //             we handle complex legal disputes with integrity, discretion, and a
-// // // //             client-focused approach.
-// // // //           </motion.p>
-
-// // // //           <motion.div
-// // // //             variants={fadeUp}
-// // // //             className="flex flex-col sm:flex-row justify-center gap-6"
-// // // //           >
-// // // //             <a
-// // // //               href="/legal-consultation-in-bangalore"
-// // // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition"
-// // // //             >
-// // // //               Book Confidential Consultation
-// // // //             </a>
-
-// // // //             <a
-// // // //               href="tel:+91XXXXXXXXXX"
-// // // //               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
-// // // //             >
-// // // //               <PhoneCall size={18} />
-// // // //               Request Call Back
-// // // //             </a>
-// // // //           </motion.div>
-
-// // // //           <motion.p
-// // // //             variants={fadeUp}
-// // // //             className="mt-6 text-sm text-[#C9A24D]"
-// // // //           >
-// // // //             Response within 24 hours guaranteed.
-// // // //           </motion.p>
-// // // //         </motion.div>
+// // // //         </div>
 // // // //       </section>
 
-// // // //       {/* ================= STRATEGY SECTION ================= */}
+// // // //       {/* ================= FAQ SECTION ================= */}
 // // // //       <section className="bg-[#0A0A0A] text-white py-20 px-6">
 // // // //         <motion.div
 // // // //           variants={container}
 // // // //           initial="hidden"
 // // // //           whileInView="visible"
 // // // //           viewport={{ once: true }}
-// // // //           className="max-w-5xl mx-auto"
+// // // //           className="max-w-4xl mx-auto"
 // // // //         >
 // // // //           <motion.h2
 // // // //             variants={fadeUp}
-// // // //             className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6"
+// // // //             className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-10 text-center"
 // // // //           >
-// // // //             Proven Strategy. Strong Advocacy. Real Results.
+// // // //             Frequently Asked Questions (FAQs)
 // // // //           </motion.h2>
 
-// // // //           <motion.p variants={fadeUp} className="text-gray-300 leading-relaxed mb-8">
-// // // //             Our team of top lawyers in Bangalore has successfully represented
-// // // //             individuals, businesses, startups, and NRIs across diverse legal
-// // // //             matters. Each case is approached with detailed legal research,
-// // // //             strategic planning, and meticulous execution.
-// // // //           </motion.p>
+// // // //           <div className="space-y-4">
+// // // //             {faqs.map((faq, index) => {
+// // // //               const isOpen = activeIndex === index;
+
+// // // //               return (
+// // // //                 <motion.div
+// // // //                   key={index}
+// // // //                   variants={fadeUp}
+// // // //                   className="border border-[#C9A24D]/30 rounded-lg overflow-hidden"
+// // // //                 >
+// // // //                   <button
+// // // //                     onClick={() =>
+// // // //                       setActiveIndex(isOpen ? null : index)
+// // // //                     }
+// // // //                     className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-[#C9A24D]/10 transition"
+// // // //                   >
+// // // //                     <span className="font-semibold text-[#C9A24D]">
+// // // //                       {faq.question}
+// // // //                     </span>
+
+// // // //                     {isOpen ? (
+// // // //                       <Minus size={20} />
+// // // //                     ) : (
+// // // //                       <Plus size={20} />
+// // // //                     )}
+// // // //                   </button>
+
+// // // //                   <AnimatePresence>
+// // // //                     {isOpen && (
+// // // //                       <motion.div
+// // // //                         initial={{ height: 0, opacity: 0 }}
+// // // //                         animate={{ height: "auto", opacity: 1 }}
+// // // //                         exit={{ height: 0, opacity: 0 }}
+// // // //                         transition={{ duration: 0.4 }}
+// // // //                         className="px-6 pb-4 text-gray-300 text-sm leading-relaxed"
+// // // //                       >
+// // // //                         {faq.answer}
+// // // //                       </motion.div>
+// // // //                     )}
+// // // //                   </AnimatePresence>
+// // // //                 </motion.div>
+// // // //               );
+// // // //             })}
+// // // //           </div>
 // // // //         </motion.div>
 // // // //       </section>
 
-// // // //       {/* ================= CASE STUDIES ================= */}
-// // // //       <section className="bg-black text-white py-20 px-6">
-// // // //         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-
-// // // //           {[
-// // // //             {
-// // // //               title: "Corporate & Commercial Dispute",
-// // // //               outcome:
-// // // //                 "Favorable settlement protecting the client’s commercial interests and minimizing financial liability.",
-// // // //             },
-// // // //             {
-// // // //               title: "Criminal Defense Matter",
-// // // //               outcome:
-// // // //                 "Relief granted by the court, safeguarding the client’s legal rights and professional reputation.",
-// // // //             },
-// // // //             {
-// // // //               title: "Property & Real Estate Dispute",
-// // // //               outcome:
-// // // //                 "Successful court order affirming the client’s lawful ownership rights.",
-// // // //             },
-// // // //             {
-// // // //               title: "Family & Matrimonial Case",
-// // // //               outcome:
-// // // //                 "Structured settlement ensuring financial security and equitable custody arrangement.",
-// // // //             },
-// // // //           ].map((item, i) => (
-// // // //             <motion.div
-// // // //               key={i}
-// // // //               variants={fadeUp}
-// // // //               initial="hidden"
-// // // //               whileInView="visible"
-// // // //               viewport={{ once: true }}
-// // // //               className="border border-[#C9A24D]/30 rounded-xl p-8 hover:shadow-[0_0_40px_rgba(201,162,77,0.2)] transition"
-// // // //             >
-// // // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
-// // // //                 {item.title}
-// // // //               </h3>
-
-// // // //               <p className="text-gray-300">{item.outcome}</p>
-// // // //             </motion.div>
-// // // //           ))}
-// // // //         </div>
-// // // //       </section>
-
-// // // //       {/* ================= WHY TRUST US ================= */}
-// // // //       <section className="bg-[#0A0A0A] text-white py-20 px-6">
-// // // //         <div className="max-w-5xl mx-auto">
-// // // //           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-8">
-// // // //             Why Clients Trust Our Legal Expertise
-// // // //           </h2>
-
-// // // //           <ul className="space-y-4 text-gray-300">
-// // // //             <li>✔ Strategic and research-driven legal approach</li>
-// // // //             <li>✔ Strong courtroom advocacy</li>
-// // // //             <li>✔ Ethical and confidential representation</li>
-// // // //             <li>✔ Personalized legal solutions</li>
-// // // //             <li>✔ Proven successful court cases in Bangalore</li>
-// // // //           </ul>
-// // // //         </div>
-// // // //       </section>
-
-// // // //       {/* ================= FAQ ================= */}
-// // // //       <section className="bg-black text-white py-20 px-6">
-// // // //         <div className="max-w-5xl mx-auto space-y-8">
-// // // //           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D]">
-// // // //             Frequently Asked Questions (FAQs)
-// // // //           </h2>
-
-// // // //           {[
-// // // //             "What types of successful court cases in Bangalore has your firm handled?",
-// // // //             "How does your law firm achieve strong court case results in Bangalore?",
-// // // //             "Are your lawyer case results compliant with confidentiality standards?",
-// // // //             "Do successful court cases guarantee similar outcomes?",
-// // // //             "How can I consult a successful lawyer in Bangalore?",
-// // // //           ].map((q, i) => (
-// // // //             <div key={i}>
-// // // //               <h3 className="font-semibold text-[#C9A24D] mb-2">
-// // // //                 {i + 1}. {q}
-// // // //               </h3>
-// // // //               <p className="text-gray-400 text-sm leading-relaxed">
-// // // //                 Please contact our office for personalized legal guidance.
-// // // //                 Each case depends on its specific facts and legal circumstances.
-// // // //               </p>
-// // // //             </div>
-// // // //           ))}
-// // // //         </div>
-// // // //       </section>
-
-// // // //       {/* ================= FINAL CTA ================= */}
-// // // //       <section className="bg-[#0A0A0A] text-center py-20 px-6">
+// // // //       {/* ================= CTA ================= */}
+// // // //       <section className="bg-black text-center py-20 px-6">
 // // // //         <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
 // // // //           Discuss Your Legal Matter With Our Experts
 // // // //         </h2>
-
-// // // //         <p className="text-gray-300 mb-10">
-// // // //           Confidential consultations. Practical guidance. Result-oriented
-// // // //           representation.
-// // // //         </p>
 
 // // // //         <div className="flex flex-col sm:flex-row justify-center gap-6">
 // // // //           <a
@@ -1490,7 +1672,6 @@
 // // // //   );
 // // // // }
 
-
 // // // "use client";
 
 // // // import { useState } from "react";
@@ -1499,7 +1680,7 @@
 // // // import Navbar from "../components/Navbar";
 // // // import Footer from "../components/Footer";
 
-// // // /* ================= ANIMATION ================= */
+// // // /* ================= ANIMATIONS ================= */
 
 // // // const container = {
 // // //   hidden: {},
@@ -1556,11 +1737,16 @@
 // // //       <Navbar />
 
 // // //       {/* ================= HERO ================= */}
-// // //       <section className="bg-black text-white pt-32 pb-20 px-6">
-// // //         <div className="max-w-5xl mx-auto text-center">
+// // //       <section className="relative bg-black text-white pt-32 pb-20 px-6 overflow-hidden">
+// // //         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.15),transparent_70%)]"></div>
+
+// // //         <motion.div
+// // //           variants={container}
+// // //           initial="hidden"
+// // //           animate="visible"
+// // //           className="max-w-5xl mx-auto text-center relative z-10"
+// // //         >
 // // //           <motion.h1
-// // //             initial="hidden"
-// // //             animate="visible"
 // // //             variants={fadeUp}
 // // //             className="text-3xl md:text-5xl font-semibold text-[#C9A24D] mb-6"
 // // //           >
@@ -1568,42 +1754,100 @@
 // // //           </motion.h1>
 
 // // //           <motion.p
-// // //             initial="hidden"
-// // //             animate="visible"
 // // //             variants={fadeUp}
-// // //             className="text-gray-300 leading-relaxed"
+// // //             className="text-gray-300 text-lg leading-relaxed mb-6"
 // // //           >
 // // //             At <strong>S Jain & Attorneys</strong>, our reputation is built on
-// // //             delivering measurable and strategic legal outcomes backed by
-// // //             strong courtroom advocacy.
+// // //             delivering measurable and strategic legal outcomes. Our track
+// // //             record of successful court cases in Bangalore reflects our
+// // //             commitment to excellence and powerful courtroom advocacy.
 // // //           </motion.p>
+
+// // //           <motion.div
+// // //             variants={fadeUp}
+// // //             className="flex flex-col sm:flex-row justify-center gap-6"
+// // //           >
+// // //             <a
+// // //               href="/legal-consultation-in-bangalore"
+// // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition"
+// // //             >
+// // //               Book Confidential Consultation
+// // //             </a>
+
+// // //             <a
+// // //               href="tel:+91XXXXXXXXXX"
+// // //               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// // //             >
+// // //               <PhoneCall size={18} />
+// // //               Request Call Back
+// // //             </a>
+// // //           </motion.div>
+
+// // //           <motion.p
+// // //             variants={fadeUp}
+// // //             className="mt-6 text-sm text-[#C9A24D]"
+// // //           >
+// // //             Response within 24 hours guaranteed.
+// // //           </motion.p>
+// // //         </motion.div>
+// // //       </section>
+
+// // //       {/* ================= CASE STUDIES ================= */}
+// // //       <section className="bg-[#0A0A0A] text-white py-20 px-6">
+// // //         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+// // //           {[
+// // //             {
+// // //               title: "Corporate & Commercial Dispute",
+// // //               outcome:
+// // //                 "Favorable settlement protecting the client’s commercial interests and minimizing financial liability.",
+// // //             },
+// // //             {
+// // //               title: "Criminal Defense Matter",
+// // //               outcome:
+// // //                 "Relief granted by the court, safeguarding the client’s legal rights and professional reputation.",
+// // //             },
+// // //             {
+// // //               title: "Property & Real Estate Dispute",
+// // //               outcome:
+// // //                 "Successful court order affirming the client’s lawful ownership rights.",
+// // //             },
+// // //             {
+// // //               title: "Family & Matrimonial Case",
+// // //               outcome:
+// // //                 "Structured settlement ensuring financial security and equitable custody arrangement.",
+// // //             },
+// // //           ].map((item, i) => (
+// // //             <motion.div
+// // //               key={i}
+// // //               variants={fadeUp}
+// // //               initial="hidden"
+// // //               whileInView="visible"
+// // //               viewport={{ once: true }}
+// // //               className="border border-[#C9A24D]/30 rounded-xl p-8 hover:shadow-[0_0_40px_rgba(201,162,77,0.25)] transition"
+// // //             >
+// // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
+// // //                 {item.title}
+// // //               </h3>
+// // //               <p className="text-gray-300">{item.outcome}</p>
+// // //             </motion.div>
+// // //           ))}
 // // //         </div>
 // // //       </section>
 
-// // //       {/* ================= FAQ SECTION ================= */}
-// // //       <section className="bg-[#0A0A0A] text-white py-20 px-6">
-// // //         <motion.div
-// // //           variants={container}
-// // //           initial="hidden"
-// // //           whileInView="visible"
-// // //           viewport={{ once: true }}
-// // //           className="max-w-4xl mx-auto"
-// // //         >
-// // //           <motion.h2
-// // //             variants={fadeUp}
-// // //             className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-10 text-center"
-// // //           >
+// // //       {/* ================= FAQ ================= */}
+// // //       <section className="bg-black text-white py-20 px-6">
+// // //         <div className="max-w-4xl mx-auto">
+// // //           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-10 text-center">
 // // //             Frequently Asked Questions (FAQs)
-// // //           </motion.h2>
+// // //           </h2>
 
 // // //           <div className="space-y-4">
 // // //             {faqs.map((faq, index) => {
 // // //               const isOpen = activeIndex === index;
 
 // // //               return (
-// // //                 <motion.div
+// // //                 <div
 // // //                   key={index}
-// // //                   variants={fadeUp}
 // // //                   className="border border-[#C9A24D]/30 rounded-lg overflow-hidden"
 // // //                 >
 // // //                   <button
@@ -1615,12 +1859,7 @@
 // // //                     <span className="font-semibold text-[#C9A24D]">
 // // //                       {faq.question}
 // // //                     </span>
-
-// // //                     {isOpen ? (
-// // //                       <Minus size={20} />
-// // //                     ) : (
-// // //                       <Plus size={20} />
-// // //                     )}
+// // //                     {isOpen ? <Minus size={20} /> : <Plus size={20} />}
 // // //                   </button>
 
 // // //                   <AnimatePresence>
@@ -1629,25 +1868,30 @@
 // // //                         initial={{ height: 0, opacity: 0 }}
 // // //                         animate={{ height: "auto", opacity: 1 }}
 // // //                         exit={{ height: 0, opacity: 0 }}
-// // //                         transition={{ duration: 0.4 }}
+// // //                         transition={{ duration: 0.3 }}
 // // //                         className="px-6 pb-4 text-gray-300 text-sm leading-relaxed"
 // // //                       >
 // // //                         {faq.answer}
 // // //                       </motion.div>
 // // //                     )}
 // // //                   </AnimatePresence>
-// // //                 </motion.div>
+// // //                 </div>
 // // //               );
 // // //             })}
 // // //           </div>
-// // //         </motion.div>
+// // //         </div>
 // // //       </section>
 
-// // //       {/* ================= CTA ================= */}
-// // //       <section className="bg-black text-center py-20 px-6">
+// // //       {/* ================= FINAL CTA ================= */}
+// // //       <section className="bg-[#0A0A0A] text-center py-20 px-6">
 // // //         <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
 // // //           Discuss Your Legal Matter With Our Experts
 // // //         </h2>
+
+// // //         <p className="text-gray-300 mb-10">
+// // //           Confidential consultations. Practical guidance.
+// // //           Result-oriented representation.
+// // //         </p>
 
 // // //         <div className="flex flex-col sm:flex-row justify-center gap-6">
 // // //           <a
@@ -1671,6 +1915,7 @@
 // // //     </>
 // // //   );
 // // // }
+
 
 // // "use client";
 
@@ -1704,31 +1949,31 @@
 // //       question:
 // //         "What types of successful court cases in Bangalore has your firm handled?",
 // //       answer:
-// //         "S Jain & Attorneys has handled corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
+// //         "S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
 // //     },
 // //     {
 // //       question:
 // //         "How does your law firm achieve strong court case results in Bangalore?",
 // //       answer:
-// //         "Our team follows a structured process including detailed case analysis, legal research, strategic planning, and strong courtroom advocacy before courts and tribunals.",
+// //         "Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.",
 // //     },
 // //     {
 // //       question:
-// //         "Are your lawyer case results compliant with confidentiality standards?",
+// //         "Are your lawyer case results in Bangalore compliant with confidentiality standards?",
 // //       answer:
-// //         "Yes. All case summaries are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards.",
+// //         "Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards while showcasing our legal expertise.",
 // //     },
 // //     {
 // //       question:
 // //         "Do successful court cases guarantee similar outcomes in my case?",
 // //       answer:
-// //         "No legal outcome can be guaranteed. Each matter depends on its specific facts, legal complexities, and judicial considerations.",
+// //         "No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations. Our team strives to provide the strongest possible representation based on the circumstances of your case.",
 // //     },
 // //     {
 // //       question:
 // //         "How can I consult a successful lawyer in Bangalore regarding my legal matter?",
 // //       answer:
-// //         "You can schedule a confidential consultation with our team to receive personalized legal guidance tailored to your situation.",
+// //         "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
 // //     },
 // //   ];
 
@@ -1753,20 +1998,19 @@
 // //             Successful Court Cases in Bangalore
 // //           </motion.h1>
 
-// //           <motion.p
-// //             variants={fadeUp}
-// //             className="text-gray-300 text-lg leading-relaxed mb-6"
-// //           >
-// //             At <strong>S Jain & Attorneys</strong>, our reputation is built on
-// //             delivering measurable and strategic legal outcomes. Our track
-// //             record of successful court cases in Bangalore reflects our
-// //             commitment to excellence and powerful courtroom advocacy.
+// //           <motion.p variants={fadeUp} className="text-gray-300 text-lg leading-relaxed mb-4">
+// //             At S Jain & Attorneys, our reputation is built on delivering measurable and strategic legal outcomes.
+// //             Our track record of successful court cases in Bangalore and strong court case results in Bangalore
+// //             reflects our commitment to excellence, preparation, and powerful courtroom advocacy.
 // //           </motion.p>
 
-// //           <motion.div
-// //             variants={fadeUp}
-// //             className="flex flex-col sm:flex-row justify-center gap-6"
-// //           >
+// //           <motion.p variants={fadeUp} className="text-gray-400 leading-relaxed mb-8">
+// //             Recognized among the firms led by a successful lawyer in Bangalore,
+// //             we handle complex legal disputes with integrity, discretion, and a client-focused approach.
+// //             Our consistent lawyer case results in Bangalore demonstrate our ability to navigate challenging legal matters effectively.
+// //           </motion.p>
+
+// //           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-6">
 // //             <a
 // //               href="/legal-consultation-in-bangalore"
 // //               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition"
@@ -1783,83 +2027,339 @@
 // //             </a>
 // //           </motion.div>
 
-// //           <motion.p
-// //             variants={fadeUp}
-// //             className="mt-6 text-sm text-[#C9A24D]"
-// //           >
+// //           <motion.p variants={fadeUp} className="mt-6 text-sm text-[#C9A24D]">
 // //             Response within 24 hours guaranteed.
 // //           </motion.p>
 // //         </motion.div>
 // //       </section>
 
-// //       {/* ================= CASE STUDIES ================= */}
+// //       {/* ================= STRATEGY SECTION ================= */}
 // //       <section className="bg-[#0A0A0A] text-white py-20 px-6">
+// //         <div className="max-w-5xl mx-auto">
+// //           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
+// //             Proven Strategy. Strong Advocacy. Real Results.
+// //           </h2>
+
+// //           <p className="text-gray-300 leading-relaxed mb-6">
+// //             Our team of top lawyers in Bangalore has successfully represented individuals,
+// //             businesses, startups, and NRIs across diverse legal matters. Each case is approached
+// //             with detailed legal research, strategic planning, and meticulous execution to achieve strong court case results in Bangalore.
+// //           </p>
+
+// //           <p className="text-gray-400 leading-relaxed">
+// //             Below are selected law firm success stories in Bangalore, presented in compliance with professional standards
+// //             and without disclosing confidential client information.
+// //           </p>
+// //         </div>
+// //       </section>
+
+// //       {/* ================= CASE STUDIES ================= */}
+// //       <section className="bg-black text-white py-20 px-6">
+// //         <div className="max-w-6xl mx-auto space-y-12">
+
+// //           <div>
+// //             <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
+// //               Corporate & Commercial Dispute
+// //             </h3>
+// //             <p><strong>Background:</strong> Representation of a mid-sized business in a high-value contractual and financial dispute.</p>
+// //             <p><strong>Legal Strategy:</strong> Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.</p>
+// //             <p><strong>Outcome:</strong> Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.</p>
+// //           </div>
+
+// //           <div>
+// //             <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
+// //               Criminal Defense Matter
+// //             </h3>
+// //             <p><strong>Background:</strong> Defense in a serious criminal allegation requiring urgent court intervention.</p>
+// //             <p><strong>Legal Strategy:</strong> Detailed evidence analysis, procedural safeguards, and strong courtroom representation.</p>
+// //             <p><strong>Outcome:</strong> Relief granted by the court, safeguarding the client’s legal rights and professional reputation.</p>
+// //           </div>
+
+// //           <div>
+// //             <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
+// //               Property & Real Estate Dispute
+// //             </h3>
+// //             <p><strong>Background:</strong> Complex ownership conflict involving title discrepancies and competing claims.</p>
+// //             <p><strong>Legal Strategy:</strong> Extensive documentation review, title verification, and structured civil litigation proceedings.</p>
+// //             <p><strong>Outcome:</strong> Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.</p>
+// //           </div>
+
+// //           <div>
+// //             <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
+// //               Family & Matrimonial Case
+// //             </h3>
+// //             <p><strong>Background:</strong> Contested divorce involving custody and financial settlement issues.</p>
+// //             <p><strong>Legal Strategy:</strong> Balanced negotiation approach combined with litigation preparedness to ensure fair resolution.</p>
+// //             <p><strong>Outcome:</strong> Structured settlement ensuring financial security and equitable custody arrangement.</p>
+// //           </div>
+
+// //         </div>
+// //       </section>
+
+// //       {/* ================= WHY TRUST ================= */}
+// //       <section className="bg-[#0A0A0A] text-white py-20 px-6">
+// //         <div className="max-w-5xl mx-auto">
+// //           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
+// //             Why Clients Trust Our Legal Expertise
+// //           </h2>
+
+// //           <ul className="space-y-3 text-gray-300">
+// //             <li>✔ Strategic and research-driven legal approach</li>
+// //             <li>✔ Strong courtroom advocacy</li>
+// //             <li>✔ Ethical and confidential representation</li>
+// //             <li>✔ Personalized legal solutions</li>
+// //             <li>✔ Proven successful court cases in Bangalore</li>
+// //           </ul>
+
+// //           <p className="text-gray-400 mt-6">
+// //             As experienced litigation lawyers in Bangalore, we focus on delivering practical solutions while protecting our clients’ rights and interests at every stage of the legal process.
+// //           </p>
+// //         </div>
+// //       </section>
+
+// //       {/* ================= FAQ (TOGGLE) ================= */}
+// //       <section className="bg-black text-white py-20 px-6">
+// //         <div className="max-w-4xl mx-auto space-y-4">
+// //           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6 text-center">
+// //             Frequently Asked Questions (FAQs)
+// //           </h2>
+
+// //           {faqs.map((faq, index) => {
+// //             const isOpen = activeIndex === index;
+// //             return (
+// //               <div key={index} className="border border-[#C9A24D]/30 rounded-lg overflow-hidden">
+// //                 <button
+// //                   onClick={() => setActiveIndex(isOpen ? null : index)}
+// //                   className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-[#C9A24D]/10 transition"
+// //                 >
+// //                   <span className="font-semibold text-[#C9A24D]">{faq.question}</span>
+// //                   {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+// //                 </button>
+
+// //                 <AnimatePresence>
+// //                   {isOpen && (
+// //                     <motion.div
+// //                       initial={{ height: 0, opacity: 0 }}
+// //                       animate={{ height: "auto", opacity: 1 }}
+// //                       exit={{ height: 0, opacity: 0 }}
+// //                       transition={{ duration: 0.3 }}
+// //                       className="px-6 pb-4 text-gray-300 text-sm leading-relaxed"
+// //                     >
+// //                       {faq.answer}
+// //                     </motion.div>
+// //                   )}
+// //                 </AnimatePresence>
+// //               </div>
+// //             );
+// //           })}
+// //         </div>
+// //       </section>
+
+// //       {/* ================= FINAL CTA ================= */}
+// //       <section className="bg-[#0A0A0A] text-center py-20 px-6">
+// //         <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
+// //           Discuss Your Legal Matter With Our Experts
+// //         </h2>
+
+// //         <p className="text-gray-300 mb-10">
+// //           If you are seeking representation backed by proven court case results in Bangalore,
+// //           S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
+// //           Confidential consultations. Practical guidance. Result-oriented representation.
+// //         </p>
+
+// //         <div className="flex flex-col sm:flex-row justify-center gap-6">
+// //           <a href="/legal-consultation-in-bangalore"
+// //              className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition">
+// //             Book Confidential Consultation
+// //           </a>
+
+// //           <a href="tel:+91XXXXXXXXXX"
+// //              className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition">
+// //             <PhoneCall size={18} />
+// //             Request Call Back
+// //           </a>
+// //         </div>
+// //       </section>
+
+// //       <Footer />
+// //     </>
+// //   );
+// // }
+
+
+// // "use client";
+
+// // import { useState } from "react";
+// // import { motion, AnimatePresence } from "framer-motion";
+// // import { PhoneCall, Plus } from "lucide-react";
+// // import Navbar from "../components/Navbar";
+// // import Footer from "../components/Footer";
+
+// // /* ================= ANIMATION VARIANTS ================= */
+
+// // const fadeUp = {
+// //   hidden: { opacity: 0, y: 40 },
+// //   visible: {
+// //     opacity: 1,
+// //     y: 0,
+// //     transition: { duration: 0.6, ease: "easeOut" },
+// //   },
+// // };
+
+// // export default function Page() {
+// //   const [activeIndex, setActiveIndex] = useState(null);
+
+// //   const faqs = [
+// //     {
+// //       question:
+// //         "What types of successful court cases in Bangalore has your firm handled?",
+// //       answer:
+// //         "S Jain & Attorneys has handled corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
+// //     },
+// //     {
+// //       question:
+// //         "How does your law firm achieve strong court case results in Bangalore?",
+// //       answer:
+// //         "Our team follows a structured process including detailed case analysis, legal research, strategic planning, and strong courtroom advocacy to deliver consistent and reliable legal outcomes.",
+// //     },
+// //     {
+// //       question:
+// //         "Are your lawyer case results compliant with confidentiality standards?",
+// //       answer:
+// //         "Yes. All case summaries are shared without disclosing confidential client information. We strictly adhere to professional and ethical standards.",
+// //     },
+// //     {
+// //       question:
+// //         "Do successful court cases guarantee similar outcomes?",
+// //       answer:
+// //         "No legal outcome can be guaranteed. Every matter depends on its specific facts and legal complexities. We strive to provide the strongest possible representation in each case.",
+// //     },
+// //   ];
+
+// //   return (
+// //     <>
+// //       <Navbar />
+
+// //       {/* ================= HERO SECTION ================= */}
+// //       <section className="relative bg-black text-white pt-36 pb-24 px-6 overflow-hidden">
+
+// //         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.12),transparent_70%)]"></div>
+
+// //         <div className="max-w-5xl mx-auto text-center relative z-10">
+
+// //           <motion.h1
+// //             initial="hidden"
+// //             animate="visible"
+// //             variants={fadeUp}
+// //             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
+// //           >
+// //             Proven Strategy. Strong Advocacy. Real Results.
+// //           </motion.h1>
+
+// //           <motion.p
+// //             variants={fadeUp}
+// //             initial="hidden"
+// //             animate="visible"
+// //             className="text-gray-300 text-lg leading-relaxed mb-10"
+// //           >
+// //             Our track record of successful court cases in Bangalore reflects our
+// //             commitment to strategic preparation, courtroom strength, and ethical
+// //             representation across complex legal disputes.
+// //           </motion.p>
+
+// //           <div className="flex flex-col sm:flex-row justify-center gap-6">
+// //             <a
+// //               href="/legal-consultation-in-bangalore"
+// //               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+// //             >
+// //               Book Confidential Consultation
+// //             </a>
+
+// //             <a
+// //               href="tel:+91XXXXXXXXXX"
+// //               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// //             >
+// //               <PhoneCall size={18} />
+// //               Call Now
+// //             </a>
+// //           </div>
+// //         </div>
+// //       </section>
+
+// //       {/* ================= CASE STUDIES ================= */}
+// //       <section className="bg-[#0A0A0A] text-white py-24 px-6">
 // //         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
 // //           {[
 // //             {
 // //               title: "Corporate & Commercial Dispute",
-// //               outcome:
-// //                 "Favorable settlement protecting the client’s commercial interests and minimizing financial liability.",
+// //               text: "High-value contractual dispute resolved through strategic negotiation and structured litigation readiness."
 // //             },
 // //             {
 // //               title: "Criminal Defense Matter",
-// //               outcome:
-// //                 "Relief granted by the court, safeguarding the client’s legal rights and professional reputation.",
+// //               text: "Urgent court intervention securing relief and safeguarding client reputation."
 // //             },
 // //             {
-// //               title: "Property & Real Estate Dispute",
-// //               outcome:
-// //                 "Successful court order affirming the client’s lawful ownership rights.",
+// //               title: "Property & Real Estate Conflict",
+// //               text: "Successful title verification and court affirmation of ownership rights."
 // //             },
 // //             {
 // //               title: "Family & Matrimonial Case",
-// //               outcome:
-// //                 "Structured settlement ensuring financial security and equitable custody arrangement.",
-// //             },
-// //           ].map((item, i) => (
+// //               text: "Balanced negotiation and litigation strategy ensuring equitable settlement."
+// //             }
+// //           ].map((item, index) => (
 // //             <motion.div
-// //               key={i}
-// //               variants={fadeUp}
-// //               initial="hidden"
-// //               whileInView="visible"
+// //               key={index}
+// //               initial={{ opacity: 0, y: 30 }}
+// //               whileInView={{ opacity: 1, y: 0 }}
+// //               transition={{ duration: 0.5, delay: index * 0.1 }}
 // //               viewport={{ once: true }}
-// //               className="border border-[#C9A24D]/30 rounded-xl p-8 hover:shadow-[0_0_40px_rgba(201,162,77,0.25)] transition"
+// //               className="bg-black/40 backdrop-blur-xl border border-[#C9A24D]/20 p-8 rounded-2xl hover:border-[#C9A24D]/60 hover:shadow-[0_0_25px_rgba(201,162,77,0.2)] transition"
 // //             >
 // //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
 // //                 {item.title}
 // //               </h3>
-// //               <p className="text-gray-300">{item.outcome}</p>
+// //               <p className="text-gray-300 leading-relaxed">
+// //                 {item.text}
+// //               </p>
 // //             </motion.div>
 // //           ))}
+
 // //         </div>
 // //       </section>
 
-// //       {/* ================= FAQ ================= */}
-// //       <section className="bg-black text-white py-20 px-6">
+// //       {/* ================= FAQ SECTION ================= */}
+// //       <section className="bg-black text-white py-24 px-6">
 // //         <div className="max-w-4xl mx-auto">
-// //           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-10 text-center">
-// //             Frequently Asked Questions (FAQs)
+
+// //           <h2 className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mb-14">
+// //             Frequently Asked Questions
 // //           </h2>
 
-// //           <div className="space-y-4">
+// //           <div className="space-y-6">
 // //             {faqs.map((faq, index) => {
 // //               const isOpen = activeIndex === index;
 
 // //               return (
 // //                 <div
 // //                   key={index}
-// //                   className="border border-[#C9A24D]/30 rounded-lg overflow-hidden"
+// //                   className="border border-[#C9A24D]/20 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-xl"
 // //                 >
 // //                   <button
-// //                     onClick={() =>
-// //                       setActiveIndex(isOpen ? null : index)
-// //                     }
-// //                     className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-[#C9A24D]/10 transition"
+// //                     onClick={() => setActiveIndex(isOpen ? null : index)}
+// //                     className="w-full flex justify-between items-center px-6 py-6 text-left"
 // //                   >
-// //                     <span className="font-semibold text-[#C9A24D]">
+// //                     <span className="font-medium text-lg">
 // //                       {faq.question}
 // //                     </span>
-// //                     {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+
+// //                     <motion.div
+// //                       animate={{ rotate: isOpen ? 180 : 0 }}
+// //                       transition={{ duration: 0.3 }}
+// //                       className="text-[#C9A24D]"
+// //                     >
+// //                       <Plus size={22} />
+// //                     </motion.div>
 // //                   </button>
 
 // //                   <AnimatePresence>
@@ -1868,8 +2368,294 @@
 // //                         initial={{ height: 0, opacity: 0 }}
 // //                         animate={{ height: "auto", opacity: 1 }}
 // //                         exit={{ height: 0, opacity: 0 }}
-// //                         transition={{ duration: 0.3 }}
-// //                         className="px-6 pb-4 text-gray-300 text-sm leading-relaxed"
+// //                         transition={{ duration: 0.4 }}
+// //                         className="px-6 pb-6 text-gray-300 leading-relaxed"
+// //                       >
+// //                         {faq.answer}
+// //                       </motion.div>
+// //                     )}
+// //                   </AnimatePresence>
+// //                 </div>
+// //               );
+// //             })}
+// //           </div>
+
+// //         </div>
+// //       </section>
+
+// //       {/* ================= FINAL CTA ================= */}
+// //       <section className="bg-[#0A0A0A] text-center py-24 px-6">
+// //         <h2 className="text-3xl font-semibold text-[#C9A24D] mb-6">
+// //           Discuss Your Legal Matter With Our Experts
+// //         </h2>
+
+// //         <p className="text-gray-300 mb-10 max-w-3xl mx-auto">
+// //           Confidential consultations. Strategic guidance. Result-oriented
+// //           representation. Speak with experienced litigation lawyers in
+// //           Bangalore today.
+// //         </p>
+
+// //         <a
+// //           href="/legal-consultation-in-bangalore"
+// //           className="bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+// //         >
+// //           Schedule Consultation
+// //         </a>
+// //       </section>
+
+// //       <Footer />
+// //     </>
+// //   );
+// // }
+
+
+
+// // "use client";
+
+// // import { useState } from "react";
+// // import { motion, AnimatePresence } from "framer-motion";
+// // import { PhoneCall, Plus } from "lucide-react";
+// // import Navbar from "../components/Navbar";
+// // import Footer from "../components/Footer";
+
+
+
+// // /* ================= ANIMATION ================= */
+
+// // const fadeUp = {
+// //   hidden: { opacity: 0, y: 40 },
+// //   visible: {
+// //     opacity: 1,
+// //     y: 0,
+// //     transition: { duration: 0.6, ease: "easeOut" },
+// //   },
+// // };
+
+// // export default function Page() {
+// //   const [activeIndex, setActiveIndex] = useState(null);
+
+// //   const faqs = [
+// //     {
+// //       question:
+// //         "What types of successful court cases in Bangalore has your firm handled?",
+// //       answer:
+// //         "S Jain & Attorneys has handled corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
+// //     },
+// //     {
+// //       question:
+// //         "How does your law firm achieve strong court case results in Bangalore?",
+// //       answer:
+// //         "Our team follows a structured process including detailed case analysis, legal research, strategic planning, and strong courtroom advocacy to deliver consistent and reliable legal outcomes.",
+// //     },
+// //     {
+// //       question:
+// //         "Are your lawyer case results compliant with confidentiality standards?",
+// //       answer:
+// //         "Yes. All case summaries are shared without disclosing confidential client information. We strictly adhere to professional and ethical standards.",
+// //     },
+// //     {
+// //       question:
+// //         "Do successful court cases guarantee similar outcomes?",
+// //       answer:
+// //         "No legal outcome can be guaranteed. Every matter depends on its specific facts and legal complexities. We strive to provide the strongest possible representation in each case.",
+// //     },
+// //     {
+// //       question:
+// //         "How can I consult a successful lawyer in Bangalore?",
+// //       answer:
+// //         "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
+// //     },
+// //   ];
+
+// //   return (
+// //     <>
+// //       <Navbar />
+
+// //       {/* ================= HERO SECTION ================= */}
+// //       <section className="relative bg-black text-white pt-36 pb-24 px-6 overflow-hidden">
+
+// //         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.12),transparent_70%)]"></div>
+
+// //         <div className="max-w-5xl mx-auto text-center relative z-10">
+
+// //           <motion.h1
+// //             initial="hidden"
+// //             animate="visible"
+// //             variants={fadeUp}
+// //             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
+// //           >
+// //             Successful Court Cases in Bangalore
+// //           </motion.h1>
+
+// //           <motion.p
+// //             variants={fadeUp}
+// //             initial="hidden"
+// //             animate="visible"
+// //             className="text-gray-300 text-lg leading-relaxed mb-6"
+// //           >
+// //             At S Jain & Attorneys, our reputation is built on delivering measurable
+// //             and strategic legal outcomes. Our track record reflects our commitment
+// //             to excellence, preparation, and powerful courtroom advocacy.
+// //           </motion.p>
+
+// //           <motion.p
+// //             variants={fadeUp}
+// //             initial="hidden"
+// //             animate="visible"
+// //             className="text-gray-400 text-base leading-relaxed mb-10"
+// //           >
+// //             Recognized among the firms led by a successful lawyer in Bangalore,
+// //             we handle complex legal disputes with integrity, discretion, and a
+// //             client-focused approach.
+// //           </motion.p>
+
+// //           <div className="flex flex-col sm:flex-row justify-center gap-6">
+// //             <a
+// //               href="/legal-consultation-in-bangalore"
+// //               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+// //             >
+// //               Book Confidential Consultation
+// //             </a>
+
+// //             <a
+// //               href="#"
+// //               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// //             >
+// //               <PhoneCall size={18} />
+// //               Request Call Back
+// //             </a>
+// //           </div>
+
+// //         </div>
+// //       </section>
+
+// //       {/* ================= STRATEGY SECTION ================= */}
+// //       <section className="bg-[#0A0A0A] text-white py-24 px-6">
+// //         <div className="max-w-5xl mx-auto text-center">
+
+// //           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
+// //             Proven Strategy. Strong Advocacy. Real Results.
+// //           </h2>
+
+// //           <p className="text-gray-300 leading-relaxed mb-16">
+// //             Our team has successfully represented individuals, businesses,
+// //             startups, and NRIs across diverse legal matters. Each case is
+// //             approached with detailed legal research, strategic planning,
+// //             and meticulous execution to achieve strong court case results in Bangalore.
+// //             <br /><br />
+// //             Response within 24 hours guaranteed.
+// //           </p>
+
+// //         </div>
+
+// //         {/* CASE STUDIES */}
+// //         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+// //           {[
+// //             {
+// //               title: "Corporate & Commercial Dispute",
+// //               text: "High-value contractual dispute resolved through structured negotiation and litigation readiness. Favorable settlement protecting commercial interests.",
+// //             },
+// //             {
+// //               title: "Criminal Defense Matter",
+// //               text: "Urgent court intervention securing relief and safeguarding client reputation through strong courtroom advocacy.",
+// //             },
+// //             {
+// //               title: "Property & Real Estate Dispute",
+// //               text: "Successful court order affirming lawful ownership rights after comprehensive title verification and structured proceedings.",
+// //             },
+// //             {
+// //               title: "Family & Matrimonial Case",
+// //               text: "Equitable settlement achieved through balanced negotiation and litigation preparedness in contested divorce proceedings.",
+// //             },
+// //           ].map((item, index) => (
+// //             <motion.div
+// //               key={index}
+// //               initial={{ opacity: 0, y: 30 }}
+// //               whileInView={{ opacity: 1, y: 0 }}
+// //               transition={{ duration: 0.5, delay: index * 0.1 }}
+// //               viewport={{ once: true }}
+// //               className="bg-black/40 backdrop-blur-xl border border-[#C9A24D]/20 p-8 rounded-2xl hover:border-[#C9A24D]/60 hover:shadow-[0_0_25px_rgba(201,162,77,0.2)] transition"
+// //             >
+// //               <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
+// //                 {item.title}
+// //               </h3>
+// //               <p className="text-gray-300 leading-relaxed">
+// //                 {item.text}
+// //               </p>
+// //             </motion.div>
+// //           ))}
+
+// //         </div>
+// //       </section>
+
+// //       {/* ================= WHY TRUST ================= */}
+// //       <section className="bg-black text-white py-24 px-6">
+// //         <div className="max-w-5xl mx-auto text-center">
+
+// //           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
+// //             Why Clients Trust Our Legal Expertise
+// //           </h2>
+
+// //           <div className="grid md:grid-cols-2 gap-8 text-left">
+// //             <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
+// //               Strategic and research-driven legal approach
+// //             </div>
+// //             <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
+// //               Strong courtroom advocacy
+// //             </div>
+// //             <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
+// //               Ethical and confidential representation
+// //             </div>
+// //             <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
+// //               Personalized legal solutions
+// //             </div>
+// //           </div>
+
+// //         </div>
+// //       </section>
+
+// //       {/* ================= FAQ ================= */}
+// //       <section className="bg-[#0A0A0A] text-white py-24 px-6">
+// //         <div className="max-w-4xl mx-auto">
+// //           <h2 className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mb-14">
+// //             Frequently Asked Questions
+// //           </h2>
+
+// //           <div className="space-y-6">
+// //             {faqs.map((faq, index) => {
+// //               const isOpen = activeIndex === index;
+
+// //               return (
+// //                 <div
+// //                   key={index}
+// //                   className="border border-[#C9A24D]/20 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-xl"
+// //                 >
+// //                   <button
+// //                     onClick={() => setActiveIndex(isOpen ? null : index)}
+// //                     className="w-full flex justify-between items-center px-6 py-6 text-left"
+// //                   >
+// //                     <span className="font-medium text-lg">
+// //                       {faq.question}
+// //                     </span>
+
+// //                     <motion.div
+// //                       animate={{ rotate: isOpen ? 180 : 0 }}
+// //                       transition={{ duration: 0.3 }}
+// //                       className="text-[#C9A24D]"
+// //                     >
+// //                       <Plus size={22} />
+// //                     </motion.div>
+// //                   </button>
+
+// //                   <AnimatePresence>
+// //                     {isOpen && (
+// //                       <motion.div
+// //                         initial={{ height: 0, opacity: 0 }}
+// //                         animate={{ height: "auto", opacity: 1 }}
+// //                         exit={{ height: 0, opacity: 0 }}
+// //                         transition={{ duration: 0.4 }}
+// //                         className="px-6 pb-6 text-gray-300 leading-relaxed"
 // //                       >
 // //                         {faq.answer}
 // //                       </motion.div>
@@ -1882,28 +2668,262 @@
 // //         </div>
 // //       </section>
 
-// //       {/* ================= FINAL CTA ================= */}
-// //       <section className="bg-[#0A0A0A] text-center py-20 px-6">
-// //         <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
-// //           Discuss Your Legal Matter With Our Experts
-// //         </h2>
+// //       <Footer />
+// //     </>
+// //   );
+// // }
 
-// //         <p className="text-gray-300 mb-10">
-// //           Confidential consultations. Practical guidance.
-// //           Result-oriented representation.
-// //         </p>
 
-// //         <div className="flex flex-col sm:flex-row justify-center gap-6">
-// //           <a
-// //             href="/legal-consultation-in-bangalore"
-// //             className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition"
+
+// // "use client";
+
+// // import { useState } from "react";
+// // import { motion, AnimatePresence } from "framer-motion";
+// // import { PhoneCall, Plus } from "lucide-react";
+// // import Navbar from "../components/Navbar";
+// // import Footer from "../components/Footer";
+
+// // /* ================= ANIMATION ================= */
+
+// // const fadeUp = {
+// //   hidden: { opacity: 0, y: 40 },
+// //   visible: {
+// //     opacity: 1,
+// //     y: 0,
+// //     transition: { duration: 0.6, ease: "easeOut" },
+// //   },
+// // };
+
+// // export default function Page() {
+// //   const [activeIndex, setActiveIndex] = useState(null);
+
+// //   const faqs = [
+// //     {
+// //       question:
+// //         "What types of successful court cases in Bangalore has your firm handled?",
+// //       answer:
+// //         "S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
+// //     },
+// //     {
+// //       question:
+// //         "How does your law firm achieve strong court case results in Bangalore?",
+// //       answer:
+// //         "Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.",
+// //     },
+// //     {
+// //       question:
+// //         "Are your lawyer case results in Bangalore compliant with confidentiality standards?",
+// //       answer:
+// //         "Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards.",
+// //     },
+// //     {
+// //       question:
+// //         "Do successful court cases guarantee similar outcomes in my case?",
+// //       answer:
+// //         "No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations.",
+// //     },
+// //     {
+// //       question:
+// //         "How can I consult a successful lawyer in Bangalore regarding my legal matter?",
+// //       answer:
+// //         "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
+// //     },
+// //   ];
+
+// //   return (
+// //     <>
+// //       <Navbar />
+
+// //       {/* ================= HERO SECTION ================= */}
+// //       <section className="relative bg-black text-white pt-36 pb-24 px-6 overflow-hidden">
+// //         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.12),transparent_70%)]"></div>
+
+// //         <div className="max-w-5xl mx-auto text-center relative z-10">
+// //           <motion.h1
+// //             initial="hidden"
+// //             animate="visible"
+// //             variants={fadeUp}
+// //             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
 // //           >
-// //             Book Confidential Consultation
-// //           </a>
+// //             Successful Court Cases in Bangalore
+// //           </motion.h1>
+
+// //           <motion.p
+// //             variants={fadeUp}
+// //             initial="hidden"
+// //             animate="visible"
+// //             className="text-gray-300 text-lg leading-relaxed mb-6"
+// //           >
+// //             At S Jain & Attorneys, our reputation is built on delivering measurable
+// //             and strategic legal outcomes. Our track record of successful court cases
+// //             in Bangalore and strong court case results in Bangalore reflects our
+// //             commitment to excellence, preparation, and powerful courtroom advocacy.
+// //           </motion.p>
+
+// //           <motion.p
+// //             variants={fadeUp}
+// //             initial="hidden"
+// //             animate="visible"
+// //             className="text-gray-400 text-base leading-relaxed mb-10"
+// //           >
+// //             Recognized among the firms led by a successful lawyer in Bangalore,
+// //             we handle complex legal disputes with integrity, discretion, and a
+// //             client-focused approach. Our consistent lawyer case results in
+// //             Bangalore demonstrate our ability to navigate challenging legal matters effectively.
+// //           </motion.p>
+
+// //           <div className="flex flex-col sm:flex-row justify-center gap-6">
+// //             <a
+// //               href="/legal-consultation-in-bangalore"
+// //               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+// //             >
+// //               Book Confidential Consultation
+// //             </a>
+
+// //             <a
+// //               href="#"
+// //               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// //             >
+// //               <PhoneCall size={18} />
+// //               Request Call Back
+// //             </a>
+// //           </div>
+// //         </div>
+// //       </section>
+
+// //       {/* ================= STRATEGY SECTION ================= */}
+// //       <section className="bg-[#0A0A0A] text-white py-24 px-6">
+// //         <div className="max-w-5xl mx-auto text-center">
+// //           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
+// //             Proven Strategy. Strong Advocacy. Real Results.
+// //           </h2>
+
+// //           <p className="text-gray-300 leading-relaxed mb-6">
+// //             Our team of top lawyers in Bangalore has successfully represented
+// //             individuals, businesses, startups, and NRIs across diverse legal
+// //             matters. Each case is approached with detailed legal research,
+// //             strategic planning, and meticulous execution to achieve strong
+// //             court case results in Bangalore.
+// //           </p>
+
+// //           <p className="text-gray-400 mb-16">
+// //             Below are selected law firm success stories in Bangalore, presented
+// //             in compliance with professional standards and without disclosing confidential client information.
+// //             <br /><br />
+// //             <span className="text-[#C9A24D] font-medium">
+// //               Response within 24 hours guaranteed.
+// //             </span>
+// //           </p>
+// //         </div>
+
+// //         {/* ================= SELECTED CASE STUDIES ================= */}
+// //         <div className="max-w-6xl mx-auto space-y-10">
+
+// //           {[
+// //             {
+// //               title: "Corporate & Commercial Dispute",
+// //               content: `
+// // Background: Representation of a mid-sized business in a high-value contractual and financial dispute.
+
+// // Legal Strategy: Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.
+
+// // Outcome: Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.
+// // `,
+// //             },
+// //             {
+// //               title: "Criminal Defense Matter",
+// //               content: `
+// // Background: Defense in a serious criminal allegation requiring urgent court intervention.
+
+// // Legal Strategy: Detailed evidence analysis, procedural safeguards, and strong courtroom representation.
+
+// // Outcome: Relief granted by the court, safeguarding the client’s legal rights and professional reputation.
+// // `,
+// //             },
+// //             {
+// //               title: "Property & Real Estate Dispute",
+// //               content: `
+// // Background: Complex ownership conflict involving title discrepancies and competing claims.
+
+// // Legal Strategy: Extensive documentation review, title verification, and structured civil litigation proceedings.
+
+// // Outcome: Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.
+// // `,
+// //             },
+// //             {
+// //               title: "Family & Matrimonial Case",
+// //               content: `
+// // Background: Contested divorce involving custody and financial settlement issues.
+
+// // Legal Strategy: Balanced negotiation approach combined with litigation preparedness to ensure fair resolution.
+
+// // Outcome: Structured settlement ensures financial security and equitable custody arrangement.
+// // `,
+// //             },
+// //           ].map((item, index) => (
+// //             <motion.div
+// //               key={index}
+// //               initial={{ opacity: 0, y: 30 }}
+// //               whileInView={{ opacity: 1, y: 0 }}
+// //               transition={{ duration: 0.5, delay: index * 0.1 }}
+// //               viewport={{ once: true }}
+// //               className="bg-black/40 border border-[#C9A24D]/20 p-10 rounded-2xl"
+// //             >
+// //               <h3 className="text-2xl font-semibold text-[#C9A24D] mb-6">
+// //                 {item.title}
+// //               </h3>
+// //               <p className="text-gray-300 whitespace-pre-line leading-relaxed">
+// //                 {item.content}
+// //               </p>
+// //             </motion.div>
+// //           ))}
+// //         </div>
+// //       </section>
+
+// //       {/* ================= SUPPORT SECTION ================= */}
+// //       <section className="bg-black text-white py-24 px-6">
+// //         <div className="max-w-5xl mx-auto text-center">
+// //           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-12">
+// //             How We Support You Through Legal Challenges
+// //           </h2>
+
+// //           <div className="grid md:grid-cols-2 gap-8 text-left">
+// //             {[
+// //               "Effective legal approach",
+// //               "Strong courtroom advocacy",
+// //               "Ethical and confidential representation",
+// //               "Personalized legal solutions",
+// //               "Proven successful court cases in Bangalore",
+// //             ].map((item, i) => (
+// //               <div
+// //                 key={i}
+// //                 className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl"
+// //               >
+// //                 {item}
+// //               </div>
+// //             ))}
+// //           </div>
+// //         </div>
+// //       </section>
+
+// //       {/* ================= FINAL CTA ================= */}
+// //       <section className="bg-[#0A0A0A] text-white py-24 px-6 text-center">
+// //         <div className="max-w-4xl mx-auto">
+// //           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-6">
+// //             Discuss Your Legal Matter With Our Experts
+// //           </h2>
+
+// //           <p className="text-gray-300 mb-10 leading-relaxed">
+// //             If you are seeking representation backed by proven court case results
+// //             in Bangalore, S Jain & Attorneys provides strategic legal advice and
+// //             strong advocacy tailored to your needs.
+// //             <br /><br />
+// //             Confidential guidance. Trusted advice. Dedicated legal support every step of the way.
+// //           </p>
 
 // //           <a
-// //             href="tel:+91XXXXXXXXXX"
-// //             className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// //             href="#"
+// //             className="inline-flex items-center gap-2 bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
 // //           >
 // //             <PhoneCall size={18} />
 // //             Request Call Back
@@ -1917,27 +2937,357 @@
 // // }
 
 
+
+// // "use client";
+
+// // import { useState } from "react";
+// // import { motion, AnimatePresence } from "framer-motion";
+// // import { PhoneCall, Plus } from "lucide-react";
+// // import Navbar from "../components/Navbar";
+// // import Footer from "../components/Footer";
+
+// // /* ================= ANIMATION ================= */
+
+// // const fadeUp = {
+// //   hidden: { opacity: 0, y: 40 },
+// //   visible: {
+// //     opacity: 1,
+// //     y: 0,
+// //     transition: { duration: 0.6, ease: "easeOut" },
+// //   },
+// // };
+
+// // export default function Page() {
+// //   const [activeIndex, setActiveIndex] = useState(null);
+
+// //   const faqs = [
+// //     {
+// //       question:
+// //         "What types of successful court cases in Bangalore has your firm handled?",
+// //       answer:
+// //         "S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
+// //     },
+// //     {
+// //       question:
+// //         "How does your law firm achieve strong court case results in Bangalore?",
+// //       answer:
+// //         "Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.",
+// //     },
+// //     {
+// //       question:
+// //         "Are your lawyer case results in Bangalore compliant with confidentiality standards?",
+// //       answer:
+// //         "Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards while showcasing our legal expertise.",
+// //     },
+// //     {
+// //       question:
+// //         "Do successful court cases guarantee similar outcomes in my case?",
+// //       answer:
+// //         "No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations. Our team strives to provide the strongest possible representation based on the circumstances of your case.",
+// //     },
+// //     {
+// //       question:
+// //         "How can I consult a successful lawyer in Bangalore regarding my legal matter?",
+// //       answer:
+// //         "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
+// //     },
+// //   ];
+
+// //   return (
+// //     <>
+// //       <Navbar />
+
+// //       {/* ================= HERO SECTION ================= */}
+// //       <section className="relative bg-black text-white pt-36 pb-24 px-6 overflow-hidden">
+// //         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.12),transparent_70%)]"></div>
+
+// //         <div className="max-w-5xl mx-auto text-center relative z-10">
+// //           <motion.h1
+// //             initial="hidden"
+// //             animate="visible"
+// //             variants={fadeUp}
+// //             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
+// //           >
+// //             Successful Court Cases in Bangalore
+// //           </motion.h1>
+
+// //           <motion.p
+// //             variants={fadeUp}
+// //             initial="hidden"
+// //             animate="visible"
+// //             className="text-gray-300 text-lg leading-relaxed mb-6"
+// //           >
+// //             At S Jain & Attorneys, our reputation is built on delivering measurable
+// //             and strategic legal outcomes. Our track record of successful court
+// //             cases in Bangalore and strong court case results in Bangalore reflects
+// //             our commitment to excellence, preparation, and powerful courtroom advocacy.
+// //           </motion.p>
+
+// //           <motion.p
+// //             variants={fadeUp}
+// //             initial="hidden"
+// //             animate="visible"
+// //             className="text-gray-400 text-base leading-relaxed "
+// //           >
+// //             Recognized among the firms led by a successful lawyer in Bangalore,
+// //             we handle complex legal disputes with integrity, discretion, and a
+// //             client-focused approach. Our consistent lawyer case results in Bangalore
+// //             demonstrate our ability to navigate challenging legal matters effectively.
+// //           </motion.p>
+
+
+// //         </div>
+// //       </section>
+
+// //       {/* ================= STRATEGY SECTION ================= */}
+// //       <section className="bg-[#0A0A0A] text-white py-18 px-6 ">
+// //         <div className="max-w-5xl mx-auto text-center">
+// //           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
+// //             Proven Strategy. Strong Advocacy. Real Results.
+// //           </h2>
+
+// //           <p className="text-gray-300 leading-relaxed mb-6">
+// //             Our team of top lawyers in Bangalore has successfully represented
+// //             individuals, businesses, startups, and NRIs across diverse legal matters.
+// //             Each case is approached with detailed legal research, strategic planning,
+// //             and meticulous execution to achieve strong court case results in Bangalore.
+// //           </p>
+
+// //           <p className="text-gray-400 mb-10">
+// //             Below are selected law firm success stories in Bangalore, presented
+// //             in compliance with professional standards and without disclosing confidential client information.
+// //           </p>
+
+// //           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-6">
+// //             <a
+// //               href="/legal-consultation-in-bangalore"
+// //               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+// //             >
+// //               Book Confidential Consultation
+// //             </a>
+
+// //             <a
+// //               href="#"
+// //               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+// //             >
+// //               <PhoneCall size={18} />
+// //               Request Call Back
+// //             </a>
+// //           </div>
+
+// //           <p className="text-[#C9A24D] font-medium mt-6">
+// //             Response within 24 hours guaranteed.
+// //           </p>
+// //         </div>
+
+// //         <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#C9A24D] mb-16 mt-10">
+// //           Selected Case Studies
+// //         </h2>
+
+// //         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+// //   {[
+// //     {
+// //       title: "Corporate & Commercial Dispute",
+// //       content: `
+// // Background: Representation of a mid-sized business in a high-value contractual and financial dispute.
+
+// // Legal Strategy: Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.
+
+// // Outcome: Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.
+// // `,
+// //     },
+// //     {
+// //       title: "Criminal Defense Matter",
+// //       content: `
+// // Background: Defense in a serious criminal allegation requiring urgent court intervention.
+
+// // Legal Strategy: Detailed evidence analysis, procedural safeguards, and strong courtroom representation.
+
+// // Outcome: Relief granted by the court, safeguarding the client’s legal rights and professional reputation.
+// // `,
+// //     },
+// //     {
+// //       title: "Property & Real Estate Dispute",
+// //       content: `
+// // Background: Complex ownership conflict involving title discrepancies and competing claims.
+
+// // Legal Strategy: Extensive documentation review, title verification, and structured civil litigation proceedings.
+
+// // Outcome: Successful court order affirming the client’s lawful ownership rights.
+// // `,
+// //     },
+// //     {
+// //       title: "Family & Matrimonial Case",
+// //       content: `
+// // Background: Contested divorce involving custody and financial settlement issues.
+
+// // Legal Strategy: Balanced negotiation approach combined with litigation preparedness.
+
+// // Outcome: Structured settlement ensures financial security and equitable custody arrangement.
+// // `,
+// //     },
+// //   ].map((item, index) => (
+// //     <motion.div
+// //       key={index}
+// //       initial={{ opacity: 0, y: 30 }}
+// //       whileInView={{ opacity: 1, y: 0 }}
+// //       transition={{ duration: 0.5, delay: index * 0.1 }}
+// //       viewport={{ once: true }}
+// //       className="bg-black/40 border border-[#C9A24D]/20 p-10 rounded-2xl"
+// //     >
+// //       <h3 className="text-2xl font-semibold text-[#C9A24D] mb-6">
+// //         {item.title}
+// //       </h3>
+// //       <p className="text-gray-300 whitespace-pre-line leading-relaxed">
+// //         {item.content}
+// //       </p>
+// //     </motion.div>
+// //   ))}
+// // </div>
+// //       </section>
+
+// //       {/* ================= SUPPORT SECTION ================= */}
+// //       <section className="bg-black text-white py-24 px-6 text-center">
+// //         <div className="max-w-5xl mx-auto">
+// //           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-12">
+// //             How We Support You Through Legal Challenges
+// //           </h2>
+
+// //           <div className="grid md:grid-cols-2 gap-8 text-left mb-10">
+// //             {[
+// //               "Effective legal approach",
+// //               "Strong courtroom advocacy",
+// //               "Ethical and confidential representation",
+// //               "Personalized legal solutions",
+// //               "Proven successful court cases in Bangalore",
+// //             ].map((item, i) => (
+// //               <div
+// //                 key={i}
+// //                 className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl"
+// //               >
+// //                 {item}
+// //               </div>
+// //             ))}
+// //           </div>
+
+// //           <p className="text-gray-400 max-w-4xl mx-auto">
+// //             As experienced litigation lawyers in Bangalore, we focus on delivering practical
+// //             solutions while protecting our clients’ rights and interests at every stage
+// //             of the legal process.
+// //           </p>
+// //         </div>
+// //       </section>
+
+// //       {/* ================= FAQ SECTION ================= */}
+// //       <section className="bg-[#0A0A0A] text-white py-24 px-6">
+// //         <div className="max-w-4xl mx-auto">
+// //           <h2 className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mb-14">
+// //             Frequently Asked Questions (FAQs)
+// //           </h2>
+
+// //           <div className="space-y-6">
+// //             {faqs.map((faq, index) => {
+// //               const isOpen = activeIndex === index;
+// //               return (
+// //                 <div
+// //                   key={index}
+// //                   className="border border-[#C9A24D]/20 rounded-2xl overflow-hidden bg-white/5"
+// //                 >
+// //                   <button
+// //                     onClick={() => setActiveIndex(isOpen ? null : index)}
+// //                     className="w-full flex justify-between items-center px-6 py-6 text-left"
+// //                   >
+// //                     <span className="font-medium text-lg">
+// //                       {faq.question}
+// //                     </span>
+
+// //                     <motion.div
+// //                       animate={{ rotate: isOpen ? 180 : 0 }}
+// //                       transition={{ duration: 0.3 }}
+// //                       className="text-[#C9A24D]"
+// //                     >
+// //                       <Plus size={22} />
+// //                     </motion.div>
+// //                   </button>
+
+// //                   <AnimatePresence>
+// //                     {isOpen && (
+// //                       <motion.div
+// //                         initial={{ height: 0, opacity: 0 }}
+// //                         animate={{ height: "auto", opacity: 1 }}
+// //                         exit={{ height: 0, opacity: 0 }}
+// //                         transition={{ duration: 0.4 }}
+// //                         className="px-6 pb-6 text-gray-300 leading-relaxed"
+// //                       >
+// //                         {faq.answer}
+// //                       </motion.div>
+// //                     )}
+// //                   </AnimatePresence>
+// //                 </div>
+// //               );
+// //             })}
+// //           </div>
+// //         </div>
+// //       </section>
+
+// //       {/* ================= FINAL CTA ================= */}
+// //       <section className="bg-black text-white py-24 px-6 text-center">
+// //         <div className="max-w-4xl mx-auto">
+// //           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-6">
+// //             Discuss Your Legal Matter With Our Experts
+// //           </h2>
+
+// //           <p className="text-gray-300 mb-10 leading-relaxed">
+// //             If you are seeking representation backed by proven court case results
+// //             in Bangalore, S Jain & Attorneys provides strategic legal advice and
+// //             strong advocacy tailored to your needs.
+// //             <br /><br />
+// //             Confidential guidance. Trusted advice. Dedicated legal support every step of the way.
+// //           </p>
+
+// //           <a
+// //             href="#"
+// //             className="inline-flex items-center gap-2 bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+// //           >
+// //             <PhoneCall size={18} />
+// //             Request Call Back
+// //           </a>
+// //         </div>
+// //       </section>
+
+// //       <Footer />
+// //     </>
+// //   );
+// // }
+
 // "use client";
 
 // import { useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
-// import { PhoneCall, Plus, Minus } from "lucide-react";
+// import { PhoneCall, Plus } from "lucide-react";
 // import Navbar from "../components/Navbar";
 // import Footer from "../components/Footer";
 
-// /* ================= ANIMATIONS ================= */
 
-// const container = {
-//   hidden: {},
-//   visible: { transition: { staggerChildren: 0.15 } },
-// };
+
+// /* ================= ANIMATION ================= */
 
 // const fadeUp = {
-//   hidden: { opacity: 0, y: 40 },
+//   hidden: { opacity: 0, y: 40, filter: "blur(6px)" },
 //   visible: {
 //     opacity: 1,
 //     y: 0,
-//     transition: { duration: 0.6, ease: "easeOut" },
+//     filter: "blur(0px)",
+//     transition: { duration: 0.8, ease: "easeOut" },
+//   },
+// };
+
+// const staggerContainer = {
+//   hidden: {},
+//   visible: {
+//     transition: {
+//       staggerChildren: 0.2,
+//     },
 //   },
 // };
 
@@ -1947,31 +3297,31 @@
 //   const faqs = [
 //     {
 //       question:
-//         "What types of successful court cases in Bangalore has your firm handled?",
+//         "1. What types of successful court cases in Bangalore has your firm handled?",
 //       answer:
 //         "S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
 //     },
 //     {
 //       question:
-//         "How does your law firm achieve strong court case results in Bangalore?",
+//         "2. How does your law firm achieve strong court case results in Bangalore?",
 //       answer:
 //         "Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.",
 //     },
 //     {
 //       question:
-//         "Are your lawyer case results in Bangalore compliant with confidentiality standards?",
+//         "3. Are your lawyer case results in Bangalore compliant with confidentiality standards?",
 //       answer:
 //         "Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards while showcasing our legal expertise.",
 //     },
 //     {
 //       question:
-//         "Do successful court cases guarantee similar outcomes in my case?",
+//         "4. Do successful court cases guarantee similar outcomes in my case?",
 //       answer:
 //         "No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations. Our team strives to provide the strongest possible representation based on the circumstances of your case.",
 //     },
 //     {
 //       question:
-//         "How can I consult a successful lawyer in Bangalore regarding my legal matter?",
+//         "5. How can I consult a successful lawyer in Bangalore regarding my legal matter?",
 //       answer:
 //         "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
 //     },
@@ -1982,891 +3332,149 @@
 //       <Navbar />
 
 //       {/* ================= HERO ================= */}
-//       <section className="relative bg-black text-white pt-32 pb-20 px-6 overflow-hidden">
-//         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.15),transparent_70%)]"></div>
-
+//       <section className="bg-black text-white pt-36 pb-24 px-6">
 //         <motion.div
-//           variants={container}
+//           variants={staggerContainer}
 //           initial="hidden"
 //           animate="visible"
-//           className="max-w-5xl mx-auto text-center relative z-10"
+//           className="max-w-5xl mx-auto text-center"
 //         >
 //           <motion.h1
 //             variants={fadeUp}
-//             className="text-3xl md:text-5xl font-semibold text-[#C9A24D] mb-6"
+//             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
 //           >
 //             Successful Court Cases in Bangalore
 //           </motion.h1>
 
-//           <motion.p variants={fadeUp} className="text-gray-300 text-lg leading-relaxed mb-4">
-//             At S Jain & Attorneys, our reputation is built on delivering measurable and strategic legal outcomes.
-//             Our track record of successful court cases in Bangalore and strong court case results in Bangalore
-//             reflects our commitment to excellence, preparation, and powerful courtroom advocacy.
+//           <motion.p
+//             variants={fadeUp}
+//             className="text-gray-300 leading-relaxed mb-6"
+//           >
+//             At S Jain & Attorneys, our reputation is built on delivering measurable and strategic legal outcomes. Our track record of successful court cases in Bangalore and strong court case results in Bangalore reflects our commitment to excellence, preparation, and powerful courtroom advocacy.
 //           </motion.p>
 
-//           <motion.p variants={fadeUp} className="text-gray-400 leading-relaxed mb-8">
-//             Recognized among the firms led by a successful lawyer in Bangalore,
-//             we handle complex legal disputes with integrity, discretion, and a client-focused approach.
-//             Our consistent lawyer case results in Bangalore demonstrate our ability to navigate challenging legal matters effectively.
+//           <motion.p
+//             variants={fadeUp}
+//             className="text-gray-400 leading-relaxed"
+//           >
+//             Recognized among the firms led by a successful lawyer in Bangalore, we handle complex legal disputes with integrity, discretion, and a client-focused approach. Our consistent lawyer case results in Bangalore demonstrate our ability to navigate challenging legal matters effectively.
+//           </motion.p>
+//         </motion.div>
+//       </section>
+
+//       {/* ================= STRATEGY ================= */}
+//       <section className="bg-[#0A0A0A] text-white py-20 px-6">
+//         <motion.div
+//           variants={staggerContainer}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           className="max-w-5xl mx-auto text-center"
+//         >
+//           <motion.h2
+//             variants={fadeUp}
+//             className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10"
+//           >
+//             Proven Strategy. Strong Advocacy. Real Results.
+//           </motion.h2>
+
+//           <motion.p variants={fadeUp} className="text-gray-300 mb-6">
+//             Our team of top lawyers in Bangalore has successfully represented individuals, businesses, startups, and NRIs across diverse legal matters. Each case is approached with detailed legal research, strategic planning, and meticulous execution to achieve strong court case results in Bangalore.
 //           </motion.p>
 
-//           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-6">
+//           <motion.p variants={fadeUp} className="text-gray-400 mb-6">
+//             Below are selected law firm success stories in Bangalore, presented in compliance with professional standards and without disclosing confidential client information.
+//           </motion.p>
+
+//           <motion.p variants={fadeUp} className="text-[#C9A24D] font-medium mb-8">
+//             Response within 24 hours guaranteed.
+//           </motion.p>
+
+//           <motion.div
+//             variants={fadeUp}
+//             className="flex flex-col sm:flex-row justify-center gap-6"
+//           >
 //             <a
 //               href="/legal-consultation-in-bangalore"
-//               className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition"
+//               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition"
 //             >
 //               Book Confidential Consultation
 //             </a>
 
 //             <a
-//               href="tel:+91XXXXXXXXXX"
-//               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition"
+//               href="#"
+//               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
 //             >
 //               <PhoneCall size={18} />
 //               Request Call Back
 //             </a>
 //           </motion.div>
-
-//           <motion.p variants={fadeUp} className="mt-6 text-sm text-[#C9A24D]">
-//             Response within 24 hours guaranteed.
-//           </motion.p>
 //         </motion.div>
-//       </section>
 
-//       {/* ================= STRATEGY SECTION ================= */}
-//       <section className="bg-[#0A0A0A] text-white py-20 px-6">
-//         <div className="max-w-5xl mx-auto">
-//           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
-//             Proven Strategy. Strong Advocacy. Real Results.
-//           </h2>
-
-//           <p className="text-gray-300 leading-relaxed mb-6">
-//             Our team of top lawyers in Bangalore has successfully represented individuals,
-//             businesses, startups, and NRIs across diverse legal matters. Each case is approached
-//             with detailed legal research, strategic planning, and meticulous execution to achieve strong court case results in Bangalore.
-//           </p>
-
-//           <p className="text-gray-400 leading-relaxed">
-//             Below are selected law firm success stories in Bangalore, presented in compliance with professional standards
-//             and without disclosing confidential client information.
-//           </p>
-//         </div>
-//       </section>
-
-//       {/* ================= CASE STUDIES ================= */}
-//       <section className="bg-black text-white py-20 px-6">
-//         <div className="max-w-6xl mx-auto space-y-12">
-
-//           <div>
-//             <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
-//               Corporate & Commercial Dispute
-//             </h3>
-//             <p><strong>Background:</strong> Representation of a mid-sized business in a high-value contractual and financial dispute.</p>
-//             <p><strong>Legal Strategy:</strong> Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.</p>
-//             <p><strong>Outcome:</strong> Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.</p>
-//           </div>
-
-//           <div>
-//             <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
-//               Criminal Defense Matter
-//             </h3>
-//             <p><strong>Background:</strong> Defense in a serious criminal allegation requiring urgent court intervention.</p>
-//             <p><strong>Legal Strategy:</strong> Detailed evidence analysis, procedural safeguards, and strong courtroom representation.</p>
-//             <p><strong>Outcome:</strong> Relief granted by the court, safeguarding the client’s legal rights and professional reputation.</p>
-//           </div>
-
-//           <div>
-//             <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
-//               Property & Real Estate Dispute
-//             </h3>
-//             <p><strong>Background:</strong> Complex ownership conflict involving title discrepancies and competing claims.</p>
-//             <p><strong>Legal Strategy:</strong> Extensive documentation review, title verification, and structured civil litigation proceedings.</p>
-//             <p><strong>Outcome:</strong> Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.</p>
-//           </div>
-
-//           <div>
-//             <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
-//               Family & Matrimonial Case
-//             </h3>
-//             <p><strong>Background:</strong> Contested divorce involving custody and financial settlement issues.</p>
-//             <p><strong>Legal Strategy:</strong> Balanced negotiation approach combined with litigation preparedness to ensure fair resolution.</p>
-//             <p><strong>Outcome:</strong> Structured settlement ensuring financial security and equitable custody arrangement.</p>
-//           </div>
-
-//         </div>
-//       </section>
-
-//       {/* ================= WHY TRUST ================= */}
-//       <section className="bg-[#0A0A0A] text-white py-20 px-6">
-//         <div className="max-w-5xl mx-auto">
-//           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
-//             Why Clients Trust Our Legal Expertise
-//           </h2>
-
-//           <ul className="space-y-3 text-gray-300">
-//             <li>✔ Strategic and research-driven legal approach</li>
-//             <li>✔ Strong courtroom advocacy</li>
-//             <li>✔ Ethical and confidential representation</li>
-//             <li>✔ Personalized legal solutions</li>
-//             <li>✔ Proven successful court cases in Bangalore</li>
-//           </ul>
-
-//           <p className="text-gray-400 mt-6">
-//             As experienced litigation lawyers in Bangalore, we focus on delivering practical solutions while protecting our clients’ rights and interests at every stage of the legal process.
-//           </p>
-//         </div>
-//       </section>
-
-//       {/* ================= FAQ (TOGGLE) ================= */}
-//       <section className="bg-black text-white py-20 px-6">
-//         <div className="max-w-4xl mx-auto space-y-4">
-//           <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6 text-center">
-//             Frequently Asked Questions (FAQs)
-//           </h2>
-
-//           {faqs.map((faq, index) => {
-//             const isOpen = activeIndex === index;
-//             return (
-//               <div key={index} className="border border-[#C9A24D]/30 rounded-lg overflow-hidden">
-//                 <button
-//                   onClick={() => setActiveIndex(isOpen ? null : index)}
-//                   className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-[#C9A24D]/10 transition"
-//                 >
-//                   <span className="font-semibold text-[#C9A24D]">{faq.question}</span>
-//                   {isOpen ? <Minus size={20} /> : <Plus size={20} />}
-//                 </button>
-
-//                 <AnimatePresence>
-//                   {isOpen && (
-//                     <motion.div
-//                       initial={{ height: 0, opacity: 0 }}
-//                       animate={{ height: "auto", opacity: 1 }}
-//                       exit={{ height: 0, opacity: 0 }}
-//                       transition={{ duration: 0.3 }}
-//                       className="px-6 pb-4 text-gray-300 text-sm leading-relaxed"
-//                     >
-//                       {faq.answer}
-//                     </motion.div>
-//                   )}
-//                 </AnimatePresence>
-//               </div>
-//             );
-//           })}
-//         </div>
-//       </section>
-
-//       {/* ================= FINAL CTA ================= */}
-//       <section className="bg-[#0A0A0A] text-center py-20 px-6">
-//         <h2 className="text-2xl md:text-3xl font-semibold text-[#C9A24D] mb-6">
-//           Discuss Your Legal Matter With Our Experts
-//         </h2>
-
-//         <p className="text-gray-300 mb-10">
-//           If you are seeking representation backed by proven court case results in Bangalore,
-//           S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
-//           Confidential consultations. Practical guidance. Result-oriented representation.
-//         </p>
-
-//         <div className="flex flex-col sm:flex-row justify-center gap-6">
-//           <a href="/legal-consultation-in-bangalore"
-//              className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition">
-//             Book Confidential Consultation
-//           </a>
-
-//           <a href="tel:+91XXXXXXXXXX"
-//              className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition">
-//             <PhoneCall size={18} />
-//             Request Call Back
-//           </a>
-//         </div>
-//       </section>
-
-//       <Footer />
-//     </>
-//   );
-// }
-
-
-// "use client";
-
-// import { useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import { PhoneCall, Plus } from "lucide-react";
-// import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
-
-// /* ================= ANIMATION VARIANTS ================= */
-
-// const fadeUp = {
-//   hidden: { opacity: 0, y: 40 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { duration: 0.6, ease: "easeOut" },
-//   },
-// };
-
-// export default function Page() {
-//   const [activeIndex, setActiveIndex] = useState(null);
-
-//   const faqs = [
-//     {
-//       question:
-//         "What types of successful court cases in Bangalore has your firm handled?",
-//       answer:
-//         "S Jain & Attorneys has handled corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
-//     },
-//     {
-//       question:
-//         "How does your law firm achieve strong court case results in Bangalore?",
-//       answer:
-//         "Our team follows a structured process including detailed case analysis, legal research, strategic planning, and strong courtroom advocacy to deliver consistent and reliable legal outcomes.",
-//     },
-//     {
-//       question:
-//         "Are your lawyer case results compliant with confidentiality standards?",
-//       answer:
-//         "Yes. All case summaries are shared without disclosing confidential client information. We strictly adhere to professional and ethical standards.",
-//     },
-//     {
-//       question:
-//         "Do successful court cases guarantee similar outcomes?",
-//       answer:
-//         "No legal outcome can be guaranteed. Every matter depends on its specific facts and legal complexities. We strive to provide the strongest possible representation in each case.",
-//     },
-//   ];
-
-//   return (
-//     <>
-//       <Navbar />
-
-//       {/* ================= HERO SECTION ================= */}
-//       <section className="relative bg-black text-white pt-36 pb-24 px-6 overflow-hidden">
-
-//         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.12),transparent_70%)]"></div>
-
-//         <div className="max-w-5xl mx-auto text-center relative z-10">
-
-//           <motion.h1
-//             initial="hidden"
-//             animate="visible"
-//             variants={fadeUp}
-//             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
-//           >
-//             Proven Strategy. Strong Advocacy. Real Results.
-//           </motion.h1>
-
-//           <motion.p
-//             variants={fadeUp}
-//             initial="hidden"
-//             animate="visible"
-//             className="text-gray-300 text-lg leading-relaxed mb-10"
-//           >
-//             Our track record of successful court cases in Bangalore reflects our
-//             commitment to strategic preparation, courtroom strength, and ethical
-//             representation across complex legal disputes.
-//           </motion.p>
-
-//           <div className="flex flex-col sm:flex-row justify-center gap-6">
-//             <a
-//               href="/legal-consultation-in-bangalore"
-//               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
-//             >
-//               Book Confidential Consultation
-//             </a>
-
-//             <a
-//               href="tel:+91XXXXXXXXXX"
-//               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
-//             >
-//               <PhoneCall size={18} />
-//               Call Now
-//             </a>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= CASE STUDIES ================= */}
-//       <section className="bg-[#0A0A0A] text-white py-24 px-6">
-//         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-
-//           {[
-//             {
-//               title: "Corporate & Commercial Dispute",
-//               text: "High-value contractual dispute resolved through strategic negotiation and structured litigation readiness."
-//             },
-//             {
-//               title: "Criminal Defense Matter",
-//               text: "Urgent court intervention securing relief and safeguarding client reputation."
-//             },
-//             {
-//               title: "Property & Real Estate Conflict",
-//               text: "Successful title verification and court affirmation of ownership rights."
-//             },
-//             {
-//               title: "Family & Matrimonial Case",
-//               text: "Balanced negotiation and litigation strategy ensuring equitable settlement."
-//             }
-//           ].map((item, index) => (
-//             <motion.div
-//               key={index}
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.5, delay: index * 0.1 }}
-//               viewport={{ once: true }}
-//               className="bg-black/40 backdrop-blur-xl border border-[#C9A24D]/20 p-8 rounded-2xl hover:border-[#C9A24D]/60 hover:shadow-[0_0_25px_rgba(201,162,77,0.2)] transition"
-//             >
-//               <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
-//                 {item.title}
-//               </h3>
-//               <p className="text-gray-300 leading-relaxed">
-//                 {item.text}
-//               </p>
-//             </motion.div>
-//           ))}
-
-//         </div>
-//       </section>
-
-//       {/* ================= FAQ SECTION ================= */}
-//       <section className="bg-black text-white py-24 px-6">
-//         <div className="max-w-4xl mx-auto">
-
-//           <h2 className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mb-14">
-//             Frequently Asked Questions
-//           </h2>
-
-//           <div className="space-y-6">
-//             {faqs.map((faq, index) => {
-//               const isOpen = activeIndex === index;
-
-//               return (
-//                 <div
-//                   key={index}
-//                   className="border border-[#C9A24D]/20 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-xl"
-//                 >
-//                   <button
-//                     onClick={() => setActiveIndex(isOpen ? null : index)}
-//                     className="w-full flex justify-between items-center px-6 py-6 text-left"
-//                   >
-//                     <span className="font-medium text-lg">
-//                       {faq.question}
-//                     </span>
-
-//                     <motion.div
-//                       animate={{ rotate: isOpen ? 180 : 0 }}
-//                       transition={{ duration: 0.3 }}
-//                       className="text-[#C9A24D]"
-//                     >
-//                       <Plus size={22} />
-//                     </motion.div>
-//                   </button>
-
-//                   <AnimatePresence>
-//                     {isOpen && (
-//                       <motion.div
-//                         initial={{ height: 0, opacity: 0 }}
-//                         animate={{ height: "auto", opacity: 1 }}
-//                         exit={{ height: 0, opacity: 0 }}
-//                         transition={{ duration: 0.4 }}
-//                         className="px-6 pb-6 text-gray-300 leading-relaxed"
-//                       >
-//                         {faq.answer}
-//                       </motion.div>
-//                     )}
-//                   </AnimatePresence>
-//                 </div>
-//               );
-//             })}
-//           </div>
-
-//         </div>
-//       </section>
-
-//       {/* ================= FINAL CTA ================= */}
-//       <section className="bg-[#0A0A0A] text-center py-24 px-6">
-//         <h2 className="text-3xl font-semibold text-[#C9A24D] mb-6">
-//           Discuss Your Legal Matter With Our Experts
-//         </h2>
-
-//         <p className="text-gray-300 mb-10 max-w-3xl mx-auto">
-//           Confidential consultations. Strategic guidance. Result-oriented
-//           representation. Speak with experienced litigation lawyers in
-//           Bangalore today.
-//         </p>
-
-//         <a
-//           href="/legal-consultation-in-bangalore"
-//           className="bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+//         {/* ================= CASE STUDIES ================= */}
+//         <motion.h2
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           variants={fadeUp}
+//           className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mt-20 mb-16"
 //         >
-//           Schedule Consultation
-//         </a>
-//       </section>
+//           SELECTED CASE STUDIES
+//         </motion.h2>
 
-//       <Footer />
-//     </>
-//   );
-// }
-
-
-
-// "use client";
-
-// import { useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import { PhoneCall, Plus } from "lucide-react";
-// import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
-
-
-
-// /* ================= ANIMATION ================= */
-
-// const fadeUp = {
-//   hidden: { opacity: 0, y: 40 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { duration: 0.6, ease: "easeOut" },
-//   },
-// };
-
-// export default function Page() {
-//   const [activeIndex, setActiveIndex] = useState(null);
-
-//   const faqs = [
-//     {
-//       question:
-//         "What types of successful court cases in Bangalore has your firm handled?",
-//       answer:
-//         "S Jain & Attorneys has handled corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
-//     },
-//     {
-//       question:
-//         "How does your law firm achieve strong court case results in Bangalore?",
-//       answer:
-//         "Our team follows a structured process including detailed case analysis, legal research, strategic planning, and strong courtroom advocacy to deliver consistent and reliable legal outcomes.",
-//     },
-//     {
-//       question:
-//         "Are your lawyer case results compliant with confidentiality standards?",
-//       answer:
-//         "Yes. All case summaries are shared without disclosing confidential client information. We strictly adhere to professional and ethical standards.",
-//     },
-//     {
-//       question:
-//         "Do successful court cases guarantee similar outcomes?",
-//       answer:
-//         "No legal outcome can be guaranteed. Every matter depends on its specific facts and legal complexities. We strive to provide the strongest possible representation in each case.",
-//     },
-//     {
-//       question:
-//         "How can I consult a successful lawyer in Bangalore?",
-//       answer:
-//         "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
-//     },
-//   ];
-
-//   return (
-//     <>
-//       <Navbar />
-
-//       {/* ================= HERO SECTION ================= */}
-//       <section className="relative bg-black text-white pt-36 pb-24 px-6 overflow-hidden">
-
-//         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.12),transparent_70%)]"></div>
-
-//         <div className="max-w-5xl mx-auto text-center relative z-10">
-
-//           <motion.h1
-//             initial="hidden"
-//             animate="visible"
-//             variants={fadeUp}
-//             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
-//           >
-//             Successful Court Cases in Bangalore
-//           </motion.h1>
-
-//           <motion.p
-//             variants={fadeUp}
-//             initial="hidden"
-//             animate="visible"
-//             className="text-gray-300 text-lg leading-relaxed mb-6"
-//           >
-//             At S Jain & Attorneys, our reputation is built on delivering measurable
-//             and strategic legal outcomes. Our track record reflects our commitment
-//             to excellence, preparation, and powerful courtroom advocacy.
-//           </motion.p>
-
-//           <motion.p
-//             variants={fadeUp}
-//             initial="hidden"
-//             animate="visible"
-//             className="text-gray-400 text-base leading-relaxed mb-10"
-//           >
-//             Recognized among the firms led by a successful lawyer in Bangalore,
-//             we handle complex legal disputes with integrity, discretion, and a
-//             client-focused approach.
-//           </motion.p>
-
-//           <div className="flex flex-col sm:flex-row justify-center gap-6">
-//             <a
-//               href="/legal-consultation-in-bangalore"
-//               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
-//             >
-//               Book Confidential Consultation
-//             </a>
-
-//             <a
-//               href="#"
-//               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
-//             >
-//               <PhoneCall size={18} />
-//               Request Call Back
-//             </a>
-//           </div>
-
-//         </div>
-//       </section>
-
-//       {/* ================= STRATEGY SECTION ================= */}
-//       <section className="bg-[#0A0A0A] text-white py-24 px-6">
-//         <div className="max-w-5xl mx-auto text-center">
-
-//           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
-//             Proven Strategy. Strong Advocacy. Real Results.
-//           </h2>
-
-//           <p className="text-gray-300 leading-relaxed mb-16">
-//             Our team has successfully represented individuals, businesses,
-//             startups, and NRIs across diverse legal matters. Each case is
-//             approached with detailed legal research, strategic planning,
-//             and meticulous execution to achieve strong court case results in Bangalore.
-//             <br /><br />
-//             Response within 24 hours guaranteed.
-//           </p>
-
-//         </div>
-
-//         {/* CASE STUDIES */}
 //         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-
 //           {[
 //             {
 //               title: "Corporate & Commercial Dispute",
-//               text: "High-value contractual dispute resolved through structured negotiation and litigation readiness. Favorable settlement protecting commercial interests.",
+//               content: `Background:
+// Representation of a mid-sized business in a high-value contractual and financial dispute.
+
+// Legal Strategy:
+// Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.
+
+// Outcome:
+// Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.`,
 //             },
 //             {
 //               title: "Criminal Defense Matter",
-//               text: "Urgent court intervention securing relief and safeguarding client reputation through strong courtroom advocacy.",
+//               content: `Background:
+// Defense in a serious criminal allegation requiring urgent court intervention.
+
+// Legal Strategy:
+// Detailed evidence analysis, procedural safeguards, and strong courtroom representation by a successful criminal lawyer Bangalore clients rely on.
+
+// Outcome:
+// Relief granted by the court, safeguarding the client’s legal rights and professional reputation.`,
 //             },
 //             {
 //               title: "Property & Real Estate Dispute",
-//               text: "Successful court order affirming lawful ownership rights after comprehensive title verification and structured proceedings.",
+//               content: `Background:
+// Complex ownership conflict involving title discrepancies and competing claims.
+
+// Legal Strategy:
+// Extensive documentation review, title verification, and structured civil litigation proceedings.
+
+// Outcome:
+// Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.`,
 //             },
 //             {
 //               title: "Family & Matrimonial Case",
-//               text: "Equitable settlement achieved through balanced negotiation and litigation preparedness in contested divorce proceedings.",
+//               content: `Background:
+// Contested divorce involving custody and financial settlement issues.
+
+// Legal Strategy:
+// Balanced negotiation approach combined with litigation preparedness to ensure fair resolution led by a successful divorce lawyer Bangalore families trust.
+
+// Outcome:
+// Structured settlement ensures financial security and equitable custody arrangement.`,
 //             },
 //           ].map((item, index) => (
 //             <motion.div
 //               key={index}
 //               initial={{ opacity: 0, y: 30 }}
 //               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.5, delay: index * 0.1 }}
 //               viewport={{ once: true }}
-//               className="bg-black/40 backdrop-blur-xl border border-[#C9A24D]/20 p-8 rounded-2xl hover:border-[#C9A24D]/60 hover:shadow-[0_0_25px_rgba(201,162,77,0.2)] transition"
-//             >
-//               <h3 className="text-xl font-semibold text-[#C9A24D] mb-4">
-//                 {item.title}
-//               </h3>
-//               <p className="text-gray-300 leading-relaxed">
-//                 {item.text}
-//               </p>
-//             </motion.div>
-//           ))}
-
-//         </div>
-//       </section>
-
-//       {/* ================= WHY TRUST ================= */}
-//       <section className="bg-black text-white py-24 px-6">
-//         <div className="max-w-5xl mx-auto text-center">
-
-//           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
-//             Why Clients Trust Our Legal Expertise
-//           </h2>
-
-//           <div className="grid md:grid-cols-2 gap-8 text-left">
-//             <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
-//               Strategic and research-driven legal approach
-//             </div>
-//             <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
-//               Strong courtroom advocacy
-//             </div>
-//             <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
-//               Ethical and confidential representation
-//             </div>
-//             <div className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl">
-//               Personalized legal solutions
-//             </div>
-//           </div>
-
-//         </div>
-//       </section>
-
-//       {/* ================= FAQ ================= */}
-//       <section className="bg-[#0A0A0A] text-white py-24 px-6">
-//         <div className="max-w-4xl mx-auto">
-//           <h2 className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mb-14">
-//             Frequently Asked Questions
-//           </h2>
-
-//           <div className="space-y-6">
-//             {faqs.map((faq, index) => {
-//               const isOpen = activeIndex === index;
-
-//               return (
-//                 <div
-//                   key={index}
-//                   className="border border-[#C9A24D]/20 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-xl"
-//                 >
-//                   <button
-//                     onClick={() => setActiveIndex(isOpen ? null : index)}
-//                     className="w-full flex justify-between items-center px-6 py-6 text-left"
-//                   >
-//                     <span className="font-medium text-lg">
-//                       {faq.question}
-//                     </span>
-
-//                     <motion.div
-//                       animate={{ rotate: isOpen ? 180 : 0 }}
-//                       transition={{ duration: 0.3 }}
-//                       className="text-[#C9A24D]"
-//                     >
-//                       <Plus size={22} />
-//                     </motion.div>
-//                   </button>
-
-//                   <AnimatePresence>
-//                     {isOpen && (
-//                       <motion.div
-//                         initial={{ height: 0, opacity: 0 }}
-//                         animate={{ height: "auto", opacity: 1 }}
-//                         exit={{ height: 0, opacity: 0 }}
-//                         transition={{ duration: 0.4 }}
-//                         className="px-6 pb-6 text-gray-300 leading-relaxed"
-//                       >
-//                         {faq.answer}
-//                       </motion.div>
-//                     )}
-//                   </AnimatePresence>
-//                 </div>
-//               );
-//             })}
-//           </div>
-//         </div>
-//       </section>
-
-//       <Footer />
-//     </>
-//   );
-// }
-
-
-
-// "use client";
-
-// import { useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import { PhoneCall, Plus } from "lucide-react";
-// import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
-
-// /* ================= ANIMATION ================= */
-
-// const fadeUp = {
-//   hidden: { opacity: 0, y: 40 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { duration: 0.6, ease: "easeOut" },
-//   },
-// };
-
-// export default function Page() {
-//   const [activeIndex, setActiveIndex] = useState(null);
-
-//   const faqs = [
-//     {
-//       question:
-//         "What types of successful court cases in Bangalore has your firm handled?",
-//       answer:
-//         "S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
-//     },
-//     {
-//       question:
-//         "How does your law firm achieve strong court case results in Bangalore?",
-//       answer:
-//         "Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.",
-//     },
-//     {
-//       question:
-//         "Are your lawyer case results in Bangalore compliant with confidentiality standards?",
-//       answer:
-//         "Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards.",
-//     },
-//     {
-//       question:
-//         "Do successful court cases guarantee similar outcomes in my case?",
-//       answer:
-//         "No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations.",
-//     },
-//     {
-//       question:
-//         "How can I consult a successful lawyer in Bangalore regarding my legal matter?",
-//       answer:
-//         "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
-//     },
-//   ];
-
-//   return (
-//     <>
-//       <Navbar />
-
-//       {/* ================= HERO SECTION ================= */}
-//       <section className="relative bg-black text-white pt-36 pb-24 px-6 overflow-hidden">
-//         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.12),transparent_70%)]"></div>
-
-//         <div className="max-w-5xl mx-auto text-center relative z-10">
-//           <motion.h1
-//             initial="hidden"
-//             animate="visible"
-//             variants={fadeUp}
-//             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
-//           >
-//             Successful Court Cases in Bangalore
-//           </motion.h1>
-
-//           <motion.p
-//             variants={fadeUp}
-//             initial="hidden"
-//             animate="visible"
-//             className="text-gray-300 text-lg leading-relaxed mb-6"
-//           >
-//             At S Jain & Attorneys, our reputation is built on delivering measurable
-//             and strategic legal outcomes. Our track record of successful court cases
-//             in Bangalore and strong court case results in Bangalore reflects our
-//             commitment to excellence, preparation, and powerful courtroom advocacy.
-//           </motion.p>
-
-//           <motion.p
-//             variants={fadeUp}
-//             initial="hidden"
-//             animate="visible"
-//             className="text-gray-400 text-base leading-relaxed mb-10"
-//           >
-//             Recognized among the firms led by a successful lawyer in Bangalore,
-//             we handle complex legal disputes with integrity, discretion, and a
-//             client-focused approach. Our consistent lawyer case results in
-//             Bangalore demonstrate our ability to navigate challenging legal matters effectively.
-//           </motion.p>
-
-//           <div className="flex flex-col sm:flex-row justify-center gap-6">
-//             <a
-//               href="/legal-consultation-in-bangalore"
-//               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
-//             >
-//               Book Confidential Consultation
-//             </a>
-
-//             <a
-//               href="#"
-//               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
-//             >
-//               <PhoneCall size={18} />
-//               Request Call Back
-//             </a>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= STRATEGY SECTION ================= */}
-//       <section className="bg-[#0A0A0A] text-white py-24 px-6">
-//         <div className="max-w-5xl mx-auto text-center">
-//           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
-//             Proven Strategy. Strong Advocacy. Real Results.
-//           </h2>
-
-//           <p className="text-gray-300 leading-relaxed mb-6">
-//             Our team of top lawyers in Bangalore has successfully represented
-//             individuals, businesses, startups, and NRIs across diverse legal
-//             matters. Each case is approached with detailed legal research,
-//             strategic planning, and meticulous execution to achieve strong
-//             court case results in Bangalore.
-//           </p>
-
-//           <p className="text-gray-400 mb-16">
-//             Below are selected law firm success stories in Bangalore, presented
-//             in compliance with professional standards and without disclosing confidential client information.
-//             <br /><br />
-//             <span className="text-[#C9A24D] font-medium">
-//               Response within 24 hours guaranteed.
-//             </span>
-//           </p>
-//         </div>
-
-//         {/* ================= SELECTED CASE STUDIES ================= */}
-//         <div className="max-w-6xl mx-auto space-y-10">
-
-//           {[
-//             {
-//               title: "Corporate & Commercial Dispute",
-//               content: `
-// Background: Representation of a mid-sized business in a high-value contractual and financial dispute.
-
-// Legal Strategy: Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.
-
-// Outcome: Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.
-// `,
-//             },
-//             {
-//               title: "Criminal Defense Matter",
-//               content: `
-// Background: Defense in a serious criminal allegation requiring urgent court intervention.
-
-// Legal Strategy: Detailed evidence analysis, procedural safeguards, and strong courtroom representation.
-
-// Outcome: Relief granted by the court, safeguarding the client’s legal rights and professional reputation.
-// `,
-//             },
-//             {
-//               title: "Property & Real Estate Dispute",
-//               content: `
-// Background: Complex ownership conflict involving title discrepancies and competing claims.
-
-// Legal Strategy: Extensive documentation review, title verification, and structured civil litigation proceedings.
-
-// Outcome: Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.
-// `,
-//             },
-//             {
-//               title: "Family & Matrimonial Case",
-//               content: `
-// Background: Contested divorce involving custody and financial settlement issues.
-
-// Legal Strategy: Balanced negotiation approach combined with litigation preparedness to ensure fair resolution.
-
-// Outcome: Structured settlement ensures financial security and equitable custody arrangement.
-// `,
-//             },
-//           ].map((item, index) => (
-//             <motion.div
-//               key={index}
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.5, delay: index * 0.1 }}
-//               viewport={{ once: true }}
+//               transition={{ duration: 0.6, delay: index * 0.1 }}
 //               className="bg-black/40 border border-[#C9A24D]/20 p-10 rounded-2xl"
 //             >
 //               <h3 className="text-2xl font-semibold text-[#C9A24D] mb-6">
@@ -2880,273 +3488,7 @@
 //         </div>
 //       </section>
 
-//       {/* ================= SUPPORT SECTION ================= */}
-//       <section className="bg-black text-white py-24 px-6">
-//         <div className="max-w-5xl mx-auto text-center">
-//           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-12">
-//             How We Support You Through Legal Challenges
-//           </h2>
-
-//           <div className="grid md:grid-cols-2 gap-8 text-left">
-//             {[
-//               "Effective legal approach",
-//               "Strong courtroom advocacy",
-//               "Ethical and confidential representation",
-//               "Personalized legal solutions",
-//               "Proven successful court cases in Bangalore",
-//             ].map((item, i) => (
-//               <div
-//                 key={i}
-//                 className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl"
-//               >
-//                 {item}
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= FINAL CTA ================= */}
-//       <section className="bg-[#0A0A0A] text-white py-24 px-6 text-center">
-//         <div className="max-w-4xl mx-auto">
-//           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-6">
-//             Discuss Your Legal Matter With Our Experts
-//           </h2>
-
-//           <p className="text-gray-300 mb-10 leading-relaxed">
-//             If you are seeking representation backed by proven court case results
-//             in Bangalore, S Jain & Attorneys provides strategic legal advice and
-//             strong advocacy tailored to your needs.
-//             <br /><br />
-//             Confidential guidance. Trusted advice. Dedicated legal support every step of the way.
-//           </p>
-
-//           <a
-//             href="#"
-//             className="inline-flex items-center gap-2 bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
-//           >
-//             <PhoneCall size={18} />
-//             Request Call Back
-//           </a>
-//         </div>
-//       </section>
-
-//       <Footer />
-//     </>
-//   );
-// }
-
-
-
-// "use client";
-
-// import { useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import { PhoneCall, Plus } from "lucide-react";
-// import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
-
-// /* ================= ANIMATION ================= */
-
-// const fadeUp = {
-//   hidden: { opacity: 0, y: 40 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { duration: 0.6, ease: "easeOut" },
-//   },
-// };
-
-// export default function Page() {
-//   const [activeIndex, setActiveIndex] = useState(null);
-
-//   const faqs = [
-//     {
-//       question:
-//         "What types of successful court cases in Bangalore has your firm handled?",
-//       answer:
-//         "S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
-//     },
-//     {
-//       question:
-//         "How does your law firm achieve strong court case results in Bangalore?",
-//       answer:
-//         "Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.",
-//     },
-//     {
-//       question:
-//         "Are your lawyer case results in Bangalore compliant with confidentiality standards?",
-//       answer:
-//         "Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards while showcasing our legal expertise.",
-//     },
-//     {
-//       question:
-//         "Do successful court cases guarantee similar outcomes in my case?",
-//       answer:
-//         "No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations. Our team strives to provide the strongest possible representation based on the circumstances of your case.",
-//     },
-//     {
-//       question:
-//         "How can I consult a successful lawyer in Bangalore regarding my legal matter?",
-//       answer:
-//         "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
-//     },
-//   ];
-
-//   return (
-//     <>
-//       <Navbar />
-
-//       {/* ================= HERO SECTION ================= */}
-//       <section className="relative bg-black text-white pt-36 pb-24 px-6 overflow-hidden">
-//         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.12),transparent_70%)]"></div>
-
-//         <div className="max-w-5xl mx-auto text-center relative z-10">
-//           <motion.h1
-//             initial="hidden"
-//             animate="visible"
-//             variants={fadeUp}
-//             className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
-//           >
-//             Successful Court Cases in Bangalore
-//           </motion.h1>
-
-//           <motion.p
-//             variants={fadeUp}
-//             initial="hidden"
-//             animate="visible"
-//             className="text-gray-300 text-lg leading-relaxed mb-6"
-//           >
-//             At S Jain & Attorneys, our reputation is built on delivering measurable
-//             and strategic legal outcomes. Our track record of successful court
-//             cases in Bangalore and strong court case results in Bangalore reflects
-//             our commitment to excellence, preparation, and powerful courtroom advocacy.
-//           </motion.p>
-
-//           <motion.p
-//             variants={fadeUp}
-//             initial="hidden"
-//             animate="visible"
-//             className="text-gray-400 text-base leading-relaxed "
-//           >
-//             Recognized among the firms led by a successful lawyer in Bangalore,
-//             we handle complex legal disputes with integrity, discretion, and a
-//             client-focused approach. Our consistent lawyer case results in Bangalore
-//             demonstrate our ability to navigate challenging legal matters effectively.
-//           </motion.p>
-
-
-//         </div>
-//       </section>
-
-//       {/* ================= STRATEGY SECTION ================= */}
-//       <section className="bg-[#0A0A0A] text-white py-18 px-6 ">
-//         <div className="max-w-5xl mx-auto text-center">
-//           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10">
-//             Proven Strategy. Strong Advocacy. Real Results.
-//           </h2>
-
-//           <p className="text-gray-300 leading-relaxed mb-6">
-//             Our team of top lawyers in Bangalore has successfully represented
-//             individuals, businesses, startups, and NRIs across diverse legal matters.
-//             Each case is approached with detailed legal research, strategic planning,
-//             and meticulous execution to achieve strong court case results in Bangalore.
-//           </p>
-
-//           <p className="text-gray-400 mb-10">
-//             Below are selected law firm success stories in Bangalore, presented
-//             in compliance with professional standards and without disclosing confidential client information.
-//           </p>
-
-//           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-6">
-//             <a
-//               href="/legal-consultation-in-bangalore"
-//               className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
-//             >
-//               Book Confidential Consultation
-//             </a>
-
-//             <a
-//               href="#"
-//               className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
-//             >
-//               <PhoneCall size={18} />
-//               Request Call Back
-//             </a>
-//           </div>
-
-//           <p className="text-[#C9A24D] font-medium mt-6">
-//             Response within 24 hours guaranteed.
-//           </p>
-//         </div>
-
-//         <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#C9A24D] mb-16 mt-10">
-//           Selected Case Studies
-//         </h2>
-
-//         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-//   {[
-//     {
-//       title: "Corporate & Commercial Dispute",
-//       content: `
-// Background: Representation of a mid-sized business in a high-value contractual and financial dispute.
-
-// Legal Strategy: Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.
-
-// Outcome: Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.
-// `,
-//     },
-//     {
-//       title: "Criminal Defense Matter",
-//       content: `
-// Background: Defense in a serious criminal allegation requiring urgent court intervention.
-
-// Legal Strategy: Detailed evidence analysis, procedural safeguards, and strong courtroom representation.
-
-// Outcome: Relief granted by the court, safeguarding the client’s legal rights and professional reputation.
-// `,
-//     },
-//     {
-//       title: "Property & Real Estate Dispute",
-//       content: `
-// Background: Complex ownership conflict involving title discrepancies and competing claims.
-
-// Legal Strategy: Extensive documentation review, title verification, and structured civil litigation proceedings.
-
-// Outcome: Successful court order affirming the client’s lawful ownership rights.
-// `,
-//     },
-//     {
-//       title: "Family & Matrimonial Case",
-//       content: `
-// Background: Contested divorce involving custody and financial settlement issues.
-
-// Legal Strategy: Balanced negotiation approach combined with litigation preparedness.
-
-// Outcome: Structured settlement ensures financial security and equitable custody arrangement.
-// `,
-//     },
-//   ].map((item, index) => (
-//     <motion.div
-//       key={index}
-//       initial={{ opacity: 0, y: 30 }}
-//       whileInView={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.5, delay: index * 0.1 }}
-//       viewport={{ once: true }}
-//       className="bg-black/40 border border-[#C9A24D]/20 p-10 rounded-2xl"
-//     >
-//       <h3 className="text-2xl font-semibold text-[#C9A24D] mb-6">
-//         {item.title}
-//       </h3>
-//       <p className="text-gray-300 whitespace-pre-line leading-relaxed">
-//         {item.content}
-//       </p>
-//     </motion.div>
-//   ))}
-// </div>
-//       </section>
-
-//       {/* ================= SUPPORT SECTION ================= */}
+//       {/* ================= SUPPORT ================= */}
 //       <section className="bg-black text-white py-24 px-6 text-center">
 //         <div className="max-w-5xl mx-auto">
 //           <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-12">
@@ -3154,31 +3496,22 @@
 //           </h2>
 
 //           <div className="grid md:grid-cols-2 gap-8 text-left mb-10">
-//             {[
-//               "Effective legal approach",
-//               "Strong courtroom advocacy",
-//               "Ethical and confidential representation",
-//               "Personalized legal solutions",
-//               "Proven successful court cases in Bangalore",
-//             ].map((item, i) => (
-//               <div
-//                 key={i}
-//                 className="bg-white/5 border border-[#C9A24D]/20 p-6 rounded-xl"
-//               >
-//                 {item}
-//               </div>
-//             ))}
+//             <div className="bg-white/5 p-6 rounded-xl">Effective legal approach</div>
+//             <div className="bg-white/5 p-6 rounded-xl">Strong courtroom advocacy</div>
+//             <div className="bg-white/5 p-6 rounded-xl">Ethical and confidential representation</div>
+//             <div className="bg-white/5 p-6 rounded-xl">Personalized legal solutions</div>
+//             <div className="bg-white/5 p-6 rounded-xl md:col-span-2 text-center">
+//               Proven successful court cases in Bangalore
+//             </div>
 //           </div>
 
 //           <p className="text-gray-400 max-w-4xl mx-auto">
-//             As experienced litigation lawyers in Bangalore, we focus on delivering practical
-//             solutions while protecting our clients’ rights and interests at every stage
-//             of the legal process.
+//             As experienced litigation lawyers in Bangalore, we focus on delivering practical solutions while protecting our clients’ rights and interests at every stage of the legal process.
 //           </p>
 //         </div>
 //       </section>
 
-//       {/* ================= FAQ SECTION ================= */}
+//       {/* ================= FAQ ================= */}
 //       <section className="bg-[#0A0A0A] text-white py-24 px-6">
 //         <div className="max-w-4xl mx-auto">
 //           <h2 className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mb-14">
@@ -3189,23 +3522,13 @@
 //             {faqs.map((faq, index) => {
 //               const isOpen = activeIndex === index;
 //               return (
-//                 <div
-//                   key={index}
-//                   className="border border-[#C9A24D]/20 rounded-2xl overflow-hidden bg-white/5"
-//                 >
+//                 <div key={index} className="border border-[#C9A24D]/20 rounded-2xl overflow-hidden bg-white/5">
 //                   <button
 //                     onClick={() => setActiveIndex(isOpen ? null : index)}
 //                     className="w-full flex justify-between items-center px-6 py-6 text-left"
 //                   >
-//                     <span className="font-medium text-lg">
-//                       {faq.question}
-//                     </span>
-
-//                     <motion.div
-//                       animate={{ rotate: isOpen ? 180 : 0 }}
-//                       transition={{ duration: 0.3 }}
-//                       className="text-[#C9A24D]"
-//                     >
+//                     <span className="font-medium text-lg">{faq.question}</span>
+//                     <motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
 //                       <Plus size={22} />
 //                     </motion.div>
 //                   </button>
@@ -3216,8 +3539,7 @@
 //                         initial={{ height: 0, opacity: 0 }}
 //                         animate={{ height: "auto", opacity: 1 }}
 //                         exit={{ height: 0, opacity: 0 }}
-//                         transition={{ duration: 0.4 }}
-//                         className="px-6 pb-6 text-gray-300 leading-relaxed"
+//                         className="px-6 pb-6 text-gray-300"
 //                       >
 //                         {faq.answer}
 //                       </motion.div>
@@ -3237,17 +3559,15 @@
 //             Discuss Your Legal Matter With Our Experts
 //           </h2>
 
-//           <p className="text-gray-300 mb-10 leading-relaxed">
-//             If you are seeking representation backed by proven court case results
-//             in Bangalore, S Jain & Attorneys provides strategic legal advice and
-//             strong advocacy tailored to your needs.
+//           <p className="text-gray-300 mb-10">
+//             If you are seeking representation backed by proven court case results in Bangalore, S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
 //             <br /><br />
-//             Confidential guidance. Trusted advice. Dedicated legal support every step of the way.
+//             Confidential guidance. Trusted advice. Dedicated legal support every step of the way
 //           </p>
 
 //           <a
 //             href="#"
-//             className="inline-flex items-center gap-2 bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-[0_0_30px_rgba(201,162,77,0.6)] transition"
+//             className="inline-flex items-center gap-2 bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-lg transition"
 //           >
 //             <PhoneCall size={18} />
 //             Request Call Back
@@ -3260,319 +3580,526 @@
 //   );
 // }
 
+
+
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { PhoneCall, Plus } from "lucide-react";
+import { useState, useRef } from "react";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+// ─── DATA ─────────────────────────────────────────────────────────────────────
 
+const caseStudies = [
+  {
+    number: "01",
+    title: "Corporate & Commercial Dispute",
+    background:
+      "Representation of a mid-sized business in a high-value contractual and financial dispute.",
+    strategy:
+      "Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.",
+    outcome:
+      "Favorable settlement protecting the client's commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.",
+  },
+  {
+    number: "02",
+    title: "Criminal Defense Matter",
+    background:
+      "Defense in a serious criminal allegation requiring urgent court intervention.",
+    strategy:
+      "Detailed evidence analysis, procedural safeguards, and strong courtroom representation by a successful criminal lawyer Bangalore clients rely on.",
+    outcome:
+      "Relief granted by the court, safeguarding the client's legal rights and professional reputation.",
+  },
+  {
+    number: "03",
+    title: "Property & Real Estate Dispute",
+    background:
+      "Complex ownership conflict involving title discrepancies and competing claims.",
+    strategy:
+      "Extensive documentation review, title verification, and structured civil litigation proceedings.",
+    outcome:
+      "Successful court order affirming the client's lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.",
+  },
+  {
+    number: "04",
+    title: "Family & Matrimonial Case",
+    background:
+      "Contested divorce involving custody and financial settlement issues.",
+    strategy:
+      "Balanced negotiation approach combined with litigation preparedness to ensure fair resolution led by a successful divorce lawyer Bangalore families trust.",
+    outcome:
+      "Structured settlement ensures financial security and equitable custody arrangement.",
+  },
+];
 
-/* ================= ANIMATION ================= */
+const supportPoints = [
+  "Effective legal approach",
+  "Strong courtroom advocacy",
+  "Ethical and confidential representation",
+  "Personalized legal solutions",
+  "Proven successful court cases in Bangalore",
+];
+
+const faqs = [
+  {
+    q: "What types of successful court cases in Bangalore has your firm handled?",
+    a: "S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
+  },
+  {
+    q: "How does your law firm achieve strong court case results in Bangalore?",
+    a: "Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.",
+  },
+  {
+    q: "Are your lawyer case results in Bangalore compliant with confidentiality standards?",
+    a: "Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards while showcasing our legal expertise.",
+  },
+  {
+    q: "Do successful court cases guarantee similar outcomes in my case?",
+    a: "No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations. Our team strives to provide the strongest possible representation based on the circumstances of your case.",
+  },
+  {
+    q: "How can I consult a successful lawyer in Bangalore regarding my legal matter?",
+    a: "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
+  },
+];
+
+// ─── ANIMATION VARIANTS ───────────────────────────────────────────────────────
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 40, filter: "blur(6px)" },
-  visible: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
+  hidden: { opacity: 0, y: 40 },
+  show: (i = 0) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+  }),
 };
 
-const staggerContainer = {
+const fadeLeft = {
+  hidden: { opacity: 0, x: -40 },
+  show: (i = 0) => ({
+    opacity: 1, x: 0,
+    transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+  }),
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.93 },
+  show: (i = 0) => ({
+    opacity: 1, scale: 1,
+    transition: { duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+  }),
+};
+
+const stagger = {
   hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
+  show: { transition: { staggerChildren: 0.12 } },
 };
 
-export default function Page() {
-  const [activeIndex, setActiveIndex] = useState(null);
+// ─── HELPERS ──────────────────────────────────────────────────────────────────
 
-  const faqs = [
-    {
-      question:
-        "1. What types of successful court cases in Bangalore has your firm handled?",
-      answer:
-        "S Jain & Attorneys has handled a wide range of successful court cases in Bangalore, including corporate disputes, civil litigation, criminal defense matters, property conflicts, and family law cases. Each matter is managed with a strategic and client-focused legal approach.",
-    },
-    {
-      question:
-        "2. How does your law firm achieve strong court case results in Bangalore?",
-      answer:
-        "Our team follows a structured process that includes detailed case analysis, legal research, strategic planning, and strong courtroom advocacy. As experienced litigation lawyers in Bangalore, we focus on preparation, negotiation when appropriate, and decisive representation before courts and tribunals.",
-    },
-    {
-      question:
-        "3. Are your lawyer case results in Bangalore compliant with confidentiality standards?",
-      answer:
-        "Yes. All law firm success stories in Bangalore shared on this page are presented without disclosing confidential client information. We strictly adhere to professional and ethical standards while showcasing our legal expertise.",
-    },
-    {
-      question:
-        "4. Do successful court cases guarantee similar outcomes in my case?",
-      answer:
-        "No legal outcome can be guaranteed. While we have achieved successful court cases in Bangalore, each matter depends on its specific facts, legal complexities, and judicial considerations. Our team strives to provide the strongest possible representation based on the circumstances of your case.",
-    },
-    {
-      question:
-        "5. How can I consult a successful lawyer in Bangalore regarding my legal matter?",
-      answer:
-        "You can schedule a confidential consultation with our team to discuss your legal concerns. We provide personalized legal guidance tailored to your specific situation.",
-    },
-  ];
+function GoldDivider() {
+  return (
+    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
+  );
+}
+
+function SectionHeading({ children, light = false }) {
+  return (
+    <motion.div
+      variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }}
+      className="mb-12"
+    >
+      <motion.span
+        initial={{ width: 0 }} whileInView={{ width: 56 }} viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+        className="block h-[3px] bg-[#C9A24D] mb-5"
+      />
+      <h2 className={`text-3xl md:text-4xl font-bold leading-tight ${light ? "text-white" : "text-gray-900"}`}>
+        {children}
+      </h2>
+    </motion.div>
+  );
+}
+
+// ─── PAGE ─────────────────────────────────────────────────────────────────────
+
+export default function SuccessfulCasesPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+  const heroY   = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const heroOpa = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
     <>
       <Navbar />
 
-      {/* ================= HERO ================= */}
-      <section className="bg-black text-white pt-36 pb-24 px-6">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
-          className="max-w-5xl mx-auto text-center"
+      {/* ══════════════════════════════════ HERO ═══════════════════════════════ */}
+      <section ref={heroRef}
+        className="relative bg-black text-white overflow-hidden min-h-[90vh] flex items-center"
+      >
+        {/* top gold border */}
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+
+        {/* animated corner brackets */}
+        {[
+          "top-8 left-8 border-t-2 border-l-2",
+          "top-8 right-8 border-t-2 border-r-2",
+          "bottom-8 left-8 border-b-2 border-l-2",
+          "bottom-8 right-8 border-b-2 border-r-2",
+        ].map((cls, i) => (
+          <motion.div key={i}
+            initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 0.35, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 + i * 0.1 }}
+            className={`absolute w-12 h-12 border-[#C9A24D] ${cls}`}
+          />
+        ))}
+
+        {/* subtle gold grid */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{
+          backgroundImage:
+            "repeating-linear-gradient(0deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)," +
+            "repeating-linear-gradient(90deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)",
+        }} />
+
+        <motion.div style={{ y: heroY, opacity: heroOpa }}
+          className="relative max-w-5xl mx-auto px-6 py-32 md:py-44 w-full text-center"
         >
-          <motion.h1
-            variants={fadeUp}
-            className="text-4xl md:text-6xl font-semibold text-[#C9A24D] mb-8"
+          {/* eyebrow */}
+          <motion.p variants={fadeUp} initial="hidden" animate="show" custom={0}
+            className="text-[#C9A24D] text-xs tracking-[0.3em] uppercase mb-6 font-semibold flex items-center justify-center gap-3"
           >
-            Successful Court Cases in Bangalore
+            <span className="inline-block w-8 h-px bg-[#C9A24D]" />
+            S Jain &amp; Attorneys · Bangalore, India
+            <span className="inline-block w-8 h-px bg-[#C9A24D]" />
+          </motion.p>
+
+          {/* H1 */}
+          <motion.h1 variants={fadeUp} initial="hidden" animate="show" custom={1}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.08] text-white mb-10 max-w-5xl mx-auto"
+          >
+            Successful Court Cases{" "}
+            <span className="text-[#C9A24D]">in Bangalore</span>
           </motion.h1>
 
-          <motion.p
-            variants={fadeUp}
-            className="text-gray-300 leading-relaxed mb-6"
+          {/* intro paras */}
+          <motion.div variants={stagger} initial="hidden" animate="show"
+            className="max-w-3xl mx-auto space-y-5 mb-8"
           >
-            At S Jain & Attorneys, our reputation is built on delivering measurable and strategic legal outcomes. Our track record of successful court cases in Bangalore and strong court case results in Bangalore reflects our commitment to excellence, preparation, and powerful courtroom advocacy.
-          </motion.p>
-
-          <motion.p
-            variants={fadeUp}
-            className="text-gray-400 leading-relaxed"
-          >
-            Recognized among the firms led by a successful lawyer in Bangalore, we handle complex legal disputes with integrity, discretion, and a client-focused approach. Our consistent lawyer case results in Bangalore demonstrate our ability to navigate challenging legal matters effectively.
-          </motion.p>
-        </motion.div>
-      </section>
-
-      {/* ================= STRATEGY ================= */}
-      <section className="bg-[#0A0A0A] text-white py-20 px-6">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="max-w-5xl mx-auto text-center"
-        >
-          <motion.h2
-            variants={fadeUp}
-            className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-10"
-          >
-            Proven Strategy. Strong Advocacy. Real Results.
-          </motion.h2>
-
-          <motion.p variants={fadeUp} className="text-gray-300 mb-6">
-            Our team of top lawyers in Bangalore has successfully represented individuals, businesses, startups, and NRIs across diverse legal matters. Each case is approached with detailed legal research, strategic planning, and meticulous execution to achieve strong court case results in Bangalore.
-          </motion.p>
-
-          <motion.p variants={fadeUp} className="text-gray-400 mb-6">
-            Below are selected law firm success stories in Bangalore, presented in compliance with professional standards and without disclosing confidential client information.
-          </motion.p>
-
-          <motion.p variants={fadeUp} className="text-[#C9A24D] font-medium mb-8">
-            Response within 24 hours guaranteed.
-          </motion.p>
-
-          <motion.div
-            variants={fadeUp}
-            className="flex flex-col sm:flex-row justify-center gap-6"
-          >
-            <a
-              href="/legal-consultation-in-bangalore"
-              className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition"
-            >
-              Book Confidential Consultation
-            </a>
-
-            <a
-              href="#"
-              className="flex items-center justify-center gap-2 border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition"
-            >
-              <PhoneCall size={18} />
-              Request Call Back
-            </a>
+            <motion.p variants={fadeUp} custom={2} className="text-gray-300 text-lg leading-relaxed">
+              At S Jain &amp; Attorneys, our reputation is built on delivering measurable and
+              strategic legal outcomes. Our track record of successful court cases in Bangalore
+              and strong court case results in Bangalore reflects our commitment to excellence,
+              preparation, and powerful courtroom advocacy.
+            </motion.p>
+            <motion.p variants={fadeUp} custom={3} className="text-gray-400 text-lg leading-relaxed">
+              Recognized among the firms led by a successful lawyer in Bangalore, we handle
+              complex legal disputes with integrity, discretion, and a client-focused approach.
+              Our consistent lawyer case results in Bangalore demonstrate our ability to navigate
+              challenging legal matters effectively.
+            </motion.p>
           </motion.div>
         </motion.div>
 
-        {/* ================= CASE STUDIES ================= */}
-        <motion.h2
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mt-20 mb-16"
+        {/* scroll indicator */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2"
         >
-          SELECTED CASE STUDIES
-        </motion.h2>
-
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-          {[
-            {
-              title: "Corporate & Commercial Dispute",
-              content: `Background:
-Representation of a mid-sized business in a high-value contractual and financial dispute.
-
-Legal Strategy:
-Comprehensive agreement review, risk assessment, and strategic negotiation supported by structured litigation readiness.
-
-Outcome:
-Favorable settlement protecting the client’s commercial interests and minimizing financial liability — contributing to our record of successful court cases in Bangalore.`,
-            },
-            {
-              title: "Criminal Defense Matter",
-              content: `Background:
-Defense in a serious criminal allegation requiring urgent court intervention.
-
-Legal Strategy:
-Detailed evidence analysis, procedural safeguards, and strong courtroom representation by a successful criminal lawyer Bangalore clients rely on.
-
-Outcome:
-Relief granted by the court, safeguarding the client’s legal rights and professional reputation.`,
-            },
-            {
-              title: "Property & Real Estate Dispute",
-              content: `Background:
-Complex ownership conflict involving title discrepancies and competing claims.
-
-Legal Strategy:
-Extensive documentation review, title verification, and structured civil litigation proceedings.
-
-Outcome:
-Successful court order affirming the client’s lawful ownership rights — reinforcing our strong lawyer case results in Bangalore.`,
-            },
-            {
-              title: "Family & Matrimonial Case",
-              content: `Background:
-Contested divorce involving custody and financial settlement issues.
-
-Legal Strategy:
-Balanced negotiation approach combined with litigation preparedness to ensure fair resolution led by a successful divorce lawyer Bangalore families trust.
-
-Outcome:
-Structured settlement ensures financial security and equitable custody arrangement.`,
-            },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-black/40 border border-[#C9A24D]/20 p-10 rounded-2xl"
-            >
-              <h3 className="text-2xl font-semibold text-[#C9A24D] mb-6">
-                {item.title}
-              </h3>
-              <p className="text-gray-300 whitespace-pre-line leading-relaxed">
-                {item.content}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+          <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.6 }}
+            className="w-px h-12 bg-gradient-to-b from-[#C9A24D] to-transparent"
+          />
+        </motion.div>
       </section>
 
-      {/* ================= SUPPORT ================= */}
-      <section className="bg-black text-white py-24 px-6 text-center">
+      {/* ════════════════ PROVEN STRATEGY. STRONG ADVOCACY. REAL RESULTS. ══════ */}
+      <section className="py-28 px-6 bg-white relative overflow-hidden">
+        <motion.div
+          initial={{ height: 0 }} whileInView={{ height: "60%" }} viewport={{ once: true }}
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="absolute right-0 top-[20%] w-[3px] bg-gradient-to-b from-transparent via-[#C9A24D] to-transparent"
+        />
+
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-12">
-            How We Support You Through Legal Challenges
-          </h2>
+          <SectionHeading>Proven Strategy. Strong Advocacy. Real Results.</SectionHeading>
 
-          <div className="grid md:grid-cols-2 gap-8 text-left mb-10">
-            <div className="bg-white/5 p-6 rounded-xl">Effective legal approach</div>
-            <div className="bg-white/5 p-6 rounded-xl">Strong courtroom advocacy</div>
-            <div className="bg-white/5 p-6 rounded-xl">Ethical and confidential representation</div>
-            <div className="bg-white/5 p-6 rounded-xl">Personalized legal solutions</div>
-            <div className="bg-white/5 p-6 rounded-xl md:col-span-2 text-center">
-              Proven successful court cases in Bangalore
-            </div>
-          </div>
-
-          <p className="text-gray-400 max-w-4xl mx-auto">
-            As experienced litigation lawyers in Bangalore, we focus on delivering practical solutions while protecting our clients’ rights and interests at every stage of the legal process.
-          </p>
-        </div>
-      </section>
-
-      {/* ================= FAQ ================= */}
-      <section className="bg-[#0A0A0A] text-white py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center font-semibold text-[#C9A24D] mb-14">
-            Frequently Asked Questions (FAQs)
-          </h2>
-
-          <div className="space-y-6">
-            {faqs.map((faq, index) => {
-              const isOpen = activeIndex === index;
-              return (
-                <div key={index} className="border border-[#C9A24D]/20 rounded-2xl overflow-hidden bg-white/5">
-                  <button
-                    onClick={() => setActiveIndex(isOpen ? null : index)}
-                    className="w-full flex justify-between items-center px-6 py-6 text-left"
-                  >
-                    <span className="font-medium text-lg">{faq.question}</span>
-                    <motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
-                      <Plus size={22} />
-                    </motion.div>
-                  </button>
-
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="px-6 pb-6 text-gray-300"
-                      >
-                        {faq.answer}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ================= FINAL CTA ================= */}
-      <section className="bg-black text-white py-24 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#C9A24D] mb-6">
-            Discuss Your Legal Matter With Our Experts
-          </h2>
-
-          <p className="text-gray-300 mb-10">
-            If you are seeking representation backed by proven court case results in Bangalore, S Jain & Attorneys provides strategic legal advice and strong advocacy tailored to your needs.
-            <br /><br />
-            Confidential guidance. Trusted advice. Dedicated legal support every step of the way
-          </p>
-
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 bg-[#C9A24D] text-black px-10 py-4 rounded-lg font-semibold hover:shadow-lg transition"
+          <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }}
+            className="space-y-5 text-gray-600 text-lg leading-relaxed mb-10"
           >
-            <PhoneCall size={18} />
-            Request Call Back
-          </a>
+            <motion.p variants={fadeUp}>
+              Our team of top lawyers in Bangalore has successfully represented individuals,
+              businesses, startups, and NRIs across diverse legal matters. Each case is approached
+              with detailed legal research, strategic planning, and meticulous execution to achieve
+              strong court case results in Bangalore.
+            </motion.p>
+            <motion.p variants={fadeUp} custom={0.5}>
+              Below are selected law firm success stories in Bangalore, presented in compliance
+              with professional standards and without disclosing confidential client information.
+            </motion.p>
+            <motion.p variants={fadeUp} custom={1}
+              className="text-[#C9A24D] font-bold tracking-wide"
+            >
+              Response within 24 hours guaranteed.
+            </motion.p>
+          </motion.div>
+
+          {/* CTAs */}
+          <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={2}
+            className="flex flex-col sm:flex-row gap-4"
+          >
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+              <Link href="/legal-consultation-in-bangalore"
+                className="inline-block bg-[#C9A24D] text-black px-8 py-4 font-semibold text-sm tracking-wide hover:bg-[#b8913d] transition-colors duration-200"
+              >
+                Book Confidential Consultation
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+              <Link href="/contact"
+                className="inline-block border-2 border-[#C9A24D] text-[#C9A24D] px-8 py-4 font-semibold text-sm tracking-wide hover:bg-[#C9A24D] hover:text-black transition-colors duration-300"
+              >
+                Request Call Back
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
+      </section>
+
+      {/* ═══════════════════════════ SELECTED CASE STUDIES ═════════════════════ */}
+      <section className="py-28 px-6 bg-black text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }}
+            className="mb-16"
+          >
+            <motion.span
+              initial={{ width: 0 }} whileInView={{ width: 56 }} viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              className="block h-[3px] bg-[#C9A24D] mb-5"
+            />
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Selected Case Studies</h2>
+          </motion.div>
+
+          <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-8"
+          >
+            {caseStudies.map((item, i) => (
+              <motion.div key={i} variants={scaleIn} custom={i * 0.15}
+                whileHover={{ y: -4, boxShadow: "0 20px 50px rgba(201,162,77,0.12)" }}
+                className="border border-[#C9A24D]/30 hover:border-[#C9A24D]/70 rounded-xl p-8 relative group transition-all duration-300"
+              >
+                {/* corner ornaments */}
+                <span className="absolute top-3 right-3 w-5 h-5 border-t border-r border-[#C9A24D]/30 group-hover:border-[#C9A24D] transition-colors duration-300" />
+                <span className="absolute bottom-3 left-3 w-5 h-5 border-b border-l border-[#C9A24D]/30 group-hover:border-[#C9A24D] transition-colors duration-300" />
+
+                {/* number + title */}
+                <div className="flex items-start gap-4 mb-6">
+                  <span className="text-[#C9A24D] font-black text-2xl shrink-0 leading-none mt-1">
+                    {item.number}
+                  </span>
+                  <div className="border-l border-[#C9A24D]/30 group-hover:border-[#C9A24D] pl-4 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-[#C9A24D]">{item.title}</h3>
+                  </div>
+                </div>
+
+                {/* background / strategy / outcome */}
+                <div className="space-y-4 text-sm leading-relaxed">
+                  <div>
+                    <p className="text-[#C9A24D] font-semibold uppercase tracking-wider text-xs mb-1">Background</p>
+                    <p className="text-gray-300">{item.background}</p>
+                  </div>
+                  <div>
+                    <p className="text-[#C9A24D] font-semibold uppercase tracking-wider text-xs mb-1">Legal Strategy</p>
+                    <p className="text-gray-300">{item.strategy}</p>
+                  </div>
+                  <div className="border-t border-[#C9A24D]/20 pt-4">
+                    <p className="text-[#C9A24D] font-semibold uppercase tracking-wider text-xs mb-1">Outcome</p>
+                    <p className="text-gray-200 font-medium">{item.outcome}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ══════════════════ HOW WE SUPPORT YOU ════════════════════════════════ */}
+      <section className="py-28 px-6 bg-[#f8f6f1] relative">
+        <GoldDivider />
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
+
+        <div className="max-w-6xl mx-auto">
+          <SectionHeading>How We Support You Through Legal Challenges</SectionHeading>
+
+          <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-5 mb-12"
+          >
+            {supportPoints.map((point, i) => (
+              <motion.div key={i} variants={fadeLeft} custom={i * 0.1}
+                whileHover={{ x: 5, boxShadow: "0 8px 30px rgba(201,162,77,0.12)" }}
+                className={`bg-white border border-gray-100 hover:border-[#C9A24D] rounded-lg p-6 flex items-start gap-4 group transition-all duration-300 ${
+                  i === 4 ? "md:col-span-2" : ""
+                }`}
+              >
+                <span className="text-[#C9A24D] font-black text-xl shrink-0 mt-0.5">✓</span>
+                <div className="border-l border-gray-200 group-hover:border-[#C9A24D] pl-4 transition-colors duration-300">
+                  <p className="text-base font-semibold text-gray-800 group-hover:text-[#8a6a20] transition-colors duration-200">
+                    {point}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+            className="text-gray-600 text-lg leading-relaxed max-w-4xl"
+          >
+            As experienced litigation lawyers in Bangalore, we focus on delivering practical
+            solutions while protecting our clients' rights and interests at every stage of the
+            legal process.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════ FAQ ═══════════════════════════════════ */}
+      <section className="py-28 px-6 bg-white relative">
+        <GoldDivider />
+
+        <div className="max-w-4xl mx-auto">
+          <SectionHeading>Frequently Asked Questions (FAQs)</SectionHeading>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div key={index}
+                variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={index * 0.1}
+                className={`rounded-xl overflow-hidden border-2 transition-all duration-300 shadow-sm ${
+                  openIndex === index
+                    ? "border-[#C9A24D] bg-[#fdf9f3] shadow-[0_4px_24px_rgba(201,162,77,0.15)]"
+                    : "border-gray-200 bg-white hover:border-[#C9A24D]/60 hover:shadow-md"
+                }`}
+              >
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  className="w-full flex justify-between items-start p-7 text-left gap-4 group"
+                  aria-expanded={openIndex === index}
+                >
+                  <div className="flex items-start gap-4 flex-1">
+                    <span className={`shrink-0 mt-1 w-1 self-stretch rounded-full transition-colors duration-300 ${
+                      openIndex === index ? "bg-[#C9A24D]" : "bg-gray-200 group-hover:bg-[#C9A24D]/50"
+                    }`} />
+                    <span className={`text-base md:text-lg font-semibold transition-colors duration-200 ${
+                      openIndex === index ? "text-[#8a6a20]" : "text-gray-800 group-hover:text-[#C9A24D]"
+                    }`}>
+                      Q{index + 1}: {faq.q}
+                    </span>
+                  </div>
+                  <motion.div
+                    animate={{ rotate: openIndex === index ? 180 : 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="shrink-0 mt-1"
+                  >
+                    <svg className={`w-5 h-5 ${openIndex === index ? "text-[#C9A24D]" : "text-gray-400"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </motion.div>
+                </button>
+
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-7 pb-7 border-t-2 border-[#C9A24D]/20 ml-7">
+                        <p className="pt-5 text-gray-500 text-base leading-relaxed">{faq.a}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════ FINAL CTA ═════════════════════════════════ */}
+      <section className="py-28 px-6 bg-black text-white text-center relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+
+        {/* animated concentric rings */}
+        {[0, 1, 2].map((i) => (
+          <motion.div key={i}
+            initial={{ scale: 0.6, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }} transition={{ duration: 1.2, delay: i * 0.2 }}
+            className="absolute rounded-full border border-[#C9A24D]/10 pointer-events-none"
+            style={{ width: `${40 + i * 30}%`, height: `${60 + i * 30}%`, top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}
+          />
+        ))}
+
+        <motion.div variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true }}
+          className="relative max-w-4xl mx-auto border border-[#C9A24D]/30 rounded-2xl px-10 py-16"
+        >
+          {/* corner marks */}
+          {[
+            "top-4 left-4 border-t-2 border-l-2",
+            "top-4 right-4 border-t-2 border-r-2",
+            "bottom-4 left-4 border-b-2 border-l-2",
+            "bottom-4 right-4 border-b-2 border-r-2",
+          ].map((cls, i) => (
+            <span key={i} className={`absolute ${cls} w-5 h-5 border-[#C9A24D]`} />
+          ))}
+
+          <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+            className="text-[#C9A24D] text-xs tracking-[0.25em] uppercase mb-4 font-semibold"
+          >
+            S Jain &amp; Attorneys · Case Results
+          </motion.p>
+
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}
+            className="text-3xl md:text-5xl font-bold mb-6 leading-tight"
+          >
+            Discuss Your Legal Matter With Our Experts
+          </motion.h2>
+
+          <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={2}
+            className="text-gray-300 text-lg mb-4 max-w-2xl mx-auto leading-relaxed"
+          >
+            If you are seeking representation backed by proven court case results in Bangalore,
+            S Jain &amp; Attorneys provides strategic legal advice and strong advocacy tailored
+            to your needs.
+          </motion.p>
+
+          <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={3}
+            className="text-[#C9A24D] font-semibold text-sm tracking-wide mb-10"
+          >
+            Confidential guidance. Trusted advice. Dedicated legal support every step of the way.
+          </motion.p>
+
+          <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={4}>
+            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
+              <Link href="/contact"
+                className="inline-block bg-[#C9A24D] hover:bg-[#b8913d] text-black px-12 py-4 font-bold text-sm tracking-widest uppercase transition-colors duration-200"
+              >
+                Request Call Back
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={5}
+            className="mt-8 text-gray-500 text-sm flex items-center justify-center gap-2"
+          >
+            <span className="inline-block w-4 h-px bg-gray-600" />
+            All matters handled with complete confidentiality and legal discretion.
+            <span className="inline-block w-4 h-px bg-gray-600" />
+          </motion.p>
+        </motion.div>
       </section>
 
       <Footer />

@@ -3680,7 +3680,7 @@ export default function Navbar() {
           {/* CTA BUTTON */}
           <Link
             href="/legal-consultation-in-bangalore"
-            className="hidden lg:block bg-[#C9A24D] text-black px-6 py-3 font-semibold hover:bg-[#b8963e] transition"
+            className="hidden lg:block bg-[#C9A24D] text-black px-4 py-3 font-semibold hover:bg-[#b8963e] transition"
           >
             Book Confidential Consultation
           </Link>
