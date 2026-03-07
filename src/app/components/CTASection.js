@@ -199,22 +199,24 @@ export default function CTASection() {
         </p>
 
         {/* CTA BUTTONS */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto">
-          {/* REQUEST CALLBACK */}
-          <Link href="/legal-consultation-in-bangalore" className="w-full sm:flex-1">
-            <button className="w-full py-3 text-center border border-[#C9A24D] text-[#C9A24D] font-semibold rounded-md hover:bg-[#C9A24D] hover:text-black transition duration-300">
-              Request Callback
-            </button>
-          </Link>
+{/* CTA BUTTONS */}
+<div className="flex flex-col sm:flex-row justify-center items-center gap-5 mt-6">
 
-          {/* BOOK CONSULTATION */}
-          <Link href="/legal-consultation-in-bangalore" className="w-full sm:flex-1">
-            <button className="w-full py-3 text-center bg-[#C9A24D] text-black font-semibold rounded-md hover:scale-105 transition duration-300 shadow-lg">
-              Book Confidential Consultation
-            </button>
-          </Link>
-        </div>
+  {/* REQUEST CALLBACK */}
+  <Link href="/legal-consultation-in-bangalore">
+    <button className="min-w-[220px] px-8 py-3 border border-[#C9A24D] text-[#C9A24D] font-medium rounded-lg hover:bg-[#C9A24D] hover:text-black transition-all duration-300">
+      Request Callback
+    </button>
+  </Link>
 
+  {/* BOOK CONSULTATION */}
+  <Link href="/legal-consultation-in-bangalore">
+    <button className="min-w-[260px] px-8 py-3 bg-[#C9A24D] text-black font-medium rounded-lg hover:scale-105 hover:shadow-lg transition-all duration-300">
+      Book Confidential Consultation
+    </button>
+  </Link>
+
+</div>
         {/* TRUST LINE */}
         <p className="text-gray-500 text-sm mt-8">
           All matters handled with complete confidentiality and legal discretion.
