@@ -2847,288 +2847,6 @@
 
 
 
-// "use client";
-
-// import { useState, useEffect, useRef } from "react";
-// import { motion, useScroll, useTransform } from "framer-motion";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { ShieldCheck, Phone, Scale, Briefcase, Award } from "lucide-react";
-// import { FaWhatsapp } from "react-icons/fa";
-
-// import Navbar from "../components/Navbar";
-// import AboutFirm from "../components/AboutFirm";
-// import ServiceOverview from "../components/ServiceOverview";
-// import WhyChooseUs from "../components/WhyChooseUs";
-// import LegalServicesSections from "../components/LegalServicesSections";
-// import Testimonials from "../components/Testimonials";
-// import CTASection from "../components/CTASection";
-// import FAQsSection from "../components/FAQsSection";
-// import Consultation from "../components/Consultation";
-// import Footer from "../components/Footer";
-
-// // ─── DATA ─────────────────────────────────────────────────────────────────────
-
-// const SENTENCE =
-//   "Leading Law Firm in Bangalore for Corporate, Civil, Criminal & Property Legal Services";
-
-// const trustIndicators = [
-//   { icon: Award,     text: "15+ Years Experience" },
-//   { icon: Briefcase, text: "1000+ Cases Successfully Handled" },
-//   { icon: Scale,     text: "Karnataka High Court & District Courts" },
-// ];
-
-// // ─── ANIMATION VARIANTS ───────────────────────────────────────────────────────
-
-// const fadeUp = {
-//   hidden: { opacity: 0, y: 30 },
-//   show: (i = 0) => ({
-//     opacity: 1, y: 0,
-//     transition: { duration: 0.65, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] },
-//   }),
-// };
-
-// const fadeLeft = {
-//   hidden: { opacity: 0, x: -30 },
-//   show: (i = 0) => ({
-//     opacity: 1, x: 0,
-//     transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
-//   }),
-// };
-
-// const stagger = {
-//   hidden: {},
-//   show: { transition: { staggerChildren: 0.1 } },
-// };
-
-// // ─── TYPEWRITER H1 ────────────────────────────────────────────────────────────
-// // Ghost-text technique: invisible full sentence holds the container height
-// // permanently so the typewriter never causes any layout reflow / page jump.
-
-// function TypewriterH1({ sentence = SENTENCE, typingSpeed = 50, deletingSpeed = 30, pause = 2500 }) {
-//   const [text, setText] = useState("");
-//   const [isDeleting, setIsDeleting] = useState(false);
-
-//   useEffect(() => {
-//     let timeout;
-//     if (!isDeleting && text.length < sentence.length) {
-//       timeout = setTimeout(() => setText(sentence.substring(0, text.length + 1)), typingSpeed);
-//     } else if (!isDeleting && text.length === sentence.length) {
-//       timeout = setTimeout(() => setIsDeleting(true), pause);
-//     } else if (isDeleting && text.length > 0) {
-//       timeout = setTimeout(() => setText(sentence.substring(0, text.length - 1)), deletingSpeed);
-//     } else {
-//       setIsDeleting(false);
-//     }
-//     return () => clearTimeout(timeout);
-//   }, [text, isDeleting, sentence, typingSpeed, deletingSpeed, pause]);
-
-//   return (
-//     <div className="relative">
-//       {/* Ghost — invisible, always full height, prevents layout shift */}
-//       <h1
-//         aria-hidden="true"
-//         className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#C9A24D] leading-[1.15] opacity-0 select-none pointer-events-none"
-//       >
-//         {sentence}
-//         <span className="inline-block w-[3px] ml-1" />
-//       </h1>
-
-//       {/* Visible animated text — absolute overlay, never in layout flow */}
-//       <h1
-//         aria-live="polite"
-//         className="absolute inset-0 text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#C9A24D] leading-[1.15]"
-//       >
-//         {text}
-//         <span className="inline-block w-[3px] h-[0.85em] bg-[#C9A24D] ml-1 align-middle animate-pulse" />
-//       </h1>
-//     </div>
-//   );
-// }
-
-// // ─── PAGE ─────────────────────────────────────────────────────────────────────
-
-// export default function HeroSection() {
-//   const heroRef = useRef(null);
-
-//   const { scrollYProgress } = useScroll({
-//     target: heroRef,
-//     offset: ["start start", "end start"],
-//   });
-
-//   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
-//   const handlePhoneClick = () => {
-//     window.location.href = "tel:+919000000000";
-//   };
-
-//   return (
-//     <>
-//       <Navbar />
-
-//       {/* ══════════════════════════════════ HERO ═══════════════════════════════ */}
-//       <section
-//         ref={heroRef}
-//         className="relative w-full min-h-[100svh] flex items-center overflow-hidden bg-black"
-//       >
-//         {/* Parallax background — position:absolute, never affects layout */}
-//         <motion.div
-//           style={{ y: bgY, willChange: "transform" }}
-//           className="absolute inset-0 scale-110"
-//         >
-//           <Image
-//             src="/closeupjustice.jpg"
-//             alt="Law Firm in Bangalore"
-//             fill
-//             priority
-//             sizes="100vw"
-//             className="object-cover object-center sm:object-right opacity-50"
-//           />
-//         </motion.div>
-
-//         {/* Dark overlay — stronger on mobile so text is always readable */}
-//         <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/40 sm:from-black sm:via-black/60 sm:to-black/20" />
-
-//         {/* Ambient gold glow — hidden on small screens to reduce noise */}
-//         <div className="hidden sm:block absolute right-0 top-0 w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] bg-[#C9A24D]/10 blur-[160px] rounded-full pointer-events-none" />
-
-//         {/* Subtle gold grid */}
-//         <div
-//           className="absolute inset-0 opacity-[0.025]"
-//           style={{
-//             backgroundImage:
-//               "repeating-linear-gradient(0deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)," +
-//               "repeating-linear-gradient(90deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)",
-//           }}
-//         />
-
-//         {/* ── Main content ── */}
-//         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-12 pb-16 sm:pt-28 sm:pb-20 lg:pt-[100px] lg:pb-[120px]">
-//           <motion.div variants={stagger} initial="hidden" animate="show" className="flex flex-col">
-
-//             {/* Badge */}
-//             <motion.div
-//               variants={fadeUp}
-//               custom={0}
-//               className="inline-flex items-center gap-2 self-start border border-[#C9A24D]/40 text-[#C9A24D] px-3 py-1.5 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm mb-5 sm:mb-8 bg-[#C9A24D]/5"
-//             >
-//               <ShieldCheck size={14} className="shrink-0" />
-//               <span>Advocates &amp; Legal Consultants · Bangalore</span>
-//             </motion.div>
-
-//             {/* Typewriter H1 — ghost technique, zero layout shift */}
-//             <motion.div variants={fadeUp} custom={1} className="mb-6 sm:mb-8 w-full max-w-full sm:max-w-xl lg:max-w-4xl">
-//               <TypewriterH1 sentence={SENTENCE} />
-//             </motion.div>
-
-//             {/* Subtext — shorter on mobile */}
-//             <motion.div
-//               variants={stagger}
-//               className="space-y-3 sm:space-y-4 text-gray-300 text-sm sm:text-base lg:text-lg mb-8 sm:mb-10 max-w-full sm:max-w-lg lg:max-w-2xl"
-//             >
-//               {[
-//                 "S Jain Attorneys is a reputed law firm in Bangalore delivering expert legal representation in corporate law, civil litigation, criminal defense, property disputes, and NRI legal services.",
-//                 "Our experienced attorneys provide strategic, result-oriented legal solutions for individuals, businesses, startups, and NRIs across India.",
-//                 "We combine integrity, experience, and practical legal insight to protect your rights.",
-//               ].map((p, i) => (
-//                 <motion.p key={i} variants={fadeUp} custom={i + 2} className="leading-relaxed">
-//                   {p}
-//                 </motion.p>
-//               ))}
-//             </motion.div>
-
-//             {/* CTA buttons — stack on mobile, row on sm+ */}
-//             <motion.div
-//               variants={fadeUp}
-//               custom={5}
-//               className="flex flex-col xs:flex-row gap-3 sm:gap-4 mb-5 sm:mb-6 w-full max-w-xs xs:max-w-none"
-//             >
-//               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full xs:w-auto">
-//                 <Link
-//                   href="/legal-consultation-in-bangalore"
-//                   className="flex items-center justify-center bg-[#C9A24D] hover:bg-[#b8913d] text-black px-6 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-wide transition-colors duration-200 shadow-lg w-full xs:w-auto"
-//                 >
-//                   Book Confidential Consultation
-//                 </Link>
-//               </motion.div>
-//               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full xs:w-auto">
-//                 <Link
-//                   href="#practice-areas"
-//                   className="flex items-center justify-center border-2 border-[#C9A24D] text-[#C9A24D] px-6 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-wide hover:bg-[#C9A24D] hover:text-black transition-colors duration-300 w-full xs:w-auto"
-//                 >
-//                   View Practice Areas
-//                 </Link>
-//               </motion.div>
-//             </motion.div>
-
-//             {/* Response note */}
-//             <motion.p
-//               variants={fadeUp}
-//               custom={6}
-//               className="text-[#C9A24D] text-xs sm:text-sm font-semibold tracking-wide mb-8 sm:mb-10"
-//             >
-//               Response within 24 hours guaranteed.
-//             </motion.p>
-
-//             {/* Trust indicators — wrap on mobile */}
-//             <motion.div
-//               variants={stagger}
-//               className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 lg:gap-8 text-gray-200 border-t border-white/10 pt-6 sm:pt-8"
-//             >
-//               {trustIndicators.map(({ icon: Icon, text }, i) => (
-//                 <motion.div
-//                   key={i}
-//                   variants={fadeLeft}
-//                   custom={i * 0.2}
-//                   className="flex items-center gap-2 sm:gap-3"
-//                 >
-//                   <Icon size={16} className="text-[#C9A24D] shrink-0" />
-//                   <span className="text-xs sm:text-sm">{text}</span>
-//                 </motion.div>
-//               ))}
-//             </motion.div>
-
-//           </motion.div>
-//         </div>
-//       </section>
-
-//       {/* ════════════════════════ REMAINING SECTIONS ══════════════════════════ */}
-//       <AboutFirm />
-//       <ServiceOverview />
-//       <WhyChooseUs />
-//       <LegalServicesSections />
-//       <Testimonials />
-//       <CTASection />
-//       <FAQsSection />
-//       <Consultation />
-//       <Footer />
-
-//       {/* ════════════════════════ STICKY FLOATING BUTTONS ═════════════════════ */}
-//       <div className="fixed left-3 sm:left-4 bottom-8 sm:bottom-12 z-50 flex flex-col gap-3">
-//         <motion.button
-//           onClick={handlePhoneClick}
-//           whileHover={{ scale: 1.1 }}
-//           whileTap={{ scale: 0.95 }}
-//           className="flex items-center justify-center w-11 h-11 sm:w-[52px] sm:h-[52px] rounded-full border border-[#C9A24D] bg-[#C9A24D]/80 hover:bg-[#C9A24D] transition-all duration-300 shadow-lg"
-//         >
-//           <Phone size={18} className="text-white" />
-//         </motion.button>
-
-//         <motion.a
-//           href="https://wa.me/919000000000"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           whileHover={{ scale: 1.1 }}
-//           whileTap={{ scale: 0.95 }}
-//           className="flex items-center justify-center w-11 h-11 sm:w-[52px] sm:h-[52px] rounded-full border border-green-500 bg-green-500/80 hover:bg-green-500 transition-all duration-300 shadow-lg"
-//         >
-//           <FaWhatsapp size={18} className="text-white" />
-//         </motion.a>
-//       </div>
-//     </>
-//   );
-// }
-
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -3149,30 +2867,32 @@ import FAQsSection from "../components/FAQsSection";
 import Consultation from "../components/Consultation";
 import Footer from "../components/Footer";
 
+// ─── DATA ─────────────────────────────────────────────────────────────────────
+
 const SENTENCE =
   "Leading Law Firm in Bangalore for Corporate, Civil, Criminal & Property Legal Services";
 
 const trustIndicators = [
-  { icon: Award, text: "15+ Years Experience" },
+  { icon: Award,     text: "15+ Years Experience" },
   { icon: Briefcase, text: "1000+ Cases Successfully Handled" },
-  { icon: Scale, text: "Karnataka High Court & District Courts" },
+  { icon: Scale,     text: "Karnataka High Court & District Courts" },
 ];
+
+// ─── ANIMATION VARIANTS ───────────────────────────────────────────────────────
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   show: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.65, delay: i * 0.12 },
+    opacity: 1, y: 0,
+    transition: { duration: 0.65, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] },
   }),
 };
 
 const fadeLeft = {
   hidden: { opacity: 0, x: -30 },
   show: (i = 0) => ({
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.65, delay: i * 0.1 },
+    opacity: 1, x: 0,
+    transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
   }),
 };
 
@@ -3181,46 +2901,52 @@ const stagger = {
   show: { transition: { staggerChildren: 0.1 } },
 };
 
-function TypewriterH1({
-  sentence = SENTENCE,
-  typingSpeed = 50,
-  deletingSpeed = 30,
-  pause = 2500,
-}) {
+// ─── TYPEWRITER H1 ────────────────────────────────────────────────────────────
+// Ghost-text technique: invisible full sentence holds the container height
+// permanently so the typewriter never causes any layout reflow / page jump.
+
+function TypewriterH1({ sentence = SENTENCE, typingSpeed = 50, deletingSpeed = 30, pause = 2500 }) {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     let timeout;
-
     if (!isDeleting && text.length < sentence.length) {
-      timeout = setTimeout(
-        () => setText(sentence.substring(0, text.length + 1)),
-        typingSpeed
-      );
+      timeout = setTimeout(() => setText(sentence.substring(0, text.length + 1)), typingSpeed);
     } else if (!isDeleting && text.length === sentence.length) {
       timeout = setTimeout(() => setIsDeleting(true), pause);
     } else if (isDeleting && text.length > 0) {
-      timeout = setTimeout(
-        () => setText(sentence.substring(0, text.length - 1)),
-        deletingSpeed
-      );
+      timeout = setTimeout(() => setText(sentence.substring(0, text.length - 1)), deletingSpeed);
     } else {
       setIsDeleting(false);
     }
-
     return () => clearTimeout(timeout);
-  }, [text, isDeleting]);
+  }, [text, isDeleting, sentence, typingSpeed, deletingSpeed, pause]);
 
   return (
-    <div className="relative min-h-[120px] sm:min-h-[160px] lg:min-h-[200px]">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#C9A24D] leading-tight">
+    <div className="relative">
+      {/* Ghost — invisible, always full height, prevents layout shift */}
+      <h1
+        aria-hidden="true"
+        className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#C9A24D] leading-[1.15] opacity-0 select-none pointer-events-none"
+      >
+        {sentence}
+        <span className="inline-block w-[3px] ml-1" />
+      </h1>
+
+      {/* Visible animated text — absolute overlay, never in layout flow */}
+      <h1
+        aria-live="polite"
+        className="absolute inset-0 text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#C9A24D] leading-[1.15]"
+      >
         {text}
-        <span className="inline-block w-[3px] h-[0.9em] bg-[#C9A24D] ml-1 animate-pulse" />
+        <span className="inline-block w-[3px] h-[0.85em] bg-[#C9A24D] ml-1 align-middle animate-pulse" />
       </h1>
     </div>
   );
 }
+
+// ─── PAGE ─────────────────────────────────────────────────────────────────────
 
 export default function HeroSection() {
   const heroRef = useRef(null);
@@ -3240,12 +2966,14 @@ export default function HeroSection() {
     <>
       <Navbar />
 
+      {/* ══════════════════════════════════ HERO ═══════════════════════════════ */}
       <section
         ref={heroRef}
-        className="relative w-full min-h-[85svh] sm:min-h-[100svh] flex items-center overflow-hidden bg-black"
+        className="relative w-full min-h-[100svh] flex items-center overflow-hidden bg-black"
       >
+        {/* Parallax background — position:absolute, never affects layout */}
         <motion.div
-          style={{ y: bgY }}
+          style={{ y: bgY, willChange: "transform" }}
           className="absolute inset-0 scale-110"
         >
           <Image
@@ -3254,89 +2982,117 @@ export default function HeroSection() {
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-50"
+            className="object-cover object-center sm:object-right opacity-50"
           />
         </motion.div>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/40" />
+        {/* Dark overlay — stronger on mobile so text is always readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/40 sm:from-black sm:via-black/60 sm:to-black/20" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-20 pb-16">
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            animate="show"
-            className="flex flex-col"
-          >
+        {/* Ambient gold glow — hidden on small screens to reduce noise */}
+        <div className="hidden sm:block absolute right-0 top-0 w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] bg-[#C9A24D]/10 blur-[160px] rounded-full pointer-events-none" />
+
+        {/* Subtle gold grid */}
+        <div
+          className="absolute inset-0 opacity-[0.025]"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)," +
+              "repeating-linear-gradient(90deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)",
+          }}
+        />
+
+        {/* ── Main content ── */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-12 pb-16 sm:pt-28 sm:pb-20 lg:pt-[100px] lg:pb-[120px]">
+          <motion.div variants={stagger} initial="hidden" animate="show" className="flex flex-col">
 
             {/* Badge */}
             <motion.div
               variants={fadeUp}
-              className="inline-flex items-center gap-2 border border-[#C9A24D]/40 text-[#C9A24D] px-4 py-2 rounded-full text-xs sm:text-sm mb-6"
+              custom={0}
+              className="inline-flex items-center gap-2 self-start border border-[#C9A24D]/40 text-[#C9A24D] px-3 py-1.5 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm mb-5 sm:mb-8 bg-[#C9A24D]/5"
             >
-              <ShieldCheck size={14} />
-              Advocates & Legal Consultants · Bangalore
+              <ShieldCheck size={14} className="shrink-0" />
+              <span>Advocates &amp; Legal Consultants · Bangalore</span>
             </motion.div>
 
-            {/* Title */}
-            <motion.div variants={fadeUp} className="mb-6 max-w-full sm:max-w-xl lg:max-w-4xl">
-              <TypewriterH1 />
+            {/* Typewriter H1 — ghost technique, zero layout shift */}
+            <motion.div variants={fadeUp} custom={1} className="mb-6 sm:mb-8 w-full max-w-full sm:max-w-xl lg:max-w-4xl">
+              <TypewriterH1 sentence={SENTENCE} />
             </motion.div>
 
-            {/* Paragraph */}
+            {/* Subtext — shorter on mobile */}
             <motion.div
-              className="space-y-4 text-gray-300 text-sm sm:text-base lg:text-lg mb-8 max-w-full sm:max-w-lg lg:max-w-2xl"
+              variants={stagger}
+              className="space-y-3 sm:space-y-4 text-gray-300 text-sm sm:text-base lg:text-lg mb-8 sm:mb-10 max-w-full sm:max-w-lg lg:max-w-2xl"
             >
-              <p>
-                S Jain Attorneys is a reputed law firm in Bangalore delivering
-                expert legal representation in corporate law, civil litigation,
-                criminal defense, property disputes, and NRI legal services.
-              </p>
-
-              <p>
-                Our experienced attorneys provide strategic legal solutions for
-                individuals, businesses, startups, and NRIs across India.
-              </p>
-              <p>
-                We combine integrity, experience, and practical legal insight to
-                 protect your rights and advance your interests.
-              </p>
-            </motion.div>
-
-            {/* Buttons */}
-            <motion.div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Link
-                href="/legal-consultation-in-bangalore"
-                className="flex items-center justify-center bg-[#C9A24D] text-black px-6 py-4 font-bold text-sm hover:bg-[#b8913d]"
-              >
-                Book Consultation
-              </Link>
-
-              <Link
-                href="#practice-areas"
-                className="flex items-center justify-center border-2 border-[#C9A24D] text-[#C9A24D] px-6 py-4 font-bold text-sm hover:bg-[#C9A24D] hover:text-black"
-              >
-                View Practice Areas
-              </Link>
-            </motion.div>
-
-            <p className="text-[#C9A24D] text-sm font-semibold mb-8">
-              Response within 24 hours guaranteed.
-            </p>
-
-            {/* Trust indicators */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-6 border-t border-white/10 pt-6">
-              {trustIndicators.map(({ icon: Icon, text }, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <Icon size={18} className="text-[#C9A24D]" />
-                  <span className="text-sm text-gray-200">{text}</span>
-                </div>
+              {[
+                "S Jain Attorneys is a reputed law firm in Bangalore delivering expert legal representation in corporate law, civil litigation, criminal defense, property disputes, and NRI legal services.",
+                "Our experienced attorneys provide strategic, result-oriented legal solutions for individuals, businesses, startups, and NRIs across India.",
+                "We combine integrity, experience, and practical legal insight to protect your rights.",
+              ].map((p, i) => (
+                <motion.p key={i} variants={fadeUp} custom={i + 2} className="leading-relaxed">
+                  {p}
+                </motion.p>
               ))}
-            </div>
+            </motion.div>
+
+            {/* CTA buttons — stack on mobile, row on sm+ */}
+            <motion.div
+              variants={fadeUp}
+              custom={5}
+              className="flex flex-col xs:flex-row gap-3 sm:gap-4 mb-5 sm:mb-6 w-full max-w-xs xs:max-w-none"
+            >
+              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full xs:w-auto">
+                <Link
+                  href="/legal-consultation-in-bangalore"
+                  className="flex items-center justify-center bg-[#C9A24D] hover:bg-[#b8913d] text-black px-6 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-wide transition-colors duration-200 shadow-lg w-full xs:w-auto"
+                >
+                  Book Confidential Consultation
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full xs:w-auto">
+                <Link
+                  href="#practice-areas"
+                  className="flex items-center justify-center border-2 border-[#C9A24D] text-[#C9A24D] px-6 sm:px-8 py-3.5 sm:py-4 font-bold text-xs sm:text-sm tracking-wide hover:bg-[#C9A24D] hover:text-black transition-colors duration-300 w-full xs:w-auto"
+                >
+                  View Practice Areas
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            {/* Response note */}
+            <motion.p
+              variants={fadeUp}
+              custom={6}
+              className="text-[#C9A24D] text-xs sm:text-sm font-semibold tracking-wide mb-8 sm:mb-10"
+            >
+              Response within 24 hours guaranteed.
+            </motion.p>
+
+            {/* Trust indicators — wrap on mobile */}
+            <motion.div
+              variants={stagger}
+              className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 lg:gap-8 text-gray-200 border-t border-white/10 pt-6 sm:pt-8"
+            >
+              {trustIndicators.map(({ icon: Icon, text }, i) => (
+                <motion.div
+                  key={i}
+                  variants={fadeLeft}
+                  custom={i * 0.2}
+                  className="flex items-center gap-2 sm:gap-3"
+                >
+                  <Icon size={16} className="text-[#C9A24D] shrink-0" />
+                  <span className="text-xs sm:text-sm">{text}</span>
+                </motion.div>
+              ))}
+            </motion.div>
 
           </motion.div>
         </div>
       </section>
 
+      {/* ════════════════════════ REMAINING SECTIONS ══════════════════════════ */}
       <AboutFirm />
       <ServiceOverview />
       <WhyChooseUs />
@@ -3347,23 +3103,27 @@ export default function HeroSection() {
       <Consultation />
       <Footer />
 
-      {/* Floating Buttons */}
-      <div className="fixed left-4 bottom-10 z-50 flex flex-col gap-3">
-        <button
+      {/* ════════════════════════ STICKY FLOATING BUTTONS ═════════════════════ */}
+      <div className="fixed left-3 sm:left-4 bottom-8 sm:bottom-12 z-50 flex flex-col gap-3">
+        <motion.button
           onClick={handlePhoneClick}
-          className="flex items-center justify-center w-12 h-12 rounded-full bg-[#C9A24D] shadow-lg"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center justify-center w-11 h-11 sm:w-[52px] sm:h-[52px] rounded-full border border-[#C9A24D] bg-[#C9A24D]/80 hover:bg-[#C9A24D] transition-all duration-300 shadow-lg"
         >
-          <Phone size={20} className="text-white" />
-        </button>
+          <Phone size={18} className="text-white" />
+        </motion.button>
 
-        <a
+        <motion.a
           href="https://wa.me/919000000000"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-12 h-12 rounded-full bg-green-500 shadow-lg"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center justify-center w-11 h-11 sm:w-[52px] sm:h-[52px] rounded-full border border-green-500 bg-green-500/80 hover:bg-green-500 transition-all duration-300 shadow-lg"
         >
-          <FaWhatsapp size={20} className="text-white" />
-        </a>
+          <FaWhatsapp size={18} className="text-white" />
+        </motion.a>
       </div>
     </>
   );
