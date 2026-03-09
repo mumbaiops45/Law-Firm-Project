@@ -397,7 +397,7 @@ export default function AboutFirm() {
   };
 
   return (
-    <section className="py-24 md:py-28 bg-[#111111] text-white">
+    <section className="py-10 md:py-24 bg-[#111111] text-white">
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
 
@@ -413,7 +413,7 @@ export default function AboutFirm() {
           {/* Heading */}
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-[#C9A24D]"
+            className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-[#C9A24D] "
           >
             About S Jain Attorneys
           </motion.h2>

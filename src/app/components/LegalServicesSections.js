@@ -426,7 +426,7 @@ export default function LegalServicesSections() {
 
         {/* ================= Scope of Services ================= */}
 
-        <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
+        {/* <section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
 
           <h2 className={sectionTitle}>
             Scope of Services
@@ -452,8 +452,37 @@ export default function LegalServicesSections() {
 
           </div>
 
-        </section>
+        </section> */}
+        
+<section className={`${fadeBase} ${visible ? fadeVisible : fadeHidden}`}>
 
+  <h2 className={sectionTitle}>
+    Scope of Services
+  </h2>
+
+  <div className={underline}></div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    {scopeServices.map((service, index) => (
+
+      <div
+        key={index}
+        className={`${card} flex items-center gap-3 h-[80px]`}
+      >
+        <FaCheckCircle className="text-[#C9A24D] flex-shrink-0" />
+
+        <p className="text-gray-800 text-base leading-relaxed">
+          {service}
+        </p>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section>
 
 
         {/* ================= Our Approach ================= */}

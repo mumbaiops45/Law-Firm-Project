@@ -586,6 +586,7 @@ const toggleFAQ = (index) => {
         <section className="bg-[#0B0F14] py-28 text-center text-white">
 
           <div className="max-w-5xl mx-auto px-6">
+            
 
             <h2 className="text-4xl md:text-5xl font-semibold mb-6">
               Get Immediate Legal Help from a Mediation Lawyer in Bangalore

@@ -981,15 +981,15 @@ export default function LawyersPage() {
           >
             {teamMembers.map((member, i) => (
               <motion.div key={member.slug} variants={scaleIn} custom={i * 0.15}
-                whileHover={{ y: -6, boxShadow: "0 20px 50px rgba(201,162,77,0.15)" }}
-                className="bg-white border border-gray-100 hover:border-[#C9A24D] rounded-xl p-8 group transition-all duration-300 relative overflow-hidden flex flex-col"
+                whileHover={{ y: -6, boxShadow: "0 20px 50px rgba(201,162,77,0.15)" }}   
+                className="bg-white border border-gray-100  rounded-xl p-8 group transition-all duration-300 relative overflow-hidden flex flex-col"
               >
                 {/* gold top bar on hover */}
-                <motion.span
+                {/* <motion.span
                   initial={{ scaleX: 0 }} whileHover={{ scaleX: 1 }}
                   className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D] origin-left"
                   style={{ transition: "transform 0.3s ease" }}
-                />
+                /> */}
 
                 {/* avatar placeholder */}
                 <div className="w-16 h-16 rounded-full bg-[#f8f6f1] border-2 border-[#C9A24D]/30 flex items-center justify-center mb-6 group-hover:border-[#C9A24D] transition-colors duration-300">

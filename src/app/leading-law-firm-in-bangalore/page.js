@@ -4919,13 +4919,13 @@ export default function LeadingLawFirmPage() {
 
       {/* ══════════════════════════════════ HERO ═══════════════════════════════ */}
       <section ref={heroRef}
-        className="relative bg-black text-white overflow-hidden min-h-[92vh] flex items-center"
+        className="relative bg-black text-white overflow-hidden min-h-[92vh] flex items-center "
       >
         {/* top gold border */}
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
 
         {/* animated corner brackets — all four corners */}
-        {[
+        {/* {[
           "top-8 left-8 border-t-2 border-l-2",
           "top-8 right-8 border-t-2 border-r-2",
           "bottom-8 left-8 border-b-2 border-l-2",
@@ -4936,7 +4936,7 @@ export default function LeadingLawFirmPage() {
             transition={{ duration: 0.8, delay: 0.4 + i * 0.1 }}
             className={`absolute w-12 h-12 border-[#C9A24D] ${cls}`}
           />
-        ))}
+        ))} */}
 
         {/* subtle gold grid overlay */}
         <div className="absolute inset-0 opacity-[0.04]" style={{
@@ -5261,17 +5261,17 @@ export default function LeadingLawFirmPage() {
 
         {/* bordered inner content box */}
         <motion.div variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true }}
-          className="relative max-w-3xl mx-auto border border-[#C9A24D]/30 rounded-2xl px-10 py-16"
+          className="relative max-w-3xl mx-auto px-10 py-16"
         >
           {/* corner marks */}
-          {[
+          {/* {[
             "top-4 left-4 border-t-2 border-l-2",
             "top-4 right-4 border-t-2 border-r-2",
             "bottom-4 left-4 border-b-2 border-l-2",
             "bottom-4 right-4 border-b-2 border-r-2",
           ].map((cls, i) => (
             <span key={i} className={`absolute ${cls} w-5 h-5 border-[#C9A24D]`} />
-          ))}
+          ))} */}
 
           <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
             className="text-[#C9A24D] text-xs tracking-[0.25em] uppercase mb-4 font-semibold"

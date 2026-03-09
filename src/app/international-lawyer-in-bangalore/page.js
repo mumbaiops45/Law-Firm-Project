@@ -1,370 +1,370 @@
-// // // "use client";
-
-// // // import Navbar from "../../components/Navbar";
-// // // import Footer from "../../components/Footer";
-// // // import Image from "next/image";
-// // // import { motion } from "framer-motion";
-// // // import Link from "next/link";
-
-// // // export default function InternationalPrivateLawPage() {
-
-// // //   const fadeUp = {
-// // //     hidden: { opacity: 0, y: 40 },
-// // //     visible: {
-// // //       opacity: 1,
-// // //       y: 0,
-// // //       transition: {
-// // //         duration: 0.8,
-// // //         ease: "easeOut"
-// // //       }
-// // //     }
-// // //   };
-
-// // //   const fadeImage = {
-// // //     hidden: { opacity: 0, scale: 1.05 },
-// // //     visible: {
-// // //       opacity: 1,
-// // //       scale: 1,
-// // //       transition: {
-// // //         duration: 1.2
-// // //       }
-// // //     }
-// // //   };
-
-// // //   const stagger = {
-// // //     visible: {
-// // //       transition: {
-// // //         staggerChildren: 0.2
-// // //       }
-// // //     }
-// // //   };
-
-// // //   return (
-// // //     <>
-// // //       <Navbar />
-
-// // //       <main className="bg-white overflow-hidden">
-
-// // //         {/* ================= HERO ================= */}
-
-// // //         <section className="relative bg-[#0B0F14] pt-32 pb-40">
-
-// // //           <motion.div
-// // //             variants={stagger}
-// // //             initial="hidden"
-// // //             animate="visible"
-// // //             className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center"
-// // //           >
-
-// // //             <motion.p
-// // //               variants={fadeUp}
-// // //               className="text-gray-400 text-sm mb-6"
-// // //             >
-// // //               Home <span className="mx-2">›</span>
-// // //               <span className="text-[#C9A24D]">
-// // //                 International Private Law
-// // //               </span>
-// // //             </motion.p>
-
-
-// // //             <motion.h1
-// // //               variants={fadeUp}
-// // //               className="
-// // //                 text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-// // //                 font-semibold
-// // //                 text-white
-// // //                 mb-6
-// // //                 tracking-tight
-// // //               "
-// // //             >
-// // //               International Private Law
-// // //             </motion.h1>
-
-
-// // //             <motion.p
-// // //               variants={fadeUp}
-// // //               className="
-// // //                 text-gray-400
-// // //                 text-base sm:text-lg md:text-xl
-// // //                 max-w-3xl mx-auto
-// // //                 leading-relaxed
-// // //               "
-// // //             >
-// // //               Expert legal assistance in cross-border disputes, international
-// // //               contracts, jurisdictional conflicts, and enforcement of foreign
-// // //               judgments with strategic global legal insight.
-// // //             </motion.p>
-
-// // //           </motion.div>
-
-
-
-// // //           {/* FLOATING IMAGE */}
+// // // // "use client";
+
+// // // // import Navbar from "../../components/Navbar";
+// // // // import Footer from "../../components/Footer";
+// // // // import Image from "next/image";
+// // // // import { motion } from "framer-motion";
+// // // // import Link from "next/link";
+
+// // // // export default function InternationalPrivateLawPage() {
+
+// // // //   const fadeUp = {
+// // // //     hidden: { opacity: 0, y: 40 },
+// // // //     visible: {
+// // // //       opacity: 1,
+// // // //       y: 0,
+// // // //       transition: {
+// // // //         duration: 0.8,
+// // // //         ease: "easeOut"
+// // // //       }
+// // // //     }
+// // // //   };
+
+// // // //   const fadeImage = {
+// // // //     hidden: { opacity: 0, scale: 1.05 },
+// // // //     visible: {
+// // // //       opacity: 1,
+// // // //       scale: 1,
+// // // //       transition: {
+// // // //         duration: 1.2
+// // // //       }
+// // // //     }
+// // // //   };
+
+// // // //   const stagger = {
+// // // //     visible: {
+// // // //       transition: {
+// // // //         staggerChildren: 0.2
+// // // //       }
+// // // //     }
+// // // //   };
+
+// // // //   return (
+// // // //     <>
+// // // //       <Navbar />
+
+// // // //       <main className="bg-white overflow-hidden">
+
+// // // //         {/* ================= HERO ================= */}
+
+// // // //         <section className="relative bg-[#0B0F14] pt-32 pb-40">
+
+// // // //           <motion.div
+// // // //             variants={stagger}
+// // // //             initial="hidden"
+// // // //             animate="visible"
+// // // //             className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 text-center"
+// // // //           >
+
+// // // //             <motion.p
+// // // //               variants={fadeUp}
+// // // //               className="text-gray-400 text-sm mb-6"
+// // // //             >
+// // // //               Home <span className="mx-2">›</span>
+// // // //               <span className="text-[#C9A24D]">
+// // // //                 International Private Law
+// // // //               </span>
+// // // //             </motion.p>
+
+
+// // // //             <motion.h1
+// // // //               variants={fadeUp}
+// // // //               className="
+// // // //                 text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+// // // //                 font-semibold
+// // // //                 text-white
+// // // //                 mb-6
+// // // //                 tracking-tight
+// // // //               "
+// // // //             >
+// // // //               International Private Law
+// // // //             </motion.h1>
+
+
+// // // //             <motion.p
+// // // //               variants={fadeUp}
+// // // //               className="
+// // // //                 text-gray-400
+// // // //                 text-base sm:text-lg md:text-xl
+// // // //                 max-w-3xl mx-auto
+// // // //                 leading-relaxed
+// // // //               "
+// // // //             >
+// // // //               Expert legal assistance in cross-border disputes, international
+// // // //               contracts, jurisdictional conflicts, and enforcement of foreign
+// // // //               judgments with strategic global legal insight.
+// // // //             </motion.p>
+
+// // // //           </motion.div>
+
+
+
+// // // //           {/* FLOATING IMAGE */}
 
-// // //           <motion.div
-// // //             variants={fadeImage}
-// // //             initial="hidden"
-// // //             animate="visible"
-// // //             className="
-// // //               absolute
-// // //               left-1/2
-// // //               -translate-x-1/2
-// // //               translate-y-1/2
-// // //               bottom-0
-// // //               w-full
-// // //               max-w-6xl
-// // //               px-6
-// // //               z-20
-// // //             "
-// // //           >
+// // // //           <motion.div
+// // // //             variants={fadeImage}
+// // // //             initial="hidden"
+// // // //             animate="visible"
+// // // //             className="
+// // // //               absolute
+// // // //               left-1/2
+// // // //               -translate-x-1/2
+// // // //               translate-y-1/2
+// // // //               bottom-0
+// // // //               w-full
+// // // //               max-w-6xl
+// // // //               px-6
+// // // //               z-20
+// // // //             "
+// // // //           >
 
-// // //             <div className="rounded-xl overflow-hidden shadow-2xl mt-82">
+// // // //             <div className="rounded-xl overflow-hidden shadow-2xl mt-82">
 
-// // //               <Image
-// // //                 src="/international-law.png"
-// // //                 alt="International Private Law"
-// // //                 width={1400}
-// // //                 height={800}
-// // //                 className="w-full h-[400px] md:h-[600px] object-cover"
-// // //                 priority
-// // //               />
+// // // //               <Image
+// // // //                 src="/international-law.png"
+// // // //                 alt="International Private Law"
+// // // //                 width={1400}
+// // // //                 height={800}
+// // // //                 className="w-full h-[400px] md:h-[600px] object-cover"
+// // // //                 priority
+// // // //               />
 
-// // //             </div>
+// // // //             </div>
 
-// // //           </motion.div>
+// // // //           </motion.div>
 
-// // //         </section>
+// // // //         </section>
 
 
 
-// // //         {/* SPACING */}
+// // // //         {/* SPACING */}
 
-// // //         <div className="h-40 md:h-60"></div>
+// // // //         <div className="h-40 md:h-60"></div>
 
 
 
-// // //         {/* ================= OVERVIEW ================= */}
+// // // //         {/* ================= OVERVIEW ================= */}
 
-// // //         <motion.section
-// // //           initial="hidden"
-// // //           whileInView="visible"
-// // //           viewport={{ once: true }}
-// // //           variants={stagger}
-// // //         >
+// // // //         <motion.section
+// // // //           initial="hidden"
+// // // //           whileInView="visible"
+// // // //           viewport={{ once: true }}
+// // // //           variants={stagger}
+// // // //         >
 
-// // //           <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-16 mt-54">
+// // // //           <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-16 mt-54">
 
 
-// // //             <motion.h2
-// // //               variants={fadeUp}
-// // //               className="text-4xl md:text-5xl font-semibold text-black mb-6 tracking-tight"
-// // //             >
-// // //               Overview
-// // //             </motion.h2>
+// // // //             <motion.h2
+// // // //               variants={fadeUp}
+// // // //               className="text-4xl md:text-5xl font-semibold text-black mb-6 tracking-tight"
+// // // //             >
+// // // //               Overview
+// // // //             </motion.h2>
 
 
-// // //             <motion.p
-// // //               variants={fadeUp}
-// // //               className="text-gray-600 text-base md:text-lg leading-relaxed mb-12"
-// // //             >
-// // //               International Private Law governs cross-border legal disputes
-// // //               involving individuals and corporations from different countries.
-// // //               Our firm provides strategic guidance in jurisdictional matters,
-// // //               international contracts, foreign investments, and enforcement of
-// // //               international judgments.
-// // //             </motion.p>
+// // // //             <motion.p
+// // // //               variants={fadeUp}
+// // // //               className="text-gray-600 text-base md:text-lg leading-relaxed mb-12"
+// // // //             >
+// // // //               International Private Law governs cross-border legal disputes
+// // // //               involving individuals and corporations from different countries.
+// // // //               Our firm provides strategic guidance in jurisdictional matters,
+// // // //               international contracts, foreign investments, and enforcement of
+// // // //               international judgments.
+// // // //             </motion.p>
 
 
 
-// // //             {/* ================= SERVICES ================= */}
+// // // //             {/* ================= SERVICES ================= */}
 
-// // //             <motion.h3
-// // //               variants={fadeUp}
-// // //               className="text-3xl md:text-4xl font-semibold text-black mb-6"
-// // //             >
-// // //               Our International Legal Services
-// // //             </motion.h3>
+// // // //             <motion.h3
+// // // //               variants={fadeUp}
+// // // //               className="text-3xl md:text-4xl font-semibold text-black mb-6"
+// // // //             >
+// // // //               Our International Legal Services
+// // // //             </motion.h3>
 
 
-// // //             <motion.p
-// // //               variants={fadeUp}
-// // //               className="text-gray-600 text-base md:text-lg leading-relaxed mb-10"
-// // //             >
-// // //               We offer comprehensive support for cross-border legal matters
-// // //               affecting individuals and businesses.
-// // //             </motion.p>
+// // // //             <motion.p
+// // // //               variants={fadeUp}
+// // // //               className="text-gray-600 text-base md:text-lg leading-relaxed mb-10"
+// // // //             >
+// // // //               We offer comprehensive support for cross-border legal matters
+// // // //               affecting individuals and businesses.
+// // // //             </motion.p>
 
 
 
-// // //             <motion.ul
-// // //               variants={fadeUp}
-// // //               className="list-disc pl-6 space-y-8 text-gray-700 mb-16"
-// // //             >
+// // // //             <motion.ul
+// // // //               variants={fadeUp}
+// // // //               className="list-disc pl-6 space-y-8 text-gray-700 mb-16"
+// // // //             >
 
-// // //               <li>
-// // //                 <span className="font-semibold text-black">
-// // //                   Cross-Border Dispute Resolution:
-// // //                 </span>
-// // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-// // //                   Handling disputes involving parties from multiple jurisdictions.
-// // //                 </p>
-// // //               </li>
+// // // //               <li>
+// // // //                 <span className="font-semibold text-black">
+// // // //                   Cross-Border Dispute Resolution:
+// // // //                 </span>
+// // // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
+// // // //                   Handling disputes involving parties from multiple jurisdictions.
+// // // //                 </p>
+// // // //               </li>
 
 
-// // //               <li>
-// // //                 <span className="font-semibold text-black">
-// // //                   International Contract Advisory:
-// // //                 </span>
-// // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-// // //                   Drafting and reviewing cross-border agreements and contracts.
-// // //                 </p>
-// // //               </li>
+// // // //               <li>
+// // // //                 <span className="font-semibold text-black">
+// // // //                   International Contract Advisory:
+// // // //                 </span>
+// // // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
+// // // //                   Drafting and reviewing cross-border agreements and contracts.
+// // // //                 </p>
+// // // //               </li>
 
 
-// // //               <li>
-// // //                 <span className="font-semibold text-black">
-// // //                   Enforcement of Foreign Judgments:
-// // //                 </span>
-// // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-// // //                   Assisting with recognition and enforcement of foreign court decisions in India.
-// // //                 </p>
-// // //               </li>
+// // // //               <li>
+// // // //                 <span className="font-semibold text-black">
+// // // //                   Enforcement of Foreign Judgments:
+// // // //                 </span>
+// // // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
+// // // //                   Assisting with recognition and enforcement of foreign court decisions in India.
+// // // //                 </p>
+// // // //               </li>
 
 
-// // //               <li>
-// // //                 <span className="font-semibold text-black">
-// // //                   International Arbitration:
-// // //                 </span>
-// // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-// // //                   Representation in global arbitration proceedings.
-// // //                 </p>
-// // //               </li>
+// // // //               <li>
+// // // //                 <span className="font-semibold text-black">
+// // // //                   International Arbitration:
+// // // //                 </span>
+// // // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
+// // // //                   Representation in global arbitration proceedings.
+// // // //                 </p>
+// // // //               </li>
 
 
-// // //               <li>
-// // //                 <span className="font-semibold text-black">
-// // //                   Foreign Investment & Compliance:
-// // //                 </span>
-// // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
-// // //                   Legal guidance on international investments and regulatory compliance.
-// // //                 </p>
-// // //               </li>
+// // // //               <li>
+// // // //                 <span className="font-semibold text-black">
+// // // //                   Foreign Investment & Compliance:
+// // // //                 </span>
+// // // //                 <p className="mt-2 text-base md:text-lg leading-relaxed">
+// // // //                   Legal guidance on international investments and regulatory compliance.
+// // // //                 </p>
+// // // //               </li>
 
-// // //             </motion.ul>
+// // // //             </motion.ul>
 
 
 
-// // //             {/* IMAGE */}
+// // // //             {/* IMAGE */}
 
-// // //             <motion.div variants={fadeUp} className="mb-16">
+// // // //             <motion.div variants={fadeUp} className="mb-16">
 
-// // //               <Image
-// // //                 src="/International-Law1.jpg"
-// // //                 alt="International Legal Consultation"
-// // //                 width={1200}
-// // //                 height={600}
-// // //                 className="w-full rounded-xl shadow-lg"
-// // //               />
+// // // //               <Image
+// // // //                 src="/International-Law1.jpg"
+// // // //                 alt="International Legal Consultation"
+// // // //                 width={1200}
+// // // //                 height={600}
+// // // //                 className="w-full rounded-xl shadow-lg"
+// // // //               />
 
-// // //             </motion.div>
+// // // //             </motion.div>
 
 
 
-// // //             {/* WHY CHOOSE */}
+// // // //             {/* WHY CHOOSE */}
 
-// // //             <motion.h3
-// // //               variants={fadeUp}
-// // //               className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-6"
-// // //             >
-// // //               Why Choose Us for International Legal Matters
-// // //             </motion.h3>
+// // // //             <motion.h3
+// // // //               variants={fadeUp}
+// // // //               className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-6"
+// // // //             >
+// // // //               Why Choose Us for International Legal Matters
+// // // //             </motion.h3>
 
 
-// // //             <motion.p
-// // //               variants={fadeUp}
-// // //               className="text-gray-600 text-base md:text-lg leading-relaxed"
-// // //             >
-// // //               Our team provides strategic cross-border legal solutions backed by
-// // //               strong research, global perspective, and practical experience.
-// // //               We ensure compliance with international legal standards while
-// // //               protecting our clients’ interests.
-// // //             </motion.p>
+// // // //             <motion.p
+// // // //               variants={fadeUp}
+// // // //               className="text-gray-600 text-base md:text-lg leading-relaxed"
+// // // //             >
+// // // //               Our team provides strategic cross-border legal solutions backed by
+// // // //               strong research, global perspective, and practical experience.
+// // // //               We ensure compliance with international legal standards while
+// // // //               protecting our clients’ interests.
+// // // //             </motion.p>
 
-// // //           </div>
+// // // //           </div>
 
-// // //         </motion.section>
+// // // //         </motion.section>
 
 
 
-// // //         {/* ================= CTA ================= */}
+// // // //         {/* ================= CTA ================= */}
 
-// // //         <motion.section
-// // //           initial={{ opacity: 0 }}
-// // //           whileInView={{ opacity: 1 }}
-// // //           transition={{ duration: 1 }}
-// // //           className="relative py-28 mt-20 overflow-hidden"
-// // //         >
+// // // //         <motion.section
+// // // //           initial={{ opacity: 0 }}
+// // // //           whileInView={{ opacity: 1 }}
+// // // //           transition={{ duration: 1 }}
+// // // //           className="relative py-28 mt-20 overflow-hidden"
+// // // //         >
 
-// // //           <div className="absolute inset-0">
+// // // //           <div className="absolute inset-0">
 
-// // //             <Image
-// // //               src="/discussion.png"
-// // //               alt="International Legal Consultation"
-// // //               fill
-// // //               className="object-cover"
-// // //             />
+// // // //             <Image
+// // // //               src="/discussion.png"
+// // // //               alt="International Legal Consultation"
+// // // //               fill
+// // // //               className="object-cover"
+// // // //             />
 
-// // //             <div className="absolute inset-0 bg-black/70"></div>
+// // // //             <div className="absolute inset-0 bg-black/70"></div>
 
-// // //           </div>
+// // // //           </div>
 
 
-// // //           <motion.div
-// // //             initial={{ opacity: 0, y: 60 }}
-// // //             whileInView={{ opacity: 1, y: 0 }}
-// // //             transition={{ duration: 0.8 }}
-// // //             className="relative max-w-5xl mx-auto px-6 text-center"
-// // //           >
+// // // //           <motion.div
+// // // //             initial={{ opacity: 0, y: 60 }}
+// // // //             whileInView={{ opacity: 1, y: 0 }}
+// // // //             transition={{ duration: 0.8 }}
+// // // //             className="relative max-w-5xl mx-auto px-6 text-center"
+// // // //           >
 
-// // //             <p className="text-[#C9A24D] uppercase tracking-widest text-sm mb-4">
-// // //               Cross-Border Legal Expertise
-// // //             </p>
+// // // //             <p className="text-[#C9A24D] uppercase tracking-widest text-sm mb-4">
+// // // //               Cross-Border Legal Expertise
+// // // //             </p>
 
 
-// // //             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-// // //               Navigate International Legal Matters with Confidence
-// // //             </h2>
+// // // //             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+// // // //               Navigate International Legal Matters with Confidence
+// // // //             </h2>
 
 
-// // //             <p className="text-gray-300 text-base md:text-lg mb-10">
-// // //               Get professional guidance for cross-border disputes and global legal challenges.
-// // //             </p>
+// // // //             <p className="text-gray-300 text-base md:text-lg mb-10">
+// // // //               Get professional guidance for cross-border disputes and global legal challenges.
+// // // //             </p>
 
-// // //             <Link href="/contact">
-// // //             <button className="
-// // //               bg-[#C9A24D]
-// // //               text-black
-// // //               px-8 py-4
-// // //               rounded-lg
-// // //               font-semibold
-// // //               hover:scale-105
-// // //               transition
-// // //             ">
-// // //               Book Consultation
-// // //             </button>
-// // //             </Link>
+// // // //             <Link href="/contact">
+// // // //             <button className="
+// // // //               bg-[#C9A24D]
+// // // //               text-black
+// // // //               px-8 py-4
+// // // //               rounded-lg
+// // // //               font-semibold
+// // // //               hover:scale-105
+// // // //               transition
+// // // //             ">
+// // // //               Book Consultation
+// // // //             </button>
+// // // //             </Link>
 
-// // //           </motion.div>
+// // // //           </motion.div>
 
-// // //         </motion.section>
+// // // //         </motion.section>
 
 
-// // //       </main>
+// // // //       </main>
 
-// // //       <Footer />
-// // //     </>
-// // //   );
-// // // }
+// // // //       <Footer />
+// // // //     </>
+// // // //   );
+// // // // }
 
 
 
@@ -1021,151 +1021,626 @@
 //   );
 // }
 
+
+
+// // "use client";
+
+// // import { useState, useRef } from "react";
+// // import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+// // import Link from "next/link";
+// // import Image from "next/image";
+// // import { ChevronDown } from "lucide-react";
+// // import Navbar from "../components/Navbar";
+// // import Footer from "../components/Footer";
+
+// // // ─── DATA ─────────────────────────────────────────────────────────────────────
+
+// // const services = [
+// //   "Cross-Border Commercial Disputes",
+// //   "International Arbitration Proceedings",
+// //   "Foreign Judgment Enforcement",
+// //   "Cross-Border Contract Disputes",
+// //   "International Family & Matrimonial Matters",
+// //   "Jurisdiction & Conflict of Law Issues",
+// //   "Drafting & Review of International Commercial Contracts",
+// // ];
+
+// // const steps = [
+// //   {
+// //     number: "01",
+// //     title: "Jurisdiction Analysis & Legal Risk Assessment",
+// //     body: "Every international dispute begins with identifying the appropriate jurisdiction and applicable laws. Our lawyers carefully analyze contractual obligations, governing law clauses, and jurisdictional factors to determine where the case should be filed and what legal risks may arise. As experienced Cross-Border Dispute Lawyers and Private International Law Advisors, we help clients understand the complexities involved when disputes span multiple countries.",
+// //   },
+// //   {
+// //     number: "02",
+// //     title: "Cross-Border Strategy & Dispute Resolution Planning",
+// //     body: "Once the legal framework is established, we design a strategic dispute resolution plan tailored to the specific situation. This may involve litigation, arbitration, negotiation, or alternative dispute resolution mechanisms. Our attorneys clearly explain jurisdictional risks, enforcement challenges, and the most effective legal options before initiating any legal proceedings, allowing clients to make well-informed decisions.",
+// //   },
+// //   {
+// //     number: "03",
+// //     title: "Filing & Representation in Appropriate Forums",
+// //     body: "Depending on the nature of the dispute, we represent clients before courts, arbitral tribunals, or international dispute resolution bodies. Our team acts as experienced International Litigation Lawyers and International Arbitration Lawyers, ensuring that all filings, documentation, and legal arguments are handled with precision and professionalism.",
+// //   },
+// //   {
+// //     number: "04",
+// //     title: "Enforcement & Ongoing Legal Support",
+// //     body: "Obtaining a judgment or arbitral award is only one part of resolving an international dispute. Our firm also assists clients with the recognition and enforcement of foreign judgments and arbitration awards, ensuring that legal outcomes are effectively implemented across jurisdictions. We continue to provide legal guidance and strategic support throughout the enforcement process to safeguard our clients' interests.",
+// //   },
+// // ];
+
+// // const whyChoose = [
+// //   "Experienced International Litigation Lawyers handling multi-jurisdictional disputes",
+// //   "Skilled International Arbitration Lawyer representation for global commercial conflicts",
+// //   "Strategic cross-border legal planning for businesses and individuals",
+// //   "Strong expertise in legal documentation, contracts, and enforcement procedures",
+// //   "Clear communication and coordinated legal strategy across jurisdictions",
+// // ];
+
+// // const faqs = [
+// //   {
+// //     q: "What is international private law?",
+// //     a: "It governs disputes involving foreign parties, cross-border transactions, and jurisdictional conflicts.",
+// //   },
+// //   {
+// //     q: "How are cross-border disputes resolved?",
+// //     a: "Through litigation, international arbitration, mediation, or negotiated settlements depending on contractual terms.",
+// //   },
+// //   {
+// //     q: "Can foreign judgments be enforced in India?",
+// //     a: "Yes, subject to recognition and enforcement procedures under applicable Indian laws and reciprocal arrangements.",
+// //   },
+// //   {
+// //     q: "Do you handle international arbitration matters?",
+// //     a: "Yes, we represent clients in domestic and international arbitration proceedings before appropriate tribunals.",
+// //   },
+// //   {
+// //     q: "How do you determine the correct jurisdiction in a cross-border dispute?",
+// //     a: "We analyze contractual clauses, governing law provisions, place of cause of action, and applicable international conventions to determine the appropriate forum.",
+// //   },
+// //   {
+// //     q: "Can you assist with drafting international commercial contracts?",
+// //     a: "Yes, we draft and review cross-border agreements with clear jurisdiction, governing law, dispute resolution, and enforcement clauses.",
+// //   },
+// // ];
+
+// // // ─── ANIMATION VARIANTS ───────────────────────────────────────────────────────
+
+// // const fadeUp = {
+// //   hidden: { opacity: 0, y: 40 },
+// //   show: (i = 0) => ({
+// //     opacity: 1, y: 0,
+// //     transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+// //   }),
+// // };
+
+// // const fadeLeft = {
+// //   hidden: { opacity: 0, x: -40 },
+// //   show: (i = 0) => ({
+// //     opacity: 1, x: 0,
+// //     transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+// //   }),
+// // };
+
+// // const scaleIn = {
+// //   hidden: { opacity: 0, scale: 0.93 },
+// //   show: (i = 0) => ({
+// //     opacity: 1, scale: 1,
+// //     transition: { duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+// //   }),
+// // };
+
+// // const stagger = {
+// //   hidden: {},
+// //   show: { transition: { staggerChildren: 0.12 } },
+// // };
+
+// // // ─── HELPERS ──────────────────────────────────────────────────────────────────
+
+// // function GoldDivider() {
+// //   return (
+// //     <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
+// //   );
+// // }
+
+// // function SectionHeading({ children, light = false }) {
+// //   return (
+// //     <motion.div
+// //       variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }}
+// //       className="mb-10"
+// //     >
+// //       <motion.span
+// //         initial={{ width: 0 }} whileInView={{ width: 56 }} viewport={{ once: true }}
+// //         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+// //         className="block h-[3px] bg-[#C9A24D] mb-5"
+// //       />
+// //       <h2 className={`text-3xl md:text-4xl font-bold leading-tight ${light ? "text-white" : "text-gray-900"}`}>
+// //         {children}
+// //       </h2>
+// //     </motion.div>
+// //   );
+// // }
+
+// // // ─── PAGE ─────────────────────────────────────────────────────────────────────
+
+// // export default function InternationalLawyerPage() {
+// //   const [openIndex, setOpenIndex] = useState(null);
+// //   const heroRef = useRef(null);
+// //   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+// //   const heroY   = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+// //   const heroOpa = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
+// //   return (
+// //     <>
+// //       <Navbar />
+
+// //       <main className="bg-white overflow-hidden">
+
+// //         {/* ══════════════════════════════ HERO ══════════════════════════════════ */}
+// //         <section ref={heroRef} className="relative bg-[#0B0F14] overflow-hidden">
+
+// //           {/* top gold border */}
+// //           <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D] z-10" />
+
+// //           {/* animated corner brackets */}
+// //           {[
+// //             "top-8 left-8 border-t-2 border-l-2",
+// //             "top-8 right-8 border-t-2 border-r-2",
+// //           ].map((cls, i) => (
+// //             <motion.div key={i}
+// //               initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 0.3, scale: 1 }}
+// //               transition={{ duration: 0.8, delay: 0.3 + i * 0.1 }}
+// //               className={`absolute w-12 h-12 border-[#C9A24D] z-10 ${cls}`}
+// //             />
+// //           ))}
+
+// //           {/* subtle gold grid */}
+// //           <div className="absolute inset-0 opacity-[0.04] z-0" style={{
+// //             backgroundImage:
+// //               "repeating-linear-gradient(0deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)," +
+// //               "repeating-linear-gradient(90deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)",
+// //           }} />
+
+// //           <motion.div style={{ y: heroY, opacity: heroOpa }}
+// //             className="relative z-10 max-w-5xl mx-auto px-6 pt-36 pb-16 text-center"
+// //           >
+// //             {/* eyebrow */}
+// //             <motion.p variants={fadeUp} initial="hidden" animate="show" custom={0}
+// //               className="text-[#C9A24D] text-xs tracking-[0.3em] uppercase mb-6 font-semibold flex items-center justify-center gap-3"
+// //             >
+// //               <span className="inline-block w-6 h-px bg-[#C9A24D]" />
+// //               S Jain &amp; Attorneys · Bangalore
+// //               <span className="inline-block w-6 h-px bg-[#C9A24D]" />
+// //             </motion.p>
+
+// //             {/* H1 */}
+// //             <motion.h1 variants={fadeUp} initial="hidden" animate="show" custom={1}
+// //               className="text-4xl md:text-6xl font-bold text-white leading-[1.08] mb-8"
+// //             >
+// //               International Lawyer in Bangalore{" "}
+// //               <span className="text-[#C9A24D]">for Cross-Border Disputes</span>
+// //             </motion.h1>
+
+// //             {/* Intro para 1 */}
+// //             <motion.p variants={fadeUp} initial="hidden" animate="show" custom={2}
+// //               className="text-gray-300 text-lg mb-4 max-w-3xl mx-auto leading-relaxed"
+// //             >
+// //               Our firm provides strategic representation as an International Lawyer in Bangalore,
+// //               assisting clients in complex cross-border disputes, arbitration proceedings, and
+// //               jurisdictional matters. We offer structured legal solutions for international
+// //               commercial and personal legal conflicts.
+// //             </motion.p>
+
+// //             {/* Intro para 2 */}
+// //             <motion.p variants={fadeUp} initial="hidden" animate="show" custom={3}
+// //               className="text-gray-400 text-lg mb-6 max-w-3xl mx-auto leading-relaxed"
+// //             >
+// //               Our goal is to minimize jurisdictional risk, ensure enforceability across borders,
+// //               and protect your legal and commercial interests in international matters.
+// //             </motion.p>
+
+// //             {/* 24-hour guarantee */}
+// //             <motion.p variants={fadeUp} initial="hidden" animate="show" custom={4}
+// //               className="text-[#C9A24D] font-bold text-base tracking-wide mb-10"
+// //             >
+// //               Response within 24 hours guaranteed.
+// //             </motion.p>
+
+// //             {/* CTAs */}
+// //             <motion.div variants={fadeUp} initial="hidden" animate="show" custom={5}
+// //               className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+// //             >
+// //               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+// //                 <Link href="/legal-consultation-in-bangalore"
+// //                   className="inline-block bg-[#C9A24D] text-black px-8 py-4 font-semibold text-sm tracking-wide hover:bg-[#b8913d] transition-colors duration-200"
+// //                 >
+// //                   Book Confidential Consultation
+// //                 </Link>
+// //               </motion.div>
+// //               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+// //                 <Link href="tel:+919000000000"
+// //                   className="inline-block border-2 border-[#C9A24D] text-[#C9A24D] px-8 py-4 font-semibold text-sm tracking-wide hover:bg-[#C9A24D] hover:text-black transition-colors duration-300"
+// //                 >
+// //                   Call Now
+// //                 </Link>
+// //               </motion.div>
+// //             </motion.div>
+// //           </motion.div>
+
+// //           {/* Hero image */}
+// //           <motion.div
+// //             variants={scaleIn} initial="hidden" animate="show"
+// //             className="relative z-10 max-w-6xl mx-auto px-6 pb-16"
+// //           >
+// //             <div className="rounded-xl overflow-hidden border border-[#C9A24D]/30 shadow-2xl">
+// //               <Image
+// //                 src="/international-law.png"
+// //                 alt="International Lawyer in Bangalore"
+// //                 width={1400} height={800}
+// //                 className="w-full h-[400px] md:h-[500px] object-cover"
+// //                 priority
+// //               />
+// //             </div>
+// //           </motion.div>
+
+// //           {/* scroll indicator */}
+// //           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
+// //             className="relative z-10 pb-8 flex justify-center"
+// //           >
+// //             <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.6 }}
+// //               className="w-px h-12 bg-gradient-to-b from-[#C9A24D] to-transparent"
+// //             />
+// //           </motion.div>
+// //         </section>
+
+// //         {/* ═══════════════ INTERNATIONAL PRIVATE LAW & CROSS-BORDER ═════════════ */}
+// //         <section className="py-28 px-6 bg-white relative overflow-hidden">
+// //           {/* animated right vertical rule */}
+// //           <motion.div
+// //             initial={{ height: 0 }} whileInView={{ height: "60%" }} viewport={{ once: true }}
+// //             transition={{ duration: 1.2, delay: 0.3 }}
+// //             className="absolute right-0 top-[20%] w-[3px] bg-gradient-to-b from-transparent via-[#C9A24D] to-transparent"
+// //           />
+
+// //           <div className="max-w-6xl mx-auto">
+// //             <SectionHeading>International Private Law &amp; Cross-Border Legal Representation</SectionHeading>
+
+// //             <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }}
+// //               className="space-y-6 text-gray-600 text-lg leading-relaxed"
+// //             >
+// //               <motion.p variants={fadeUp}>
+// //                 Legal disputes involving parties from different countries often require careful
+// //                 handling, as they may involve multiple legal systems, international contracts, and
+// //                 complex jurisdictional issues. Our firm provides strategic legal support in
+// //                 cross-border matters, helping clients navigate international legal challenges with
+// //                 clarity and confidence.
+// //               </motion.p>
+// //               <motion.p variants={fadeUp} custom={0.5}>
+// //                 We regularly represent clients in matters involving international commercial
+// //                 disputes, enforcement of foreign judgments, cross-border contracts, and
+// //                 international arbitration proceedings. Acting as trusted International Litigation
+// //                 Lawyers and International Arbitration Lawyers, we provide strong representation
+// //                 before competent courts and arbitral tribunals, while coordinating with foreign
+// //                 legal professionals when required.
+// //               </motion.p>
+// //               <motion.p variants={fadeUp} custom={1}>
+// //                 With a practical and structured approach, we aim to simplify complex international
+// //                 legal processes and deliver solutions that align with both Indian law and applicable
+// //                 international legal frameworks.
+// //               </motion.p>
+// //             </motion.div>
+// //           </div>
+// //         </section>
+
+// //         {/* ════════════════════ OUR INTERNATIONAL LAW SERVICES ══════════════════ */}
+// //         <section className="py-28 px-6 bg-[#f8f6f1] relative">
+// //           <GoldDivider />
+// //           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
+
+// //           <div className="max-w-6xl mx-auto">
+// //             <motion.h3 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+// //               className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-8 border-l-4 border-[#C9A24D] pl-4"
+// //             >
+// //               Our International Law Services Include
+// //             </motion.h3>
+
+// //             <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }}
+// //               className="grid md:grid-cols-2 gap-5 mb-16"
+// //             >
+// //               {services.map((item, i) => (
+// //                 <motion.div key={i} variants={fadeLeft} custom={i * 0.1}
+// //                   whileHover={{ x: 5, boxShadow: "0 8px 30px rgba(201,162,77,0.12)" }}
+// //                   className="bg-white border border-gray-100 hover:border-[#C9A24D] rounded-lg p-6 flex items-start gap-4 group transition-all duration-300"
+// //                 >
+// //                   <span className="text-[#C9A24D] font-black text-lg shrink-0 mt-0.5">
+// //                     {String(i + 1).padStart(2, "0")}
+// //                   </span>
+// //                   <div className="border-l border-gray-200 group-hover:border-[#C9A24D] pl-4 transition-colors duration-300">
+// //                     <p className="text-base font-semibold text-gray-800 group-hover:text-[#8a6a20] transition-colors duration-200">
+// //                       {item}
+// //                     </p>
+// //                   </div>
+// //                 </motion.div>
+// //               ))}
+// //             </motion.div>
+
+// //             {/* second image */}
+// //             <motion.div variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true }}
+// //               className="rounded-xl overflow-hidden border border-gray-100 shadow-lg"
+// //             >
+// //               <Image
+// //                 src="/International-Law1.jpg"
+// //                 alt="International Law Services Bangalore"
+// //                 width={1200} height={600}
+// //                 className="w-full object-cover"
+// //               />
+// //             </motion.div>
+// //           </div>
+// //         </section>
+
+// //         {/* ════════════════════════════ OUR APPROACH ════════════════════════════ */}
+// //         <section className="py-28 px-6 bg-black text-white relative overflow-hidden">
+// //           <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+
+// //           {/* decorative watermark */}
+// //           <motion.div
+// //             initial={{ opacity: 0, x: 80 }} whileInView={{ opacity: 0.04, x: 0 }}
+// //             viewport={{ once: true }} transition={{ duration: 1.2 }}
+// //             className="absolute right-[-3rem] top-1/2 -translate-y-1/2 text-[22rem] font-black text-[#C9A24D] select-none pointer-events-none leading-none"
+// //           >
+// //             4
+// //           </motion.div>
+
+// //           <div className="max-w-6xl mx-auto relative">
+// //             <SectionHeading light>Our Approach – How We Work</SectionHeading>
+
+// //             <div className="space-y-8">
+// //               {steps.map((step, i) => (
+// //                 <motion.div key={step.number}
+// //                   variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }} custom={i * 0.2}
+// //                   className="border border-[#C9A24D]/30 hover:border-[#C9A24D]/70 rounded-lg p-8 relative group transition-colors duration-300"
+// //                 >
+// //                   {/* corner ornaments */}
+// //                   <span className="absolute top-3 right-3 w-5 h-5 border-t border-r border-[#C9A24D]/40 group-hover:border-[#C9A24D] transition-colors duration-300" />
+// //                   <span className="absolute bottom-3 left-3 w-5 h-5 border-b border-l border-[#C9A24D]/40 group-hover:border-[#C9A24D] transition-colors duration-300" />
+
+// //                   <div className="flex gap-6 items-start">
+// //                     <span className="text-[#C9A24D] font-black text-3xl shrink-0 leading-none">{step.number}</span>
+// //                     <div className="border-l border-[#C9A24D]/30 pl-6">
+// //                       <h3 className="text-xl font-bold text-white mb-3">
+// //                         Step {i + 1}: {step.title}
+// //                       </h3>
+// //                       <p className="text-gray-400 leading-relaxed">{step.body}</p>
+// //                     </div>
+// //                   </div>
+// //                 </motion.div>
+// //               ))}
+// //             </div>
+// //           </div>
+// //         </section>
+
+// //         {/* ════════════════════════════ WHY CHOOSE ══════════════════════════════ */}
+// //         <section className="py-28 px-6 bg-white relative overflow-hidden">
+// //           <GoldDivider />
+// //           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
+
+// //           <div className="max-w-6xl mx-auto">
+// //             <SectionHeading>Why Choose Our Firm</SectionHeading>
+
+// //             <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }}
+// //               className="grid md:grid-cols-2 gap-5"
+// //             >
+// //               {whyChoose.map((item, i) => (
+// //                 <motion.div key={i} variants={fadeLeft} custom={i * 0.1}
+// //                   whileHover={{ x: 5, boxShadow: "0 8px 30px rgba(201,162,77,0.12)" }}
+// //                   className="bg-[#f8f6f1] border border-gray-100 hover:border-[#C9A24D] rounded-lg p-6 flex items-start gap-4 group transition-all duration-300"
+// //                 >
+// //                   <span className="text-[#C9A24D] font-black text-xl shrink-0 mt-0.5">✓</span>
+// //                   <div className="border-l border-gray-200 group-hover:border-[#C9A24D] pl-4 transition-colors duration-300">
+// //                     <p className="text-base font-semibold text-gray-800 group-hover:text-[#8a6a20] transition-colors duration-200">
+// //                       {item}
+// //                     </p>
+// //                   </div>
+// //                 </motion.div>
+// //               ))}
+// //             </motion.div>
+// //           </div>
+// //         </section>
+
+// //         {/* ══════════════════════════════ FAQ ═══════════════════════════════════ */}
+// //         <section className="py-28 px-6 bg-[#f8f6f1] relative">
+// //           <GoldDivider />
+
+// //           <div className="max-w-4xl mx-auto">
+// //             <SectionHeading>Frequently Asked Questions</SectionHeading>
+
+// //             <div className="space-y-4">
+// //               {faqs.map((faq, index) => (
+// //                 <motion.div key={index}
+// //                   variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={index * 0.1}
+// //                   className={`rounded-xl overflow-hidden border-2 transition-all duration-300 shadow-sm ${
+// //                     openIndex === index
+// //                       ? "border-[#C9A24D] bg-[#fdf9f3] shadow-[0_4px_24px_rgba(201,162,77,0.15)]"
+// //                       : "border-gray-200 bg-white hover:border-[#C9A24D]/60 hover:shadow-md"
+// //                   }`}
+// //                 >
+// //                   <button
+// //                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
+// //                     className="w-full flex justify-between items-start p-7 text-left gap-4 group"
+// //                     aria-expanded={openIndex === index}
+// //                   >
+// //                     <div className="flex items-start gap-4 flex-1">
+// //                       <span className={`shrink-0 mt-1 w-1 self-stretch rounded-full transition-colors duration-300 ${
+// //                         openIndex === index ? "bg-[#C9A24D]" : "bg-gray-200 group-hover:bg-[#C9A24D]/50"
+// //                       }`} />
+// //                       <span className={`text-base md:text-lg font-semibold transition-colors duration-200 ${
+// //                         openIndex === index ? "text-[#8a6a20]" : "text-gray-800 group-hover:text-[#C9A24D]"
+// //                       }`}>
+// //                         Q{index + 1}: {faq.q}
+// //                       </span>
+// //                     </div>
+// //                     <motion.div
+// //                       animate={{ rotate: openIndex === index ? 180 : 0 }}
+// //                       transition={{ duration: 0.25 }}
+// //                       className="shrink-0 mt-1"
+// //                     >
+// //                       <ChevronDown className={`w-5 h-5 ${openIndex === index ? "text-[#C9A24D]" : "text-gray-400"}`} />
+// //                     </motion.div>
+// //                   </button>
+
+// //                   <AnimatePresence>
+// //                     {openIndex === index && (
+// //                       <motion.div
+// //                         initial={{ height: 0, opacity: 0 }}
+// //                         animate={{ height: "auto", opacity: 1 }}
+// //                         exit={{ height: 0, opacity: 0 }}
+// //                         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+// //                         className="overflow-hidden"
+// //                       >
+// //                         <div className="px-7 pb-7 border-t-2 border-[#C9A24D]/20 ml-7">
+// //                           <p className="pt-5 text-gray-500 text-base leading-relaxed">{faq.a}</p>
+// //                         </div>
+// //                       </motion.div>
+// //                     )}
+// //                   </AnimatePresence>
+// //                 </motion.div>
+// //               ))}
+// //             </div>
+// //           </div>
+// //         </section>
+
+// //         {/* ══════════════════════════ FINAL CTA ═════════════════════════════════ */}
+// //         <section className="relative py-28 text-center text-white overflow-hidden">
+// //           <Image src="/discussion.png" alt="International Legal Support Bangalore" fill className="object-cover" />
+// //           <div className="absolute inset-0 bg-black/80" />
+// //           <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+// //           <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+
+// //           {/* animated rings */}
+// //           {[0, 1, 2].map((i) => (
+// //             <motion.div key={i}
+// //               initial={{ scale: 0.6, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }}
+// //               viewport={{ once: true }} transition={{ duration: 1.2, delay: i * 0.2 }}
+// //               className="absolute rounded-full border border-[#C9A24D]/10 pointer-events-none"
+// //               style={{ width: `${40 + i * 30}%`, height: `${60 + i * 30}%`, top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}
+// //             />
+// //           ))}
+
+// //           <motion.div variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true }}
+// //             className="relative max-w-4xl mx-auto px-6"
+// //           >
+// //             <div className="border border-[#C9A24D]/30 rounded-2xl px-10 py-16 relative">
+// //               {/* corner marks */}
+// //               {[
+// //                 "top-4 left-4 border-t-2 border-l-2",
+// //                 "top-4 right-4 border-t-2 border-r-2",
+// //                 "bottom-4 left-4 border-b-2 border-l-2",
+// //                 "bottom-4 right-4 border-b-2 border-r-2",
+// //               ].map((cls, i) => (
+// //                 <span key={i} className={`absolute ${cls} w-5 h-5 border-[#C9A24D]`} />
+// //               ))}
+
+// //               <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+// //                 className="text-[#C9A24D] text-xs tracking-[0.25em] uppercase mb-4 font-semibold"
+// //               >
+// //                 S Jain &amp; Attorneys · International Law
+// //               </motion.p>
+
+// //               <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}
+// //                 className="text-3xl md:text-5xl font-bold mb-10 leading-tight"
+// //               >
+// //                 Access reliable cross-border legal guidance from a Bangalore-based international lawyer.
+// //               </motion.h2>
+
+// //               <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={2}>
+// //                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
+// //                   <Link href="/contact"
+// //                     className="inline-block bg-[#C9A24D] hover:bg-[#b8913d] text-black px-12 py-4 font-bold text-sm tracking-widest uppercase transition-colors duration-200"
+// //                   >
+// //                     Request Call Back
+// //                   </Link>
+// //                 </motion.div>
+// //               </motion.div>
+
+// //               <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={3}
+// //                 className="mt-8 text-gray-500 text-sm flex items-center justify-center gap-2"
+// //               >
+// //                 <span className="inline-block w-4 h-px bg-gray-600" />
+// //                 All matters handled with complete confidentiality and legal discretion.
+// //                 <span className="inline-block w-4 h-px bg-gray-600" />
+// //               </motion.p>
+// //             </div>
+// //           </motion.div>
+// //         </section>
+
+// //       </main>
+
+// //       <Footer />
+// //     </>
+// //   );
+// // }
+
+
+
+
+
+
+
+
+
 "use client";
 
-import { useState, useRef } from "react";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-// ─── DATA ─────────────────────────────────────────────────────────────────────
+export default function InternationalLawyer() {
 
-const services = [
-  "Cross-Border Commercial Disputes",
-  "International Arbitration Proceedings",
-  "Foreign Judgment Enforcement",
-  "Cross-Border Contract Disputes",
-  "International Family & Matrimonial Matters",
-  "Jurisdiction & Conflict of Law Issues",
-  "Drafting & Review of International Commercial Contracts",
-];
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+  };
 
-const steps = [
-  {
-    number: "01",
-    title: "Jurisdiction Analysis & Legal Risk Assessment",
-    body: "Every international dispute begins with identifying the appropriate jurisdiction and applicable laws. Our lawyers carefully analyze contractual obligations, governing law clauses, and jurisdictional factors to determine where the case should be filed and what legal risks may arise. As experienced Cross-Border Dispute Lawyers and Private International Law Advisors, we help clients understand the complexities involved when disputes span multiple countries.",
-  },
-  {
-    number: "02",
-    title: "Cross-Border Strategy & Dispute Resolution Planning",
-    body: "Once the legal framework is established, we design a strategic dispute resolution plan tailored to the specific situation. This may involve litigation, arbitration, negotiation, or alternative dispute resolution mechanisms. Our attorneys clearly explain jurisdictional risks, enforcement challenges, and the most effective legal options before initiating any legal proceedings, allowing clients to make well-informed decisions.",
-  },
-  {
-    number: "03",
-    title: "Filing & Representation in Appropriate Forums",
-    body: "Depending on the nature of the dispute, we represent clients before courts, arbitral tribunals, or international dispute resolution bodies. Our team acts as experienced International Litigation Lawyers and International Arbitration Lawyers, ensuring that all filings, documentation, and legal arguments are handled with precision and professionalism.",
-  },
-  {
-    number: "04",
-    title: "Enforcement & Ongoing Legal Support",
-    body: "Obtaining a judgment or arbitral award is only one part of resolving an international dispute. Our firm also assists clients with the recognition and enforcement of foreign judgments and arbitration awards, ensuring that legal outcomes are effectively implemented across jurisdictions. We continue to provide legal guidance and strategic support throughout the enforcement process to safeguard our clients' interests.",
-  },
-];
+  const [openFAQ, setOpenFAQ] = useState(null);
 
-const whyChoose = [
-  "Experienced International Litigation Lawyers handling multi-jurisdictional disputes",
-  "Skilled International Arbitration Lawyer representation for global commercial conflicts",
-  "Strategic cross-border legal planning for businesses and individuals",
-  "Strong expertise in legal documentation, contracts, and enforcement procedures",
-  "Clear communication and coordinated legal strategy across jurisdictions",
-];
+  const toggleFAQ = (index) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
 
-const faqs = [
-  {
-    q: "What is international private law?",
-    a: "It governs disputes involving foreign parties, cross-border transactions, and jurisdictional conflicts.",
-  },
-  {
-    q: "How are cross-border disputes resolved?",
-    a: "Through litigation, international arbitration, mediation, or negotiated settlements depending on contractual terms.",
-  },
-  {
-    q: "Can foreign judgments be enforced in India?",
-    a: "Yes, subject to recognition and enforcement procedures under applicable Indian laws and reciprocal arrangements.",
-  },
-  {
-    q: "Do you handle international arbitration matters?",
-    a: "Yes, we represent clients in domestic and international arbitration proceedings before appropriate tribunals.",
-  },
-  {
-    q: "How do you determine the correct jurisdiction in a cross-border dispute?",
-    a: "We analyze contractual clauses, governing law provisions, place of cause of action, and applicable international conventions to determine the appropriate forum.",
-  },
-  {
-    q: "Can you assist with drafting international commercial contracts?",
-    a: "Yes, we draft and review cross-border agreements with clear jurisdiction, governing law, dispute resolution, and enforcement clauses.",
-  },
-];
-
-// ─── ANIMATION VARIANTS ───────────────────────────────────────────────────────
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: (i = 0) => ({
-    opacity: 1, y: 0,
-    transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
-  }),
-};
-
-const fadeLeft = {
-  hidden: { opacity: 0, x: -40 },
-  show: (i = 0) => ({
-    opacity: 1, x: 0,
-    transition: { duration: 0.65, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
-  }),
-};
-
-const scaleIn = {
-  hidden: { opacity: 0, scale: 0.93 },
-  show: (i = 0) => ({
-    opacity: 1, scale: 1,
-    transition: { duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
-  }),
-};
-
-const stagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
-};
-
-// ─── HELPERS ──────────────────────────────────────────────────────────────────
-
-function GoldDivider() {
-  return (
-    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
-  );
-}
-
-function SectionHeading({ children, light = false }) {
-  return (
-    <motion.div
-      variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }}
-      className="mb-10"
-    >
-      <motion.span
-        initial={{ width: 0 }} whileInView={{ width: 56 }} viewport={{ once: true }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-        className="block h-[3px] bg-[#C9A24D] mb-5"
-      />
-      <h2 className={`text-3xl md:text-4xl font-bold leading-tight ${light ? "text-white" : "text-gray-900"}`}>
-        {children}
-      </h2>
-    </motion.div>
-  );
-}
-
-// ─── PAGE ─────────────────────────────────────────────────────────────────────
-
-export default function InternationalLawyerPage() {
-  const [openIndex, setOpenIndex] = useState(null);
-  const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const heroY   = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  const heroOpa = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const faqData = [
+    {
+      question: "What is international private law?",
+      answer:
+        "It governs disputes involving foreign parties, cross-border transactions, and jurisdictional conflicts."
+    },
+    {
+      question: "How are cross-border disputes resolved?",
+      answer:
+        "Through litigation, international arbitration, mediation, or negotiated settlements depending on contractual terms."
+    },
+    {
+      question: "Can foreign judgments be enforced in India?",
+      answer:
+        "Yes, subject to recognition and enforcement procedures under applicable Indian laws and reciprocal arrangements."
+    },
+    {
+      question: "Do you handle international arbitration matters?",
+      answer:
+        "Yes, we represent clients in domestic and international arbitration proceedings before appropriate tribunals."
+    },
+    {
+      question: "How do you determine the correct jurisdiction in a cross-border dispute?",
+      answer:
+        "We analyze contractual clauses, governing law provisions, place of cause of action, and applicable international conventions to determine the appropriate forum."
+    },
+    {
+      question: "Can you assist with drafting international commercial contracts?",
+      answer:
+        "Yes, we draft and review cross-border agreements with clear jurisdiction, governing law, dispute resolution, and enforcement clauses."
+    }
+  ];
 
   return (
     <>
@@ -1173,401 +1648,191 @@ export default function InternationalLawyerPage() {
 
       <main className="bg-white overflow-hidden">
 
-        {/* ══════════════════════════════ HERO ══════════════════════════════════ */}
-        <section ref={heroRef} className="relative bg-[#0B0F14] overflow-hidden">
+        {/* HERO SECTION */}
+        <section className="relative bg-[#0B0F14] pt-8 pb-48 text-center">
 
-          {/* top gold border */}
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D] z-10" />
+          <div className="max-w-6xl mx-auto px-6">
 
-          {/* animated corner brackets */}
-          {[
-            "top-8 left-8 border-t-2 border-l-2",
-            "top-8 right-8 border-t-2 border-r-2",
-          ].map((cls, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 0.3, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 + i * 0.1 }}
-              className={`absolute w-12 h-12 border-[#C9A24D] z-10 ${cls}`}
-            />
-          ))}
-
-          {/* subtle gold grid */}
-          <div className="absolute inset-0 opacity-[0.04] z-0" style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)," +
-              "repeating-linear-gradient(90deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)",
-          }} />
-
-          <motion.div style={{ y: heroY, opacity: heroOpa }}
-            className="relative z-10 max-w-5xl mx-auto px-6 pt-36 pb-16 text-center"
-          >
-            {/* eyebrow */}
-            <motion.p variants={fadeUp} initial="hidden" animate="show" custom={0}
-              className="text-[#C9A24D] text-xs tracking-[0.3em] uppercase mb-6 font-semibold flex items-center justify-center gap-3"
+            <motion.h1
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="text-4xl md:text-6xl font-semibold text-white mb-6"
             >
-              <span className="inline-block w-6 h-px bg-[#C9A24D]" />
-              S Jain &amp; Attorneys · Bangalore
-              <span className="inline-block w-6 h-px bg-[#C9A24D]" />
-            </motion.p>
-
-            {/* H1 */}
-            <motion.h1 variants={fadeUp} initial="hidden" animate="show" custom={1}
-              className="text-4xl md:text-6xl font-bold text-white leading-[1.08] mb-8"
-            >
-              International Lawyer in Bangalore{" "}
-              <span className="text-[#C9A24D]">for Cross-Border Disputes</span>
+              International Lawyer in Bangalore for Cross-Border Disputes
             </motion.h1>
 
-            {/* Intro para 1 */}
-            <motion.p variants={fadeUp} initial="hidden" animate="show" custom={2}
-              className="text-gray-300 text-lg mb-4 max-w-3xl mx-auto leading-relaxed"
-            >
-              Our firm provides strategic representation as an International Lawyer in Bangalore,
-              assisting clients in complex cross-border disputes, arbitration proceedings, and
-              jurisdictional matters. We offer structured legal solutions for international
-              commercial and personal legal conflicts.
-            </motion.p>
+            <p className="text-gray-400 text-lg max-w-4xl mx-auto">
+              Our firm provides strategic representation as an International Lawyer in Bangalore, assisting clients in complex cross-border disputes, arbitration proceedings, and jurisdictional matters. We offer structured legal solutions for international commercial and personal legal conflicts.
+            </p>
 
-            {/* Intro para 2 */}
-            <motion.p variants={fadeUp} initial="hidden" animate="show" custom={3}
-              className="text-gray-400 text-lg mb-6 max-w-3xl mx-auto leading-relaxed"
-            >
-              Our goal is to minimize jurisdictional risk, ensure enforceability across borders,
-              and protect your legal and commercial interests in international matters.
-            </motion.p>
+            <p className="text-gray-400 text-lg max-w-4xl mx-auto mt-4">
+              Our goal is to minimize jurisdictional risk, ensure enforceability across borders, and protect your legal and commercial interests in international matters.
+            </p>
 
-            {/* 24-hour guarantee */}
-            <motion.p variants={fadeUp} initial="hidden" animate="show" custom={4}
-              className="text-[#C9A24D] font-bold text-base tracking-wide mb-10"
-            >
+            <p className="text-[#C9A24D] font-semibold mt-6">
               Response within 24 hours guaranteed.
-            </motion.p>
+            </p>
 
-            {/* CTAs */}
-            <motion.div variants={fadeUp} initial="hidden" animate="show" custom={5}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-            >
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                <Link href="/legal-consultation-in-bangalore"
-                  className="inline-block bg-[#C9A24D] text-black px-8 py-4 font-semibold text-sm tracking-wide hover:bg-[#b8913d] transition-colors duration-200"
-                >
+            <div className="flex justify-center gap-6 mt-10 flex-wrap">
+
+              <Link href="/international-lawyer-in-bangalore/consultation">
+                <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
                   Book Confidential Consultation
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                <Link href="tel:+919000000000"
-                  className="inline-block border-2 border-[#C9A24D] text-[#C9A24D] px-8 py-4 font-semibold text-sm tracking-wide hover:bg-[#C9A24D] hover:text-black transition-colors duration-300"
-                >
-                  Call Now
-                </Link>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+                </button>
+              </Link>
 
-          {/* Hero image */}
-          <motion.div
-            variants={scaleIn} initial="hidden" animate="show"
-            className="relative z-10 max-w-6xl mx-auto px-6 pb-16"
-          >
-            <div className="rounded-xl overflow-hidden border border-[#C9A24D]/30 shadow-2xl">
+              <Link href="tel:+919000000000">
+                <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
+                  Call Now
+                </button>
+              </Link>
+
+            </div>
+
+          </div>
+
+          {/* HERO IMAGE */}
+          <div className="absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 w-full max-w-6xl px-6">
+            <div className="rounded-xl overflow-hidden shadow-2xl mt-52">
               <Image
                 src="/international-law.png"
-                alt="International Lawyer in Bangalore"
-                width={1400} height={800}
-                className="w-full h-[400px] md:h-[500px] object-cover"
-                priority
+                alt="International Lawyer Consultation"
+                width={1400}
+                height={800}
+                className="w-full h-[450px] object-cover"
               />
             </div>
-          </motion.div>
-
-          {/* scroll indicator */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
-            className="relative z-10 pb-8 flex justify-center"
-          >
-            <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.6 }}
-              className="w-px h-12 bg-gradient-to-b from-[#C9A24D] to-transparent"
-            />
-          </motion.div>
-        </section>
-
-        {/* ═══════════════ INTERNATIONAL PRIVATE LAW & CROSS-BORDER ═════════════ */}
-        <section className="py-28 px-6 bg-white relative overflow-hidden">
-          {/* animated right vertical rule */}
-          <motion.div
-            initial={{ height: 0 }} whileInView={{ height: "60%" }} viewport={{ once: true }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-            className="absolute right-0 top-[20%] w-[3px] bg-gradient-to-b from-transparent via-[#C9A24D] to-transparent"
-          />
-
-          <div className="max-w-6xl mx-auto">
-            <SectionHeading>International Private Law &amp; Cross-Border Legal Representation</SectionHeading>
-
-            <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }}
-              className="space-y-6 text-gray-600 text-lg leading-relaxed"
-            >
-              <motion.p variants={fadeUp}>
-                Legal disputes involving parties from different countries often require careful
-                handling, as they may involve multiple legal systems, international contracts, and
-                complex jurisdictional issues. Our firm provides strategic legal support in
-                cross-border matters, helping clients navigate international legal challenges with
-                clarity and confidence.
-              </motion.p>
-              <motion.p variants={fadeUp} custom={0.5}>
-                We regularly represent clients in matters involving international commercial
-                disputes, enforcement of foreign judgments, cross-border contracts, and
-                international arbitration proceedings. Acting as trusted International Litigation
-                Lawyers and International Arbitration Lawyers, we provide strong representation
-                before competent courts and arbitral tribunals, while coordinating with foreign
-                legal professionals when required.
-              </motion.p>
-              <motion.p variants={fadeUp} custom={1}>
-                With a practical and structured approach, we aim to simplify complex international
-                legal processes and deliver solutions that align with both Indian law and applicable
-                international legal frameworks.
-              </motion.p>
-            </motion.div>
           </div>
+
         </section>
 
-        {/* ════════════════════ OUR INTERNATIONAL LAW SERVICES ══════════════════ */}
-        <section className="py-28 px-6 bg-[#f8f6f1] relative">
-          <GoldDivider />
-          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
+        <div className="h-48"></div>
 
-          <div className="max-w-6xl mx-auto">
-            <motion.h3 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
-              className="text-xl font-bold text-gray-900 uppercase tracking-widest mb-8 border-l-4 border-[#C9A24D] pl-4"
-            >
-              Our International Law Services Include
-            </motion.h3>
+        {/* INTERNATIONAL LAW SERVICES */}
+        <section className="max-w-6xl mx-auto px-6 py-20 mt-24">
 
-            <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }}
-              className="grid md:grid-cols-2 gap-5 mb-16"
-            >
-              {services.map((item, i) => (
-                <motion.div key={i} variants={fadeLeft} custom={i * 0.1}
-                  whileHover={{ x: 5, boxShadow: "0 8px 30px rgba(201,162,77,0.12)" }}
-                  className="bg-white border border-gray-100 hover:border-[#C9A24D] rounded-lg p-6 flex items-start gap-4 group transition-all duration-300"
+          <h2 className="text-4xl font-semibold mb-6">
+            International Private Law & Cross-Border Legal Representation
+          </h2>
+
+          <p className="text-gray-700 text-lg mb-10">
+            International disputes often involve multiple jurisdictions, foreign contracts, and enforcement complexities. As an experienced Cross Border Dispute Lawyer and Private International Law Lawyer, we guide clients through legal challenges involving foreign parties and international transactions.
+            Our attorneys act as International Litigation Lawyers and International Arbitration Lawyers, ensuring effective representation before appropriate courts and arbitral tribunals.
+          </p>
+
+          <h3 className="text-2xl font-semibold mb-6">
+            OUR INTERNATIONAL LAW SERVICES INCLUDE
+          </h3>
+
+          <ul className="grid md:grid-cols-2 gap-6 text-lg text-gray-700 mb-16">
+            <li>▪ Cross-Border Commercial Disputes</li>
+            <li>▪ International Arbitration Proceedings</li>
+            <li>▪ Foreign Judgment Enforcement</li>
+            <li>▪ Cross-Border Contract Disputes</li>
+            <li>▪ International Family & Matrimonial Matters</li>
+            <li>▪ Jurisdiction & Conflict of Law Issues</li>
+            <li>▪ Drafting & Review of International Commercial Contracts</li>
+          </ul>
+
+          {/* APPROACH */}
+
+          <h2 className="text-4xl font-semibold mb-6">
+            OUR APPROACH / HOW WE WORK
+          </h2>
+
+          <div className="space-y-4 text-lg text-gray-700 mb-16">
+
+            <p><strong>Step 1:</strong> Jurisdiction & Legal Risk Assessment — Analyzing applicable laws, jurisdiction, and enforcement challenges.</p>
+
+            <p><strong>Step 2:</strong> Strategy for Cross-Border Resolution — Developing a tailored dispute resolution or arbitration strategy. We clearly explain jurisdictional risks, enforcement challenges, and strategic legal options before initiating proceedings.</p>
+
+            <p><strong>Step 3:</strong> Filing & Representation in Appropriate Forums — Representing clients before courts, tribunals, or arbitral institutions.</p>
+
+            <p><strong>Step 4:</strong> Enforcement & Ongoing Legal Support — Ensuring compliance with judgments, awards, and settlements.</p>
+
+          </div>
+
+          {/* WHY CHOOSE */}
+
+          <h2 className="text-4xl font-semibold mb-6">
+            WHY CHOOSE OUR FIRM
+          </h2>
+
+          <ul className="space-y-4 text-lg text-gray-700 mb-16">
+            <li>✓ Experienced International Litigation Lawyers</li>
+            <li>✓ Skilled International Arbitration Lawyer representation</li>
+            <li>✓ Strategic cross-border legal planning</li>
+            <li>✓ Strong documentation and enforcement expertise</li>
+            <li>✓ Clear and coordinated communication across jurisdictions</li>
+          </ul>
+
+          {/* FAQ */}
+
+          <h2 className="text-4xl font-semibold text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+
+            {faqData.map((faq, index) => (
+              <div key={index} className="border border-[#C9A24D] rounded-lg overflow-hidden">
+
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-lg bg-white hover:bg-[#C9A24D]/10 transition"
                 >
-                  <span className="text-[#C9A24D] font-black text-lg shrink-0 mt-0.5">
-                    {String(i + 1).padStart(2, "0")}
+                  {faq.question}
+                  <span className="text-[#C9A24D] text-2xl font-bold">
+                    {openFAQ === index ? "−" : "+"}
                   </span>
-                  <div className="border-l border-gray-200 group-hover:border-[#C9A24D] pl-4 transition-colors duration-300">
-                    <p className="text-base font-semibold text-gray-800 group-hover:text-[#8a6a20] transition-colors duration-200">
-                      {item}
-                    </p>
+                </button>
+
+                {openFAQ === index && (
+                  <div className="px-6 pb-6 text-gray-700 border-t border-[#C9A24D]/40 pt-4">
+                    {faq.answer}
                   </div>
-                </motion.div>
-              ))}
-            </motion.div>
+                )}
 
-            {/* second image */}
-            <motion.div variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true }}
-              className="rounded-xl overflow-hidden border border-gray-100 shadow-lg"
-            >
-              <Image
-                src="/International-Law1.jpg"
-                alt="International Law Services Bangalore"
-                width={1200} height={600}
-                className="w-full object-cover"
-              />
-            </motion.div>
+              </div>
+            ))}
+
           </div>
+
         </section>
 
-        {/* ════════════════════════════ OUR APPROACH ════════════════════════════ */}
-        <section className="py-28 px-6 bg-black text-white relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+        {/* CTA */}
 
-          {/* decorative watermark */}
-          <motion.div
-            initial={{ opacity: 0, x: 80 }} whileInView={{ opacity: 0.04, x: 0 }}
-            viewport={{ once: true }} transition={{ duration: 1.2 }}
-            className="absolute right-[-3rem] top-1/2 -translate-y-1/2 text-[22rem] font-black text-[#C9A24D] select-none pointer-events-none leading-none"
-          >
-            4
-          </motion.div>
+        <section className="relative py-28 overflow-hidden">
 
-          <div className="max-w-6xl mx-auto relative">
-            <SectionHeading light>Our Approach – How We Work</SectionHeading>
-
-            <div className="space-y-8">
-              {steps.map((step, i) => (
-                <motion.div key={step.number}
-                  variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }} custom={i * 0.2}
-                  className="border border-[#C9A24D]/30 hover:border-[#C9A24D]/70 rounded-lg p-8 relative group transition-colors duration-300"
-                >
-                  {/* corner ornaments */}
-                  <span className="absolute top-3 right-3 w-5 h-5 border-t border-r border-[#C9A24D]/40 group-hover:border-[#C9A24D] transition-colors duration-300" />
-                  <span className="absolute bottom-3 left-3 w-5 h-5 border-b border-l border-[#C9A24D]/40 group-hover:border-[#C9A24D] transition-colors duration-300" />
-
-                  <div className="flex gap-6 items-start">
-                    <span className="text-[#C9A24D] font-black text-3xl shrink-0 leading-none">{step.number}</span>
-                    <div className="border-l border-[#C9A24D]/30 pl-6">
-                      <h3 className="text-xl font-bold text-white mb-3">
-                        Step {i + 1}: {step.title}
-                      </h3>
-                      <p className="text-gray-400 leading-relaxed">{step.body}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ════════════════════════════ WHY CHOOSE ══════════════════════════════ */}
-        <section className="py-28 px-6 bg-white relative overflow-hidden">
-          <GoldDivider />
-          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
-
-          <div className="max-w-6xl mx-auto">
-            <SectionHeading>Why Choose Our Firm</SectionHeading>
-
-            <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }}
-              className="grid md:grid-cols-2 gap-5"
-            >
-              {whyChoose.map((item, i) => (
-                <motion.div key={i} variants={fadeLeft} custom={i * 0.1}
-                  whileHover={{ x: 5, boxShadow: "0 8px 30px rgba(201,162,77,0.12)" }}
-                  className="bg-[#f8f6f1] border border-gray-100 hover:border-[#C9A24D] rounded-lg p-6 flex items-start gap-4 group transition-all duration-300"
-                >
-                  <span className="text-[#C9A24D] font-black text-xl shrink-0 mt-0.5">✓</span>
-                  <div className="border-l border-gray-200 group-hover:border-[#C9A24D] pl-4 transition-colors duration-300">
-                    <p className="text-base font-semibold text-gray-800 group-hover:text-[#8a6a20] transition-colors duration-200">
-                      {item}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* ══════════════════════════════ FAQ ═══════════════════════════════════ */}
-        <section className="py-28 px-6 bg-[#f8f6f1] relative">
-          <GoldDivider />
-
-          <div className="max-w-4xl mx-auto">
-            <SectionHeading>Frequently Asked Questions</SectionHeading>
-
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <motion.div key={index}
-                  variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={index * 0.1}
-                  className={`rounded-xl overflow-hidden border-2 transition-all duration-300 shadow-sm ${
-                    openIndex === index
-                      ? "border-[#C9A24D] bg-[#fdf9f3] shadow-[0_4px_24px_rgba(201,162,77,0.15)]"
-                      : "border-gray-200 bg-white hover:border-[#C9A24D]/60 hover:shadow-md"
-                  }`}
-                >
-                  <button
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full flex justify-between items-start p-7 text-left gap-4 group"
-                    aria-expanded={openIndex === index}
-                  >
-                    <div className="flex items-start gap-4 flex-1">
-                      <span className={`shrink-0 mt-1 w-1 self-stretch rounded-full transition-colors duration-300 ${
-                        openIndex === index ? "bg-[#C9A24D]" : "bg-gray-200 group-hover:bg-[#C9A24D]/50"
-                      }`} />
-                      <span className={`text-base md:text-lg font-semibold transition-colors duration-200 ${
-                        openIndex === index ? "text-[#8a6a20]" : "text-gray-800 group-hover:text-[#C9A24D]"
-                      }`}>
-                        Q{index + 1}: {faq.q}
-                      </span>
-                    </div>
-                    <motion.div
-                      animate={{ rotate: openIndex === index ? 180 : 0 }}
-                      transition={{ duration: 0.25 }}
-                      className="shrink-0 mt-1"
-                    >
-                      <ChevronDown className={`w-5 h-5 ${openIndex === index ? "text-[#C9A24D]" : "text-gray-400"}`} />
-                    </motion.div>
-                  </button>
-
-                  <AnimatePresence>
-                    {openIndex === index && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-7 pb-7 border-t-2 border-[#C9A24D]/20 ml-7">
-                          <p className="pt-5 text-gray-500 text-base leading-relaxed">{faq.a}</p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ══════════════════════════ FINAL CTA ═════════════════════════════════ */}
-        <section className="relative py-28 text-center text-white overflow-hidden">
-          <Image src="/discussion.png" alt="International Legal Support Bangalore" fill className="object-cover" />
-          <div className="absolute inset-0 bg-black/80" />
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
-          <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
-
-          {/* animated rings */}
-          {[0, 1, 2].map((i) => (
-            <motion.div key={i}
-              initial={{ scale: 0.6, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }} transition={{ duration: 1.2, delay: i * 0.2 }}
-              className="absolute rounded-full border border-[#C9A24D]/10 pointer-events-none"
-              style={{ width: `${40 + i * 30}%`, height: `${60 + i * 30}%`, top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}
+          <div className="absolute inset-0">
+            <Image
+              src="/discussion.png"
+              alt="Consultation"
+              fill
+              className="object-cover"
             />
-          ))}
+            <div className="absolute inset-0 bg-black/70"></div>
+          </div>
 
-          <motion.div variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true }}
-            className="relative max-w-4xl mx-auto px-6"
-          >
-            <div className="border border-[#C9A24D]/30 rounded-2xl px-10 py-16 relative">
-              {/* corner marks */}
-              {[
-                "top-4 left-4 border-t-2 border-l-2",
-                "top-4 right-4 border-t-2 border-r-2",
-                "bottom-4 left-4 border-b-2 border-l-2",
-                "bottom-4 right-4 border-b-2 border-r-2",
-              ].map((cls, i) => (
-                <span key={i} className={`absolute ${cls} w-5 h-5 border-[#C9A24D]`} />
-              ))}
+          <div className="relative max-w-5xl mx-auto px-6 text-center">
 
-              <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
-                className="text-[#C9A24D] text-xs tracking-[0.25em] uppercase mb-4 font-semibold"
-              >
-                S Jain &amp; Attorneys · International Law
-              </motion.p>
+            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+              Access reliable cross-border legal guidance from a Bangalore-based international lawyer
+            </h2>
 
-              <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}
-                className="text-3xl md:text-5xl font-bold mb-10 leading-tight"
-              >
-                Access reliable cross-border legal guidance from a Bangalore-based international lawyer.
-              </motion.h2>
+            <Link href="/international-lawyer-in-bangalore/consultation">
+              <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
+                Request Call Back
+              </button>
+            </Link>
 
-              <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={2}>
-                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
-                  <Link href="/contact"
-                    className="inline-block bg-[#C9A24D] hover:bg-[#b8913d] text-black px-12 py-4 font-bold text-sm tracking-widest uppercase transition-colors duration-200"
-                  >
-                    Request Call Back
-                  </Link>
-                </motion.div>
-              </motion.div>
+            <p className="text-gray-400 text-sm mt-8">
+              All matters handled with complete confidentiality and legal discretion.
+            </p>
 
-              <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={3}
-                className="mt-8 text-gray-500 text-sm flex items-center justify-center gap-2"
-              >
-                <span className="inline-block w-4 h-px bg-gray-600" />
-                All matters handled with complete confidentiality and legal discretion.
-                <span className="inline-block w-4 h-px bg-gray-600" />
-              </motion.p>
-            </div>
-          </motion.div>
+          </div>
+
         </section>
 
       </main>

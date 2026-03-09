@@ -817,7 +817,7 @@ export default function HighCourtLawyerPage() {
           <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D] z-10" />
 
           {/* animated corner brackets */}
-          {[
+          {/* {[
             "top-8 left-8 border-t-2 border-l-2",
             "top-8 right-8 border-t-2 border-r-2",
           ].map((cls, i) => (
@@ -826,7 +826,7 @@ export default function HighCourtLawyerPage() {
               transition={{ duration: 0.8, delay: 0.3 + i * 0.1 }}
               className={`absolute w-12 h-12 border-[#C9A24D] z-10 ${cls}`}
             />
-          ))}
+          ))} */}
 
           {/* subtle gold grid */}
           <div className="absolute inset-0 opacity-[0.04] z-0" style={{
@@ -913,9 +913,9 @@ export default function HighCourtLawyerPage() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
             className="relative z-10 pb-8 flex justify-center"
           >
-            <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.6 }}
+            {/* <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.6 }}
               className="w-px h-12 bg-gradient-to-b from-[#C9A24D] to-transparent"
-            />
+            /> */}
           </motion.div>
         </section>
 
@@ -1115,71 +1115,36 @@ export default function HighCourtLawyerPage() {
         </section>
 
         {/* ══════════════════════════ FINAL CTA ═════════════════════════════════ */}
-        <section className="relative py-28 text-center text-white overflow-hidden">
-          <Image src="/discussion.png" alt="High Court Legal Consultation" fill className="object-cover" />
-          <div className="absolute inset-0 bg-black/80" />
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
-          <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+         <section className="relative py-28 overflow-hidden">
 
-          {/* animated rings */}
-          {[0, 1, 2].map((i) => (
-            <motion.div key={i}
-              initial={{ scale: 0.6, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }} transition={{ duration: 1.2, delay: i * 0.2 }}
-              className="absolute rounded-full border border-[#C9A24D]/10 pointer-events-none"
-              style={{ width: `${40 + i * 30}%`, height: `${60 + i * 30}%`, top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}
+          <div className="absolute inset-0">
+            <Image
+              src="/discussion.png"
+              alt="Consultation"
+              fill
+              className="object-cover"
             />
-          ))}
+            <div className="absolute inset-0 bg-black/70"></div>
+          </div>
 
-          <motion.div variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true }}
-            className="relative max-w-4xl mx-auto px-6"
-          >
-            {/* bordered content box */}
-            <div className="border border-[#C9A24D]/30 rounded-2xl px-10 py-16 relative">
-              {/* corner marks */}
-              {[
-                "top-4 left-4 border-t-2 border-l-2",
-                "top-4 right-4 border-t-2 border-r-2",
-                "bottom-4 left-4 border-b-2 border-l-2",
-                "bottom-4 right-4 border-b-2 border-r-2",
-              ].map((cls, i) => (
-                <span key={i} className={`absolute ${cls} w-5 h-5 border-[#C9A24D]`} />
-              ))}
+          <div className="relative max-w-5xl mx-auto px-6 text-center">
 
-              <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
-                className="text-[#C9A24D] text-xs tracking-[0.25em] uppercase mb-4 font-semibold"
-              >
-                S Jain &amp; Attorneys · High Court &amp; Supreme Court
-              </motion.p>
+            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+              Consult an experienced Cheque Bounce Lawyer in Bangalore today for strategic legal guidance and effective court representation.
+            </h2>
 
-              {/* H2 — exact text from brief */}
-              <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}
-                className="text-3xl md:text-5xl font-bold mb-10 leading-tight"
-              >
-                Seek urgent legal help from a skilled High Court &amp; Supreme Court litigation lawyer.
-              </motion.h2>
+            <Link href="/international-lawyer-in-bangalore/consultation">
+              <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
+                Request Call Back
+              </button>
+            </Link>
 
-              {/* Single CTA — brief specifies only [ Request Call Back ] */}
-              <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={2}>
-                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
-                  <Link href="/contact"
-                    className="inline-block bg-[#C9A24D] hover:bg-[#b8913d] text-black px-12 py-4 font-bold text-sm tracking-widest uppercase transition-colors duration-200"
-                  >
-                    Request Call Back
-                  </Link>
-                </motion.div>
-              </motion.div>
+            <p className="text-gray-400 text-sm mt-8">
+              All matters handled with complete confidentiality and legal discretion.
+            </p>
 
-              {/* confidentiality note */}
-              <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={3}
-                className="mt-8 text-gray-500 text-sm flex items-center justify-center gap-2"
-              >
-                <span className="inline-block w-4 h-px bg-gray-600" />
-                All matters handled with complete confidentiality and professional discretion.
-                <span className="inline-block w-4 h-px bg-gray-600" />
-              </motion.p>
-            </div>
-          </motion.div>
+          </div>
+
         </section>
 
       </main>
