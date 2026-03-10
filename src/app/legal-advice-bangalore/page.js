@@ -1269,7 +1269,7 @@ export default function LegalBlogsPage() {
       {/* ══════════════════════════ HERO ══════════════════════════════════════ */}
       <section className="relative bg-black text-white overflow-hidden min-h-[60vh] flex items-center">
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
-
+{/* 
         {[
           "top-8 left-8 border-t-2 border-l-2",
           "top-8 right-8 border-t-2 border-r-2",
@@ -1279,21 +1279,21 @@ export default function LegalBlogsPage() {
           <div key={i} className={`absolute w-12 h-12 border-[#C9A24D] opacity-30 ${cls}`} />
         ))}
 
-        <div
-          className="absolute inset-0 opacity-[0.04]"
+        <div */}
+          {/* className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
               "repeating-linear-gradient(0deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)," +
               "repeating-linear-gradient(90deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)",
           }}
-        />
+        /> */}
 
-        <div className="relative max-w-5xl mx-auto px-6 py-32 md:py-40 w-full text-center">
-          <p className="text-[#C9A24D] text-xs tracking-[0.3em] uppercase mb-6 font-semibold flex items-center justify-center gap-3">
+        <div className="relative max-w-5xl mx-auto px-6 py-8 md:py-5 w-full text-center">
+          {/* <p className="text-[#C9A24D] text-xs tracking-[0.3em] uppercase mb-6 font-semibold flex items-center justify-center gap-3">
             <span className="inline-block w-8 h-px bg-[#C9A24D]" />
             S Jain &amp; Attorneys · Legal Insights
             <span className="inline-block w-8 h-px bg-[#C9A24D]" />
-          </p>
+          </p> */}
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.08] text-white mb-8 max-w-5xl mx-auto">
             Case Studies &amp; Blogs That{" "}

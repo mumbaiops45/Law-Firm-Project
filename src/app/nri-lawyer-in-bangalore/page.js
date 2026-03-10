@@ -1247,8 +1247,8 @@ export default function NRILawyerPage() {
 
         {/* HERO SECTION */}
 
-        <section className="bg-[#0B0F14] pt-18 pb-20">
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-center">
+        <section className="bg-[#0B0F14] pt-10 pb-8">
+          <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-center">
 
             <h1 className="text-4xl md:text-6xl font-semibold text-white mb-6">
               Trusted NRI Lawyers in Bangalore for Cross-Border Legal Matters

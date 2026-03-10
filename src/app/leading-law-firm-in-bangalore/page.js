@@ -4742,6 +4742,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 
@@ -4866,12 +4867,12 @@ function SectionHeading({ children, light = false }) {
   return (
     <motion.div
       variants={fadeLeft} initial="hidden" whileInView="show" viewport={{ once: true }}
-      className="mb-12"
+      className="mb-4"
     >
       <motion.span
         initial={{ width: 0 }} whileInView={{ width: 56 }} viewport={{ once: true }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-        className="block h-[3px] bg-[#C9A24D] mb-5"
+        className="block h-[2px] bg-[#C9A24D] mb-5"
       />
       <h2 className={`text-3xl md:text-4xl font-bold leading-tight ${light ? "text-white" : "text-gray-900"}`}>
         {children}
@@ -4910,7 +4911,7 @@ export default function LeadingLawFirmPage() {
   const [activeFAQ, setActiveFAQ] = useState(null);
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const heroY   = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const heroOpa = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
@@ -4922,7 +4923,7 @@ export default function LeadingLawFirmPage() {
         className="relative bg-black text-white overflow-hidden min-h-[92vh] flex items-center "
       >
         {/* top gold border */}
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
+        {/* <div className="absolute top-0 left-0 right-0 h-[px] bg-[#C9A24D]" /> */}
 
         {/* animated corner brackets — all four corners */}
         {/* {[
@@ -4939,21 +4940,21 @@ export default function LeadingLawFirmPage() {
         ))} */}
 
         {/* subtle gold grid overlay */}
-        <div className="absolute inset-0 opacity-[0.04]" style={{
+        {/* <div className="absolute inset-0 opacity-[0.015]" style={{
           backgroundImage:
             "repeating-linear-gradient(0deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)," +
             "repeating-linear-gradient(90deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)",
-        }} />
+        }} /> */}
 
-        <motion.div style={{ y: heroY, opacity: heroOpa }}
-          className="relative max-w-6xl mx-auto px-6 py-32 md:py-44 w-full"
+        <motion.div
+          className="relative max-w-6xl mx-auto px-6 py-10 md:py-8 w-full"
         >
           {/* eyebrow */}
           <motion.p variants={fadeUp} initial="hidden" animate="show" custom={0}
             className="text-[#C9A24D] text-xs tracking-[0.3em] uppercase mb-6 font-semibold flex items-center gap-3"
           >
             <span className="inline-block w-8 h-px bg-[#C9A24D]" />
-            S Jain &amp; Attorneys · Bangalore, India
+            S Jain &amp; Attorneys  Bangalore, India
           </motion.p>
 
           {/* H1 */}
@@ -4966,7 +4967,7 @@ export default function LeadingLawFirmPage() {
 
           {/* Intro paragraph (no H tag) */}
           <motion.p variants={fadeUp} initial="hidden" animate="show" custom={2}
-            className="text-gray-400 text-lg md:text-xl max-w-2xl mb-14 leading-relaxed"
+            className="text-gray-400 text-lg md:text-xl max-w-2xl mb-14 leading-[1.6]"
           >
             A leading law firm in Bangalore providing full-service legal representation
             across litigation, advisory, and regulatory matters.
@@ -4994,35 +4995,35 @@ export default function LeadingLawFirmPage() {
           </motion.div>
 
           {/* scroll indicator */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 1 }}
             className="absolute bottom-10 left-6 flex flex-col items-center gap-2"
           >
             <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
               className="w-px h-12 bg-gradient-to-b from-[#C9A24D] to-transparent"
             />
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
       </section>
 
       {/* ═══════════════════════════════ ABOUT OUR FIRM ════════════════════════ */}
-      <section className="py-28 px-6 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-14 px-6 bg-white relative overflow-hidden">
         {/* animated right-side vertical rule */}
-        <motion.div
+        {/* <motion.div
           initial={{ height: 0 }} whileInView={{ height: "60%" }} viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
           className="absolute right-0 top-[20%] w-[3px] bg-gradient-to-b from-transparent via-[#C9A24D] to-transparent"
-        />
+        /> */}
 
         <div className="max-w-5xl mx-auto">
           <SectionHeading>About Our Firm</SectionHeading>
 
-          
+
 
           <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }}
-            className="space-y-6 text-gray-600 text-lg leading-relaxed"
+            className="space-y-6 text-gray-600 text-lg leading-[1.6]"
           >
             {[
               "S Jain Attorneys is a well-established law firm in Bangalore known for providing reliable legal guidance and strong representation across a wide range of legal matters. Our firm works closely with individuals, businesses, startups, multinational companies, and Non-Resident Indians (NRIs) who require professional legal support in India.",
@@ -5037,7 +5038,7 @@ export default function LeadingLawFirmPage() {
       </section>
 
       {/* ══════════════════════════ WHY CHOOSE OUR LEGAL TEAM ══════════════════ */}
-      <section className="py-28 px-6 bg-[#f8f6f1] relative">
+      <section className="py-12 md:py-14 px-6 bg-[#f8f6f1] relative">
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
 
@@ -5045,7 +5046,7 @@ export default function LeadingLawFirmPage() {
           <SectionHeading>Why Choose Our Legal Team</SectionHeading>
 
           <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }}
-            className="space-y-6 text-gray-600 text-lg leading-relaxed"
+            className="space-y-6 text-gray-600 text-lg leading-[1.6]"
           >
             {[
               "Choosing the right lawyer is essential when you face significant decisions in your life. S Jain Attorneys provides reliable case management solutions through the application of practical legal experience and a commitment to our clients.",
@@ -5065,7 +5066,7 @@ export default function LeadingLawFirmPage() {
       </section>
 
       {/* ════════════════════════════════ OUR FOUNDER ══════════════════════════ */}
-      <section className="py-28 px-6 bg-black text-white relative overflow-hidden">
+      <section className="py-12 md:py-14 px-6 bg-black text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
 
         {/* large decorative "S" watermark */}
@@ -5101,7 +5102,7 @@ export default function LeadingLawFirmPage() {
               S Jain – Principal Attorney
             </motion.h3>
 
-            <div className="space-y-5 text-gray-300 text-lg leading-relaxed max-w-3xl">
+            <div className="space-y-5 text-gray-300 text-lg leading-[1.6] max-w-3xl">
               {[
                 "S Jain, the Principal Attorney of S Jain & Attorneys, brings extensive legal experience in representing clients before courts, tribunals, and regulatory authorities.",
                 "As a respected advocate and legal strategist, S Jain blends practical understanding with deep legal insight to deliver structured, results-oriented counsel across litigation and advisory matters.",
@@ -5117,7 +5118,7 @@ export default function LeadingLawFirmPage() {
       </section>
 
       {/* ═══════════════════════════ CORE VALUES & APPROACH ════════════════════ */}
-      <section className="py-28 px-6 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-14 px-6 bg-white relative overflow-hidden">
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
 
         <div className="max-w-5xl mx-auto">
@@ -5141,7 +5142,7 @@ export default function LeadingLawFirmPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#8a6a20] transition-colors duration-200">
                   {val.title}
                 </h3>
-                <p className="text-gray-500 leading-relaxed">{val.description}</p>
+                <p className="text-gray-500 leading-[1.6]">{val.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -5151,7 +5152,7 @@ export default function LeadingLawFirmPage() {
             className="border-l-4 border-[#C9A24D] bg-[#fdf9f3] rounded-r-lg px-8 py-7"
           >
             <h3 className="text-xl font-bold text-gray-900 mb-3">Our Approach</h3>
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-gray-600 text-lg leading-[1.6]">
               We provide understandable, structured legal guidance at every stage — prioritizing
               your objectives, protecting your rights, and securing long-term outcomes.
             </p>
@@ -5160,7 +5161,7 @@ export default function LeadingLawFirmPage() {
       </section>
 
       {/* ════════════════════════════ OUR LEGAL EXPERTISE ══════════════════════ */}
-      <section className="py-28 px-6 bg-[#f8f6f1] relative">
+      <section className="py-12 md:py-14 px-6 bg-[#f8f6f1] relative">
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
 
         <div className="max-w-5xl mx-auto">
@@ -5181,7 +5182,7 @@ export default function LeadingLawFirmPage() {
                   <h3 className="text-base font-bold text-gray-900 mb-1 group-hover:text-[#8a6a20] transition-colors duration-200">
                     {area.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{area.description}</p>
+                  <p className="text-gray-500 text-sm leading-[1.6]">{area.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -5190,7 +5191,7 @@ export default function LeadingLawFirmPage() {
       </section>
 
       {/* ════════════════════════════════ FAQs ════════════════════════════════ */}
-      <section className="py-28 px-6 bg-white relative">
+      <section className="py-14 md:py-14 px-6 bg-white relative">
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
 
         <div className="max-w-4xl mx-auto">
@@ -5200,18 +5201,16 @@ export default function LeadingLawFirmPage() {
             {faqs.map((faq, index) => (
               <motion.div key={index}
                 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={index * 0.15}
-                className={`transition-colors duration-300 ${
-                  activeFAQ === index ? "bg-[#fdf9f3]" : "bg-white hover:bg-gray-50"
-                }`}
+                className={`transition-colors duration-300 ${activeFAQ === index ? "bg-[#fdf9f3]" : "bg-white hover:bg-gray-50"
+                  }`}
               >
                 <button
                   className="w-full text-left px-8 py-6 flex justify-between items-start gap-4 group"
                   onClick={() => setActiveFAQ(activeFAQ === index ? null : index)}
                   aria-expanded={activeFAQ === index}
                 >
-                  <h3 className={`text-base md:text-lg font-semibold transition-colors duration-200 ${
-                    activeFAQ === index ? "text-[#8a6a20]" : "text-gray-800 group-hover:text-[#C9A24D]"
-                  }`}>
+                  <h3 className={`text-base md:text-lg font-semibold transition-colors duration-200 ${activeFAQ === index ? "text-[#8a6a20]" : "text-gray-800 group-hover:text-[#C9A24D]"
+                    }`}>
                     {index + 1}. {faq.q}
                   </h3>
                   <motion.span
@@ -5233,7 +5232,7 @@ export default function LeadingLawFirmPage() {
                       className="overflow-hidden"
                     >
                       <div className="px-8 pb-7 border-t border-[#C9A24D]/20">
-                        <p className="pt-5 text-gray-500 text-base leading-relaxed">{faq.a}</p>
+                        <p className="pt-5 text-gray-500 text-base leading-[1.6]">{faq.a}</p>
                       </div>
                     </motion.div>
                   )}
@@ -5245,65 +5244,36 @@ export default function LeadingLawFirmPage() {
       </section>
 
       {/* ═══════════════════════════════ FINAL CTA ════════════════════════════ */}
-      <section className="py-28 px-6 bg-black text-white text-center relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
-        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
 
-        {/* animated concentric rings */}
-        {[0, 1, 2].map((i) => (
-          <motion.div key={i}
-            initial={{ scale: 0.6, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }} transition={{ duration: 1.2, delay: i * 0.2, ease: "easeOut" }}
-            className="absolute rounded-full border border-[#C9A24D]/10 pointer-events-none"
-            style={{ width: `${40 + i * 30}%`, height: `${80 + i * 30}%`, top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
-          />
-        ))}
+      <section className="relative py-24 text-white text-center">
 
-        {/* bordered inner content box */}
-        <motion.div variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true }}
-          className="relative max-w-3xl mx-auto px-10 py-16"
-        >
-          {/* corner marks */}
-          {/* {[
-            "top-4 left-4 border-t-2 border-l-2",
-            "top-4 right-4 border-t-2 border-r-2",
-            "bottom-4 left-4 border-b-2 border-l-2",
-            "bottom-4 right-4 border-b-2 border-r-2",
-          ].map((cls, i) => (
-            <span key={i} className={`absolute ${cls} w-5 h-5 border-[#C9A24D]`} />
-          ))} */}
+        <Image
+          src="/discussion.png"
+          alt="Legal consultation"
+          fill
+          className="object-cover"
+        />
 
-          <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
-            className="text-[#C9A24D] text-xs tracking-[0.25em] uppercase mb-4 font-semibold"
+        <div className="absolute inset-0 bg-black/80"></div>
+
+        <div className="relative max-w-4xl mx-auto px-6">
+
+          <h2 className="text-2xl md:text-5xl font-semibold mb-6">
+            Get trusted legal guidance from S Jain & Attorneys in Bangalore, protecting your rights with confidence and clarity.</h2>
+
+          <Link
+            href="/contact"
+            className="inline-block bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition"
           >
-            S Jain &amp; Attorneys
-          </motion.p>
+            Request Call Back
+          </Link>
 
-          <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}
-            className="text-3xl md:text-4xl font-bold mb-6 leading-tight"
-          >
-            Get trusted legal guidance from S Jain &amp; Attorneys in Bangalore,
-            protecting your rights with confidence and clarity.
-          </motion.h2>
-
-          <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={2}>
-            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
-              <Link href="/contact"
-                className="inline-block bg-[#C9A24D] hover:bg-[#b8913d] text-black px-12 py-4 font-bold text-sm tracking-widest uppercase transition-colors duration-200"
-              >
-                Request Call Back
-              </Link>
-            </motion.div>
-          </motion.div>
-
-          <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={3}
-            className="mt-8 text-gray-500 text-sm flex items-center justify-center gap-2"
-          >
-            <span className="inline-block w-4 h-px bg-gray-600" />
+          <p className="text-gray-400 mt-8 text-sm">
             All matters handled with complete confidentiality and legal discretion.
-            <span className="inline-block w-4 h-px bg-gray-600" />
-          </motion.p>
-        </motion.div>
+          </p>
+
+        </div>
+
       </section>
 
       <Footer />

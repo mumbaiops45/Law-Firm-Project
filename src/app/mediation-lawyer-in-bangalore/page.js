@@ -266,7 +266,7 @@
 
 //             </motion.div>
 
-            
+
 
 
 
@@ -377,9 +377,9 @@ import { useState } from "react";
 export default function MediationLawyerPage() {
   const [openIndex, setOpenIndex] = useState(null);
 
-const toggleFAQ = (index) => {
-  setOpenIndex(openIndex === index ? null : index);
-};
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
     <>
       <Navbar />
@@ -388,7 +388,7 @@ const toggleFAQ = (index) => {
 
         {/* ================= HERO ================= */}
 
-        <section className="bg-[#0B0F14] pt-32 pb-20 text-center">
+        <section className="bg-[#0B0F14] pt-10 pb-20 text-center">
 
           <div className="max-w-6xl mx-auto px-6">
 
@@ -508,7 +508,7 @@ const toggleFAQ = (index) => {
             WHY CHOOSE OUR FIRM
           </h3>
 
-          <ul className="space-y-3 text-gray-700 mb-20">
+          <ul className="space-y-3 text-gray-700 mb-5">
             <li>✓ Experienced Mediation Lawyers and ADR Lawyers</li>
             <li>✓ Skilled Arbitration Lawyer representation</li>
             <li>✓ Confidential and time-efficient dispute resolution</li>
@@ -523,61 +523,61 @@ const toggleFAQ = (index) => {
         <section className="bg-[#F4F4F4] py-20">
           <div className="max-w-6xl mx-auto px-6">
 
-            <h3 className="text-4xl font-bold mb-12">
+            <h3 className="text-4xl font-bold mb-10">
               Frequently Asked Questions
             </h3>
 
-           <div className="space-y-6 text-gray-800">
+            <div className="space-y-6 text-gray-800">
 
-  {[
-    {
-      q: "Q1: What is mediation and how does it work?",
-      a: "Mediation is a structured negotiation process where a neutral mediator helps parties reach a mutually acceptable settlement."
-    },
-    {
-      q: "Q2: How is arbitration different from litigation?",
-      a: "Arbitration is a private dispute resolution process, often faster and more flexible than court litigation."
-    },
-    {
-      q: "Q3: Is ADR legally binding?",
-      a: "Yes, arbitration awards and properly executed settlement agreements are legally enforceable."
-    },
-    {
-      q: "Q4: Can disputes be resolved without going to court?",
-      a: "Yes, many disputes can be effectively resolved through mediation or arbitration."
-    },
-    {
-      q: "Q5: Can mediation be used in ongoing court cases?",
-      a: "Yes, courts often refer matters to mediation during pending litigation, and we represent clients in court-referred mediation."
-    },
-    {
-      q: "Q6: Do you assist in drafting and enforcing settlement agreements?",
-      a: "Yes, we draft legally enforceable settlement agreements and consent terms to ensure compliance and clarity."
-    }
-  ].map((faq, index) => (
-    <div
-      key={index}
-      className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 cursor-pointer transition"
-      onClick={() => toggleFAQ(index)}
-    >
-      <div className="flex justify-between items-center">
-        <h4 className="font-semibold text-lg">
-          {faq.q}
-        </h4>
-        <span className="text-2xl font-bold text-[#C9A24D]">
-          {openIndex === index ? "−" : "+"}
-        </span>
-      </div>
+              {[
+                {
+                  q: "Q1: What is mediation and how does it work?",
+                  a: "Mediation is a structured negotiation process where a neutral mediator helps parties reach a mutually acceptable settlement."
+                },
+                {
+                  q: "Q2: How is arbitration different from litigation?",
+                  a: "Arbitration is a private dispute resolution process, often faster and more flexible than court litigation."
+                },
+                {
+                  q: "Q3: Is ADR legally binding?",
+                  a: "Yes, arbitration awards and properly executed settlement agreements are legally enforceable."
+                },
+                {
+                  q: "Q4: Can disputes be resolved without going to court?",
+                  a: "Yes, many disputes can be effectively resolved through mediation or arbitration."
+                },
+                {
+                  q: "Q5: Can mediation be used in ongoing court cases?",
+                  a: "Yes, courts often refer matters to mediation during pending litigation, and we represent clients in court-referred mediation."
+                },
+                {
+                  q: "Q6: Do you assist in drafting and enforcing settlement agreements?",
+                  a: "Yes, we draft legally enforceable settlement agreements and consent terms to ensure compliance and clarity."
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 cursor-pointer transition"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <h4 className="font-semibold text-lg">
+                      {faq.q}
+                    </h4>
+                    <span className="text-2xl font-bold text-[#C9A24D]">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
+                  </div>
 
-      {openIndex === index && (
-        <p className="mt-4 text-gray-700">
-          {faq.a}
-        </p>
-      )}
-    </div>
-  ))}
+                  {openIndex === index && (
+                    <p className="mt-4 text-gray-700">
+                      {faq.a}
+                    </p>
+                  )}
+                </div>
+              ))}
 
-</div>
+            </div>
           </div>
         </section>
 
@@ -586,7 +586,7 @@ const toggleFAQ = (index) => {
         <section className="bg-[#0B0F14] py-28 text-center text-white">
 
           <div className="max-w-5xl mx-auto px-6">
-            
+
 
             <h2 className="text-4xl md:text-5xl font-semibold mb-6">
               Get Immediate Legal Help from a Mediation Lawyer in Bangalore

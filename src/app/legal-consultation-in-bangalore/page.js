@@ -2667,7 +2667,7 @@ export default function Page() {
       <Navbar />
 
       {/* ================= HERO SECTION ================= */}
-      <section className="bg-black text-white relative overflow-hidden pt-32 md:pt-24 pb-24 px-6">
+      <section className="bg-black text-white relative overflow-hidden pt-12 md:pt-8 pb-24 px-6">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,#C9A24D,transparent_70%)]" />
 
         <motion.div

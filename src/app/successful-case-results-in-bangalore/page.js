@@ -3744,7 +3744,7 @@ export default function SuccessfulCasesPage() {
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
 
         {/* animated corner brackets */}
-        {[
+        {/* {[
           "top-8 left-8 border-t-2 border-l-2",
           "top-8 right-8 border-t-2 border-r-2",
           "bottom-8 left-8 border-b-2 border-l-2",
@@ -3755,26 +3755,26 @@ export default function SuccessfulCasesPage() {
             transition={{ duration: 0.8, delay: 0.4 + i * 0.1 }}
             className={`absolute w-12 h-12 border-[#C9A24D] ${cls}`}
           />
-        ))}
+        ))} */}
 
         {/* subtle gold grid */}
-        <div className="absolute inset-0 opacity-[0.04]" style={{
+        {/* <div className="absolute inset-0 opacity-[0.04]" style={{
           backgroundImage:
             "repeating-linear-gradient(0deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)," +
             "repeating-linear-gradient(90deg,#C9A24D,#C9A24D 1px,transparent 1px,transparent 80px)",
-        }} />
+        }} /> */}
 
         <motion.div style={{ y: heroY, opacity: heroOpa }}
-          className="relative max-w-5xl mx-auto px-6 py-32 md:py-44 w-full text-center"
+          className="relative max-w-5xl mx-auto px-6 py-15 md:py-4 w-full text-center"
         >
           {/* eyebrow */}
-          <motion.p variants={fadeUp} initial="hidden" animate="show" custom={0}
+          {/* <motion.p variants={fadeUp} initial="hidden" animate="show" custom={0}
             className="text-[#C9A24D] text-xs tracking-[0.3em] uppercase mb-6 font-semibold flex items-center justify-center gap-3"
           >
             <span className="inline-block w-8 h-px bg-[#C9A24D]" />
             S Jain &amp; Attorneys · Bangalore, India
             <span className="inline-block w-8 h-px bg-[#C9A24D]" />
-          </motion.p>
+          </motion.p> */}
 
           {/* H1 */}
           <motion.h1 variants={fadeUp} initial="hidden" animate="show" custom={1}
@@ -3804,17 +3804,17 @@ export default function SuccessfulCasesPage() {
         </motion.div>
 
         {/* scroll indicator */}
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
+        {/* <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2"
         >
           <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.6 }}
             className="w-px h-12 bg-gradient-to-b from-[#C9A24D] to-transparent"
           />
-        </motion.div>
+        </motion.div> */}
       </section>
 
       {/* ════════════════ PROVEN STRATEGY. STRONG ADVOCACY. REAL RESULTS. ══════ */}
-      <section className="py-28 px-6 bg-white relative overflow-hidden">
+      <section className="py-10 px-6 bg-white relative overflow-hidden">
         <motion.div
           initial={{ height: 0 }} whileInView={{ height: "60%" }} viewport={{ once: true }}
           transition={{ duration: 1.2, delay: 0.3 }}
@@ -3867,7 +3867,7 @@ export default function SuccessfulCasesPage() {
       </section>
 
       {/* ═══════════════════════════ SELECTED CASE STUDIES ═════════════════════ */}
-      <section className="py-28 px-6 bg-black text-white relative overflow-hidden">
+      <section className="py-14 px-6 bg-black text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A24D]" />
 
         <div className="max-w-6xl mx-auto">
@@ -3927,7 +3927,7 @@ export default function SuccessfulCasesPage() {
       </section>
 
       {/* ══════════════════ HOW WE SUPPORT YOU ════════════════════════════════ */}
-      <section className="py-28 px-6 bg-[#f8f6f1] relative">
+      <section className="py-14  px-6 bg-[#f8f6f1] relative">
         <GoldDivider />
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent" />
 
@@ -3965,7 +3965,7 @@ export default function SuccessfulCasesPage() {
       </section>
 
       {/* ══════════════════════════════ FAQ ═══════════════════════════════════ */}
-      <section className="py-28 px-6 bg-white relative">
+      <section className="py-12 px-6 bg-white relative">
         <GoldDivider />
 
         <div className="max-w-4xl mx-auto">

@@ -2059,6 +2059,241 @@
 // }
 
 
+// "use client";
+
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
+// import Image from "next/image";
+// import { motion } from "framer-motion";
+// import Link from "next/link";
+
+// export default function FamilyDivorceLawPage() {
+
+//   const fadeUp = {
+//     hidden: { opacity: 0, y: 40 },
+//     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+//   };
+
+//   const fadeImage = {
+//     hidden: { opacity: 0, scale: 1.05 },
+//     visible: { opacity: 1, scale: 1, transition: { duration: 1.2 } }
+//   };
+
+//   const stagger = { visible: { transition: { staggerChildren: 0.2 } } };
+
+//   return (
+//     <>
+//       <Navbar />
+
+//       <main className="bg-white overflow-hidden">
+
+//         {/* ================= HERO ================= */}
+//         <section className="relative bg-[#0B0F14] pt-32 pb-40 text-center">
+//           <motion.div
+//             variants={stagger}
+//             initial="hidden"
+//             animate="visible"
+//             className="max-w-6xl mx-auto px-6 text-center"
+//           >
+
+//             <motion.h1
+//               variants={fadeUp}
+//               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 tracking-tight"
+//             >
+//               Trusted Family & Divorce Law Services in Bangalore Focused on Protecting Your Future
+//             </motion.h1>
+
+//             <motion.p
+//               variants={fadeUp}
+//               className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-4"
+//             >
+//               Our firm provides trusted legal representation in Family & Divorce Law matters, offering strategic guidance through sensitive matrimonial and family disputes.
+//             </motion.p>
+
+//             <motion.p
+//               variants={fadeUp}
+//               className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-6"
+//             >
+//               Our experienced Divorce Lawyer and Family Court Lawyer team ensures practical, confidential, and result-oriented solutions. Our goal is to protect your rights, secure fair settlements, and ensure long-term legal stability for you and your family.
+//             </motion.p>
+
+//             <motion.p
+//               variants={fadeUp}
+//               className="text-[#C9A24D] font-semibold mb-10"
+//             >
+//               Response within 24 hours guaranteed.
+//             </motion.p>
+
+//             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+//               <Link href="/contact">
+//                 <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
+//                   Book Confidential Consultation
+//                 </button>
+//               </Link>
+//               <Link href="tel:+919000000000">
+//                 <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
+//                   Call Now
+//                 </button>
+//               </Link>
+//             </div>
+//           </motion.div>
+
+//           {/* ================= IMAGE CARDS ================= */}
+//           <motion.div
+//             variants={fadeImage}
+//             initial="hidden"
+//             animate="visible"
+//             className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 mt-16"
+//           >
+//             {/* FAMILY LAW CARD */}
+//             <motion.div variants={fadeUp} className="rounded-xl overflow-hidden shadow-2xl bg-white hover:scale-105 transition-transform duration-300">
+//               <Image
+//                 src="/family-law.jpg"
+//                 alt="Family Law"
+//                 width={700}
+//                 height={600}
+//                 className="w-full h-[300px] md:h-[400px] object-cover"
+//                 priority
+//               />
+//               <div className="p-6">
+//                 <h3 className="text-xl font-semibold text-black mb-2 text-center">Family Law</h3>
+//                 <p className="text-gray-600 text-sm leading-relaxed text-center">
+//                   Legal assistance for family disputes, child custody, maintenance, and protection of your legal rights with professional and compassionate support.
+//                 </p>
+//               </div>
+//             </motion.div>
+
+//             {/* DIVORCE LAW CARD */}
+//             <motion.div variants={fadeUp} className="rounded-xl overflow-hidden shadow-2xl bg-white hover:scale-105 transition-transform duration-300">
+//               <Image
+//                 src="/divorce.png"
+//                 alt="Divorce Law"
+//                 width={700}
+//                 height={600}
+//                 className="w-full h-[300px] md:h-[400px] object-cover"
+//                 priority
+//               />
+//               <div className="p-6">
+//                 <h3 className="text-xl font-semibold text-black mb-2 text-center">Divorce Law</h3>
+//                 <p className="text-gray-600 text-sm leading-relaxed text-center">
+//                   Expert legal representation for mutual and contested divorce, ensuring fair settlements, alimony, and protection of your future.
+//                 </p>
+//               </div>
+//             </motion.div>
+//           </motion.div>
+//         </section>
+
+//         {/* ================= OVERVIEW ================= */}
+//         <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+//           <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-16">
+
+//             <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-semibold text-black mb-6">
+//               About Our Family & Divorce Law Services
+//             </motion.h2>
+
+//             <motion.p variants={fadeUp} className="text-gray-600 text-base md:text-lg leading-relaxed mb-12">
+//               Family disputes require legal clarity with emotional sensitivity. Our Family & Divorce Law practice focuses on protecting your rights while guiding you through every stage of the legal process. Our experienced Divorce Lawyers and Family Court Lawyers handle complex matrimonial litigation, custody battles, and settlement negotiations with discretion and professionalism.
+//             </motion.p>
+
+//             {/* SERVICES */}
+//             <motion.h3 variants={fadeUp} className="text-3xl md:text-4xl font-semibold text-black mb-6">
+//               Our Family & Divorce Legal Services Include
+//             </motion.h3>
+
+//             <motion.ul variants={fadeUp} className="list-disc pl-6 space-y-6 text-gray-700 mb-16">
+//               <li>Mutual Consent Divorce</li>
+//               <li>Contested Divorce</li>
+//               <li>Child Custody & Visitation Rights</li>
+//               <li>Maintenance & Alimony</li>
+//               <li>Protection under Domestic Violence Act</li>
+//               <li>Matrimonial property and financial settlements</li>
+//               <li>Legal notices, petitions, and settlement agreements</li>
+//             </motion.ul>
+
+//             {/* IMAGE */}
+//             <motion.div variants={fadeUp} className="mb-16 max-w-4xl mx-auto">
+//               <Image
+//                 src="/familylaw.png"
+//                 alt="Family Law Consultation"
+//                 width={900}
+//                 height={500}
+//                 className="w-full h-[480px] md:h-[540px] object-cover rounded-xl shadow-lg"
+//                 sizes="(max-width: 768px) 100vw, 900px"
+//               />
+//             </motion.div>
+
+//             {/* APPROACH */}
+//             <motion.h3 variants={fadeUp} className="text-3xl md:text-4xl font-semibold text-black mb-6">
+//               Our Approach / How We Work
+//             </motion.h3>
+
+//             <motion.ul variants={fadeUp} className="list-disc pl-6 space-y-4 text-gray-700 mb-12">
+//               <li><strong>Step 1:</strong> Confidential Consultation — We understand your situation and assess legal options.</li>
+//               <li><strong>Step 2:</strong> Case Evaluation & Strategy Planning — A clear legal strategy is designed based on your objectives. We clearly explain legal risks, possible outcomes, and settlement options before proceeding.</li>
+//               <li><strong>Step 3:</strong> Petition Filing & Documentation — Accurate preparation and filing of required legal documents.</li>
+//               <li><strong>Step 4:</strong> Court Representation & Resolution — Strong representation before the Family Court for fair resolution.</li>
+//             </motion.ul>
+
+//             {/* WHY CHOOSE */}
+//             <motion.h3 variants={fadeUp} className="text-3xl md:text-4xl font-semibold text-black mb-6">
+//               Why Choose Our Firm
+//             </motion.h3>
+
+//             <motion.ul variants={fadeUp} className="list-disc pl-6 space-y-4 text-gray-700 mb-16">
+//               <li>Experienced Family & Divorce Law Advocates</li>
+//               <li>Dedicated Divorce Lawyer & Family Court Lawyer Support</li>
+//               <li>Discreet & Confidential Case Handling</li>
+//               <li>Transparent Legal Guidance & Clear Communication</li>
+//             </motion.ul>
+
+//           </div>
+//         </motion.section>
+
+//         {/* ================= CTA ================= */}
+//         <motion.section
+//           initial={{ opacity: 0 }}
+//           whileInView={{ opacity: 1 }}
+//           transition={{ duration: 1 }}
+//           className="relative py-28 mt-20 overflow-hidden"
+//         >
+//           <div className="absolute inset-0">
+//             <Image src="/discussion.png" alt="Family Consultation" fill className="object-cover" />
+//             <div className="absolute inset-0 bg-black/70"></div>
+//           </div>
+
+//           <motion.div
+//             initial={{ opacity: 0, y: 60 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.8 }}
+//             className="relative max-w-5xl mx-auto px-6 text-center"
+//           >
+//             <p className="text-[#C9A24D] uppercase tracking-widest text-sm mb-4">
+//               Confidential Legal Support
+//             </p>
+
+//             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+//               Get Trusted Legal Guidance From Our Divorce & Family Court Lawyers
+//             </h2>
+
+//             <p className="text-gray-300 mb-10">
+//               All matters handled with complete confidentiality and legal discretion.
+//             </p>
+
+//             <Link href="/contact">
+//               <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
+//                 Request Call Back
+//               </button>
+//             </Link>
+//           </motion.div>
+//         </motion.section>
+
+//       </main>
+
+//       <Footer />
+//     </>
+//   );
+// }
+
 "use client";
 
 import Navbar from "../components/Navbar";
@@ -2066,230 +2301,300 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 export default function FamilyDivorceLawPage() {
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-  };
+const [active,setActive]=useState(null);
 
-  const fadeImage = {
-    hidden: { opacity: 0, scale: 1.05 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 1.2 } }
-  };
+const toggle=(i)=>{
+setActive(active===i?null:i)
+}
 
-  const stagger = { visible: { transition: { staggerChildren: 0.2 } } };
+const faqs=[
+{
+q:"How long does a divorce process take?",
+a:"The timeline depends on whether it is mutual consent or contested, and the complexity of issues involved."
+},
+{
+q:"What documents are required for filing divorce?",
+a:"Marriage certificate, address proof, identity documents, income details, and supporting evidence depending on the case."
+},
+{
+q:"What is the role of a Family Court Lawyer?",
+a:"A Family Court Lawyer represents you in family court proceedings, drafts petitions, negotiates settlements, and protects your legal rights."
+},
+{
+q:"How is child custody decided?",
+a:"Custody decisions are based on the child’s welfare, financial stability, parental capability, and overall best interests of the child."
+},
+{
+q:"Can divorce be settled without a court trial?",
+a:"Many matters can be resolved through mutual consent divorce or structured settlement negotiations."
+},
+{
+q:"How is alimony calculated?",
+a:"It depends on income, financial capacity, duration of marriage, standard of living, and court discretion."
+}
+]
 
-  return (
-    <>
-      <Navbar />
+const fadeUp={
+hidden:{opacity:0,y:40},
+visible:{opacity:1,y:0,transition:{duration:0.7}}
+}
 
-      <main className="bg-white overflow-hidden">
+return(
 
-        {/* ================= HERO ================= */}
-        <section className="relative bg-[#0B0F14] pt-32 pb-40 text-center">
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            animate="visible"
-            className="max-w-6xl mx-auto px-6 text-center"
-          >
+<>
+<Navbar/>
 
-            <motion.h1
-              variants={fadeUp}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 tracking-tight"
-            >
-              Trusted Family & Divorce Law Services in Bangalore Focused on Protecting Your Future
-            </motion.h1>
+<main className="bg-white overflow-hidden">
 
-            <motion.p
-              variants={fadeUp}
-              className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-4"
-            >
-              Our firm provides trusted legal representation in Family & Divorce Law matters, offering strategic guidance through sensitive matrimonial and family disputes.
-            </motion.p>
+{/* HERO */}
 
-            <motion.p
-              variants={fadeUp}
-              className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-6"
-            >
-              Our experienced Divorce Lawyer and Family Court Lawyer team ensures practical, confidential, and result-oriented solutions. Our goal is to protect your rights, secure fair settlements, and ensure long-term legal stability for you and your family.
-            </motion.p>
+<section className="relative bg-[#0B0F14] pt-10 md:pt-8 pb-36 md:pb-40 text-center">
 
-            <motion.p
-              variants={fadeUp}
-              className="text-[#C9A24D] font-semibold mb-10"
-            >
-              Response within 24 hours guaranteed.
-            </motion.p>
+<motion.div
+initial="hidden"
+animate="visible"
+variants={{visible:{transition:{staggerChildren:0.15}}}}
+className="max-w-6xl mx-auto px-6"
+>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-              <Link href="/contact">
-                <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
-                  Book Confidential Consultation
-                </button>
-              </Link>
-              <Link href="tel:+919000000000">
-                <button className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition">
-                  Call Now
-                </button>
-              </Link>
-            </div>
-          </motion.div>
+<motion.h1
+variants={fadeUp}
+className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight"
+>
+Trusted Family & Divorce Law Services in Bangalore Focused on Protecting Your Future
+</motion.h1>
 
-          {/* ================= IMAGE CARDS ================= */}
-          <motion.div
-            variants={fadeImage}
-            initial="hidden"
-            animate="visible"
-            className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 mt-16"
-          >
-            {/* FAMILY LAW CARD */}
-            <motion.div variants={fadeUp} className="rounded-xl overflow-hidden shadow-2xl bg-white hover:scale-105 transition-transform duration-300">
-              <Image
-                src="/family-law.jpg"
-                alt="Family Law"
-                width={700}
-                height={600}
-                className="w-full h-[300px] md:h-[400px] object-cover"
-                priority
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-black mb-2 text-center">Family Law</h3>
-                <p className="text-gray-600 text-sm leading-relaxed text-center">
-                  Legal assistance for family disputes, child custody, maintenance, and protection of your legal rights with professional and compassionate support.
-                </p>
-              </div>
-            </motion.div>
+<motion.p
+variants={fadeUp}
+className="text-gray-300 text-base md:text-lg max-w-3xl mx-auto mb-4"
+>
+Our firm provides trusted legal representation in Family & Divorce Law matters, offering strategic guidance through sensitive matrimonial and family disputes. Our experienced Divorce Lawyer and Family Court Lawyer team ensures practical, confidential, and result-oriented solutions.
+</motion.p>
 
-            {/* DIVORCE LAW CARD */}
-            <motion.div variants={fadeUp} className="rounded-xl overflow-hidden shadow-2xl bg-white hover:scale-105 transition-transform duration-300">
-              <Image
-                src="/divorce.png"
-                alt="Divorce Law"
-                width={700}
-                height={600}
-                className="w-full h-[300px] md:h-[400px] object-cover"
-                priority
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-black mb-2 text-center">Divorce Law</h3>
-                <p className="text-gray-600 text-sm leading-relaxed text-center">
-                  Expert legal representation for mutual and contested divorce, ensuring fair settlements, alimony, and protection of your future.
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-        </section>
+<motion.p
+variants={fadeUp}
+className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto mb-6"
+>
+Our goal is to protect your rights, secure fair settlements, and ensure long-term legal stability for you and your family.
+</motion.p>
 
-        {/* ================= OVERVIEW ================= */}
-        <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-          <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-16">
+<motion.p variants={fadeUp} className="text-[#C9A24D] font-semibold mb-10">
+Response within 24 hours guaranteed.
+</motion.p>
 
-            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-semibold text-black mb-6">
-              About Our Family & Divorce Law Services
-            </motion.h2>
+<motion.div variants={fadeUp} className="flex flex-col sm:flex-row justify-center gap-4">
 
-            <motion.p variants={fadeUp} className="text-gray-600 text-base md:text-lg leading-relaxed mb-12">
-              Family disputes require legal clarity with emotional sensitivity. Our Family & Divorce Law practice focuses on protecting your rights while guiding you through every stage of the legal process. Our experienced Divorce Lawyers and Family Court Lawyers handle complex matrimonial litigation, custody battles, and settlement negotiations with discretion and professionalism.
-            </motion.p>
+<Link
+href="/contact"
+className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition text-center"
+>
+Book Confidential Consultation
+</Link>
 
-            {/* SERVICES */}
-            <motion.h3 variants={fadeUp} className="text-3xl md:text-4xl font-semibold text-black mb-6">
-              Our Family & Divorce Legal Services Include
-            </motion.h3>
+<a
+href="tel:+919000000000"
+className="border border-[#C9A24D] text-[#C9A24D] px-8 py-4 rounded-lg font-semibold hover:bg-[#C9A24D] hover:text-black transition text-center"
+>
+Call Now
+</a>
 
-            <motion.ul variants={fadeUp} className="list-disc pl-6 space-y-6 text-gray-700 mb-16">
-              <li>Mutual Consent Divorce</li>
-              <li>Contested Divorce</li>
-              <li>Child Custody & Visitation Rights</li>
-              <li>Maintenance & Alimony</li>
-              <li>Protection under Domestic Violence Act</li>
-              <li>Matrimonial property and financial settlements</li>
-              <li>Legal notices, petitions, and settlement agreements</li>
-            </motion.ul>
+</motion.div>
 
-            {/* IMAGE */}
-            <motion.div variants={fadeUp} className="mb-16 max-w-4xl mx-auto">
-              <Image
-                src="/familylaw.png"
-                alt="Family Law Consultation"
-                width={900}
-                height={500}
-                className="w-full h-[480px] md:h-[540px] object-cover rounded-xl shadow-lg"
-                sizes="(max-width: 768px) 100vw, 900px"
-              />
-            </motion.div>
+</motion.div>
 
-            {/* APPROACH */}
-            <motion.h3 variants={fadeUp} className="text-3xl md:text-4xl font-semibold text-black mb-6">
-              Our Approach / How We Work
-            </motion.h3>
+{/* IMAGE CARDS */}
 
-            <motion.ul variants={fadeUp} className="list-disc pl-6 space-y-4 text-gray-700 mb-12">
-              <li><strong>Step 1:</strong> Confidential Consultation — We understand your situation and assess legal options.</li>
-              <li><strong>Step 2:</strong> Case Evaluation & Strategy Planning — A clear legal strategy is designed based on your objectives. We clearly explain legal risks, possible outcomes, and settlement options before proceeding.</li>
-              <li><strong>Step 3:</strong> Petition Filing & Documentation — Accurate preparation and filing of required legal documents.</li>
-              <li><strong>Step 4:</strong> Court Representation & Resolution — Strong representation before the Family Court for fair resolution.</li>
-            </motion.ul>
+<div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 mt-16">
 
-            {/* WHY CHOOSE */}
-            <motion.h3 variants={fadeUp} className="text-3xl md:text-4xl font-semibold text-black mb-6">
-              Why Choose Our Firm
-            </motion.h3>
+<div className="bg-white rounded-xl overflow-hidden shadow-xl">
+<Image
+src="/family-law.jpg"
+alt="Family Law"
+width={700}
+height={500}
+className="w-full h-[260px] md:h-[340px] object-cover"
+/>
+<div className="p-6 text-center">
+<h3 className="text-xl font-semibold mb-2">Family Law</h3>
+<p className="text-gray-600 text-sm">
+Legal assistance for family disputes, child custody, maintenance, and protection of your legal rights.
+</p>
+</div>
+</div>
 
-            <motion.ul variants={fadeUp} className="list-disc pl-6 space-y-4 text-gray-700 mb-16">
-              <li>Experienced Family & Divorce Law Advocates</li>
-              <li>Dedicated Divorce Lawyer & Family Court Lawyer Support</li>
-              <li>Discreet & Confidential Case Handling</li>
-              <li>Transparent Legal Guidance & Clear Communication</li>
-            </motion.ul>
+<div className="bg-white rounded-xl overflow-hidden shadow-xl">
+<Image
+src="/divorce.png"
+alt="Divorce Law"
+width={700}
+height={500}
+className="w-full h-[260px] md:h-[340px] object-cover"
+/>
+<div className="p-6 text-center">
+<h3 className="text-xl font-semibold mb-2">Divorce Law</h3>
+<p className="text-gray-600 text-sm">
+Expert legal representation for mutual and contested divorce, ensuring fair settlements and protection of your future.
+</p>
+</div>
+</div>
 
-          </div>
-        </motion.section>
+</div>
 
-        {/* ================= CTA ================= */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="relative py-28 mt-20 overflow-hidden"
-        >
-          <div className="absolute inset-0">
-            <Image src="/discussion.png" alt="Family Consultation" fill className="object-cover" />
-            <div className="absolute inset-0 bg-black/70"></div>
-          </div>
+</section>
 
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative max-w-5xl mx-auto px-6 text-center"
-          >
-            <p className="text-[#C9A24D] uppercase tracking-widest text-sm mb-4">
-              Confidential Legal Support
-            </p>
+{/* ABOUT */}
 
-            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-              Get Trusted Legal Guidance From Our Divorce & Family Court Lawyers
-            </h2>
+<section className="max-w-6xl mx-auto px-6 py-16">
 
-            <p className="text-gray-300 mb-10">
-              All matters handled with complete confidentiality and legal discretion.
-            </p>
+<h2 className="text-3xl md:text-4xl font-semibold mb-6">
+Trusted Legal Support for Family & Divorce Matters
+</h2>
 
-            <Link href="/contact">
-              <button className="bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
-                Request Call Back
-              </button>
-            </Link>
-          </motion.div>
-        </motion.section>
+<p className="text-gray-700 text-lg max-w-3xl mb-10">
+Family disputes require legal clarity with emotional sensitivity. Our Family & Divorce Law practice focuses on protecting your rights while guiding you through every stage of the legal process.
+</p>
 
-      </main>
+<p className="text-gray-700 text-lg max-w-3xl mb-14">
+As experienced Divorce Lawyers and Family Court Lawyers, we handle complex matrimonial litigation, custody battles, and settlement negotiations with discretion and professionalism.
+</p>
 
-      <Footer />
-    </>
-  );
+<h3 className="text-2xl font-semibold mb-6">
+OUR FAMILY & DIVORCE LEGAL SERVICES INCLUDE
+</h3>
+
+<ul className="grid md:grid-cols-2 gap-4 text-lg text-gray-700 mb-16 max-w-3xl">
+
+<li>▪ Mutual Consent Divorce</li>
+<li>▪ Contested Divorce</li>
+<li>▪ Child Custody & Visitation Rights</li>
+<li>▪ Maintenance & Alimony</li>
+<li>▪ Protection under Domestic Violence Act</li>
+<li>▪ Matrimonial property and financial settlements</li>
+<li>▪ Legal notices, petitions, and settlement agreements</li>
+
+</ul>
+
+<Image
+src="/familylaw.png"
+alt="Family law consultation"
+width={900}
+height={500}
+className="rounded-xl shadow-lg mx-auto mb-16 w-full max-w-3xl"
+/>
+
+<h3 className="text-2xl font-semibold mb-6">
+OUR APPROACH / HOW WE WORK
+</h3>
+
+<div className="space-y-4 text-gray-700 text-lg max-w-3xl mb-16">
+
+<p><strong>Step 1: Confidential Consultation</strong><br/>We understand your situation and assess legal options.</p>
+
+<p><strong>Step 2: Case Evaluation & Strategy Planning</strong><br/>A clear legal strategy is designed based on your objectives. We clearly explain legal risks, possible outcomes, and settlement options before proceeding.</p>
+
+<p><strong>Step 3: Petition Filing & Documentation</strong><br/>Accurate preparation and filing of required legal documents.</p>
+
+<p><strong>Step 4: Court Representation & Resolution</strong><br/>Strong representation before the Family Court for fair resolution.</p>
+
+</div>
+
+<h3 className="text-2xl font-semibold mb-5">
+WHY CHOOSE OUR FIRM
+</h3>
+
+{/* <ul className="space-y-4 text-lg mb-16 max-w-3xl"> */}
+  <ul className="space-y-4 text-lg mb-2 max-w-3xl">
+
+<li>✓ Experienced Family & Divorce Law Advocates</li>
+<li>✓ Dedicated Divorce Lawyer & Family Court Lawyer Support</li>
+<li>✓ Discreet & Confidential Case Handling</li>
+<li>✓ Transparent Legal Guidance & Clear Communication</li>
+
+</ul>
+
+</section>
+
+{/* FAQ */}
+
+{/* <section className="max-w-4xl mx-auto px-6 py-10 mb-20"> */}
+  <section className="max-w-4xl mx-auto px-6 py-6 mb-16">
+
+<h2 className="text-3xl md:text-4xl text-center font-semibold mb-10">
+Frequently Asked Questions
+</h2>
+
+<div className="space-y-4">
+
+{faqs.map((f,i)=>(
+<div key={i} className="border border-[#C9A24D] rounded-lg">
+
+<button
+onClick={()=>toggle(i)}
+className="flex justify-between items-center w-full px-6 py-5 font-semibold text-left"
+>
+
+{f.q}
+
+<ChevronDown className={`transition ${active===i?"rotate-180 text-[#C9A24D]":""}`}/>
+
+</button>
+
+{active===i && (
+<div className="px-6 pb-6 text-gray-700 border-t border-[#C9A24D]/40 pt-4">
+{f.a}
+</div>
+)}
+
+</div>
+))}
+
+</div>
+
+</section>
+
+{/* CTA */}
+
+<section className="relative py-24 text-white text-center">
+
+<Image
+src="/discussion.png"
+alt="Legal consultation"
+fill
+className="object-cover"
+/>
+
+<div className="absolute inset-0 bg-black/80"></div>
+
+<div className="relative max-w-4xl mx-auto px-6">
+
+<h2 className="text-3xl md:text-5xl font-semibold mb-6">
+Get trusted legal guidance from our skilled Divorce and Family Court Lawyers.
+</h2>
+
+<Link
+href="/contact"
+className="inline-block bg-[#C9A24D] text-black px-8 py-4 rounded-lg font-semibold hover:scale-105 transition"
+>
+Request Call Back
+</Link>
+
+<p className="text-gray-400 mt-8 text-sm">
+All matters handled with complete confidentiality and legal discretion.
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<Footer/>
+
+</>
+);
 }
