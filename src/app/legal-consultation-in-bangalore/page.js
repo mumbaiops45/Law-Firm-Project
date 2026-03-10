@@ -2667,56 +2667,49 @@ export default function Page() {
       <Navbar />
 
       {/* ================= HERO SECTION ================= */}
-      <section className="bg-black text-white relative overflow-hidden pt-12 md:pt-8 pb-24 px-6">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,#C9A24D,transparent_70%)]" />
+     <section className="bg-black text-white relative overflow-hidden pt-12 pb-24 px-4 sm:px-6">
+  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,#C9A24D,transparent_70%)] pointer-events-none" />
 
-        <motion.div
-          variants={containerVariant}
-          initial="hidden"
-          animate="visible"
-          className="max-w-6xl mx-auto relative z-10 text-center"
-        >
-          <motion.h1
-            variants={fadeUp}
-            className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#C9A24D] leading-tight mb-6"
-          >
-            Legal Consultation in Bangalore
-          </motion.h1>
+  <motion.div
+    variants={containerVariant}
+    initial="hidden"
+    animate="visible"
+    className="max-w-md sm:max-w-3xl md:max-w-4xl mx-auto relative z-10 text-center"
+  >
+    <motion.h1
+      variants={fadeUp}
+      className="text-2xl sm:text-3xl md:text-5xl font-semibold text-[#C9A24D] leading-snug mb-4 sm:mb-6"
+    >
+      Legal Consultation in Bangalore
+    </motion.h1>
 
-          <motion.p
-            variants={fadeUp}
-            className="text-gray-300 max-w-3xl mx-auto leading-relaxed text-lg mb-6"
-          >
-            Speak with the experienced legal team at{" "}
-            <strong>S Jain & Attorneys</strong> for clear, strategic, and
-            confidential legal consultation in Bangalore. We provide structured
-            legal guidance tailored to your specific matter with precision and
-            professionalism.
-          </motion.p>
+    <motion.p
+      variants={fadeUp}
+      className="text-gray-300 text-sm sm:text-base md:text-lg max-w-md sm:max-w-2xl mx-auto leading-relaxed mb-4 sm:mb-6"
+    >
+      Speak with the experienced legal team at <strong>S Jain & Attorneys</strong> for clear, strategic, and confidential legal consultation in Bangalore. We provide structured legal guidance tailored to your specific matter with precision and professionalism.
+    </motion.p>
 
-          <motion.p variants={fadeUp} className="text-[#C9A24D] font-semibold mb-8">
-            Response within 24 hours guaranteed.
-          </motion.p>
+    <motion.p variants={fadeUp} className="text-[#C9A24D] font-semibold mb-6 sm:mb-8">
+      Response within 24 hours guaranteed.
+    </motion.p>
 
-          <motion.div
-            variants={fadeUp}
-            className="flex flex-col sm:flex-row justify-center gap-4"
-          >
-            <a
-              href="#consultation-form"
-              className="bg-[#C9A24D] text-black px-8 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300"
-            >
-              Book Confidential Consultation
-            </a>
-            <a
-              href="tel:+91XXXXXXXXXX"
-              className="border border-[#C9A24D] text-[#C9A24D] px-8 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
-            >
-              📞 Call Now
-            </a>
-          </motion.div>
-        </motion.div>
-      </section>
+    <motion.div variants={fadeUp} className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
+      <a
+        href="#consultation-form"
+        className="w-full sm:w-auto bg-[#C9A24D] text-black px-6 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_rgba(201,162,77,0.5)] transition duration-300 text-center"
+      >
+        Book Confidential Consultation
+      </a>
+      <a
+        href="tel:+91XXXXXXXXXX"
+        className="w-full sm:w-auto border border-[#C9A24D] text-[#C9A24D] px-6 py-3 rounded-md font-semibold hover:bg-[#C9A24D] hover:text-black transition duration-300 text-center shadow-[0_0_15px_rgba(201,162,77,0.15)] hover:shadow-[0_0_30px_rgba(201,162,77,0.4)]"
+      >
+        📞 Call Now
+      </a>
+    </motion.div>
+  </motion.div>
+</section>
 
       {/* ================= CONTACT + FORM SECTION ================= */}
       <section id="consultation-form" className="bg-[#0A0A0A] text-white py-24 px-6">

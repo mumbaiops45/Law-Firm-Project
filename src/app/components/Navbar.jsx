@@ -4067,17 +4067,23 @@ export default function Navbar() {
             >
               Practice Areas <ChevronDown size={18} />
             </button>
-            {mobileServicesOpen && (
-              <div>
-                {practiceAreas.map((item, i) => (
-                  <Link key={i} href={item.href} onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-10 py-3 border-b border-gray-800 transition ${isActive(item.href) ? "text-[#C9A24D] font-semibold" : "text-white"}`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            )}
+           {/* MOBILE PRACTICE AREAS */}
+{mobileServicesOpen && (
+  <div className="max-h-[300px] overflow-y-auto">
+    {practiceAreas.map((item, i) => (
+      <Link
+        key={i}
+        href={item.href}
+        onClick={() => setMobileMenuOpen(false)}
+        className={`block px-10 py-3 border-b border-gray-800 transition ${
+          isActive(item.href) ? "text-[#C9A24D] font-semibold" : "text-white"
+        }`}
+      >
+        {item.name}
+      </Link>
+    ))}
+  </div>
+)}
 
             <Link href="/lawyers-in-bangalore" onClick={() => setMobileMenuOpen(false)}
               className={`block px-6 py-4 border-b border-gray-800 transition ${isActive("/lawyers-in-bangalore") ? "text-[#C9A24D] font-semibold" : ""}`}
